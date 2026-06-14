@@ -321,7 +321,6 @@ const ch05 = {
   <!-- Face labels -->
   <text x="135" y="142" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">front △</text>
   <text x="195" y="100" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">rect</text>
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2 triangular + 3 rectangular = 5 faces</text>
 </svg>`,
       options: ["4", "5", "6", "7"],
       answer: 1,
@@ -364,7 +363,6 @@ const ch05 = {
   <circle cx="215" cy="175" r="3" fill="#5b5ef4"/>
   <circle cx="245" cy="140" r="3" fill="#5b5ef4"/>
   <circle cx="105" cy="140" r="3" fill="#5b5ef4"/>
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4 base edges + 4 lateral edges = 8 edges</text>
 </svg>`,
       answer: "8",
       acceptableAnswers: ["8"],
@@ -442,7 +440,6 @@ const ch05 = {
   <!-- Count label -->
   <text x="255" y="100" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">6</text>
   <text x="255" y="116" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">squares</text>
-  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Net of a cube = 6 equal squares</text>
 </svg>`,
       options: ["4", "5", "6", "8"],
       answer: 2,

@@ -84,7 +84,6 @@ const ch13 = {
   <line x1="58" y1="22" x2="322" y2="22" stroke="#5b5ef4" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
   <line x1="58" y1="18" x2="58" y2="26" stroke="#5b5ef4" stroke-width="2"/>
   <line x1="322" y1="18" x2="322" y2="26" stroke="#5b5ef4" stroke-width="2"/>
-  <text x="190" y="17" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">distance = 7</text>
 </svg>`,
       options: ["1", "7", "−7", "−1"],
       answer: 1,
@@ -414,7 +413,7 @@ const ch13 = {
   <!-- Arrow from -7 to -3 (move right 4) -->
   <path d="M 58 26 Q 133 10 203 26" fill="none" stroke="#22c55e" stroke-width="2"/>
   <polygon points="209,26 199,20 203,30" fill="#22c55e"/>
-  <text x="133" y="10" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">+4 (subtract negative = add)</text>
+  <text x="133" y="10" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">+?</text>
 </svg>`,
       answer: "-3",
       acceptableAnswers: ["-3"],

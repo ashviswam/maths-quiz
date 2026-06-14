@@ -36,6 +36,9 @@
     <div class="home-hero">
       <h1 id="home-greeting">Welcome! 👋</h1>
       <p class="home-subtitle">Pick a chapter to practise. Your progress is saved automatically.</p>
+      <div id="notes-cta" class="notes-cta hidden">
+        <button class="btn-notes-view" onclick="App.openNotes()">📋 View notes (<span id="notes-count">0</span>)</button>
+      </div>
       <div id="overall-bar" class="overall-bar hidden">
         <div class="overall-bar-track">
           <div id="overall-bar-fill" class="overall-bar-fill"></div>
@@ -97,6 +100,18 @@
             <input type="text" id="answer-input" placeholder="Type your answer here…" autocomplete="off" autocorrect="off">
             <button id="btn-submit" class="btn-primary" onclick="App.submitInput()">Check →</button>
           </div>
+
+          <!-- Parent note -->
+          <div id="q-note-bar" class="q-note-bar">
+            <button id="btn-note" class="btn-note" onclick="App.toggleNote()">📝 Leave a note</button>
+            <div id="note-panel" class="note-panel hidden">
+              <textarea id="note-text" class="note-textarea" placeholder="Your note about this question (only visible to you)…"></textarea>
+              <div class="note-actions">
+                <button class="btn-note-cancel" onclick="App.cancelNote()">Cancel</button>
+                <button class="btn-note-save" onclick="App.saveNote()">Save note</button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Feedback card -->
@@ -127,6 +142,17 @@
       </div>
     </div>
   </main>
+
+  <!-- ── NOTES OVERLAY ────────────────────────────────────────── -->
+  <div id="notes-overlay" class="notes-overlay hidden">
+    <div class="notes-modal">
+      <div class="notes-header">
+        <span class="notes-title">📋 Your Notes</span>
+        <button class="notes-close" onclick="App.closeNotes()">✕ Close</button>
+      </div>
+      <div id="notes-list" class="notes-list"></div>
+    </div>
+  </div>
 
 </div><!-- /#app -->
 

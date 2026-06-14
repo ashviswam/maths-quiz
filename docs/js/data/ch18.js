@@ -423,7 +423,6 @@ const ch18 = {
   <!-- Sector 4 midpoint at 200+35=235deg: x=115+82*0.65*cos(235)=115-31=84, y=110+82*0.65*sin(235)=110-44=66 -->
   <text x="72" y="62" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">?°</text>
   <!-- Note -->
-  <text x="130" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">120 + 90 + 80 + ? = 360</text>
 </svg>`,
       answer: "70",
       acceptableAnswers: ["70", "70°"],

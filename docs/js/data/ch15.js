@@ -858,7 +858,6 @@ const ch15 = {
   <!-- center dot -->
   <circle cx="110" cy="110" r="4" fill="#64748b"/>
   <!-- formula at bottom -->
-  <text x="110" y="215" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">360° ÷ 8 = 45°</text>
 </svg>`,
       answer: "45",
       acceptableAnswers: ["45", "45°"],

@@ -228,7 +228,6 @@ const ch12 = {
   <line x1="30" y1="72" x2="350" y2="72" stroke="#64748b" stroke-width="1.5"/>
   <line x1="30" y1="68" x2="30" y2="76" stroke="#64748b" stroke-width="1.5"/>
   <line x1="350" y1="68" x2="350" y2="76" stroke="#64748b" stroke-width="1.5"/>
-  <text x="190" y="88" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">New price = 125% of $120</text>
 </svg>`,
       options: ["$25", "$145", "$150", "$95"],
       answer: 2,

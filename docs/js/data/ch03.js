@@ -163,7 +163,6 @@ const ch03 = {
   <rect x="80" y="138" width="14" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
   <!-- 90° label -->
   <text x="105" y="135" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">90°</text>
-  <text x="140" y="185" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">Right angle = exactly 90°</text>
 </svg>`,
       answer: "right angle",
       acceptableAnswers: ["right angle", "Right angle", "right", "Right"],
@@ -269,7 +268,6 @@ const ch03 = {
   <!-- From ray3 at 35px to ray1 at 35px, large arc -->
   <path d="M 111.3,130.1 A 35,35 0 0,0 175,110" fill="none" stroke="#22c55e" stroke-width="1.5"/>
   <text x="168" y="138" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">?</text>
-  <text x="140" y="190" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">Three angles at a point = 360°</text>
 </svg>`,
       answer: "145",
       acceptableAnswers: ["145", "145°", "145 degrees"],
@@ -312,7 +310,6 @@ const ch03 = {
   <path d="M 102.7,112.8 A 30,30 0 0,1 120,140" fill="none" stroke="#22c55e" stroke-width="1.5"/>
   <text x="122" y="126" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">r</text>
   <text x="133" y="120" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">?</text>
-  <text x="140" y="180" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">p + q + r = 180°</text>
 </svg>`,
       options: ["55°", "65°", "75°", "85°"],
       answer: 1,
@@ -372,7 +369,6 @@ const ch03 = {
   <text x="100" y="110" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">105°</text>
   <!-- Right angle (105°) -->
   <text x="183" y="110" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">105°</text>
-  <text x="140" y="185" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">75° + 105° = 180° (supplementary)</text>
 </svg>`,
       options: [
         "75°, 105°, 75°, 105°",

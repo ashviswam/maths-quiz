@@ -1,3 +1,20 @@
+/* ── Notes ────────────────────────────────────────────────────
+   Parent feedback notes, stored in localStorage by question ID.
+──────────────────────────────────────────────────────────────── */
+const Notes = (() => {
+  const KEY = 'maths6_notes';
+  function all() { return JSON.parse(localStorage.getItem(KEY) || '{}'); }
+  function get(qId) { return all()[qId] || ''; }
+  function set(qId, text) {
+    const d = all();
+    if (text.trim()) d[qId] = text.trim();
+    else delete d[qId];
+    localStorage.setItem(KEY, JSON.stringify(d));
+  }
+  function count() { return Object.keys(all()).length; }
+  return { all, get, set, count };
+})();
+
 /* ── App ──────────────────────────────────────────────────────
    Main application controller.
    Depends on: CHAPTERS (chapters.js), Progress (progress.js)
@@ -39,6 +56,15 @@ const App = (() => {
                    : hour < 17 ? 'Hey Pragathy! 👋'
                    : 'Good evening, Pragathy! 🌙';
     document.getElementById('home-greeting').textContent = greeting;
+
+    const notesCta = document.getElementById('notes-cta');
+    const nc = Notes.count();
+    if (nc > 0) {
+      notesCta.classList.remove('hidden');
+      document.getElementById('notes-count').textContent = nc;
+    } else {
+      notesCta.classList.add('hidden');
+    }
 
     const overall = Progress.getOverallStats(CHAPTERS);
     const bar  = document.getElementById('overall-bar');
@@ -146,7 +172,7 @@ const App = (() => {
 
       btn.innerHTML = `
         <span class="si-num">${i + 1}</span>
-        <span class="si-topic">${q.topic}${q.difficulty === 'challenging' ? ' ⭐' : ''}</span>
+        <span class="si-topic">${q.topic}${q.difficulty === 'challenging' ? ' ⭐' : ''}${Notes.get(q.id) ? ' 📝' : ''}</span>
         <span class="si-dot"></span>
       `;
       list.appendChild(btn);
@@ -261,6 +287,19 @@ const App = (() => {
     }
 
     setSidebarCurrent(state.index);
+
+    // Note button state
+    _refreshNoteBtn(q.id);
+    document.getElementById('note-panel').classList.add('hidden');
+    document.getElementById('note-text').value = Notes.get(q.id);
+  }
+
+  function _refreshNoteBtn(qId) {
+    const btn = document.getElementById('btn-note');
+    if (!btn) return;
+    const hasNote = !!Notes.get(qId);
+    btn.classList.toggle('has-note', hasNote);
+    btn.textContent = hasNote ? '📝 Edit note' : '📝 Leave a note';
   }
 
   function renderOptions(q) {
@@ -443,6 +482,70 @@ const App = (() => {
     startChapter(state.chapter, true);
   }
 
+  // ── Note functions ────────────────────────────────────────
+  function toggleNote() {
+    const panel = document.getElementById('note-panel');
+    const opening = panel.classList.contains('hidden');
+    panel.classList.toggle('hidden', !opening);
+    if (opening) document.getElementById('note-text').focus();
+  }
+
+  function cancelNote() {
+    document.getElementById('note-panel').classList.add('hidden');
+  }
+
+  function saveNote() {
+    const q = state.questions[state.index];
+    Notes.set(q.id, document.getElementById('note-text').value);
+    document.getElementById('note-panel').classList.add('hidden');
+    _refreshNoteBtn(q.id);
+    // Update sidebar indicator for this question
+    const sidebarBtn = document.getElementById(`si-${state.index}`);
+    if (sidebarBtn) {
+      const topicEl = sidebarBtn.querySelector('.si-topic');
+      if (topicEl) {
+        const base = q.topic + (q.difficulty === 'challenging' ? ' ⭐' : '');
+        topicEl.textContent = base + (Notes.get(q.id) ? ' 📝' : '');
+      }
+    }
+  }
+
+  // ── Notes review overlay ──────────────────────────────────
+  function openNotes() {
+    const entries = Object.entries(Notes.all());
+    const list = document.getElementById('notes-list');
+    list.innerHTML = '';
+    if (entries.length === 0) {
+      list.innerHTML = '<p class="notes-empty">No notes yet.</p>';
+    } else {
+      entries.forEach(([qId, text]) => {
+        let chTitle = '', qTopic = '', qText = '';
+        for (const ch of CHAPTERS) {
+          const q = ch.questions.find(q2 => q2.id === qId);
+          if (q) {
+            chTitle = `Ch. ${ch.id}: ${ch.title}`;
+            qTopic  = q.topic;
+            qText   = q.question.replace(/<[^>]+>/g, '').substring(0, 90) + (q.question.length > 90 ? '…' : '');
+            break;
+          }
+        }
+        const div = document.createElement('div');
+        div.className = 'notes-entry';
+        div.innerHTML = `
+          <div class="notes-entry-meta">${chTitle} · ${qTopic} <span style="opacity:.6;font-weight:400">(${qId})</span></div>
+          <div class="notes-entry-q">${qText}</div>
+          <div class="notes-entry-note">${text}</div>
+        `;
+        list.appendChild(div);
+      });
+    }
+    document.getElementById('notes-overlay').classList.remove('hidden');
+  }
+
+  function closeNotes() {
+    document.getElementById('notes-overlay').classList.add('hidden');
+  }
+
   // ── Keyboard shortcuts ────────────────────────────────────
   document.addEventListener('keydown', e => {
     const inpDiv = document.getElementById('q-input');
@@ -454,7 +557,7 @@ const App = (() => {
     }
   });
 
-  return { init, goHome, startChapter, submitInput, nextQuestion, retryWrong, jumpToQuestion, showResults };
+  return { init, goHome, startChapter, submitInput, nextQuestion, retryWrong, jumpToQuestion, showResults, toggleNote, cancelNote, saveNote, openNotes, closeNotes };
 })();
 
 document.addEventListener('DOMContentLoaded', App.init);

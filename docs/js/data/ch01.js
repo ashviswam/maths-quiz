@@ -56,7 +56,6 @@ const ch01 = {
   <line x1="317" y1="107" x2="317" y2="150" stroke="#5b5ef4" stroke-width="1.5" stroke-dasharray="4,2"/>
   <text x="317" y="165" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">7 is here</text>
   <text x="317" y="180" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10">(hundred-thousands)</text>
-  <text x="317" y="195" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10">= 700,000</text>
 </svg>`,
       options: ["7,000", "700,000", "70,000", "7,000,000"],
       answer: 1,
