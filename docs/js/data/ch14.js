@@ -450,43 +450,6 @@ const ch14 = {
       explanation: "Substitute n = 7 into the rule: 3 × 7 + 2 = 21 + 2 = 23. Pattern 7 needs 23 matchsticks."
     },
     {
-      id: "c14_q21",
-      topic: "Fibonacci sequence",
-      type: "mcq",
-      question: "The Fibonacci sequence starts: <strong>1, 1, 2, 3, 5, 8, 13, 21, …</strong><br>What is the rule for getting each new term?",
-      options: [
-        "Add 2 to the previous term",
-        "Multiply the previous term by 2",
-        "Add the two previous terms together",
-        "Add the position number to the previous term"
-      ],
-      answer: 2,
-      explanation: "In the Fibonacci sequence, each term is found by adding the two terms before it: 1+1=2, 1+2=3, 2+3=5, 3+5=8, 5+8=13, and so on. This is what makes it special!"
-    },
-    {
-      id: "c14_q22",
-      topic: "Fibonacci sequence",
-      type: "input",
-      question: "The Fibonacci sequence is: 1, 1, 2, 3, 5, 8, 13, 21, 34, …<br>What is the <strong>11th term</strong> of the Fibonacci sequence?",
-      answer: "89",
-      acceptableAnswers: ["89"],
-      explanation: "Continue the sequence: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89. The 10th term is 55 (34+21) and the 11th term is 89 (55+34). Great pattern spotting!"
-    },
-    {
-      id: "c14_q23",
-      topic: "Fibonacci sequence",
-      type: "mcq",
-      question: "Which of the following sequences is <strong>not</strong> the Fibonacci sequence?",
-      options: [
-        "1, 1, 2, 3, 5, 8, 13",
-        "1, 1, 2, 3, 5, 8, 14",
-        "The next term after 8 is 13",
-        "It begins with two 1s"
-      ],
-      answer: 1,
-      explanation: "In the Fibonacci sequence, 5 + 8 = 13, not 14. The sequence 1, 1, 2, 3, 5, 8, 14 has an error at the last term — it should be 13. All the other statements are true."
-    },
-    {
       id: "c14_q24",
       topic: "Square number sequence",
       type: "mcq",
@@ -508,51 +471,6 @@ const ch14 = {
       answer: "7",
       acceptableAnswers: ["7"],
       explanation: "Yes! 7 × 7 = 49, so 49 = 7². It is the 7th square number in the sequence 1, 4, 9, 16, 25, 36, 49."
-    },
-    {
-      id: "c14_q26",
-      topic: "Triangular number sequence",
-      type: "mcq",
-      question: "The triangular numbers are: <strong>1, 3, 6, 10, 15, 21, …</strong><br>What is the <strong>8th triangular number</strong>?",
-      options: ["28", "30", "36", "24"],
-      answer: 0,
-      explanation: "The triangular numbers grow by adding one more each time: +2, +3, +4, +5, +6, +7, +8, … The sequence continues: 1, 3, 6, 10, 15, 21, 28. The 8th term is 21 + 7 = 28."
-    },
-    {
-      id: "c14_q27",
-      topic: "Triangular number sequence",
-      type: "mcq",
-      question: "Which of the following is <strong>not</strong> a triangular number?",
-      options: ["10", "15", "18", "21"],
-      answer: 2,
-      explanation: "The triangular numbers are 1, 3, 6, 10, 15, 21, 28, … 18 is not in this list — it falls between 15 and 21. You can check: 15+6=21, so there is no triangular number equal to 18."
-    },
-    {
-      id: "c14_q28",
-      topic: "nth term formula",
-      type: "mcq",
-      question: "An arithmetic sequence has first term <strong>a = 3</strong> and common difference <strong>d = 5</strong>.<br>The nth term formula is T(n) = a + (n−1)d.<br>What is the <strong>6th term</strong>?",
-      options: ["25", "28", "30", "33"],
-      answer: 1,
-      explanation: "Using T(n) = a + (n−1)d with a=3, d=5 and n=6:<br>T(6) = 3 + (6−1) × 5 = 3 + 5 × 5 = 3 + 25 = 28. The 6th term is 28."
-    },
-    {
-      id: "c14_q29",
-      topic: "nth term formula",
-      type: "input",
-      question: "The nth term of a sequence is given by <strong>T(n) = 4n − 1</strong>.<br>What is the <strong>12th term</strong>?",
-      answer: "47",
-      acceptableAnswers: ["47"],
-      explanation: "Substitute n = 12 into the formula: T(12) = 4 × 12 − 1 = 48 − 1 = 47. Always substitute carefully and remember to follow the order of operations!"
-    },
-    {
-      id: "c14_q30",
-      topic: "nth term formula",
-      type: "mcq",
-      question: "The sequence 5, 8, 11, 14, 17, … has the nth term formula T(n) = 3n + 2.<br>Which term of the sequence equals <strong>32</strong>?",
-      options: ["9th", "10th", "11th", "12th"],
-      answer: 1,
-      explanation: "Set T(n) = 32: 3n + 2 = 32, so 3n = 30, so n = 10. The 10th term is 32. Check: 3×10 + 2 = 32. Correct!"
     },
     {
       id: "c14_q31",
@@ -619,16 +537,6 @@ const ch14 = {
       explanation: "The common difference is 23−19=4. Working forward from 3: 3+4=7, 7+4=11 ✓. Working forward from 11: 11+4=15, 15+4=19 ✓. The two missing terms are 7 and 15."
     },
     {
-      id: "c14_q37",
-      topic: "nth term formula",
-      difficulty: "challenging",
-      type: "input",
-      question: "The <strong>5th term</strong> of an arithmetic sequence is <strong>23</strong> and the <strong>8th term</strong> is <strong>35</strong>.<br>What is the <strong>1st term</strong> of the sequence?",
-      answer: "7",
-      acceptableAnswers: ["7"],
-      explanation: "From the 5th term to the 8th term is 3 steps. The sequence increases by 35−23=12 over 3 steps, so the common difference d = 12÷3 = 4.<br>Working backwards from the 5th term (23): 23−4=19 (4th), 19−4=15 (3rd), 15−4=11 (2nd), 11−4=7 (1st).<br>Check using T(n) = 7 + (n−1)×4: T(5)=7+16=23 ✓, T(8)=7+28=35 ✓. The 1st term is 7."
-    },
-    {
       id: "c14_q38",
       topic: "Geometric sequences",
       difficulty: "challenging",
@@ -638,55 +546,5 @@ const ch14 = {
       acceptableAnswers: ["3"],
       explanation: "From the 1st term to the 4th term, we multiply by the ratio 3 times. So: 2 × r³ = 54. Divide both sides by 2: r³ = 27. Since 3³ = 27, the common ratio r = 3.<br>Check: 2, 2×3=6, 6×3=18, 18×3=54 ✓. Well done — this is tricky thinking!"
     },
-    {
-      id: "c14_q39",
-      topic: "Triangular number sequence",
-      difficulty: "challenging",
-      type: "input",
-      question: "The triangular numbers are: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, …<br>Which triangular number equals <strong>55</strong>? Write the position (e.g. write 5 if it is the 5th triangular number).",
-      answer: "10",
-      acceptableAnswers: ["10"],
-      explanation: "List the triangular numbers with their positions:<br>T1=1, T2=3, T3=6, T4=10, T5=15, T6=21, T7=28, T8=36, T9=45, T10=55.<br>Each new triangular number adds the next whole number: T10 = T9 + 10 = 45 + 10 = 55.<br>So 55 is the 10th triangular number. Brilliant pattern work!"
-    },
-    {
-      id: "c14_q40",
-      topic: "nth term formula",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "The sequence 3, 7, 11, 15, … has the nth term formula T(n) = 4n − 1.<br>Does the number <strong>97</strong> appear in this sequence? Choose the correct answer and justification.",
-      options: [
-        "Yes — it is the 24th term (T(24) = 97)",
-        "Yes — it is the 25th term (T(25) = 97)",
-        "No — 4n − 1 = 97 gives n = 24.5, which is not a whole number",
-        "No — 97 is odd so it cannot be in the sequence"
-      ],
-      answer: 2,
-      explanation: "Set T(n) = 97: 4n − 1 = 97, so 4n = 98, so n = 24.5. Since 24.5 is not a whole number, 97 does NOT appear in the sequence.<br>Check: T(24) = 4×24 − 1 = 95 and T(25) = 4×25 − 1 = 99. So 97 falls between two terms and is skipped. The key skill is checking whether n is a whole number!"
-    },
-    {
-      id: "c14_q41",
-      topic: "nth term formula",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "The sequence 3, 7, 11, 15, … has nth term formula T(n) = 4n − 1.<br>Does the number <strong>99</strong> appear in this sequence? Choose the correct justification.",
-      options: [
-        "Yes — T(25) = 99",
-        "Yes — T(24) = 99",
-        "No — 99 is odd so it cannot appear",
-        "No — the sequence only goes up to 95"
-      ],
-      answer: 0,
-      explanation: "Set T(n) = 99: 4n − 1 = 99, so 4n = 100, so n = 25. Since 25 is a whole number, 99 does appear in the sequence. Check: T(25) = 4×25 − 1 = 100 − 1 = 99 ✓. The key step is to check whether (answer + 1) is divisible by 4."
-    },
-    {
-      id: "c14_q42",
-      topic: "nth term formula",
-      difficulty: "challenging",
-      type: "input",
-      question: "An arithmetic sequence has first term <strong>6</strong> and common difference <strong>4</strong>.<br>Using the formula T(n) = a + (n−1)d, what is the <strong>100th term</strong>?",
-      answer: "402",
-      acceptableAnswers: ["402"],
-      explanation: "Using T(n) = a + (n−1)d with a=6, d=4, n=100:<br>T(100) = 6 + (100−1) × 4 = 6 + 99 × 4 = 6 + 396 = 402.<br>This shows how powerful the nth term formula is — without it, you would have to write out all 100 terms!"
-    }
   ]
 };

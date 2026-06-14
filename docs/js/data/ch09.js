@@ -407,133 +407,10 @@ const ch09 = {
     },
 
     // Circumference of a circle
-    {
-      id: "c9_q30", topic: "Circumference of a circle", type: "mcq",
-      question: "A circle has a diameter of <strong>10 cm</strong>. Using π ≈ 3.14, what is its circumference?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Circle with diameter 10 cm">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <circle cx="160" cy="110" r="80" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Diameter line -->
-  <line x1="80" y1="110" x2="240" y2="110" stroke="#f43f5e" stroke-width="2" stroke-dasharray="6,3"/>
-  <!-- Diameter label -->
-  <text x="160" y="100" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">d = 10 cm</text>
-  <!-- Centre dot -->
-  <circle cx="160" cy="110" r="3" fill="#f43f5e"/>
-</svg>`,
-      options: ["31.4 cm", "62.8 cm", "78.5 cm", "15.7 cm"],
-      answer: 0,
-      explanation: "Circumference = π × d = 3.14 × 10 = 31.4 cm. The formula C = πd uses the <strong>diameter</strong>. Remember: diameter = 2 × radius."
-    },
-    {
-      id: "c9_q31", topic: "Circumference of a circle", type: "mcq",
-      question: "A circle has a radius of <strong>7 cm</strong>. Using π ≈ 3.14, what is its circumference?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Circle with radius 7 cm">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <circle cx="160" cy="110" r="80" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Radius line -->
-  <line x1="160" y1="110" x2="240" y2="110" stroke="#f43f5e" stroke-width="2" stroke-dasharray="6,3"/>
-  <!-- Radius label -->
-  <text x="200" y="100" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">r = 7 cm</text>
-  <!-- Centre dot -->
-  <circle cx="160" cy="110" r="3" fill="#f43f5e"/>
-  <!-- Centre label -->
-  <text x="160" y="128" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">centre</text>
-</svg>`,
-      options: ["21.98 cm", "43.96 cm", "153.86 cm", "87.92 cm"],
-      answer: 1,
-      explanation: "Circumference = 2πr = 2 × 3.14 × 7 = 6.28 × 7 = 43.96 cm. Since radius = 7 cm, diameter = 14 cm, so C = π × 14 = 3.14 × 14 = 43.96 cm — both routes give the same answer!"
-    },
-    {
-      id: "c9_q32", topic: "Circumference of a circle", type: "input",
-      question: "A circular wheel has a diameter of <strong>50 cm</strong>. Using π ≈ 3.14, what is the circumference of the wheel in centimetres?",
-      answer: "157",
-      acceptableAnswers: ["157", "157 cm", "157.0", "157.0 cm"],
-      explanation: "Circumference = π × d = 3.14 × 50 = 157 cm. This is how far the wheel travels in one full turn — pretty cool!"
-    },
-    {
-      id: "c9_q33", topic: "Circumference of a circle", type: "mcq",
-      question: "A circle has a circumference of <strong>62.8 cm</strong>. Using π ≈ 3.14, what is its diameter?",
-      options: ["10 cm", "20 cm", "5 cm", "31.4 cm"],
-      answer: 1,
-      explanation: "C = π × d, so d = C ÷ π = 62.8 ÷ 3.14 = 20 cm. Working backwards from the circumference to find the diameter — great algebraic thinking!"
-    },
 
     // Arc length
-    {
-      id: "c9_q34", topic: "Arc length", type: "mcq",
-      question: "A circle has a diameter of <strong>12 cm</strong>. What is the length of a <strong>semicircular arc</strong> (half the circumference)? Use π ≈ 3.14.",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Semicircle with diameter 12 cm showing arc">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Semicircle: diameter along horizontal, arc on top -->
-  <!-- Centre (160,140), radius 80 -->
-  <path d="M 80,140 A 80,80 0 0 1 240,140" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Diameter line (dashed base) -->
-  <line x1="80" y1="140" x2="240" y2="140" stroke="#64748b" stroke-width="2" stroke-dasharray="6,3"/>
-  <!-- Diameter label -->
-  <text x="160" y="158" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">d = 12 cm</text>
-  <!-- Arc label -->
-  <text x="160" y="75" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">arc = ?</text>
-  <!-- Centre dot -->
-  <circle cx="160" cy="140" r="3" fill="#f43f5e"/>
-</svg>`,
-      options: ["18.84 cm", "37.68 cm", "12 cm", "75.36 cm"],
-      answer: 0,
-      explanation: "Full circumference = π × d = 3.14 × 12 = 37.68 cm. A semicircle is half the circle, so arc = 37.68 ÷ 2 = 18.84 cm."
-    },
-    {
-      id: "c9_q35", topic: "Arc length", type: "mcq",
-      question: "A circle has a radius of <strong>6 cm</strong>. What is the arc length of a <strong>quarter circle</strong> (one quarter of the circumference)? Use π ≈ 3.14.",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Quarter circle with radius 6 cm">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Quarter circle: centre at (80,170), radius 120, arc from top to right -->
-  <path d="M 80,50 A 120,120 0 0 1 200,170" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Two radii -->
-  <line x1="80" y1="170" x2="80" y2="50" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <line x1="80" y1="170" x2="200" y2="170" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <!-- Right angle box -->
-  <rect x="80" y="155" width="15" height="15" fill="none" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Labels -->
-  <text x="56" y="115" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">6 cm</text>
-  <text x="140" y="186" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">6 cm</text>
-  <!-- Arc label -->
-  <text x="178" y="90" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">arc = ?</text>
-  <!-- 90° label -->
-  <text x="108" y="153" text-anchor="start" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">90°</text>
-</svg>`,
-      options: ["9.42 cm", "18.84 cm", "37.68 cm", "4.71 cm"],
-      answer: 0,
-      explanation: "Full circumference = 2πr = 2 × 3.14 × 6 = 37.68 cm. A quarter circle = ¼ of the circumference = 37.68 ÷ 4 = 9.42 cm."
-    },
-    {
-      id: "c9_q36", topic: "Arc length", type: "input",
-      question: "A circle has a diameter of <strong>20 cm</strong>. A sector covers <strong>one third</strong> of the circle. What is the arc length of that sector in centimetres? Use π ≈ 3.14. Round to 2 decimal places.",
-      answer: "20.93",
-      acceptableAnswers: ["20.93", "20.93 cm"],
-      explanation: "Full circumference = π × d = 3.14 × 20 = 62.8 cm. One third of the circumference = 62.8 ÷ 3 ≈ 20.93 cm."
-    },
 
     // Converting perimeter units
-    {
-      id: "c9_q37", topic: "Converting perimeter units", type: "mcq",
-      question: "A square field has a perimeter of <strong>2,400 m</strong>. What is this perimeter in kilometres?",
-      options: ["24 km", "2.4 km", "240 km", "0.24 km"],
-      answer: 1,
-      explanation: "To convert metres to kilometres, divide by 1,000: 2,400 ÷ 1,000 = 2.4 km."
-    },
-    {
-      id: "c9_q38", topic: "Converting perimeter units", type: "mcq",
-      question: "A rectangle has a perimeter of <strong>1.2 m</strong>. What is this perimeter in centimetres?",
-      options: ["12 cm", "120 cm", "1,200 cm", "0.12 cm"],
-      answer: 1,
-      explanation: "To convert metres to centimetres, multiply by 100: 1.2 × 100 = 120 cm."
-    },
-    {
-      id: "c9_q39", topic: "Converting perimeter units", type: "input",
-      question: "A triangle has sides of <strong>45 mm, 60 mm</strong> and <strong>75 mm</strong>. What is the perimeter of the triangle in centimetres?",
-      answer: "18",
-      acceptableAnswers: ["18", "18 cm"],
-      explanation: "First find the perimeter in mm: 45 + 60 + 75 = 180 mm. Then convert to cm: 180 ÷ 10 = 18 cm. You can also convert each side to cm first and then add."
-    },
 
     // Scale drawings — extra coverage
     {
@@ -588,13 +465,6 @@ const ch09 = {
       answer: "34",
       acceptableAnswers: ["34", "34 cm"],
       explanation: "This is a classic trap — students often think the perimeter gets smaller when a corner is removed, but it stays the same! <br><br>Trace the new shape: 6 + 4 + 4 + 4 + 3 + 10 + 7 = 34 cm? Wait, let's check carefully: the two new edges (4 cm down + 4 cm across) replace the two edges they would have been (4 cm + 3 cm). Original perimeter = 2 × (10 + 7) = 34 cm. When you remove a rectangular corner, the two new interior sides equal the two sides they replaced, so the perimeter stays at <strong>34 cm</strong>!"
-    },
-    {
-      id: "c9_q43", topic: "Circumference of a circle", difficulty: "challenging", type: "input",
-      question: "A circular running track has an area of <strong>314 m²</strong>. Using π ≈ 3.14, first find the radius, then find the circumference of the track. Give your answer in metres.",
-      answer: "62.8",
-      acceptableAnswers: ["62.8", "62.8 m"],
-      explanation: "Step 1: Area of a circle = πr², so 314 = 3.14 × r². Dividing both sides by 3.14: r² = 100, so r = 10 m.<br>Step 2: Circumference = 2πr = 2 × 3.14 × 10 = 62.8 m.<br><br>Great multi-step problem — you had to find the radius from the area before you could find the circumference!"
     },
     {
       id: "c9_q44", topic: "Composite shapes", difficulty: "challenging", type: "input",

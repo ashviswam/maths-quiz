@@ -33,30 +33,6 @@ const ch05 = {
       explanation: "A polygon with 8 sides is called an <strong>octagon</strong>. The prefix 'octa' means eight, just like in the word octopus (eight arms)."
     },
     {
-      id: "c5_q2",
-      topic: "Polygons",
-      type: "mcq",
-      question: "The sum of the interior angles of a hexagon is:",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Regular hexagon with 6 interior angles marked">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <polygon points="245,108 202,181 118,181 75,108 118,35 202,35"
-    fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Small angle arcs at all 6 vertices -->
-  <path d="M225,108 A18,18 0 0,1 232,93" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <path d="M196,165 A18,18 0 0,1 179,169" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <path d="M124,169 A18,18 0 0,1 108,163" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <path d="M95,108 A18,18 0 0,1 88,93" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <path d="M124,51 A18,18 0 0,1 140,46" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <path d="M180,46 A18,18 0 0,1 196,51" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <!-- Question mark in centre -->
-  <text x="160" y="115" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="22" font-weight="700">?°</text>
-  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Hexagon — 6 sides, 6 angles</text>
-</svg>`,
-      options: ["540°", "360°", "720°", "900°"],
-      answer: 2,
-      explanation: "The sum of interior angles of any polygon = (n − 2) × 180°, where n is the number of sides. For a hexagon: (6 − 2) × 180° = 4 × 180° = <strong>720°</strong>."
-    },
-    {
       id: "c5_q3",
       topic: "Polygons",
       type: "mcq",
@@ -100,34 +76,6 @@ const ch05 = {
       explanation: "A regular polygon has <strong>all sides equal in length</strong> and <strong>all interior angles equal</strong>. A square and an equilateral triangle are common examples of regular polygons."
     },
     {
-      id: "c5_q4",
-      topic: "Polygons",
-      type: "input",
-      question: "A polygon has <strong>10 sides</strong>. What is the sum of its interior angles? (Give your answer in degrees, e.g. 720)",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Decagon with 10 sides">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Regular decagon centered at (160,108), radius 85 -->
-  <!-- 10 vertices: angle = 90 - k*36 degrees for k=0..9 -->
-  <!-- k=0: (160+85,108)=(245,108) -->
-  <!-- k=1: (160+85*cos(36°),108-85*sin(36°))=(229,58) -->
-  <!-- k=2: (160+85*cos(72°),108-85*sin(72°))=(186,27) -->
-  <!-- k=3: (160+85*cos(108°),108-85*sin(108°)) = (160-26,108-81)=(134,27) -->
-  <!-- k=4: (160+85*cos(144°),108-85*sin(144°))=(91,58) -->
-  <!-- k=5: (75,108) -->
-  <!-- k=6: (91,158) -->
-  <!-- k=7: (134,189) -->
-  <!-- k=8: (186,189) -->
-  <!-- k=9: (229,158) -->
-  <polygon points="245,108 229,58 186,27 134,27 91,58 75,108 91,158 134,189 186,189 229,158"
-    fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <text x="160" y="112" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">10 sides</text>
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Decagon — (10−2)×180° = ?</text>
-</svg>`,
-      answer: "1440",
-      acceptableAnswers: ["1440", "1440°"],
-      explanation: "Using the formula (n − 2) × 180°: (10 − 2) × 180° = 8 × 180° = <strong>1440°</strong>. A 10-sided polygon is called a decagon."
-    },
-    {
       id: "c5_q5",
       topic: "Triangles",
       type: "mcq",
@@ -160,40 +108,6 @@ const ch05 = {
       options: ["Isosceles", "Scalene", "Right-angled", "Equilateral"],
       answer: 3,
       explanation: "An <strong>equilateral triangle</strong> has all three sides equal in length and all three angles equal to 60°. 'Equilateral' comes from Latin meaning 'equal sides'."
-    },
-    {
-      id: "c5_q6",
-      topic: "Triangles",
-      type: "mcq",
-      question: "A triangle has angles of 90°, 45°, and 45°. How would you classify this triangle by its angles?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Right-angled isosceles triangle with 90, 45, 45 degrees">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Right-angled isosceles triangle: right angle at bottom-left -->
-  <!-- Vertices: A=(70,185), B=(70,35), C=(250,185) -->
-  <polygon points="70,185 70,35 250,185" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Right angle box at A=(70,185) -->
-  <rect x="70" y="170" width="15" height="15" fill="none" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Angle arc at B=(70,35): 45° -->
-  <path d="M 70,57 A 22,22 0 0,1 88,46" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <!-- Angle arc at C=(250,185): 45° -->
-  <path d="M 230,185 A 22,22 0 0,0 236,167" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <!-- Tick marks on equal legs (AB and AC) -->
-  <!-- Left leg AB midpoint (70,110) -->
-  <line x1="63" y1="107" x2="77" y2="113" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Hypotenuse BC midpoint (160,110) -->
-  <!-- No tick needed; hypotenuse is longest -->
-  <!-- Angle labels -->
-  <text x="58" y="178" text-anchor="end" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">90°</text>
-  <text x="90" y="55" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">45°</text>
-  <text x="218" y="180" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">45°</text>
-  <!-- Vertex labels -->
-  <text x="57" y="195" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">A</text>
-  <text x="57" y="32" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">B</text>
-  <text x="262" y="195" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">C</text>
-</svg>`,
-      options: ["Acute-angled", "Obtuse-angled", "Right-angled", "Equilateral"],
-      answer: 2,
-      explanation: "A triangle containing a <strong>90° angle</strong> is called a right-angled triangle. The small square symbol drawn at a corner indicates a right angle."
     },
     {
       id: "c5_q7",
@@ -231,35 +145,6 @@ const ch05 = {
       options: ["Equilateral", "Isosceles", "Scalene", "Right-angled"],
       answer: 2,
       explanation: "A <strong>scalene triangle</strong> has all three sides of different lengths. Here 3 cm, 5 cm, and 7 cm are all different, so this is a scalene triangle."
-    },
-    {
-      id: "c5_q8",
-      topic: "Triangles",
-      type: "input",
-      question: "Two angles of a triangle are 65° and 75°. What is the size of the third angle? (Give the number only, in degrees)",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Triangle with two known angles 65 and 75 degrees, third angle unknown">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Triangle: A=(50,190), B=(270,190), C=(200,35) -->
-  <polygon points="50,190 270,190 200,35" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Angle arc at A=(50,190): 65° -->
-  <path d="M 72,190 A 22,22 0 0,0 65,169" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <!-- Angle arc at B=(270,190): 75° -->
-  <path d="M 248,190 A 22,22 0 0,1 255,169" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <!-- Angle arc at C=(200,35): unknown -->
-  <path d="M 197,57 A 22,22 0 0,1 214,50" fill="none" stroke="#f43f5e" stroke-width="1.5"/>
-  <!-- Angle labels -->
-  <text x="82" y="182" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">65°</text>
-  <text x="228" y="182" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">75°</text>
-  <text x="212" y="55" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">?°</text>
-  <!-- Vertex labels -->
-  <text x="38" y="205" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">A</text>
-  <text x="282" y="205" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">B</text>
-  <text x="200" y="26" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">C</text>
-  <text x="160" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">65° + 75° + ? = 180°</text>
-</svg>`,
-      answer: "40",
-      acceptableAnswers: ["40", "40°"],
-      explanation: "The angles of any triangle add up to <strong>180°</strong>. So the third angle = 180° − 65° − 75° = <strong>40°</strong>."
     },
     {
       id: "c5_q9",
@@ -365,97 +250,6 @@ const ch05 = {
       ],
       answer: 2,
       explanation: "A <strong>rhombus</strong> has all four sides equal in length. Its opposite angles are equal, but its angles are <em>not</em> necessarily 90°. It is like a 'pushed-over' square."
-    },
-    {
-      id: "c5_q12",
-      topic: "Circles",
-      type: "mcq",
-      question: "A chord in a circle is a line segment that:",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Circle showing chord, radius, and diameter">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Circle centered at (160,110), radius 85 -->
-  <circle cx="160" cy="110" r="85" fill="rgba(91,94,244,0.08)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Center point -->
-  <circle cx="160" cy="110" r="3" fill="#64748b"/>
-  <text x="165" y="106" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">O</text>
-  <!-- Radius line (O to top) -->
-  <line x1="160" y1="110" x2="160" y2="25" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="170" y="72" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">radius</text>
-  <!-- Chord: two points on circle, not through centre -->
-  <!-- Point P1: angle=210° => (160+85*cos(210°), 110+85*sin(210°)) = (160-74,110+43)=(86,153) -->
-  <!-- Point P2: angle=340° => (160+85*cos(340°), 110+85*sin(340°)) = (160+80,110-29)=(240,81) -->
-  <line x1="86" y1="153" x2="240" y2="81" stroke="#f43f5e" stroke-width="2.5"/>
-  <circle cx="86" cy="153" r="4" fill="#f43f5e"/>
-  <circle cx="240" cy="81" r="4" fill="#f43f5e"/>
-  <text x="60" y="162" text-anchor="end" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">chord</text>
-  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">A chord joins two points on the circle</text>
-</svg>`,
-      options: [
-        "Starts at the centre and ends on the circle",
-        "Connects two points on the circle and passes through the centre",
-        "Connects two points on the circle without necessarily passing through the centre",
-        "Goes around the outside of the circle"
-      ],
-      answer: 2,
-      explanation: "A <strong>chord</strong> is a straight line segment that joins any two points on a circle. The <em>diameter</em> is a special chord that passes through the centre. A radius is not a chord — it goes from the centre to the edge."
-    },
-    {
-      id: "c5_q13",
-      topic: "Circles",
-      type: "input",
-      question: "A circle has a radius of <strong>9 cm</strong>. What is the length of its diameter in centimetres?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Circle with radius 9cm and diameter shown">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Circle centered at (160,110), radius 85 -->
-  <circle cx="160" cy="110" r="85" fill="rgba(91,94,244,0.08)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Center point -->
-  <circle cx="160" cy="110" r="3" fill="#64748b"/>
-  <text x="165" y="106" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">O</text>
-  <!-- Radius line -->
-  <line x1="160" y1="110" x2="245" y2="110" stroke="#5b5ef4" stroke-width="2"/>
-  <text x="202" y="105" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">9 cm</text>
-  <!-- Diameter line -->
-  <line x1="75" y1="110" x2="245" y2="110" stroke="#f43f5e" stroke-width="2" stroke-dasharray="6,3"/>
-  <!-- Diameter brace label -->
-  <text x="160" y="135" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">diameter = 2 × 9 = ?</text>
-  <!-- Points on circle -->
-  <circle cx="75" cy="110" r="4" fill="#f43f5e"/>
-  <circle cx="245" cy="110" r="4" fill="#f43f5e"/>
-  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">diameter = 2 × radius</text>
-</svg>`,
-      answer: "18",
-      acceptableAnswers: ["18", "18 cm"],
-      explanation: "The <strong>diameter</strong> of a circle is twice the radius. So diameter = 2 × 9 cm = <strong>18 cm</strong>. The diameter is the longest chord in any circle."
-    },
-    {
-      id: "c5_q14",
-      topic: "Circles",
-      type: "mcq",
-      question: "The region enclosed between two radii and an arc of a circle is called a:",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Circle showing a sector (pie slice region between two radii and an arc)">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Circle centered at (155,115), radius 80 -->
-  <circle cx="155" cy="115" r="80" fill="rgba(91,94,244,0.06)" stroke="#5b5ef4" stroke-width="1.5"/>
-  <!-- Sector: from angle -60° to 60° (top-right wedge) -->
-  <!-- Angle 1: -60° from horizontal => (155+80*cos(-60°), 115+80*sin(-60°)) = (155+40, 115-69) = (195,46) -->
-  <!-- Angle 2:  60° from horizontal => (155+80*cos(60°),  115+80*sin(60°))  = (155+40, 115+69) = (195,184) -->
-  <path d="M 155,115 L 195,46 A 80,80 0 0,1 195,184 Z"
-    fill="rgba(91,94,244,0.25)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Label inside sector -->
-  <text x="196" y="118" text-anchor="start" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">sector</text>
-  <!-- Center label -->
-  <circle cx="155" cy="115" r="3" fill="#64748b"/>
-  <text x="140" y="112" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">O</text>
-  <!-- Radius lines -->
-  <line x1="155" y1="115" x2="195" y2="46" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="155" y1="115" x2="195" y2="184" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Arc label -->
-  <text x="225" y="118" text-anchor="start" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">arc</text>
-  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Sector = 2 radii + arc</text>
-</svg>`,
-      options: ["Chord", "Segment", "Sector", "Tangent"],
-      answer: 2,
-      explanation: "A <strong>sector</strong> is a 'pie-slice' shaped region bounded by two radii and an arc. A chord divides a circle into two <em>segments</em>, which are different from sectors."
     },
     {
       id: "c5_q15",
@@ -683,74 +477,10 @@ const ch05 = {
     // ── NEW QUESTIONS START HERE ──────────────────────────────────────────
 
     // TRIANGLES: isosceles
-    {
-      id: "c5_q21",
-      topic: "Triangles",
-      type: "mcq",
-      question: "An <strong>isosceles triangle</strong> has which of the following properties?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Isosceles triangle with two equal sides and two equal base angles">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Isosceles triangle: A=(160,25), B=(60,195), C=(260,195) -->
-  <polygon points="160,25 60,195 260,195" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Double tick marks on equal sides (left: AB, right: AC) -->
-  <!-- AB midpoint: (110,110) -->
-  <line x1="104" y1="107" x2="116" y2="113" stroke="#5b5ef4" stroke-width="2"/>
-  <line x1="107" y1="102" x2="119" y2="108" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- AC midpoint: (210,110) -->
-  <line x1="204" y1="113" x2="216" y2="107" stroke="#5b5ef4" stroke-width="2"/>
-  <line x1="201" y1="108" x2="213" y2="102" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Base angles equal arcs -->
-  <path d="M 82,195 A 22,22 0 0,0 77,174" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <path d="M 238,195 A 22,22 0 0,1 243,174" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <!-- Angle labels -->
-  <text x="90" y="183" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">equal</text>
-  <text x="230" y="183" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">equal</text>
-  <!-- Side labels -->
-  <text x="99" y="148" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">a</text>
-  <text x="220" y="148" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">a</text>
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Isosceles: 2 equal sides, 2 equal angles</text>
-</svg>`,
-      options: [
-        "All three sides are equal",
-        "Exactly two sides are equal and the base angles are equal",
-        "All three angles are different",
-        "It always has a right angle"
-      ],
-      answer: 1,
-      explanation: "An <strong>isosceles triangle</strong> has exactly two sides equal in length. The two angles opposite the equal sides (the base angles) are also equal. For example, a triangle with sides 5 cm, 5 cm, and 8 cm is isosceles."
-    },
 
     // TRIANGLES: obtuse-angled
-    {
-      id: "c5_q22",
-      topic: "Triangles",
-      type: "mcq",
-      question: "A triangle has angles of 120°, 35°, and 25°. This triangle is classified as:",
-      options: [
-        "Acute-angled",
-        "Right-angled",
-        "Obtuse-angled",
-        "Equilateral"
-      ],
-      answer: 2,
-      explanation: "A triangle with one angle <strong>greater than 90°</strong> is called an <strong>obtuse-angled triangle</strong>. Here, 120° > 90°, so this is obtuse-angled. Check: 120° + 35° + 25° = 180°. ✓"
-    },
 
     // TRIANGLES: acute-angled
-    {
-      id: "c5_q23",
-      topic: "Triangles",
-      type: "mcq",
-      question: "Which set of angles could belong to an <strong>acute-angled triangle</strong>?",
-      options: [
-        "90°, 50°, 40°",
-        "110°, 40°, 30°",
-        "60°, 70°, 50°",
-        "95°, 45°, 40°"
-      ],
-      answer: 2,
-      explanation: "An <strong>acute-angled triangle</strong> has <em>all three</em> angles less than 90°. Only 60° + 70° + 50° = 180° with all angles below 90°. Options A has a right angle (90°), and B and D have obtuse angles."
-    },
 
     // QUADRILATERALS: rectangle
     {
@@ -858,163 +588,18 @@ const ch05 = {
     },
 
     // CIRCLES: tangent
-    {
-      id: "c5_q27",
-      topic: "Circles",
-      type: "mcq",
-      question: "A <strong>tangent</strong> to a circle is a straight line that:",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Circle with a tangent line touching it at exactly one point">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Circle centered at (150,110), radius 75 -->
-  <circle cx="150" cy="110" r="75" fill="rgba(91,94,244,0.08)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Center -->
-  <circle cx="150" cy="110" r="3" fill="#64748b"/>
-  <text x="155" y="106" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">O</text>
-  <!-- Tangent line: touches at right side (225,110), vertical-ish line -->
-  <line x1="225" y1="30" x2="225" y2="195" stroke="#f43f5e" stroke-width="2.5"/>
-  <!-- Point of tangency -->
-  <circle cx="225" cy="110" r="5" fill="#f43f5e"/>
-  <text x="232" y="108" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">T</text>
-  <!-- Radius to point of tangency (showing 90°) -->
-  <line x1="150" y1="110" x2="225" y2="110" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <!-- Right angle marker at T -->
-  <rect x="213" y="98" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
-  <text x="232" y="140" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">tangent</text>
-  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Tangent touches circle at exactly one point</text>
-</svg>`,
-      options: [
-        "Passes through the centre of the circle",
-        "Connects two points on the circle",
-        "Touches the circle at exactly one point",
-        "Cuts across the circle dividing it into two parts"
-      ],
-      answer: 2,
-      explanation: "A <strong>tangent</strong> is a straight line that touches a circle at exactly one point (called the point of tangency). At that point, the tangent is perpendicular (at 90°) to the radius."
-    },
 
     // CIRCLES: arc and circumference
-    {
-      id: "c5_q28",
-      topic: "Circles",
-      type: "mcq",
-      question: "The <strong>circumference</strong> of a circle is:",
-      options: [
-        "The distance from the centre to the edge",
-        "The total distance around the outside of the circle",
-        "A straight line joining two points on the circle",
-        "The area of the circle"
-      ],
-      answer: 1,
-      explanation: "The <strong>circumference</strong> is the total distance all the way around the outside of a circle — it is the perimeter of a circle. An <em>arc</em> is just part of the circumference. The formula is C = π × diameter."
-    },
 
     // CIRCLES: arc definition
-    {
-      id: "c5_q29",
-      topic: "Circles",
-      type: "mcq",
-      question: "An <strong>arc</strong> of a circle is:",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Circle with an arc highlighted in red">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Circle centered at (160,110), radius 80 -->
-  <circle cx="160" cy="110" r="80" fill="rgba(91,94,244,0.06)" stroke="#5b5ef4" stroke-width="1.5"/>
-  <!-- Arc: highlighted portion from 0° to 120° (top-right) -->
-  <!-- Point at 0°: (240,110) -->
-  <!-- Point at 120°: (160+80*cos(120°), 110+80*sin(120°)) = (160-40, 110+69) = (120,179) -->
-  <path d="M 240,110 A 80,80 0 0,1 120,179" fill="none" stroke="#f43f5e" stroke-width="4"/>
-  <circle cx="240" cy="110" r="5" fill="#f43f5e"/>
-  <circle cx="120" cy="179" r="5" fill="#f43f5e"/>
-  <!-- Arc label -->
-  <text x="230" y="165" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">arc</text>
-  <!-- Center -->
-  <circle cx="160" cy="110" r="3" fill="#64748b"/>
-  <text x="165" y="106" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">O</text>
-  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">An arc is part of the circumference</text>
-</svg>`,
-      options: [
-        "A straight line from the centre to the edge",
-        "A part of the circumference (curved section of the circle's edge)",
-        "The flat region inside a sector",
-        "A line joining the centre to a point on the circle"
-      ],
-      answer: 1,
-      explanation: "An <strong>arc</strong> is a portion (part) of the circumference of a circle — it is a curved section of the circle's edge between two points. A <em>minor arc</em> is the shorter part, and a <em>major arc</em> is the longer part."
-    },
 
     // SYMMETRY: lines of symmetry
-    {
-      id: "c5_q30",
-      topic: "Symmetry",
-      type: "mcq",
-      question: "How many <strong>lines of symmetry</strong> does an equilateral triangle have?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Equilateral triangle with 3 lines of symmetry shown">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Equilateral triangle: A=(160,20), B=(55,195), C=(265,195) -->
-  <polygon points="160,20 55,195 265,195" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Line of symmetry 1: vertical from A to midpoint of BC (160,195) -->
-  <line x1="160" y1="20" x2="160" y2="195" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <!-- Line of symmetry 2: from B to midpoint of AC: midpoint=(212,108) -->
-  <line x1="55" y1="195" x2="212" y2="108" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <!-- Line of symmetry 3: from C to midpoint of AB: midpoint=(108,108) -->
-  <line x1="265" y1="195" x2="108" y2="108" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3 lines of symmetry shown (red dashes)</text>
-</svg>`,
-      options: ["1", "2", "3", "6"],
-      answer: 2,
-      explanation: "An equilateral triangle has <strong>3 lines of symmetry</strong>. Each line goes from one vertex to the midpoint of the opposite side. A shape has a line of symmetry if it looks the same on both sides when folded along that line."
-    },
 
     // SYMMETRY: square lines of symmetry
-    {
-      id: "c5_q31",
-      topic: "Symmetry",
-      type: "input",
-      question: "How many lines of symmetry does a <strong>square</strong> have?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Square with its 4 lines of symmetry shown">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Square: (80,30),(240,30),(240,190),(80,190) -->
-  <polygon points="80,30 240,30 240,190 80,190" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Line 1: horizontal midline -->
-  <line x1="60" y1="110" x2="260" y2="110" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <!-- Line 2: vertical midline -->
-  <line x1="160" y1="10" x2="160" y2="210" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <!-- Line 3: diagonal top-left to bottom-right -->
-  <line x1="80" y1="30" x2="240" y2="190" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <!-- Line 4: diagonal top-right to bottom-left -->
-  <line x1="240" y1="30" x2="80" y2="190" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="160" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">How many red lines are shown?</text>
-</svg>`,
-      answer: "4",
-      acceptableAnswers: ["4"],
-      explanation: "A square has <strong>4 lines of symmetry</strong>: two along the midpoints of opposite sides (horizontal and vertical), and two along the diagonals. Each line divides the square into two identical mirror images."
-    },
 
     // SYMMETRY: rotational symmetry
-    {
-      id: "c5_q32",
-      topic: "Symmetry",
-      type: "mcq",
-      question: "The <strong>order of rotational symmetry</strong> of a shape is:",
-      options: [
-        "The number of lines of symmetry it has",
-        "The number of times the shape looks the same during one full 360° rotation",
-        "The angle you must rotate it by",
-        "The number of sides the shape has"
-      ],
-      answer: 1,
-      explanation: "The <strong>order of rotational symmetry</strong> is the number of times a shape looks identical to its original position as it is rotated through 360°. For example, a square has order 4 (it looks the same at 90°, 180°, 270°, and 360°)."
-    },
 
     // SYMMETRY: rotational symmetry of rectangle
-    {
-      id: "c5_q33",
-      topic: "Symmetry",
-      type: "mcq",
-      question: "A rectangle (that is not a square) has what <strong>order of rotational symmetry</strong>?",
-      options: ["1", "2", "4", "0"],
-      answer: 1,
-      explanation: "A rectangle has order of rotational symmetry <strong>2</strong>. It looks identical to its starting position after a rotation of 180°, and again at 360°. It does <em>not</em> look the same at 90° or 270° (unlike a square, which has order 4)."
-    },
 
     // 3D SHAPES: cuboid
     {
@@ -1119,26 +704,8 @@ const ch05 = {
     },
 
     // EULER'S FORMULA
-    {
-      id: "c5_q38",
-      topic: "Euler's Formula",
-      type: "mcq",
-      question: "Euler's formula for polyhedra states that V − E + F = 2, where V = vertices, E = edges, F = faces. A shape has 6 vertices and 9 edges. How many <strong>faces</strong> does it have?",
-      options: ["4", "5", "6", "7"],
-      answer: 1,
-      explanation: "Using Euler's formula: V − E + F = 2 → 6 − 9 + F = 2 → F = 2 − 6 + 9 = <strong>5</strong>. A triangular prism has exactly V=6, E=9, F=5, so this matches!"
-    },
 
     // EULER'S FORMULA: second question
-    {
-      id: "c5_q39",
-      topic: "Euler's Formula",
-      type: "input",
-      question: "A solid has <strong>5 faces</strong> and <strong>5 vertices</strong>. Using Euler's formula (V − E + F = 2), how many <strong>edges</strong> does it have?",
-      answer: "8",
-      acceptableAnswers: ["8"],
-      explanation: "Euler's formula: V − E + F = 2 → 5 − E + 5 = 2 → 10 − E = 2 → E = <strong>8</strong>. This matches a square pyramid, which has a square base (4 edges) plus 4 edges going to the apex = 8 edges. Great algebra thinking!"
-    },
 
     // NETS: triangular prism net
     {
@@ -1172,71 +739,14 @@ const ch05 = {
       explanation: "A square pyramid has 1 square base and 4 triangular faces (one for each side of the square). So its net has <strong>1 square and 4 triangles</strong> — 5 shapes in total, matching its 5 faces."
     },
 
-    // POLYGONS: interior angle of a regular polygon (for a pentagon)
-    {
-      id: "c5_q42",
-      topic: "Polygons",
-      type: "input",
-      question: "What is the size of each interior angle in a <strong>regular pentagon</strong> (5 sides)? Give your answer in degrees.",
-      answer: "108",
-      acceptableAnswers: ["108", "108°"],
-      explanation: "Step 1 — Find the angle sum: (n − 2) × 180° = (5 − 2) × 180° = 3 × 180° = 540°. Step 2 — Divide equally (regular polygon, all angles equal): 540° ÷ 5 = <strong>108°</strong>. Each interior angle of a regular pentagon is 108°."
-    },
 
     // ── CHALLENGING QUESTIONS ─────────────────────────────────────────────
 
-    // CHALLENGING: interior angle of regular polygon — work backwards
-    {
-      id: "c5_q43",
-      topic: "Polygons",
-      difficulty: "challenging",
-      type: "input",
-      question: "Each interior angle of a regular polygon is <strong>120°</strong>. How many sides does the polygon have?",
-      answer: "6",
-      acceptableAnswers: ["6"],
-      explanation: "Let the number of sides be n. For a regular polygon, each interior angle = (n − 2) × 180° ÷ n.<br>Set this equal to 120°: (n − 2) × 180 = 120n → 180n − 360 = 120n → 60n = 360 → n = <strong>6</strong>.<br>A regular polygon with 120° interior angles is a <strong>hexagon</strong>. You can check: (6−2) × 180° = 720°, and 720° ÷ 6 = 120°. ✓"
-    },
 
-    // CHALLENGING: exterior angle and sides
-    {
-      id: "c5_q44",
-      topic: "Polygons",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "The <strong>exterior angle</strong> of a regular polygon is 45°. How many sides does this polygon have?",
-      options: ["6", "7", "8", "9"],
-      answer: 2,
-      explanation: "The sum of all exterior angles of any polygon is always <strong>360°</strong>. For a regular polygon, each exterior angle is equal, so: number of sides = 360° ÷ exterior angle = 360° ÷ 45° = <strong>8</strong>. This is a regular octagon! Check: each interior angle = 180° − 45° = 135°, and (8−2) × 180° ÷ 8 = 1080° ÷ 8 = 135°. ✓"
-    },
 
     // CHALLENGING: Euler's formula — identify the shape
-    {
-      id: "c5_q45",
-      topic: "Euler's Formula",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "A polyhedron has <strong>V = 4, E = 6, F = 4</strong>. Which shape is this?",
-      options: ["Cube", "Square pyramid", "Triangular pyramid (tetrahedron)", "Triangular prism"],
-      answer: 2,
-      explanation: "Check Euler's formula: V − E + F = 4 − 6 + 4 = <strong>2</strong>. ✓ A shape with 4 vertices, 6 edges, and 4 faces is a <strong>triangular pyramid</strong> (also called a tetrahedron) — it has a triangular base and 3 triangular faces, giving 4 triangular faces in total. A cube has V=8, E=12, F=6. A square pyramid has V=5, E=8, F=5."
-    },
 
     // CHALLENGING: symmetry of a regular hexagon
-    {
-      id: "c5_q46",
-      topic: "Symmetry",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "A regular hexagon has how many lines of symmetry, and what is its order of rotational symmetry?",
-      options: [
-        "3 lines of symmetry, order 3",
-        "6 lines of symmetry, order 6",
-        "4 lines of symmetry, order 4",
-        "6 lines of symmetry, order 3"
-      ],
-      answer: 1,
-      explanation: "A regular hexagon has <strong>6 lines of symmetry</strong> — 3 through opposite vertices and 3 through midpoints of opposite sides. It also has <strong>order of rotational symmetry 6</strong> because it looks identical every 60° rotation (360° ÷ 6 = 60°). In general, a regular n-sided polygon has n lines of symmetry and rotational symmetry of order n."
-    },
 
     // CHALLENGING: multi-step — net identification + Euler check
     {

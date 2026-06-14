@@ -319,106 +319,10 @@ const ch07 = {
     },
 
     // Multiplying a decimal by a decimal
-    {
-      id: "c7_q28",
-      topic: "Multiplying decimals by decimals",
-      type: "mcq",
-      question: "Calculate <strong>0.4 × 0.3</strong>.",
-      options: ["1.2", "0.12", "0.012", "12"],
-      answer: 1,
-      explanation: "Multiply as whole numbers: 4 × 3 = 12. Count the total decimal places in both numbers: 0.4 has 1 decimal place and 0.3 has 1 decimal place, so 1 + 1 = 2 decimal places in the answer. Place the decimal point: 0.12. So 0.4 × 0.3 = 0.12."
-    },
-    {
-      id: "c7_q29",
-      topic: "Multiplying decimals by decimals",
-      type: "mcq",
-      question: "Calculate <strong>1.2 × 0.5</strong>.",
-      options: ["6", "0.06", "0.6", "60"],
-      answer: 2,
-      explanation: "Multiply as whole numbers: 12 × 5 = 60. Count total decimal places: 1.2 has 1 decimal place, 0.5 has 1 decimal place, so 1 + 1 = 2 decimal places in the answer. Place the decimal: 0.60 = 0.6. So 1.2 × 0.5 = 0.6."
-    },
-    {
-      id: "c7_q30",
-      topic: "Multiplying decimals by decimals",
-      type: "input",
-      question: "A rectangle has a length of <strong>2.4 cm</strong> and a width of <strong>1.5 cm</strong>. What is its area in cm²?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Rectangle with length 2.4 cm and width 1.5 cm">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Rectangle shape -->
-  <rect x="60" y="50" width="200" height="120" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Length label (bottom) -->
-  <line x1="60" y1="188" x2="260" y2="188" stroke="#5b5ef4" stroke-width="1"/>
-  <polygon points="60,185 60,191 53,188" fill="#5b5ef4"/>
-  <polygon points="260,185 260,191 267,188" fill="#5b5ef4"/>
-  <text x="160" y="204" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">2.4 cm</text>
-  <!-- Width label (right) -->
-  <line x1="278" y1="50" x2="278" y2="170" stroke="#5b5ef4" stroke-width="1"/>
-  <polygon points="275,50 281,50 278,43" fill="#5b5ef4"/>
-  <polygon points="275,170 281,170 278,177" fill="#5b5ef4"/>
-  <text x="302" y="114" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">1.5 cm</text>
-</svg>`,
-      answer: "3.6",
-      acceptableAnswers: ["3.6", "3.6 cm²", "3.60"],
-      explanation: "Area = length × width = 2.4 × 1.5. Multiply as whole numbers: 24 × 15 = 360. Count decimal places: 2.4 has 1, 1.5 has 1, so 2 decimal places in total. The answer is 3.60 = 3.6 cm²."
-    },
 
     // Dividing a decimal by a decimal
-    {
-      id: "c7_q31",
-      topic: "Dividing decimals by decimals",
-      type: "mcq",
-      question: "Calculate <strong>0.8 ÷ 0.2</strong>.",
-      options: ["0.04", "0.4", "4", "40"],
-      answer: 2,
-      explanation: "Multiply both numbers by 10 to remove the decimal from the divisor: 0.8 ÷ 0.2 = 8 ÷ 2 = 4. This works because multiplying both the dividend and divisor by the same number doesn't change the answer."
-    },
-    {
-      id: "c7_q32",
-      topic: "Dividing decimals by decimals",
-      type: "mcq",
-      question: "Calculate <strong>1.8 ÷ 0.6</strong>.",
-      options: ["0.3", "3", "30", "0.03"],
-      answer: 1,
-      explanation: "Multiply both numbers by 10: 1.8 ÷ 0.6 = 18 ÷ 6 = 3. Alternatively, think of it as: how many 0.6s fit into 1.8? 0.6 × 3 = 1.8, so the answer is 3."
-    },
-    {
-      id: "c7_q33",
-      topic: "Dividing decimals by decimals",
-      type: "input",
-      question: "A piece of rope is <strong>2.4 m</strong> long. It is cut into pieces each <strong>0.3 m</strong> long. How many pieces are there?",
-      answer: "8",
-      acceptableAnswers: ["8", "8 pieces"],
-      explanation: "Divide 2.4 ÷ 0.3. Multiply both by 10 to get 24 ÷ 3 = 8. There are 8 pieces of rope. Check: 8 × 0.3 = 2.4. ✓"
-    },
 
     // Terminating vs recurring decimals
-    {
-      id: "c7_q34",
-      topic: "Terminating and recurring decimals",
-      type: "mcq",
-      question: "Which of these fractions gives a <strong>terminating decimal</strong> when divided?",
-      options: ["1/3", "1/6", "1/4", "1/9"],
-      answer: 2,
-      explanation: "A terminating decimal is one that ends after a finite number of digits. 1/4 = 0.25 (terminates). In contrast, 1/3 = 0.333... (recurring), 1/6 = 0.1666... (recurring), and 1/9 = 0.111... (recurring). Fractions whose denominators only have factors of 2 and/or 5 always give terminating decimals."
-    },
-    {
-      id: "c7_q35",
-      topic: "Terminating and recurring decimals",
-      type: "mcq",
-      question: "What type of decimal does <strong>1/3</strong> produce when you divide 1 by 3?",
-      options: ["A terminating decimal (ends after 1 digit)", "A terminating decimal (ends after 3 digits)", "A recurring decimal (digit 3 repeats forever)", "A whole number"],
-      answer: 2,
-      explanation: "When you divide 1 by 3, you get 0.3333... — the digit 3 keeps repeating without end. This is called a recurring (or repeating) decimal. We sometimes write it as 0.3̄ with a dot or bar over the 3."
-    },
-    {
-      id: "c7_q36",
-      topic: "Terminating and recurring decimals",
-      type: "mcq",
-      question: "Convert <strong>1/6</strong> to a decimal. Which answer is correct?",
-      options: ["0.16", "0.1666... (6 recurs)", "0.6", "0.166 (terminates)"],
-      answer: 1,
-      explanation: "Dividing 1 by 6: 10 ÷ 6 = 1 remainder 4, 40 ÷ 6 = 6 remainder 4, 40 ÷ 6 = 6 remainder 4 — the remainder 4 keeps appearing, so the digit 6 recurs. 1/6 = 0.1666... = 0.16̄."
-    },
 
     // Ordering a mixture of fractions and decimals
     {
@@ -437,24 +341,6 @@ const ch07 = {
     },
 
     // Significant figures
-    {
-      id: "c7_q38",
-      topic: "Significant figures",
-      type: "mcq",
-      question: "Round <strong>4.627</strong> to <strong>2 significant figures</strong>.",
-      options: ["4.6", "4.7", "4.63", "5.0"],
-      answer: 0,
-      explanation: "Significant figures are counted from the first non-zero digit. In 4.627, the first significant figure is 4 and the second is 6. To round to 2 significant figures, look at the third significant figure: 2. Since 2 < 5, keep the second significant figure as 6. So 4.627 ≈ 4.6 (2 sig. fig.)."
-    },
-    {
-      id: "c7_q39",
-      topic: "Significant figures",
-      type: "mcq",
-      question: "Round <strong>0.00853</strong> to <strong>1 significant figure</strong>.",
-      options: ["0.008", "0.009", "0.01", "0.1"],
-      answer: 1,
-      explanation: "Leading zeros are not significant — they just show place value. The first significant figure in 0.00853 is 8. To round to 1 significant figure, look at the next digit: 5. Since 5 ≥ 5, round up the 8 to 9. So 0.00853 ≈ 0.009 (1 sig. fig.)."
-    },
 
     // Adding decimals word problem (extra)
     {
@@ -490,16 +376,6 @@ const ch07 = {
       explanation: "For a number to round to 5.40, it must satisfy 5.395 ≤ x < 5.405. The largest possible value approaches 5.405 but never quite reaches it (because 5.405 would round up to 5.41). The largest value is just under 5.405, which we can write as 5.4049999... . This is a really important idea — the upper boundary is not included!"
     },
     {
-      id: "c7_q43",
-      topic: "Multiplying decimals by decimals",
-      difficulty: "challenging",
-      type: "input",
-      question: "A square tile has a side length of <strong>0.35 m</strong>. What is the area of the tile in m²? Give your answer to 4 decimal places.",
-      answer: "0.1225",
-      acceptableAnswers: ["0.1225", "0.1225 m²"],
-      explanation: "Area of a square = side × side = 0.35 × 0.35. Multiply as whole numbers: 35 × 35 = 1225. Count decimal places: 0.35 has 2 decimal places, and we have two of them, so 2 + 2 = 4 decimal places in the answer. Place the decimal: 0.1225. The area is 0.1225 m²."
-    },
-    {
       id: "c7_q44",
       topic: "Adding and subtracting decimal numbers",
       difficulty: "challenging",
@@ -509,15 +385,5 @@ const ch07 = {
       acceptableAnswers: ["1.46", "£1.46", "1.46 pounds"],
       explanation: "Step 1 — add the three prices:<br>  6.49 + 8.75 + 3.30<br>Hundredths: 9 + 5 + 0 = 14, write 4 carry 1.<br>Tenths: 4 + 7 + 3 + 1 = 15, write 5 carry 1.<br>Ones: 6 + 8 + 3 + 1 = 18, write 8 carry 1.<br>Tens: 0 + 0 + 0 + 1 = 1.<br>Total spent = £18.54.<br><br>Step 2 — subtract from £20.00:<br>20.00 − 18.54 = 1.46.<br><br>Mia receives £1.46 change."
     },
-    {
-      id: "c7_q45",
-      topic: "Dividing decimals by decimals",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "Petrol costs <strong>£1.48 per litre</strong>. A driver spends exactly <strong>£18.50</strong>. How many litres did they buy?",
-      options: ["10.5 litres", "12.5 litres", "11.5 litres", "13.5 litres"],
-      answer: 1,
-      explanation: "Divide the total cost by the cost per litre: 18.50 ÷ 1.48. Multiply both by 100 to clear decimals: 1850 ÷ 148. Estimate: 148 × 12 = 1776 and 148 × 13 = 1924, so the answer is between 12 and 13. 148 × 12.5 = 148 × 12 + 148 × 0.5 = 1776 + 74 = 1850. ✓ So the driver bought 12.5 litres."
-    }
   ]
 };

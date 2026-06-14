@@ -454,54 +454,6 @@ const ch10 = {
     },
 
     // Area of trapezium (0 questions before)
-    {
-      id: "c10_q24",
-      topic: "Area of a trapezium",
-      type: "mcq",
-      question: "A trapezium has two parallel sides. The formula for its area is:<br>A = ½ × (a + b) × h<br>where <em>a</em> and <em>b</em> are the two parallel sides and <em>h</em> is the perpendicular height.<br><br>Which of the following correctly describes what <strong>h</strong> is?",
-      options: [
-        "The length of one of the slanted sides",
-        "The sum of both parallel sides",
-        "The perpendicular distance between the two parallel sides",
-        "Half the difference of the two parallel sides"
-      ],
-      answer: 2,
-      explanation: "In the trapezium area formula A = ½ × (a + b) × h, the height <strong>h</strong> is the <strong>perpendicular distance</strong> between the two parallel sides — not the length of any slanted side."
-    },
-    {
-      id: "c10_q25",
-      topic: "Area of a trapezium",
-      type: "mcq",
-      question: "A trapezium has parallel sides of <strong>8 cm</strong> and <strong>4 cm</strong>, and a perpendicular height of <strong>5 cm</strong>. What is its area?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Trapezium with parallel sides 8 cm and 4 cm, height 5 cm">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Trapezium: bottom=160px(8cm), top=80px(4cm), height=100px(5cm) -->
-  <!-- Bottom from (80,175) to (240,175), top from (110,75) to (210,75) -->
-  <polygon points="80,175 240,175 210,75 110,75" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Perpendicular height dashed line -->
-  <line x1="110" y1="75" x2="110" y2="175" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <!-- Right angle marker -->
-  <rect x="110" y="163" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Bottom label (a = 8 cm) -->
-  <text x="160" y="197" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">a = 8 cm</text>
-  <!-- Top label (b = 4 cm) -->
-  <text x="160" y="65" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">b = 4 cm</text>
-  <!-- Height label -->
-  <text x="96" y="128" text-anchor="end" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">h = 5 cm</text>
-</svg>`,
-      options: ["20 cm²", "30 cm²", "40 cm²", "60 cm²"],
-      answer: 1,
-      explanation: "Area of trapezium = ½ × (a + b) × h = ½ × (8 + 4) × 5 = ½ × 12 × 5 = ½ × 60 = 30 cm²."
-    },
-    {
-      id: "c10_q26",
-      topic: "Area of a trapezium",
-      type: "input",
-      question: "A trapezium has parallel sides of <strong>10 m</strong> and <strong>6 m</strong>, and a perpendicular height of <strong>4 m</strong>. What is its area in m²?",
-      answer: "32",
-      acceptableAnswers: ["32", "32 m²", "32m²"],
-      explanation: "Area = ½ × (a + b) × h = ½ × (10 + 6) × 4 = ½ × 16 × 4 = ½ × 64 = 32 m²."
-    },
 
     // Composite shapes (0 questions before)
     {
@@ -564,96 +516,11 @@ const ch10 = {
     },
 
     // Area unit conversion (0 questions before)
-    {
-      id: "c10_q29",
-      topic: "Area unit conversion",
-      type: "mcq",
-      question: "How many cm² are in <strong>1 m²</strong>?",
-      options: ["100 cm²", "1,000 cm²", "10,000 cm²", "1,000,000 cm²"],
-      answer: 2,
-      explanation: "1 m = 100 cm, so 1 m² = 100 × 100 = <strong>10,000 cm²</strong>. When converting square units, you multiply (or divide) by the conversion factor <em>squared</em>."
-    },
-    {
-      id: "c10_q30",
-      topic: "Area unit conversion",
-      type: "mcq",
-      question: "A room has an area of <strong>24 m²</strong>. What is this in cm²?",
-      options: ["2,400 cm²", "24,000 cm²", "240,000 cm²", "2,400,000 cm²"],
-      answer: 2,
-      explanation: "1 m² = 10,000 cm², so 24 m² = 24 × 10,000 = 240,000 cm²."
-    },
-    {
-      id: "c10_q31",
-      topic: "Area unit conversion",
-      type: "mcq",
-      question: "1 hectare (ha) = 10,000 m². A small park has an area of <strong>30,000 m²</strong>. What is this in hectares?",
-      options: ["0.3 ha", "3 ha", "30 ha", "300 ha"],
-      answer: 1,
-      explanation: "To convert m² to hectares, divide by 10,000: 30,000 ÷ 10,000 = <strong>3 ha</strong>. Hectares are used for large land areas like farms and parks."
-    },
 
     // Surface area of a cuboid (0 questions before)
-    {
-      id: "c10_q32",
-      topic: "Surface area of a cuboid",
-      type: "mcq",
-      question: "A cuboid has <strong>6 rectangular faces</strong>. To find its total surface area, which of the following is correct?",
-      options: [
-        "Multiply length × width × height",
-        "Add up the areas of all 6 faces",
-        "Add the length, width, and height together",
-        "Multiply the area of one face by 6"
-      ],
-      answer: 1,
-      explanation: "The surface area of a cuboid is the <strong>total area of all 6 rectangular faces</strong>. A cuboid has 3 pairs of identical faces: top/bottom, front/back, and left/right."
-    },
-    {
-      id: "c10_q33",
-      topic: "Surface area of a cuboid",
-      type: "mcq",
-      question: "A rectangular box is <strong>5 cm</strong> long, <strong>3 cm</strong> wide, and <strong>2 cm</strong> tall. What is its total surface area?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Cuboid 5 cm by 3 cm by 2 cm for surface area">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Oblique projection: L=5, W=3, H=2. Scale: 5cm=>120px, H=2cm=>48px, depth offset 24px,18px -->
-  <!-- Front face: BL=(65,130), W=120px, H=48px -->
-  <rect x="65" y="130" width="120" height="48" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Top face parallelogram -->
-  <polygon points="65,130 89,112 209,112 185,130" fill="rgba(91,94,244,0.20)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Right face parallelogram -->
-  <polygon points="185,130 209,112 209,160 185,178" fill="rgba(91,94,244,0.08)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Length label -->
-  <text x="125" y="192" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">l = 5 cm</text>
-  <!-- Height label -->
-  <text x="48" y="157" text-anchor="end" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">h = 2 cm</text>
-  <!-- Width label -->
-  <text x="147" y="103" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">w = 3 cm</text>
-</svg>`,
-      options: ["30 cm²", "62 cm²", "46 cm²", "71 cm²"],
-      answer: 1,
-      explanation: "A cuboid has 3 pairs of faces:<br>• Top &amp; bottom: 2 × (5 × 3) = 2 × 15 = 30 cm²<br>• Front &amp; back: 2 × (5 × 2) = 2 × 10 = 20 cm²<br>• Left &amp; right: 2 × (3 × 2) = 2 × 6 = 12 cm²<br>• Total = 30 + 20 + 12 = <strong>62 cm²</strong>"
-    },
-    {
-      id: "c10_q34",
-      topic: "Surface area of a cuboid",
-      type: "input",
-      question: "A gift box is <strong>8 cm</strong> long, <strong>6 cm</strong> wide, and <strong>4 cm</strong> tall. How much wrapping paper (in cm²) is needed to cover all 6 faces exactly?",
-      answer: "208",
-      acceptableAnswers: ["208", "208 cm²", "208cm²"],
-      explanation: "Find the area of each pair of faces:<br>• Top &amp; bottom: 2 × (8 × 6) = 2 × 48 = 96 cm²<br>• Front &amp; back: 2 × (8 × 4) = 2 × 32 = 64 cm²<br>• Left &amp; right: 2 × (6 × 4) = 2 × 24 = 48 cm²<br>• Total surface area = 96 + 64 + 48 = <strong>208 cm²</strong>"
-    },
 
     // ── CHALLENGING QUESTIONS ────────────────────────────────────────────────
 
-    {
-      id: "c10_q35",
-      topic: "Area unit conversion",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "A rectangular sports field is <strong>120 m</strong> long and <strong>85 m</strong> wide. What is its area in <strong>hectares</strong>? (1 ha = 10,000 m²)",
-      options: ["0.102 ha", "1.02 ha", "10.2 ha", "102 ha"],
-      answer: 1,
-      explanation: "Step 1: Find the area in m²: 120 × 85 = 10,200 m²<br>Step 2: Convert to hectares: 10,200 ÷ 10,000 = <strong>1.02 ha</strong><br>Great thinking — this is a two-step problem combining area calculation with unit conversion!"
-    },
     {
       id: "c10_q36",
       topic: "Capacity",
@@ -701,16 +568,6 @@ const ch10 = {
       options: ["245 cm²", "272 cm²", "271 cm²", "300 cm²"],
       answer: 1,
       explanation: "Step 1: Rectangle area = 20 × 15 = 300 cm²<br>Step 2: Circle area = π × r² = 3.14 × 3² = 3.14 × 9 = 28.26 cm²<br>Step 3: Remaining area = 300 − 28.26 ≈ <strong>271.74 ≈ 272 cm²</strong> (to the nearest whole number).<br>This combines two area formulas — excellent multi-step thinking!"
-    },
-    {
-      id: "c10_q39",
-      topic: "Surface area of a cuboid",
-      difficulty: "challenging",
-      type: "input",
-      question: "A cube has a total surface area of <strong>216 cm²</strong>. What is the <strong>side length</strong> of the cube in cm?<br><em>Hint: A cube has 6 identical square faces.</em>",
-      answer: "6",
-      acceptableAnswers: ["6", "6 cm", "6cm"],
-      explanation: "Step 1: A cube has 6 square faces, all the same size.<br>Area of each face = 216 ÷ 6 = 36 cm²<br>Step 2: Each face is a square with area 36 cm², so:<br>side × side = 36 → side = √36 = <strong>6 cm</strong><br>Working backwards from surface area requires careful thinking — great job!"
     },
     {
       id: "c10_q40",

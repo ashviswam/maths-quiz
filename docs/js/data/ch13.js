@@ -475,33 +475,6 @@ const ch13 = {
       explanation: "A positive divided by a negative gives a negative result. 56 ÷ (−7) = −8. The division rules follow the same sign rules as multiplication: different signs produce a negative answer."
     },
     {
-      id: "c13_q21",
-      topic: "Absolute value",
-      type: "mcq",
-      question: "What is the <strong>absolute value</strong> of −9? Written as |−9|.",
-      options: ["-9", "0", "9", "-1"],
-      answer: 2,
-      explanation: "The <strong>absolute value</strong> of a number is its distance from 0 on the number line — it is always positive (or zero). |−9| = 9 because −9 is 9 steps away from 0."
-    },
-    {
-      id: "c13_q22",
-      topic: "Absolute value",
-      type: "mcq",
-      question: "Which of the following has the <strong>greatest absolute value</strong>?",
-      options: ["|−3|", "|7|", "|−10|", "|4|"],
-      answer: 2,
-      explanation: "Absolute value is the distance from 0, ignoring the sign. |−3| = 3, |7| = 7, |−10| = 10, |4| = 4. The greatest is |−10| = 10. Remember: a large negative number has a large absolute value!"
-    },
-    {
-      id: "c13_q23",
-      topic: "Absolute value",
-      type: "input",
-      question: "Calculate: <strong>|−15| + |−3|</strong>",
-      answer: "18",
-      acceptableAnswers: ["18"],
-      explanation: "First find each absolute value: |−15| = 15 and |−3| = 3. Then add: 15 + 3 = 18. Absolute value strips the negative sign, leaving the size of the number."
-    },
-    {
       id: "c13_q24",
       topic: "Negative numbers in context",
       type: "mcq",
@@ -649,16 +622,6 @@ const ch13 = {
       options: ["20", "4", "−4", "−20"],
       answer: 1,
       explanation: "Add all three rounds: −5 + 12 + (−3). Step 1: −5 + 12 = 7. Step 2: 7 + (−3) = 7 − 3 = 4. Aisha's total score is 4 points. When adding multiple integers, it helps to deal with them two at a time."
-    },
-    {
-      id: "c13_q39",
-      topic: "Absolute value",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "Which integer <strong>n</strong> satisfies <strong>|n| = 6</strong> AND <strong>n &lt; 0</strong>?",
-      options: ["6", "−6", "36", "Both 6 and −6"],
-      answer: 1,
-      explanation: "|n| = 6 means n is 6 steps from 0, so n could be 6 or −6. But we also need n &lt; 0 (negative), which eliminates n = 6. Therefore n = −6. This question combines absolute value with an inequality — well done for thinking it through!"
     },
     {
       id: "c13_q40",

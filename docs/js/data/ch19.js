@@ -1166,136 +1166,6 @@ const ch19 = {
       explanation: "Check the 90° ACW rule (x, y) → (−y, x): (4, 0) → (0, 4). Yes — that matches! So the rotation is 90° anticlockwise about the origin. (You can also check: 90° CW gives (0, −4), which does not match.)"
     },
     {
-      id: "c19_q30",
-      topic: "Enlargements",
-      type: "mcq",
-      question: "A rectangle has vertices at (1, 1), (3, 1), (3, 2), and (1, 2). It is enlarged with <strong>scale factor 3</strong> and <strong>centre of enlargement at the origin</strong>. What are the coordinates of the image of vertex (3, 2)?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 280" aria-label="Enlargement of rectangle with scale factor 3 from origin">
-  <rect width="340" height="280" fill="#f8fafc" rx="8"/>
-  <!-- grid -->
-  <line x1="20" y1="20" x2="320" y2="20" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="45" x2="320" y2="45" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="70" x2="320" y2="70" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="95" x2="320" y2="95" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="120" x2="320" y2="120" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="145" x2="320" y2="145" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="170" x2="320" y2="170" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="195" x2="320" y2="195" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="220" x2="320" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="245" x2="320" y2="245" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="20" x2="20" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="45" y1="20" x2="45" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="70" y1="20" x2="70" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="95" y1="20" x2="95" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="120" y1="20" x2="120" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="145" y1="20" x2="145" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="170" y1="20" x2="170" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="195" y1="20" x2="195" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="220" y1="20" x2="220" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="245" y1="20" x2="245" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="270" y1="20" x2="270" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="295" y1="20" x2="295" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="320" y1="20" x2="320" y2="260" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- axes: origin at (20,245), 1 unit=25px (positive quadrant only) -->
-  <line x1="20" y1="245" x2="320" y2="245" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="20" y1="20" x2="20" y2="255" stroke="#64748b" stroke-width="1.5"/>
-  <text x="24" y="258" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="45" y="258" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
-  <text x="70" y="258" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="95" y="258" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <text x="120" y="258" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
-  <text x="145" y="258" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
-  <text x="170" y="258" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">6</text>
-  <text x="195" y="258" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">7</text>
-  <text x="220" y="258" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">8</text>
-  <text x="245" y="258" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">9</text>
-  <text x="13" y="220" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
-  <text x="13" y="195" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="13" y="170" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <text x="13" y="145" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
-  <text x="13" y="120" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
-  <text x="13" y="95" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">6</text>
-  <!-- svgX = 20 + x*25, svgY = 245 - y*25 -->
-  <!-- Original rect: (1,1)=45,220; (3,1)=95,220; (3,2)=95,195; (1,2)=45,195 -->
-  <polygon points="45,220 95,220 95,195 45,195" fill="rgba(91,94,244,0.2)" stroke="#5b5ef4" stroke-width="2"/>
-  <text x="60" y="213" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">A</text>
-  <!-- Image rect sf=3: (3,3)=95,170; (9,3)=245,170; (9,6)=245,95; (3,6)=95,95 -->
-  <polygon points="95,170 245,170 245,95 95,95" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="155" y="140" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">A' (enlarged)</text>
-  <!-- ray lines from origin through corners -->
-  <line x1="20" y1="245" x2="250" y2="165" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
-  <line x1="20" y1="245" x2="100" y2="88" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
-  <text x="22" y="242" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">O</text>
-</svg>`,
-      options: ["(6, 4)", "(9, 6)", "(9, 2)", "(3, 6)"],
-      answer: 1,
-      explanation: "When enlarging from the origin with scale factor k, multiply each coordinate by k. So (3, 2) → (3 × 3, 2 × 3) = (9, 6). Every vertex is multiplied by the scale factor."
-    },
-    {
-      id: "c19_q31",
-      topic: "Enlargements",
-      type: "mcq",
-      question: "A triangle has vertices at A(0, 0), B(4, 0), C(0, 2). It is enlarged with scale factor 2 from <strong>centre (0, 0)</strong>. What are the coordinates of C'?",
-      options: ["(0, 4)", "(4, 2)", "(0, 2)", "(8, 0)"],
-      answer: 0,
-      explanation: "Scale factor 2 from the origin: multiply each coordinate by 2. C(0, 2) → C'(0 × 2, 2 × 2) = C'(0, 4). The other vertices map: A'(0,0) and B'(8, 0)."
-    },
-    {
-      id: "c19_q32",
-      topic: "Enlargements",
-      type: "mcq",
-      question: "A shape and its enlarged image are shown. The original has a side length of <strong>3 cm</strong>, and the corresponding side on the image is <strong>12 cm</strong>. What is the scale factor of the enlargement?",
-      options: ["3", "4", "9", "15"],
-      answer: 1,
-      explanation: "Scale factor = image length ÷ original length = 12 ÷ 3 = <strong>4</strong>. When the scale factor is 4, every length in the image is 4 times the corresponding length in the original."
-    },
-    {
-      id: "c19_q33",
-      topic: "Enlargements",
-      type: "input",
-      question: "Triangle P has vertices at (2, 1), (4, 1), (2, 4). It is enlarged with <strong>scale factor 2</strong> from <strong>centre (2, 1)</strong>. What are the coordinates of the image of vertex (4, 1)? Write in the form (x, y).",
-      answer: "(6, 1)",
-      acceptableAnswers: ["(6, 1)", "6, 1"],
-      explanation: "To enlarge from centre C(2, 1) with scale factor 2: first find the vector from C to the point: (4−2, 1−1) = (2, 0). Multiply by scale factor 2: (4, 0). Add back to centre: (2+4, 1+0) = (6, 1). So the image is (6, 1)."
-    },
-    {
-      id: "c19_q34",
-      topic: "Enlargements",
-      type: "mcq",
-      question: "To <strong>fully describe an enlargement</strong>, which two pieces of information must you give?",
-      options: [
-        "The angle and the direction",
-        "The mirror line and the scale factor",
-        "The scale factor and the centre of enlargement",
-        "The translation vector and the scale factor"
-      ],
-      answer: 2,
-      explanation: "An enlargement is fully described by the <strong>scale factor</strong> (how many times bigger) and the <strong>centre of enlargement</strong> (the fixed point everything is measured from). Unlike rotations, you don't need a direction."
-    },
-    {
-      id: "c19_q35",
-      topic: "Enlargements",
-      type: "mcq",
-      question: "A shape is enlarged with scale factor 3 from centre C(1, 2). A vertex of the original shape is at (3, 5). Which calculation gives the image vertex?",
-      options: [
-        "Multiply (3, 5) by 3 → (9, 15)",
-        "Add (3, 5) + (1, 2) then multiply by 3",
-        "Find vector from C to vertex, multiply by 3, add back to C",
-        "Multiply the distance from origin by 3"
-      ],
-      answer: 2,
-      explanation: "The correct method: Step 1 — vector from C(1,2) to (3,5): (3−1, 5−2) = (2, 3). Step 2 — multiply by scale factor 3: (6, 9). Step 3 — add back to C: (1+6, 2+9) = (7, 11). Always work from the centre of enlargement, not the origin."
-    },
-    {
-      id: "c19_q36",
-      topic: "Enlargements",
-      type: "mcq",
-      question: "Shape A is enlarged to give Shape B. Shape A has a perimeter of <strong>8 cm</strong> and Shape B has a perimeter of <strong>24 cm</strong>. What is the scale factor of the enlargement?",
-      options: ["16", "3", "8", "2"],
-      answer: 1,
-      explanation: "Scale factor = image measurement ÷ original measurement = 24 ÷ 8 = <strong>3</strong>. When the scale factor is k, all lengths (including perimeter) are multiplied by k. Note: area would be multiplied by k² = 9."
-    },
-    {
       id: "c19_q37",
       topic: "Combinations of transformations",
       type: "mcq",
@@ -1338,21 +1208,6 @@ const ch19 = {
       explanation: "Two reflections in parallel horizontal lines produce a translation perpendicular to those lines. The distance between y = 1 and y = 5 is 4 units. The translation is twice that = 8 units upward (since we go from y=1 to y=5, i.e. upward). The single transformation is translation by vector (0 / 8)."
     },
     {
-      id: "c19_q40",
-      topic: "Enlargements",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "Triangle ABC has vertices A(2, 2), B(4, 2), C(2, 5). It is enlarged with <strong>scale factor ½</strong> from centre <strong>(0, 0)</strong>. Which describes the image triangle A'B'C'?",
-      options: [
-        "A'(4,4), B'(8,4), C'(4,10) — it gets bigger",
-        "A'(1,1), B'(2,1), C'(1,2.5) — it gets smaller",
-        "A'(1,1), B'(2,1), C'(1,2.5) — it gets bigger",
-        "A'(2,2), B'(4,2), C'(2,5) — it stays the same"
-      ],
-      answer: 1,
-      explanation: "A scale factor between 0 and 1 gives a <strong>reduction</strong> (the image is smaller). Multiply each coordinate by ½: A(2,2)→A'(1,1), B(4,2)→B'(2,1), C(2,5)→C'(1, 2.5). The image is half the size of the original but has the same shape. This is still called an enlargement even though it makes things smaller!"
-    },
-    {
       id: "c19_q41",
       topic: "Rotations",
       difficulty: "challenging",
@@ -1376,16 +1231,6 @@ const ch19 = {
       ],
       answer: 0,
       explanation: "Compare each vertex: x-coordinate increases by 4 (2→6) and y-coordinate is unchanged. This matches a translation by vector (4 / 0) — 4 right, 0 up. You can rule out enlargement (the shape doesn't grow) and rotation (the orientation doesn't change). A translation moves every point the same distance in the same direction — which is exactly what happens here."
-    },
-    {
-      id: "c19_q43",
-      topic: "Enlargements",
-      difficulty: "challenging",
-      type: "input",
-      question: "Triangle A has vertices at (1, 1), (3, 1), and (1, 4). Triangle B (its enlarged image) has vertices at (1, 1), (7, 1), and (1, 10). What is the scale factor of the enlargement?",
-      answer: "3",
-      acceptableAnswers: ["3"],
-      explanation: "Compare corresponding side lengths. The base of triangle A (from (1,1) to (3,1)) has length 2. The base of triangle B (from (1,1) to (7,1)) has length 6. Scale factor = 6 ÷ 2 = <strong>3</strong>. Check the height: A has height 4−1 = 3, B has height 10−1 = 9. Scale factor = 9 ÷ 3 = 3. Both give scale factor 3, and the centre of enlargement is (1, 1) — the shared vertex. Great work!"
     },
     {
       id: "c19_q44",

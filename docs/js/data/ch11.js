@@ -352,73 +352,6 @@ const ch11 = {
     },
     // ── NEW QUESTIONS START HERE ──────────────────────────────────────────
     // Reading analogue clocks
-    {
-      id: "c11_q21",
-      topic: "Reading analogue clocks",
-      type: "mcq",
-      question: "Look at the analogue clock below. What time does it show?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" aria-label="Analogue clock showing 7:20">
-  <rect width="220" height="220" fill="#f8fafc" rx="8"/>
-  <circle cx="110" cy="110" r="90" fill="white" stroke="#64748b" stroke-width="2"/>
-  <circle cx="110" cy="110" r="85" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- Hour tick marks -->
-  <line x1="110" y1="25" x2="110" y2="38" stroke="#64748b" stroke-width="2.5"/>
-  <line x1="155" y1="36" x2="148" y2="48" stroke="#64748b" stroke-width="2"/>
-  <line x1="185" y1="65" x2="175" y2="72" stroke="#64748b" stroke-width="2"/>
-  <line x1="195" y1="110" x2="182" y2="110" stroke="#64748b" stroke-width="2.5"/>
-  <line x1="185" y1="155" x2="175" y2="148" stroke="#64748b" stroke-width="2"/>
-  <line x1="155" y1="184" x2="148" y2="172" stroke="#64748b" stroke-width="2"/>
-  <line x1="110" y1="195" x2="110" y2="182" stroke="#64748b" stroke-width="2.5"/>
-  <line x1="65" y1="184" x2="72" y2="172" stroke="#64748b" stroke-width="2"/>
-  <line x1="35" y1="155" x2="45" y2="148" stroke="#64748b" stroke-width="2"/>
-  <line x1="25" y1="110" x2="38" y2="110" stroke="#64748b" stroke-width="2.5"/>
-  <line x1="35" y1="65" x2="45" y2="72" stroke="#64748b" stroke-width="2"/>
-  <line x1="65" y1="36" x2="72" y2="48" stroke="#64748b" stroke-width="2"/>
-  <!-- Numbers -->
-  <text x="110" y="34" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">12</text>
-  <text x="190" y="114" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">3</text>
-  <text x="110" y="200" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">6</text>
-  <text x="28" y="114" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">9</text>
-  <text x="163" y="52" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12">1</text>
-  <text x="192" y="80" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12">2</text>
-  <text x="192" y="145" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12">4</text>
-  <text x="163" y="175" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12">5</text>
-  <text x="57" y="175" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12">7</text>
-  <text x="28" y="145" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12">8</text>
-  <text x="28" y="80" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12">10</text>
-  <text x="57" y="52" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12">11</text>
-  <!-- Hour hand at 7:20 — angle = 7*30 + 20*0.5 = 220 degrees from 12 -->
-  <!-- sin(220°)=-0.6428, cos(220°)=-0.7660 -->
-  <!-- x = 110 + 55*(-0.6428) = 74.6, y = 110 - 55*(-0.7660) = 152.1 -->
-  <line x1="110" y1="110" x2="75" y2="152" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
-  <!-- Minute hand at 7:20 — angle = 20*6 = 120 degrees -->
-  <!-- sin(120°)=0.8660, cos(120°)=-0.5 -->
-  <!-- x = 110 + 72*0.8660 = 172.4, y = 110 - 72*(-0.5) = 146 -->
-  <line x1="110" y1="110" x2="172" y2="146" stroke="#5b5ef4" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="110" cy="110" r="5" fill="#1e293b"/>
-</svg>`,
-      options: ["7:04", "7:20", "7:25", "8:20"],
-      answer: 1,
-      explanation: "The short (hour) hand points just past 7, and the long (minute) hand points to the 4, which means 20 minutes. So the time is <strong>7:20</strong>. Remember: each number on the clock face represents 5 minutes for the minute hand."
-    },
-    {
-      id: "c11_q22",
-      topic: "Reading analogue clocks",
-      type: "mcq",
-      question: "An analogue clock has its minute hand pointing to the <strong>9</strong> and its hour hand pointing halfway between <strong>2</strong> and <strong>3</strong>. What time is it?",
-      options: ["2:09", "2:45", "3:45", "9:15"],
-      answer: 1,
-      explanation: "The minute hand at 9 means 9 × 5 = <strong>45 minutes</strong>. The hour hand is halfway between 2 and 3, which makes sense because at 2:45 the hour hand is three-quarters of the way from 2 to 3. So the time is <strong>2:45</strong>."
-    },
-    {
-      id: "c11_q23",
-      topic: "Reading analogue clocks",
-      type: "input",
-      question: "On an analogue clock, the minute hand points exactly at the <strong>7</strong> and the hour hand is between <strong>4</strong> and <strong>5</strong>. Write the time shown (in the form h:mm, e.g. 4:35).",
-      answer: "4:35",
-      acceptableAnswers: ["4:35"],
-      explanation: "The minute hand at 7 means 7 × 5 = <strong>35 minutes</strong>. The hour hand is between 4 and 5 (closer to 5), which is correct for 4:35. The time is <strong>4:35</strong>."
-    },
     // Reading digital clocks / 12-hour am-pm
     {
       id: "c11_q24",
@@ -500,24 +433,6 @@ const ch11 = {
       explanation: "11:50 am + 1 hour = 12:50 pm. Then 12:50 pm + 20 minutes = <strong>1:10 pm</strong>. Be careful — adding 20 minutes to 12:50 takes you past 1:00 pm: 12:50 + 10 min = 1:00 pm, then + 10 more = 1:10 pm."
     },
     // Time spanning midnight
-    {
-      id: "c11_q32",
-      topic: "Time spanning midnight",
-      type: "mcq",
-      question: "A night-shift worker starts at <strong>22:30</strong> and finishes at <strong>06:00</strong> the next morning. How long is the shift?",
-      options: ["6 hours 30 minutes", "7 hours 30 minutes", "8 hours 30 minutes", "9 hours 30 minutes"],
-      answer: 1,
-      explanation: "From 22:30 to midnight (00:00) = 1 hour 30 minutes. From midnight to 06:00 = 6 hours. Total = 1 h 30 min + 6 h = <strong>7 hours 30 minutes</strong>."
-    },
-    {
-      id: "c11_q33",
-      topic: "Time spanning midnight",
-      type: "input",
-      question: "A ferry departs at <strong>23:15</strong> on Monday and arrives at <strong>04:45</strong> on Tuesday. How long is the journey? Give your answer in hours and minutes (e.g. 5 hours 30 minutes).",
-      answer: "5 hours 30 minutes",
-      acceptableAnswers: ["5 hours 30 minutes", "5h 30min", "5 hr 30 min", "5hrs 30mins", "5 hours and 30 minutes"],
-      explanation: "From 23:15 to midnight (00:00) = 45 minutes. From midnight to 04:45 = 4 hours 45 minutes. Total = 45 min + 4 h 45 min = 4 h + (45 + 45) min = 4 h 90 min = <strong>5 hours 30 minutes</strong>."
-    },
     // Calendar — days/weeks in a year, and date arithmetic
     {
       id: "c11_q34",
@@ -547,33 +462,6 @@ const ch11 = {
       explanation: "Use the knuckle trick or the rhyme! <strong>July and August</strong> both have 31 days — they are two consecutive long months. April, June, September and November have 30 days; February has 28 or 29."
     },
     // Time zones
-    {
-      id: "c11_q37",
-      topic: "Time zones",
-      type: "mcq",
-      question: "London is at <strong>UTC+0</strong> and Dubai is at <strong>UTC+4</strong>. When it is <strong>10:00 am</strong> in London, what time is it in Dubai?",
-      options: ["6:00 am", "10:00 am", "2:00 pm", "6:00 pm"],
-      answer: 2,
-      explanation: "Dubai is 4 hours <em>ahead</em> of London (UTC+4 vs UTC+0). So add 4 hours: 10:00 am + 4 hours = <strong>2:00 pm</strong> in Dubai."
-    },
-    {
-      id: "c11_q38",
-      topic: "Time zones",
-      type: "mcq",
-      question: "New York is at <strong>UTC−5</strong>. When it is <strong>18:00</strong> in London (UTC+0), what time is it in New York?",
-      options: ["11:00", "13:00", "18:00", "23:00"],
-      answer: 1,
-      explanation: "New York is 5 hours <em>behind</em> London. So subtract 5 hours: 18:00 − 5 = <strong>13:00</strong> (1:00 pm) in New York."
-    },
-    {
-      id: "c11_q39",
-      topic: "Time zones",
-      type: "input",
-      question: "Amsterdam is at <strong>UTC+1</strong> and Bangalore is at <strong>UTC+5:30</strong>. When it is <strong>09:00</strong> in Amsterdam, what time (hours and minutes) is it in Bangalore? Write in the form HH:MM (e.g. 14:30).",
-      answer: "13:30",
-      acceptableAnswers: ["13:30", "1:30 pm", "1330"],
-      explanation: "Bangalore is 4 hours 30 minutes ahead of Amsterdam (5h30 − 1h = 4h30). Add 4 h 30 min to 09:00: 09:00 + 4 h = 13:00, then + 30 min = <strong>13:30</strong>."
-    },
     // Units of time — conversions
     {
       id: "c11_q40",
@@ -605,16 +493,6 @@ const ch11 = {
     },
     // ── CHALLENGING QUESTIONS ─────────────────────────────────────────────
     {
-      id: "c11_q43",
-      topic: "Time zones",
-      difficulty: "challenging",
-      type: "input",
-      question: "A flight departs Amsterdam (UTC+1) at <strong>08:45 local time</strong>. The flight duration is <strong>11 hours 25 minutes</strong>. The destination city is in a time zone of <strong>UTC+4</strong>.<br><br>What is the <strong>local arrival time</strong> at the destination? Write in 24-hour format (HH:MM).",
-      answer: "23:10",
-      acceptableAnswers: ["23:10", "2310"],
-      explanation: "Step 1 — Find the UTC arrival time: Depart 08:45 local Amsterdam time (UTC+1) = 07:45 UTC. Add flight time: 07:45 + 11h 25min = 07:45 + 11h = 18:45, then + 25min = 19:10 UTC.<br>Step 2 — Convert UTC to destination local time (UTC+4): 19:10 + 4 hours = <strong>23:10</strong>.<br>Great thinking — this type of multi-step time-zone problem appears in real travel planning!"
-    },
-    {
       id: "c11_q44",
       topic: "The calendar year",
       difficulty: "challenging",
@@ -623,21 +501,6 @@ const ch11 = {
       answer: "26th February",
       acceptableAnswers: ["26th February", "February 26", "26 February", "Feb 26"],
       explanation: "Count forward from 18 November: November has 30 days, so from 18 Nov there are 30 − 18 = 12 days left in November. 100 − 12 = 88 more days needed after 30 Nov. December has 31 days: 88 − 31 = 57 more days after December. January has 31 days: 57 − 31 = 26 more days into February. So the date is <strong>26th February</strong>. Careful counting across months is key!"
-    },
-    {
-      id: "c11_q45",
-      topic: "Time spanning midnight",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "A baker starts work at <strong>23:40</strong> on Friday. She works for <strong>8 hours 50 minutes</strong>. What day and time does she finish?",
-      options: [
-        "Saturday 07:30",
-        "Saturday 08:30",
-        "Saturday 08:50",
-        "Sunday 08:30"
-      ],
-      answer: 1,
-      explanation: "23:40 + 8 hours = 07:40 (Saturday). Then add 50 minutes: 07:40 + 50 min = 08:30. So she finishes at <strong>Saturday 08:30</strong>. Breaking it into steps — add hours first, then minutes — prevents errors with time carrying."
     },
     {
       id: "c11_q46",

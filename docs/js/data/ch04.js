@@ -461,53 +461,8 @@ const ch04 = {
       explanation: "64 = 4 × 4 × 4 = 4³, so 64 is a cube number. The others are not: 16 = 2⁴ (not a perfect cube), 25 = 5² (a square number but not a cube), and 36 = 6² (also a square but not a cube)."
     },
     // Index notation / exponent form
-    {
-      id: "c4_q34",
-      topic: "Index notation",
-      type: "mcq",
-      question: "What is the value of 2<sup>4</sup> (2 to the power of 4)?",
-      options: ["6", "8", "16", "24"],
-      answer: 2,
-      explanation: "2⁴ means 2 × 2 × 2 × 2 = 4 × 4 = 16. The index (or exponent) tells you how many times to multiply the base by itself. Don't confuse 2⁴ with 2 × 4 = 8!"
-    },
-    {
-      id: "c4_q35",
-      topic: "Index notation",
-      type: "mcq",
-      question: "The prime factorisation of 72 written in <strong>index notation</strong> is:",
-      options: ["2<sup>2</sup> × 3<sup>2</sup>", "2<sup>3</sup> × 3<sup>2</sup>", "2<sup>2</sup> × 3<sup>3</sup>", "2<sup>4</sup> × 3"],
-      answer: 1,
-      explanation: "Start with a factor tree: 72 = 2 × 36 = 2 × 2 × 18 = 2 × 2 × 2 × 9 = 2 × 2 × 2 × 3 × 3. That gives three 2s and two 3s, so 72 = 2³ × 3². Index notation groups repeated prime factors using powers."
-    },
-    {
-      id: "c4_q36",
-      topic: "Index notation",
-      type: "input",
-      question: "Write 2<sup>3</sup> × 5 as an ordinary number (e.g. if the answer were 12, type 12).",
-      answer: "40",
-      acceptableAnswers: ["40"],
-      explanation: "2³ × 5 = (2 × 2 × 2) × 5 = 8 × 5 = 40. Always work out the powers first, then multiply."
-    },
     // HCF using prime factorisation
-    {
-      id: "c4_q37",
-      topic: "Highest common factor",
-      type: "mcq",
-      question: "Use prime factorisation to find the <strong>HCF</strong> of 48 and 72.<br>48 = 2<sup>4</sup> × 3 &nbsp;&nbsp; 72 = 2<sup>3</sup> × 3<sup>2</sup>",
-      options: ["12", "16", "24", "36"],
-      answer: 2,
-      explanation: "To find the HCF using prime factorisation, take the <strong>lowest power</strong> of each common prime factor. Both numbers share 2 and 3. Lowest power of 2: min(4, 3) = 2³ = 8. Lowest power of 3: min(1, 2) = 3¹ = 3. HCF = 8 × 3 = 24."
-    },
     // LCM using prime factorisation
-    {
-      id: "c4_q38",
-      topic: "Multiples",
-      type: "mcq",
-      question: "Use prime factorisation to find the <strong>LCM</strong> of 12 and 18.<br>12 = 2<sup>2</sup> × 3 &nbsp;&nbsp; 18 = 2 × 3<sup>2</sup>",
-      options: ["24", "36", "54", "72"],
-      answer: 1,
-      explanation: "To find the LCM using prime factorisation, take the <strong>highest power</strong> of each prime factor that appears. Primes: 2 and 3. Highest power of 2: max(2, 1) = 2² = 4. Highest power of 3: max(1, 2) = 3² = 9. LCM = 4 × 9 = 36."
-    },
     // ── CHALLENGING QUESTIONS ────────────────────────────────────────────────
 
     {
@@ -539,26 +494,6 @@ const ch04 = {
       options: ["15", "20", "30", "35"],
       answer: 3,
       explanation: "The mystery number is 2² × 3 × 5 = 4 × 15 = 60. To be a factor of 60, a number can only use the primes 2, 3, and 5 (and no higher powers than 2² for the prime 2). Check each option: 15 = 3 × 5 ✓ (60 ÷ 15 = 4), 20 = 2² × 5 ✓ (60 ÷ 20 = 3), 30 = 2 × 3 × 5 ✓ (60 ÷ 30 = 2), 35 = 5 × 7 — but <strong>7 is not a prime factor of 60</strong>, so 35 cannot be a factor. 60 ÷ 35 = 1.71... not a whole number. The answer is 35."
-    },
-    {
-      id: "c4_q42",
-      topic: "Index notation",
-      difficulty: "challenging",
-      type: "input",
-      question: "A number written in index notation is 2<sup>3</sup> × 3<sup>2</sup>. Write this number as an ordinary number.",
-      answer: "72",
-      acceptableAnswers: ["72"],
-      explanation: "Work it out step by step: 2³ = 2 × 2 × 2 = 8. 3² = 3 × 3 = 9. Then 8 × 9 = <strong>72</strong>. Index notation is a compact way of writing prime factorisations — 72 = 2³ × 3² is much neater than writing 2 × 2 × 2 × 3 × 3!"
-    },
-    {
-      id: "c4_q43",
-      topic: "Highest common factor",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "The <strong>HCF</strong> of two numbers is 8 and their <strong>LCM</strong> is 48. One of the numbers is 16. What is the <strong>other number</strong>?",
-      options: ["12", "24", "32", "48"],
-      answer: 1,
-      explanation: "There is a handy rule: HCF × LCM = first number × second number. So 8 × 48 = 16 × second number. That gives 384 = 16 × second number, so second number = 384 ÷ 16 = <strong>24</strong>. Check: HCF(16, 24) — factors of 16: 1,2,4,8,16; factors of 24: 1,2,3,4,6,8,12,24. HCF = 8 ✓. LCM(16,24) = 48 ✓. Brilliant — this question connects HCF and LCM together!"
     },
     {
       id: "c4_q44",

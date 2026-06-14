@@ -400,60 +400,6 @@ const ch06 = {
       explanation: "The LCD of 4 and 5 is 20. Convert: 3/4 = 15/20 and 2/5 = 8/20. Subtract: 15/20 − 8/20 = 7/20. Since 7 is prime and does not divide 20, this fraction is already in lowest terms."
     },
     {
-      id: "c6_q31",
-      topic: "Multiplying fractions",
-      type: "mcq",
-      question: "What is <strong>2/3 × 3/5</strong>?",
-      options: ["5/8", "6/15", "2/5", "5/15"],
-      answer: 2,
-      explanation: "To multiply two fractions, multiply the numerators together and multiply the denominators together. 2/3 × 3/5 = (2 × 3)/(3 × 5) = 6/15. Simplify by dividing both by 3: 6/15 = 2/5. You can also cancel before multiplying: the 3s cancel, leaving 2/5 directly."
-    },
-    {
-      id: "c6_q32",
-      topic: "Multiplying fractions",
-      type: "input",
-      question: "Calculate <strong>4/5 × 5/8</strong>. Write your answer as a fraction in lowest terms.",
-      answer: "1/2",
-      acceptableAnswers: ["1/2", "4/8", "20/40"],
-      explanation: "Multiply across: (4 × 5)/(5 × 8) = 20/40. Simplify: the HCF of 20 and 40 is 20, so 20/40 = 1/2. Tip: you can cancel first — 4 and 8 share a factor of 4 (giving 1 and 2), and the 5s cancel, leaving 1/2 directly."
-    },
-    {
-      id: "c6_q33",
-      topic: "Multiplying fractions",
-      type: "mcq",
-      question: "What is <strong>3/4 × 2/9</strong> in lowest terms?",
-      options: ["6/36", "5/13", "1/6", "6/13"],
-      answer: 2,
-      explanation: "Multiply: (3 × 2)/(4 × 9) = 6/36. Simplify: the HCF of 6 and 36 is 6, so 6/36 = 1/6. Or cancel before multiplying: 3 and 9 share a factor of 3 (→ 1 and 3), and 2 and 4 share a factor of 2 (→ 1 and 2), giving 1/(2 × 3) = 1/6."
-    },
-    {
-      id: "c6_q34",
-      topic: "Dividing fractions",
-      type: "mcq",
-      question: "To divide by a fraction, you <strong>Keep, Change, Flip</strong> (KCF). What is <strong>3/4 ÷ 1/2</strong>?",
-      options: ["3/8", "4/6", "3/2", "6/4"],
-      answer: 2,
-      explanation: "Using KCF: Keep the first fraction (3/4), Change the ÷ to ×, and Flip the second fraction (1/2 becomes 2/1). So 3/4 ÷ 1/2 = 3/4 × 2/1 = 6/4 = 3/2. This makes sense — how many halves fit into 3/4? One and a half halves, which is 3/2."
-    },
-    {
-      id: "c6_q35",
-      topic: "Dividing fractions",
-      type: "mcq",
-      question: "What is <strong>2/3 ÷ 4/5</strong>?",
-      options: ["8/15", "10/12", "5/6", "8/12"],
-      answer: 2,
-      explanation: "Apply KCF (Keep, Change, Flip): 2/3 ÷ 4/5 = 2/3 × 5/4 = (2 × 5)/(3 × 4) = 10/12. Simplify: the HCF of 10 and 12 is 2, so 10/12 = 5/6."
-    },
-    {
-      id: "c6_q36",
-      topic: "Dividing fractions",
-      type: "input",
-      question: "A recipe uses <strong>3/4</strong> of a cup of flour. You only have a <strong>1/8</strong>-cup measure. How many times do you need to fill it?",
-      answer: "6",
-      acceptableAnswers: ["6"],
-      explanation: "We need to calculate 3/4 ÷ 1/8. Using KCF: 3/4 × 8/1 = 24/4 = 6. You need to fill the 1/8-cup measure 6 times. This makes sense because 6 × 1/8 = 6/8 = 3/4."
-    },
-    {
       id: "c6_q37",
       topic: "A fraction of a quantity",
       type: "mcq",
@@ -498,16 +444,6 @@ const ch06 = {
       answer: "4 7/12",
       acceptableAnswers: ["4 7/12"],
       explanation: "Step 1 — Add the whole numbers: 2 + 1 = 3.<br>Step 2 — Add the fractions. LCD of 4 and 6 is 12: 3/4 = 9/12 and 5/6 = 10/12. So 9/12 + 10/12 = 19/12.<br>Step 3 — Convert the improper fraction: 19/12 = 1 7/12.<br>Step 4 — Add to the whole number: 3 + 1 7/12 = 4 7/12."
-    },
-    {
-      id: "c6_q42",
-      topic: "Fraction of a quantity (working backwards)",
-      difficulty: "challenging",
-      type: "input",
-      question: "In a class, <strong>3/5</strong> of the students scored above 70% on a test. There are <strong>30 students</strong> in the class. How many students scored <strong>70% or below</strong>?",
-      answer: "12",
-      acceptableAnswers: ["12"],
-      explanation: "First find how many scored <em>above</em> 70%: 3/5 of 30 = 30 ÷ 5 × 3 = 18 students.<br>The rest scored 70% or below: 30 − 18 = 12 students.<br>You could also reason: if 3/5 scored above, then 2/5 scored 70% or below. 2/5 of 30 = 12."
     },
     {
       id: "c6_q43",

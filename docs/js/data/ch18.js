@@ -520,173 +520,6 @@ const ch18 = {
       explanation: "Names with more than 5 letters means 6 letters or 7 letters. Add those frequencies: 5 + 2 = <strong>7</strong> students."
     },
     {
-      id: "c18_q26",
-      topic: "Range",
-      type: "mcq",
-      question: "What is the <strong>range</strong> of the data set: 13, 7, 25, 4, 19?",
-      options: ["13", "16", "21", "25"],
-      answer: 2,
-      explanation: "<strong>Range = maximum − minimum</strong>. The largest value is 25 and the smallest is 4. Range = 25 − 4 = <strong>21</strong>. The range tells you how spread out the data is."
-    },
-    {
-      id: "c18_q27",
-      topic: "Range",
-      type: "input",
-      question: "The daily high temperatures (°C) for a week were: 18, 22, 15, 26, 20, 24, 17. What is the <strong>range</strong> of the temperatures? Write your answer as a number.",
-      answer: "11",
-      acceptableAnswers: ["11", "11°C", "11 °C"],
-      explanation: "Range = maximum − minimum. The highest temperature is 26°C and the lowest is 15°C. Range = 26 − 15 = <strong>11°C</strong>. A larger range means the temperatures varied a lot."
-    },
-    {
-      id: "c18_q28",
-      topic: "Median",
-      type: "mcq",
-      question: "Find the <strong>median</strong> of the data set: 12, 5, 8, 20, 14, 3, 9.",
-      options: ["8", "9", "12", "14"],
-      answer: 1,
-      explanation: "Sort the values in order: 3, 5, 8, <strong>9</strong>, 12, 14, 20. There are 7 values, so the median is the 4th value = <strong>9</strong>. For an odd number of values, the median is the middle one."
-    },
-    {
-      id: "c18_q29",
-      topic: "Median",
-      type: "mcq",
-      question: "The ages of 6 students are: 11, 13, 12, 14, 11, 12. What is the <strong>median</strong> age?",
-      options: ["11", "12", "12.5", "13"],
-      answer: 1,
-      explanation: "Sort in order: 11, 11, 12, 12, 13, 14. With 6 values (even count), the median is the average of the 3rd and 4th values: (12 + 12) ÷ 2 = <strong>12</strong>."
-    },
-    {
-      id: "c18_q30",
-      topic: "When to use mean vs median vs mode",
-      type: "mcq",
-      question: "A shoe shop records the sizes sold in one day: 5, 6, 6, 7, 7, 7, 8, 8, 9. Which measure of centre is <strong>most useful</strong> for deciding which size to stock the most of?",
-      options: ["Mean, because it uses all the data", "Median, because it is the middle value", "Mode, because it shows the most popular size", "Range, because it shows how spread out the sizes are"],
-      answer: 2,
-      explanation: "The <strong>mode</strong> is the value that appears most often. For a shoe shop, knowing the most commonly sold size (7) is most useful for stocking decisions. The mode is best used with categorical or discrete data where you need the most frequent value."
-    },
-    {
-      id: "c18_q31",
-      topic: "When to use mean vs median vs mode",
-      type: "mcq",
-      question: "Seven students' pocket money per week (£) is: 2, 3, 3, 4, 4, 5, 40. A new student joins and wants to know the 'typical' amount. Which measure gives the <strong>most representative</strong> value?",
-      options: ["Mean = 8.71, because it uses all values", "Median = 4, because it is not affected by the extreme value of 40", "Mode = 3 or 4, because two values tie", "Range = 38, because it shows the spread"],
-      answer: 1,
-      explanation: "When there is an <strong>outlier</strong> (an extreme value like 40), the mean is pulled upward and gives a misleading picture. The <strong>median</strong> is resistant to outliers and gives a better idea of the typical value. The median here is 4, which better represents the group."
-    },
-    {
-      id: "c18_q32",
-      topic: "Stem-and-leaf diagrams",
-      type: "mcq",
-      question: "A stem-and-leaf diagram shows the following data:<br><br><strong>Stem | Leaf</strong><br>1 &nbsp;&nbsp;&nbsp;| 2 &nbsp;5 &nbsp;8<br>2 &nbsp;&nbsp;&nbsp;| 0 &nbsp;3 &nbsp;3 &nbsp;7<br>3 &nbsp;&nbsp;&nbsp;| 1 &nbsp;4<br><br>(Stem = tens digit, Leaf = units digit)<br><br>How many data values are in the diagram?",
-      options: ["3", "7", "9", "10"],
-      answer: 2,
-      explanation: "Count all the leaves: Row 1 has 3 leaves (2, 5, 8), Row 2 has 4 leaves (0, 3, 3, 7), Row 3 has 2 leaves (1, 4). Total = 3 + 4 + 2 = <strong>9</strong> data values."
-    },
-    {
-      id: "c18_q33",
-      topic: "Stem-and-leaf diagrams",
-      type: "mcq",
-      question: "Using the same stem-and-leaf diagram:<br><br><strong>Stem | Leaf</strong><br>1 &nbsp;&nbsp;&nbsp;| 2 &nbsp;5 &nbsp;8<br>2 &nbsp;&nbsp;&nbsp;| 0 &nbsp;3 &nbsp;3 &nbsp;7<br>3 &nbsp;&nbsp;&nbsp;| 1 &nbsp;4<br><br>What is the <strong>mode</strong>?",
-      options: ["12", "20", "23", "27"],
-      answer: 2,
-      explanation: "The mode is the value that appears most often. In the diagram, the leaf 3 appears twice in the 2 | row, making the value <strong>23</strong> appear twice. No other value is repeated. The mode is 23."
-    },
-    {
-      id: "c18_q34",
-      topic: "Stem-and-leaf diagrams",
-      type: "input",
-      question: "A stem-and-leaf diagram shows test scores:<br><br><strong>Stem | Leaf</strong><br>4 &nbsp;&nbsp;&nbsp;| 5 &nbsp;8<br>5 &nbsp;&nbsp;&nbsp;| 2 &nbsp;6 &nbsp;9<br>6 &nbsp;&nbsp;&nbsp;| 0 &nbsp;3 &nbsp;7<br>7 &nbsp;&nbsp;&nbsp;| 1<br><br>What is the <strong>range</strong> of the scores? Write your answer as a number.",
-      answer: "26",
-      acceptableAnswers: ["26"],
-      explanation: "The smallest value is 45 (stem 4, leaf 5) and the largest is 71 (stem 7, leaf 1). Range = 71 − 45 = <strong>26</strong>."
-    },
-    {
-      id: "c18_q35",
-      topic: "Dual bar charts",
-      type: "mcq",
-      question: "A dual bar chart compares boys' and girls' scores on two subjects. In Maths, boys scored 72 and girls scored 68. In Science, boys scored 65 and girls scored 74. Which statement is correct?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Dual bar chart comparing boys and girls scores in Maths and Science">
-  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
-  <!-- plot area y=20..185, scores range 60..80, range=20 -->
-  <!-- y = 185 - ((v-60)/20)*165 -->
-  <!-- 60: 185, 65: 144, 70: 103, 75: 62, 80: 20 -->
-  <line x1="55" y1="185" x2="380" y2="185" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="55" y1="144" x2="380" y2="144" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="55" y1="103" x2="380" y2="103" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="55" y1="62" x2="380" y2="62" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="55" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- axes -->
-  <line x1="55" y1="20" x2="55" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="55" y1="185" x2="382" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <!-- y labels -->
-  <text x="48" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">60</text>
-  <text x="48" y="148" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">65</text>
-  <text x="48" y="107" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">70</text>
-  <text x="48" y="66" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">75</text>
-  <text x="48" y="25" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">80</text>
-  <!-- MATHS group: boys=72, girls=68 -->
-  <!-- boys 72: y=185-((72-60)/20)*165=185-99=86 -->
-  <rect x="80" y="86" width="38" height="99" fill="#5b5ef4" rx="3"/>
-  <text x="99" y="81" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">72</text>
-  <!-- girls 68: y=185-((68-60)/20)*165=185-66=119 -->
-  <rect x="122" y="119" width="38" height="66" fill="#f43f5e" rx="3"/>
-  <text x="141" y="114" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">68</text>
-  <text x="121" y="201" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">Maths</text>
-  <!-- SCIENCE group: boys=65, girls=74 -->
-  <!-- boys 65: y=185-((65-60)/20)*165=185-41=144 -->
-  <rect x="225" y="144" width="38" height="41" fill="#5b5ef4" rx="3"/>
-  <text x="244" y="139" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">65</text>
-  <!-- girls 74: y=185-((74-60)/20)*165=185-115.5=69.5≈70 -->
-  <rect x="267" y="70" width="38" height="115" fill="#f43f5e" rx="3"/>
-  <text x="286" y="65" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">74</text>
-  <text x="267" y="201" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">Science</text>
-  <!-- Legend -->
-  <rect x="330" y="30" width="12" height="12" fill="#5b5ef4" rx="2"/>
-  <text x="346" y="41" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="10">Boys</text>
-  <rect x="330" y="50" width="12" height="12" fill="#f43f5e" rx="2"/>
-  <text x="346" y="61" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="10">Girls</text>
-</svg>`,
-      options: ["Boys scored higher in both subjects", "Girls scored higher in both subjects", "Boys scored higher in Maths; girls scored higher in Science", "Girls scored higher in Maths; boys scored higher in Science"],
-      answer: 2,
-      explanation: "In <strong>Maths</strong>: boys (72) > girls (68), so boys scored higher. In <strong>Science</strong>: girls (74) > boys (65), so girls scored higher. A dual bar chart lets you compare two groups side by side for each category."
-    },
-    {
-      id: "c18_q36",
-      topic: "Dual bar charts",
-      type: "mcq",
-      question: "The dual bar chart shows students' scores in two subjects. How much higher did girls score than boys in Science?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Dual bar chart showing boys scored 65 and girls scored 74 in Science">
-  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
-  <line x1="55" y1="185" x2="280" y2="185" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="55" y1="144" x2="280" y2="144" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="55" y1="103" x2="280" y2="103" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="55" y1="62" x2="280" y2="62" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="55" y1="20" x2="280" y2="20" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="55" y1="20" x2="55" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="55" y1="185" x2="282" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <text x="48" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">60</text>
-  <text x="48" y="148" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">65</text>
-  <text x="48" y="107" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">70</text>
-  <text x="48" y="66" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">75</text>
-  <text x="48" y="25" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">80</text>
-  <!-- boys 65 -->
-  <rect x="80" y="144" width="45" height="41" fill="#5b5ef4" rx="3"/>
-  <text x="102" y="139" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">65</text>
-  <!-- girls 74: y=185-((74-60)/20)*165=70 -->
-  <rect x="130" y="70" width="45" height="115" fill="#f43f5e" rx="3"/>
-  <text x="152" y="65" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">74</text>
-  <text x="128" y="201" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">Science</text>
-  <!-- Legend -->
-  <rect x="220" y="60" width="12" height="12" fill="#5b5ef4" rx="2"/>
-  <text x="235" y="71" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="10">Boys</text>
-  <rect x="220" y="80" width="12" height="12" fill="#f43f5e" rx="2"/>
-  <text x="235" y="91" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="10">Girls</text>
-</svg>`,
-      options: ["5", "7", "9", "11"],
-      answer: 2,
-      explanation: "Girls scored 74 and boys scored 65 in Science. Difference = 74 − 65 = <strong>9</strong>. Reading dual bar charts: find the value of each bar, then subtract to find the difference."
-    },
-    {
       id: "c18_q37",
       topic: "Misleading statistics",
       type: "mcq",
@@ -769,15 +602,6 @@ const ch18 = {
       explanation: "15 ÷ 6 = 2.5 symbols. A half symbol represents 3 matches (half of 6). So 2 full symbols and 1 half symbol are needed to show 15 matches."
     },
     {
-      id: "c18_q42",
-      topic: "Stem-and-leaf diagrams",
-      type: "mcq",
-      question: "A stem-and-leaf diagram shows:<br><br><strong>Stem | Leaf</strong><br>2 &nbsp;&nbsp;&nbsp;| 4 &nbsp;6 &nbsp;9<br>3 &nbsp;&nbsp;&nbsp;| 1 &nbsp;1 &nbsp;5 &nbsp;8<br>4 &nbsp;&nbsp;&nbsp;| 0 &nbsp;2<br><br>What is the <strong>median</strong> of this data?",
-      options: ["31", "35", "36", "38"],
-      answer: 0,
-      explanation: "List all values in order: 24, 26, 29, 31, 31, 35, 38, 40, 42. There are 9 values so the median is the 5th value = <strong>31</strong>. Always read the stem-and-leaf diagram from top-left to bottom-right to get values in order."
-    },
-    {
       id: "c18_q43",
       topic: "Measuring the centre of a data set",
       difficulty: "challenging",
@@ -798,16 +622,6 @@ const ch18 = {
       explanation: "Sector angle = (frequency ÷ total) × 360°. Science has 12 out of 30 students. Angle = (12/30) × 360° = 0.4 × 360° = <strong>144°</strong>. Always divide the individual frequency by the total first, then multiply by 360."
     },
     {
-      id: "c18_q45",
-      topic: "Stem-and-leaf diagrams",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "A back-to-back stem-and-leaf diagram compares heights (cm) of boys and girls:<br><br><strong>Boys | Stem | Girls</strong><br>8 4 | 14 | 2 5 7<br>9 6 3 | 15 | 1 3 6 8<br>5 2 | 16 | 0 4<br><br>(Read boys' leaves right-to-left from the stem)<br><br>How many students are represented in total?",
-      options: ["12", "14", "16", "18"],
-      answer: 2,
-      explanation: "Count all leaves: Boys — row 14: 2 leaves (4, 8), row 15: 3 leaves (3, 6, 9), row 16: 2 leaves (2, 5) = 7 boys. Girls — row 14: 3 leaves (2, 5, 7), row 15: 4 leaves (1, 3, 6, 8), row 16: 2 leaves (0, 4) = 9 girls. Total = 7 + 9 = <strong>16</strong> students."
-    },
-    {
       id: "c18_q46",
       topic: "Measuring the centre of a data set",
       difficulty: "challenging",
@@ -826,15 +640,6 @@ const ch18 = {
       options: ["10%", "100%", "110%", "1000%"],
       answer: 0,
       explanation: "Actual increase = £1100 − £1000 = £100. Percentage increase = (100 ÷ 1000) × 100% = <strong>10%</strong>. Graph B is misleading because starting the axis at 900 makes Year 1's bar very short (just 100 units tall) vs Year 2's bar (200 units tall), making the increase look 100% visually when it's really only 10%. Always check the scale before drawing conclusions!"
-    },
-    {
-      id: "c18_q48",
-      topic: "Range",
-      type: "mcq",
-      question: "Two students each took 5 tests. Amara's scores: 60, 65, 62, 64, 59. Ben's scores: 40, 75, 55, 80, 50. Both students have the same mean score. What does the <strong>range</strong> tell us about their performance?",
-      options: ["Amara and Ben performed equally well overall", "Ben's scores are more consistent because his range is smaller", "Amara's scores are more consistent because her range is smaller", "Range does not tell us anything useful here"],
-      answer: 2,
-      explanation: "Amara's range = 65 − 59 = 6. Ben's range = 80 − 40 = 40. A <strong>smaller range means more consistent</strong> scores. Even though they have the same mean, Amara's marks are much more consistent (always close to 62), while Ben's vary wildly from 40 to 80."
     },
     {
       id: "c18_q49",

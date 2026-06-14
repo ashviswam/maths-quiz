@@ -251,33 +251,6 @@ const ch08 = {
     // ── NEW QUESTIONS ─────────────────────────────────────────────────────────
 
     // Units of length: mm ↔ cm
-    {
-      id: "c8_q21",
-      topic: "Units of length",
-      type: "mcq",
-      question: "How many millimetres are in <strong>1 centimetre</strong>?",
-      options: ["1 mm", "10 mm", "100 mm", "1000 mm"],
-      answer: 1,
-      explanation: "The prefix <em>milli-</em> means one thousandth, so 1 cm = <strong>10 mm</strong>. Think of it this way: a ruler shows 10 small millimetre marks for every centimetre gap."
-    },
-    {
-      id: "c8_q22",
-      topic: "Units of length",
-      type: "input",
-      question: "Convert <strong>45 mm</strong> to centimetres.<br><br>10 mm = 1 cm. Write your answer in centimetres.",
-      answer: "4.5",
-      acceptableAnswers: ["4.5", "4.5 cm", "4.50", "4.50 cm"],
-      explanation: "To convert millimetres to centimetres, divide by 10. 45 ÷ 10 = <strong>4.5 cm</strong>. You are moving to a larger unit, so you divide."
-    },
-    {
-      id: "c8_q23",
-      topic: "Units of length",
-      type: "input",
-      question: "Convert <strong>6.8 cm</strong> to millimetres.<br><br>1 cm = 10 mm. Write your answer in millimetres.",
-      answer: "68",
-      acceptableAnswers: ["68", "68 mm", "68mm"],
-      explanation: "To convert centimetres to millimetres, multiply by 10. 6.8 × 10 = <strong>68 mm</strong>. Moving to a smaller unit means multiplying."
-    },
 
     // Mass: mg ↔ g
     {
@@ -320,80 +293,8 @@ const ch08 = {
     },
 
     // Capacity: mL ↔ L
-    {
-      id: "c8_q28",
-      topic: "Units of capacity",
-      type: "mcq",
-      question: "How many millilitres (mL) are in <strong>1 litre</strong>?",
-      options: ["10 mL", "100 mL", "1000 mL", "10 000 mL"],
-      answer: 2,
-      explanation: "1 litre = <strong>1000 mL</strong>. A standard water bottle holds about 500 mL, which is half a litre. Knowing this helps you estimate everyday liquid quantities."
-    },
-    {
-      id: "c8_q29",
-      topic: "Units of capacity",
-      type: "input",
-      question: "A bottle contains <strong>2.5 litres</strong> of juice. How many millilitres is this?<br><br>1 L = 1000 mL. Write your answer in millilitres.",
-      answer: "2500",
-      acceptableAnswers: ["2500", "2500 mL", "2500ml", "2,500", "2,500 mL"],
-      explanation: "To convert litres to millilitres, multiply by 1000. 2.5 × 1000 = <strong>2500 mL</strong>. Moving to a smaller unit means multiplying."
-    },
-    {
-      id: "c8_q30",
-      topic: "Units of capacity",
-      type: "mcq",
-      question: "A fish tank holds <strong>75 000 mL</strong> of water. What is this in litres?",
-      options: ["7.5 L", "75 L", "750 L", "7500 L"],
-      answer: 1,
-      explanation: "To convert millilitres to litres, divide by 1000. 75 000 ÷ 1000 = <strong>75 L</strong>. A 75-litre fish tank is a medium-sized home aquarium — the unit 'litres' gives a much more useful number here."
-    },
 
     // Units of time
-    {
-      id: "c8_q31",
-      topic: "Units of time",
-      type: "mcq",
-      question: "How many seconds are in <strong>1 minute</strong>?",
-      options: ["10", "60", "100", "1000"],
-      answer: 1,
-      explanation: "There are <strong>60 seconds</strong> in 1 minute. Unlike length and mass where we use powers of 10, time uses 60 as the base for seconds→minutes→hours. This goes back thousands of years to ancient Babylonian mathematics!"
-    },
-    {
-      id: "c8_q32",
-      topic: "Units of time",
-      type: "mcq",
-      question: "How many minutes are in <strong>2.5 hours</strong>?",
-      options: ["25 minutes", "120 minutes", "150 minutes", "250 minutes"],
-      answer: 2,
-      explanation: "1 hour = 60 minutes, so 2.5 hours = 2.5 × 60 = <strong>150 minutes</strong>. It helps to split it: 2 hours = 120 minutes, then half an hour = 30 minutes, giving 120 + 30 = 150 minutes."
-    },
-    {
-      id: "c8_q33",
-      topic: "Units of time",
-      type: "input",
-      question: "A film lasts <strong>135 minutes</strong>. How many hours and minutes is this?<br><br>Write your answer as a whole number of hours only (ignore the remaining minutes). How many <em>complete</em> hours are there?",
-      answer: "2",
-      acceptableAnswers: ["2", "2 hours", "2h"],
-      explanation: "135 ÷ 60 = 2 remainder 15. There are <strong>2 complete hours</strong> in 135 minutes (with 15 minutes left over). So the film lasts 2 hours and 15 minutes."
-    },
-    {
-      id: "c8_q34",
-      topic: "Units of time",
-      type: "mcq",
-      question: "Which unit would be most appropriate for measuring the time it takes to blink your eyes?",
-      options: ["Hours", "Minutes", "Seconds", "Days"],
-      answer: 2,
-      explanation: "A blink lasts about 0.1 to 0.4 <strong>seconds</strong>. This is far too short to measure in minutes or hours. Seconds (and fractions of a second) are used for very short time intervals."
-    },
-    {
-      id: "c8_q35",
-      topic: "Units of time",
-      type: "mcq",
-      question: "How many days are in <strong>3 weeks</strong>?",
-      options: ["14 days", "18 days", "21 days", "30 days"],
-      answer: 2,
-      explanation: "1 week = 7 days, so 3 weeks = 3 × 7 = <strong>21 days</strong>. Time conversions involving weeks always use the multiplier 7."
-    },
 
     // Estimation
     {
@@ -425,57 +326,11 @@ const ch08 = {
     },
 
     // Imperial and metric comparisons
-    {
-      id: "c8_q39",
-      topic: "Imperial and metric",
-      type: "mcq",
-      question: "Using the approximation <strong>1 inch ≈ 2.5 cm</strong>, approximately how many centimetres is <strong>4 inches</strong>?",
-      options: ["8 cm", "10 cm", "12 cm", "16 cm"],
-      answer: 1,
-      explanation: "4 inches × 2.5 cm/inch = <strong>10 cm</strong>. A 4-inch screen (like an older phone) is about 10 cm across. The approximation 1 inch ≈ 2.5 cm is very useful for everyday conversions."
-    },
-    {
-      id: "c8_q40",
-      topic: "Imperial and metric",
-      type: "mcq",
-      question: "Using the approximation <strong>1 mile ≈ 1.6 km</strong>, approximately how many kilometres is <strong>5 miles</strong>?",
-      options: ["5 km", "6.4 km", "8 km", "10 km"],
-      answer: 2,
-      explanation: "5 miles × 1.6 km/mile = <strong>8 km</strong>. Speed limits in the UK are often given in miles per hour — a 30 mph limit is about 48 km/h. The approximation 1 mile ≈ 1.6 km is important to know."
-    },
 
     // Compound measures preview: speed
-    {
-      id: "c8_q41",
-      topic: "Compound measures",
-      type: "mcq",
-      question: "Speed is calculated using the formula: <em>Speed = Distance ÷ Time</em>.<br><br>A cyclist travels <strong>30 km</strong> in <strong>2 hours</strong>. What is the cyclist's average speed?",
-      options: ["15 km per hour", "60 km per hour", "32 km per hour", "28 km per hour"],
-      answer: 0,
-      explanation: "Speed = Distance ÷ Time = 30 ÷ 2 = <strong>15 km per hour (km/h)</strong>. This means the cyclist covers 15 km in every hour of travel. Speed always combines two different units — a unit of distance and a unit of time."
-    },
-    {
-      id: "c8_q42",
-      topic: "Compound measures",
-      type: "mcq",
-      question: "Density is calculated as: <em>Density = Mass ÷ Volume</em>.<br><br>A rock has a mass of <strong>600 g</strong> and a volume of <strong>200 cm³</strong>. What is its density?",
-      options: ["0.33 g/cm³", "2 g/cm³", "3 g/cm³", "400 g/cm³"],
-      answer: 2,
-      explanation: "Density = Mass ÷ Volume = 600 ÷ 200 = <strong>3 g/cm³</strong>. This means every 1 cm³ of the rock has a mass of 3 g. The density of water is 1 g/cm³, so this rock is 3 times denser than water — it sinks!"
-    },
 
     // CHALLENGING QUESTIONS ───────────────────────────────────────────────────
 
-    {
-      id: "c8_q43",
-      topic: "Units of length",
-      difficulty: "challenging",
-      type: "input",
-      question: "A running track is <strong>0.4 km</strong> long. How many <strong>centimetres</strong> long is the track?<br><br>Show your thinking: first convert km to m, then m to cm.",
-      answer: "40000",
-      acceptableAnswers: ["40000", "40 000", "40000 cm", "40,000", "40,000 cm"],
-      explanation: "This is a two-step conversion chain! <br>Step 1: km → m: 0.4 km × 1000 = 400 m<br>Step 2: m → cm: 400 m × 100 = <strong>40 000 cm</strong><br>You can also think of it as: 1 km = 100 000 cm, so 0.4 km = 0.4 × 100 000 = 40 000 cm. Multi-step conversions are handled one step at a time."
-    },
     {
       id: "c8_q44",
       topic: "Units of mass",
@@ -501,30 +356,5 @@ const ch08 = {
       acceptableAnswers: ["1400000", "1 400 000", "1,400,000", "1400000 g", "1,400,000 g"],
       explanation: "Step 1: tonnes → kg: 1.4 tonnes × 1000 = 1400 kg<br>Step 2: kg → g: 1400 × 1000 = <strong>1 400 000 g</strong> (one million four hundred thousand grams!)<br>It is usually better to express this as 1.4 tonnes or 1400 kg — this shows why we choose units that give manageable numbers."
     },
-    {
-      id: "c8_q46",
-      topic: "Units of capacity",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "A swimming pool holds <strong>2 500 000 litres</strong> of water.<br>Select the row that correctly expresses this in both kilolitres (kL) <em>and</em> cubic metres (m³), given that 1 kL = 1000 L and 1 m³ = 1000 L.",
-      options: [
-        "250 kL and 250 m³",
-        "2500 kL and 2500 m³",
-        "25 000 kL and 25 000 m³",
-        "2 500 000 kL and 2 500 000 m³"
-      ],
-      answer: 1,
-      explanation: "Litres → kL: 2 500 000 ÷ 1000 = <strong>2500 kL</strong>.<br>Since 1 m³ = 1 kL, the pool also holds <strong>2500 m³</strong>.<br>This is a great example of how knowing that 1 kL = 1 m³ (a neat fact in the metric system!) lets you solve two conversions at once."
-    },
-    {
-      id: "c8_q47",
-      topic: "Compound measures",
-      difficulty: "challenging",
-      type: "mcq",
-      question: "A train travels at a constant speed of <strong>90 km/h</strong>. How far does it travel in <strong>30 minutes</strong>?<br><br>Hint: convert 30 minutes to hours first.",
-      options: ["30 km", "45 km", "60 km", "90 km"],
-      answer: 1,
-      explanation: "30 minutes = 30 ÷ 60 = 0.5 hours.<br>Distance = Speed × Time = 90 × 0.5 = <strong>45 km</strong>.<br>The key insight is that you must convert time to the same unit used in the speed (hours). In half an hour at 90 km/h, you cover half of 90 km = 45 km."
-    }
   ]
 };
