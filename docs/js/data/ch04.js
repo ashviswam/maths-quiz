@@ -210,7 +210,7 @@ const ch04 = {
   <text x="290" y="120" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">18</text>
   <text x="283" y="140" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">36</text>
   <!-- HCF label -->
-  <text x="190" y="210" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">HCF = 12 (largest common factor)</text>
+  <text x="190" y="210" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">HCF = ?</text>
 </svg>`,
       options: ["4", "6", "12", "18"],
       answer: 2,

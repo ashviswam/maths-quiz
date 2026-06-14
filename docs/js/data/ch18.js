@@ -378,7 +378,7 @@ const ch18 = {
   <!-- Other label -->
   <text x="90" y="155" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">75%</text>
   <!-- Note -->
-  <text x="130" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">25% of 360° = 90°</text>
+  <text x="130" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">25% of 360° = ?°</text>
 </svg>`,
       options: ["25°", "45°", "90°", "180°"],
       answer: 2,

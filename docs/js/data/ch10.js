@@ -151,7 +151,7 @@ const ch10 = {
   <!-- Scale: 6 cm height => 120px, length unknown => show as wider shape -->
   <rect x="60" y="50" width="200" height="120" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
   <!-- Area label inside -->
-  <text x="160" y="117" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="600">Area = 48 cm²</text>
+  <text x="160" y="117" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="600">Area = ? cm²</text>
   <!-- Length label (top) with question mark -->
   <text x="160" y="38" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">? cm</text>
   <!-- Width label (left) -->

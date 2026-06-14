@@ -37,24 +37,20 @@ const ch05 = {
       topic: "Polygons",
       type: "mcq",
       question: "The sum of the interior angles of a hexagon is:",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Regular hexagon with interior angles marked">
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Regular hexagon with 6 interior angles marked">
   <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Regular hexagon centered at (160,108), radius 85 -->
-  <polygon points="
-    245,108
-    202,181
-    118,181
-    75,108
-    118,35
-    202,35"
+  <polygon points="245,108 202,181 118,181 75,108 118,35 202,35"
     fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Angle arc at vertex (245,108) -->
-  <path d="M 225,108 A 20,20 0 0,1 235,91" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <!-- Interior angle labels at each vertex (inside) -->
-  <text x="222" y="112" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">120°</text>
-  <!-- Label count -->
-  <text x="160" y="116" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">6 angles × 120° = 720°</text>
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Hexagon — 6 sides</text>
+  <!-- Small angle arcs at all 6 vertices -->
+  <path d="M225,108 A18,18 0 0,1 232,93" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <path d="M196,165 A18,18 0 0,1 179,169" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <path d="M124,169 A18,18 0 0,1 108,163" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <path d="M95,108 A18,18 0 0,1 88,93" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <path d="M124,51 A18,18 0 0,1 140,46" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <path d="M180,46 A18,18 0 0,1 196,51" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <!-- Question mark in centre -->
+  <text x="160" y="115" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="22" font-weight="700">?°</text>
+  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Hexagon — 6 sides, 6 angles</text>
 </svg>`,
       options: ["540°", "360°", "720°", "900°"],
       answer: 2,

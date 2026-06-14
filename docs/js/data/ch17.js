@@ -267,7 +267,7 @@ const ch17 = {
   <text x="303" y="138" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">T,5</text>
   <text x="343" y="138" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">T,6</text>
   <!-- Total count label -->
-  <text x="190" y="195" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Total outcomes: 2 × 6 = 12</text>
+  <text x="190" y="195" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Total outcomes = ?</text>
 </svg>`,
       options: ["2", "6", "8", "12"],
       answer: 3,

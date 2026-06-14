@@ -273,7 +273,7 @@ const ch03 = {
   <text x="145" y="118" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">b</text>
   <text x="155" y="108" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">?</text>
   <!-- Straight line label -->
-  <text x="140" y="165" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">a + b = 180° (angles on a straight line)</text>
+  <text x="140" y="165" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">a + b = ?°</text>
 </svg>`,
       options: ["25°", "115°", "295°", "125°"],
       answer: 1,
