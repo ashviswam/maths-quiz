@@ -6,19 +6,18 @@ const App = (() => {
 
   // ── State ──────────────────────────────────────────────────
   let state = {
-    chapter: null,       // current chapter object
-    questions: [],       // questions for current session
-    index: 0,            // current question index
-    sessionCorrect: 0,   // correct answers this session
-    sessionAnswers: [],  // {id, correct} per question
-    answered: false,     // has current question been answered
-    retryMode: false     // retrying wrong answers only
+    chapter: null,
+    questions: [],
+    index: 0,
+    sessionCorrect: 0,
+    sessionAnswers: [],  // [{id, correct}] — unique per question, for results
+    sessionMap: {},      // {questionId: correct} — O(1) lookup for sidebar
+    answered: false,
+    retryMode: false
   };
 
   // ── Boot ───────────────────────────────────────────────────
-  function init() {
-    renderHome();
-  }
+  function init() { renderHome(); }
 
   // ── Navigation ─────────────────────────────────────────────
   function showView(id) {
@@ -30,15 +29,15 @@ const App = (() => {
     document.getElementById('btn-back').classList.add('hidden');
     document.getElementById('header-right').textContent = '';
     showView('view-home');
-    renderHome(); // refresh progress
+    renderHome();
   }
 
   // ── Home View ──────────────────────────────────────────────
   function renderHome() {
     const hour = new Date().getHours();
-    const greeting = hour < 12 ? 'Good morning! ☀️'
-                   : hour < 17 ? 'Hello! 👋'
-                   : 'Good evening! 🌙';
+    const greeting = hour < 12 ? 'Good morning, Pragathy! ☀️'
+                   : hour < 17 ? 'Hey Pragathy! 👋'
+                   : 'Good evening, Pragathy! 🌙';
     document.getElementById('home-greeting').textContent = greeting;
 
     const overall = Progress.getOverallStats(CHAPTERS);
@@ -66,6 +65,8 @@ const App = (() => {
     card.onclick = () => startChapter(ch);
 
     const progPct = Math.round((stats.correct / ch.questions.length) * 100);
+    const answered = stats.answered;
+    const inProgress = answered > 0 && !stats.done;
 
     card.innerHTML = `
       <div class="ch-top">
@@ -81,23 +82,26 @@ const App = (() => {
             ? `${stats.correct}/${ch.questions.length} correct (${progPct}%)`
             : `${ch.questions.length} questions`}
         </span>
-        ${stats.done ? '<span class="ch-badge-done">✓ Completed</span>' : ''}
+        ${stats.done
+          ? '<span class="ch-badge-done">✓ Completed</span>'
+          : inProgress
+            ? `<span class="ch-badge-progress">▶ In progress (${answered} done)</span>`
+            : ''}
       </div>
     `;
     return card;
   }
 
-  // ── Quiz ───────────────────────────────────────────────────
+  // ── Start Chapter ─────────────────────────────────────────
   function startChapter(ch, wrongOnly = false) {
-    state.chapter = ch;
+    state.chapter   = ch;
     state.retryMode = wrongOnly;
-    state.index = 0;
-    state.sessionCorrect = 0;
-    state.sessionAnswers = [];
-    state.answered = false;
+    state.sessionCorrect  = 0;
+    state.sessionAnswers  = [];
+    state.sessionMap      = {};
+    state.answered        = false;
 
     if (wrongOnly) {
-      // Only questions the user got wrong previously
       state.questions = ch.questions.filter(q => {
         const h = Progress.getQuestionHistory(ch.id, q.id);
         return !h || !h.correct;
@@ -106,30 +110,108 @@ const App = (() => {
         alert("You've got all questions correct already! 🎉");
         return;
       }
+      state.index = 0;
     } else {
       state.questions = [...ch.questions];
+      // Resume from first unanswered question
+      const firstUnanswered = state.questions.findIndex(q =>
+        !Progress.getQuestionHistory(ch.id, q.id)
+      );
+      // If all answered already → start from 0 (review mode)
+      state.index = firstUnanswered >= 0 ? firstUnanswered : 0;
     }
 
     document.getElementById('btn-back').classList.remove('hidden');
     document.getElementById('quiz-title').textContent = `Ch. ${ch.id}: ${ch.title}`;
 
+    renderSidebar();
     showView('view-quiz');
     renderQuestion();
   }
 
+  // ── Sidebar ───────────────────────────────────────────────
+  function renderSidebar() {
+    const list = document.getElementById('sidebar-list');
+    list.innerHTML = '';
+    state.questions.forEach((q, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'si-item';
+      btn.id = `si-${i}`;
+      btn.onclick = () => jumpToQuestion(i);
+      btn.title = `Q${i + 1}: ${q.topic}`;
+
+      const h = Progress.getQuestionHistory(state.chapter.id, q.id);
+      const status = h ? (h.correct ? 'correct' : 'wrong') : 'grey';
+      if (status !== 'grey') btn.classList.add(`si-${status}`);
+
+      btn.innerHTML = `
+        <span class="si-num">${i + 1}</span>
+        <span class="si-topic">${q.topic}${q.difficulty === 'challenging' ? ' ⭐' : ''}</span>
+        <span class="si-dot"></span>
+      `;
+      list.appendChild(btn);
+    });
+    updateFinishBtn();
+  }
+
+  function updateSidebarItem(index) {
+    const q   = state.questions[index];
+    const btn = document.getElementById(`si-${index}`);
+    if (!btn) return;
+    btn.classList.remove('si-correct', 'si-wrong');
+
+    // Session result takes priority; fall back to persistent history
+    const sessionResult = state.sessionMap[q.id];
+    if (sessionResult !== undefined) {
+      btn.classList.add(sessionResult ? 'si-correct' : 'si-wrong');
+    } else {
+      const h = Progress.getQuestionHistory(state.chapter.id, q.id);
+      if (h) btn.classList.add(h.correct ? 'si-correct' : 'si-wrong');
+    }
+  }
+
+  function setSidebarCurrent(index) {
+    document.querySelectorAll('.si-item').forEach(el => el.classList.remove('si-current'));
+    const curr = document.getElementById(`si-${index}`);
+    if (curr) {
+      curr.classList.add('si-current');
+      curr.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+  }
+
+  function updateFinishBtn() {
+    const btn = document.getElementById('btn-finish-quiz');
+    if (!btn) return;
+    const anyAnswered = state.sessionAnswers.length > 0;
+    btn.classList.toggle('hidden', !anyAnswered);
+  }
+
+  // ── Jump to any question ──────────────────────────────────
+  function jumpToQuestion(index) {
+    state.index   = index;
+    state.answered = false;
+    document.getElementById('feedback-card').classList.add('hidden');
+    renderQuestion();
+  }
+
+  // ── Render Question ───────────────────────────────────────
   function renderQuestion() {
     const q = state.questions[state.index];
     state.answered = false;
 
-    // Progress bar
-    const pct = Math.round((state.index / state.questions.length) * 100);
+    // Progress bar reflects overall chapter completion
+    const doneCount = state.questions.filter(q2 => {
+      return state.sessionMap[q2.id] !== undefined
+          || !!Progress.getQuestionHistory(state.chapter.id, q2.id);
+    }).length;
+    const pct = Math.round((doneCount / state.questions.length) * 100);
     document.getElementById('quiz-prog-fill').style.width = pct + '%';
     document.getElementById('quiz-counter').textContent =
       `Question ${state.index + 1} of ${state.questions.length}`;
     document.getElementById('quiz-score-live').textContent =
-      `✓ ${state.sessionCorrect}  ✗ ${state.index - state.sessionCorrect}`;
+      `✓ ${state.sessionCorrect}  ✗ ${state.sessionAnswers.length - state.sessionCorrect}`;
 
-    // Previous history note
+    // History badge
     const history = Progress.getQuestionHistory(state.chapter.id, q.id);
     let badge = '';
     if (history) {
@@ -138,14 +220,28 @@ const App = (() => {
         : ' <span style="font-size:.75rem;background:#fff1f2;color:#e11d48;padding:2px 7px;border-radius:99px;margin-left:6px;">Missed before</span>';
     }
 
+    // Difficulty badge
+    const topicEl = document.getElementById('q-topic');
+    topicEl.textContent = q.topic;
+    const stretchBadge = document.getElementById('q-stretch-badge');
+    if (q.difficulty === 'challenging') {
+      stretchBadge.classList.remove('hidden');
+    } else {
+      stretchBadge.classList.add('hidden');
+    }
+
     document.getElementById('q-topic').textContent = q.topic;
     document.getElementById('q-text').innerHTML = q.question + badge;
+    const diagDiv = document.getElementById('q-diagram');
+    if (q.diagram) {
+      diagDiv.innerHTML = q.diagram;
+      diagDiv.classList.remove('hidden');
+    } else {
+      diagDiv.innerHTML = '';
+      diagDiv.classList.add('hidden');
+    }
+    document.getElementById('feedback-card').classList.add('hidden');
 
-    // Hide feedback
-    const fb = document.getElementById('feedback-card');
-    fb.classList.add('hidden');
-
-    // MCQ or Input
     const optDiv   = document.getElementById('q-options');
     const inputDiv = document.getElementById('q-input');
     const inp      = document.getElementById('answer-input');
@@ -163,6 +259,8 @@ const App = (() => {
       document.getElementById('btn-submit').disabled = false;
       inp.focus();
     }
+
+    setSidebarCurrent(state.index);
   }
 
   function renderOptions(q) {
@@ -181,16 +279,12 @@ const App = (() => {
   function selectOption(btn, index, q) {
     if (state.answered) return;
     state.answered = true;
-
     const correct = index === q.answer;
-    const buttons = document.querySelectorAll('.option-btn');
-
-    buttons.forEach((b, i) => {
+    document.querySelectorAll('.option-btn').forEach((b, i) => {
       b.disabled = true;
       if (i === q.answer) b.classList.add('correct');
       else if (i === index && !correct) b.classList.add('wrong');
     });
-
     handleResult(correct, q);
   }
 
@@ -217,23 +311,38 @@ const App = (() => {
       ? q.acceptableAnswers.map(normalize)
       : [normalize(q.answer)];
     if (accepted.includes(user)) return true;
-    // Try numeric comparison
     const uNum = parseFloat(user.replace(/[^\d.\-]/g, ''));
     const aNum = parseFloat(normalize(q.answer).replace(/[^\d.\-]/g, ''));
     if (!isNaN(uNum) && !isNaN(aNum) && Math.abs(uNum - aNum) < 0.0001) return true;
     return false;
   }
 
+  // ── Handle answer result ──────────────────────────────────
   function handleResult(correct, q) {
-    state.sessionAnswers.push({ id: q.id, correct });
-    if (correct) state.sessionCorrect++;
+    const prev  = state.sessionMap[q.id];
+    const isNew = prev === undefined;
+
+    if (isNew) {
+      state.sessionAnswers.push({ id: q.id, correct });
+      if (correct) state.sessionCorrect++;
+    } else {
+      // Re-answer: update existing entry
+      const entry = state.sessionAnswers.find(a => a.id === q.id);
+      if (entry) {
+        if (!entry.correct && correct)  state.sessionCorrect++;
+        if (entry.correct  && !correct) state.sessionCorrect--;
+        entry.correct = correct;
+      }
+    }
+    state.sessionMap[q.id] = correct;
 
     Progress.recordAnswer(state.chapter.id, q.id, correct);
 
-    // Update live score
     document.getElementById('quiz-score-live').textContent =
       `✓ ${state.sessionCorrect}  ✗ ${state.sessionAnswers.length - state.sessionCorrect}`;
 
+    updateSidebarItem(state.index);
+    updateFinishBtn();
     showFeedback(correct, q);
   }
 
@@ -245,12 +354,10 @@ const App = (() => {
     const heading = document.getElementById('fb-heading');
     heading.textContent = correct ? 'Correct! Well done!' : 'Not quite — but now you know!';
     heading.className = 'fb-heading ' + (correct ? 'correct-heading' : 'wrong-heading');
-
     document.getElementById('fb-explanation').innerHTML = q.explanation;
 
-    const btnNext = document.getElementById('btn-next');
-    const isLast  = state.index >= state.questions.length - 1;
-    btnNext.textContent = isLast ? 'See Results →' : 'Next Question →';
+    const isLast = state.index >= state.questions.length - 1;
+    document.getElementById('btn-next').textContent = isLast ? 'Finish →' : 'Next Question →';
 
     fb.classList.add('pop');
     setTimeout(() => fb.classList.remove('pop'), 300);
@@ -267,30 +374,34 @@ const App = (() => {
 
   // ── Results ────────────────────────────────────────────────
   function showResults() {
-    const total   = state.questions.length;
+    if (state.sessionAnswers.length === 0) {
+      goHome();
+      return;
+    }
+
+    const total   = state.sessionAnswers.length;
     const correct = state.sessionCorrect;
     const pct     = Math.round((correct / total) * 100);
 
     let emoji, title, msg;
     if (pct === 100) {
       emoji = '🏆'; title = 'Perfect Score!';
-      msg = 'Absolutely brilliant — you got every single question right! 🌟';
+      msg = 'Absolutely brilliant — every answer correct! 🌟';
     } else if (pct >= 80) {
       emoji = '⭐'; title = 'Great Work!';
-      msg = `${pct}% — that's really solid. A little more review and you'll be unstoppable!`;
+      msg = `${pct}% — really solid. A bit more review and you'll be unstoppable!`;
     } else if (pct >= 60) {
       emoji = '💪'; title = 'Good Effort!';
-      msg = `${pct}% — you're getting there! Try the wrong ones again to boost your score.`;
+      msg = `${pct}% — you're getting there! Try the wrong ones again.`;
     } else {
       emoji = '📚'; title = 'Keep Practising!';
-      msg = `${pct}% this time — the more you practise, the better you'll get. You've got this!`;
+      msg = `${pct}% — the more you practise, the better you'll get. You've got this!`;
     }
 
     document.getElementById('results-emoji').textContent = emoji;
     document.getElementById('results-title').textContent = title;
     document.getElementById('results-msg').textContent   = msg;
 
-    // Score block
     const pctClass = pct >= 80 ? 'pct-great' : pct >= 60 ? 'pct-ok' : 'pct-low';
     document.getElementById('results-score').innerHTML = `
       <span class="results-score-num">${correct}</span>
@@ -299,14 +410,14 @@ const App = (() => {
       <span class="results-score-pct ${pctClass}">${pct}%</span>
     `;
 
-    // Breakdown
+    // Breakdown — only questions answered this session
     const bd = document.getElementById('results-breakdown');
     bd.innerHTML = '';
-    state.sessionAnswers.forEach((ans, i) => {
-      const q   = state.questions[i];
+    state.sessionAnswers.forEach(ans => {
+      const q   = state.questions.find(q2 => q2.id === ans.id);
+      if (!q) return;
       const div = document.createElement('div');
       div.className = 'breakdown-item';
-      // Strip HTML tags for display
       const qText = q.question.replace(/<[^>]+>/g, '').substring(0, 70) + (q.question.length > 70 ? '…' : '');
       div.innerHTML = `
         <span class="breakdown-icon">${ans.correct ? '✅' : '❌'}</span>
@@ -316,8 +427,7 @@ const App = (() => {
       bd.appendChild(div);
     });
 
-    // Show "Retry wrong" button if any wrong
-    const wrongCount = total - correct;
+    const wrongCount = state.sessionAnswers.filter(a => !a.correct).length;
     const retryBtn   = document.getElementById('btn-retry-wrong');
     if (wrongCount > 0 && !state.retryMode) {
       retryBtn.classList.remove('hidden');
@@ -333,7 +443,7 @@ const App = (() => {
     startChapter(state.chapter, true);
   }
 
-  // ── Enter key for input ────────────────────────────────────
+  // ── Keyboard shortcuts ────────────────────────────────────
   document.addEventListener('keydown', e => {
     const inpDiv = document.getElementById('q-input');
     if (e.key === 'Enter' && !inpDiv.classList.contains('hidden') && !state.answered) {
@@ -344,8 +454,7 @@ const App = (() => {
     }
   });
 
-  return { init, goHome, startChapter, submitInput, nextQuestion, retryWrong };
+  return { init, goHome, startChapter, submitInput, nextQuestion, retryWrong, jumpToQuestion, showResults };
 })();
 
-// Boot when DOM is ready
 document.addEventListener('DOMContentLoaded', App.init);

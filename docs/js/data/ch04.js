@@ -137,6 +137,44 @@ const ch04 = {
       topic: "Prime and composite numbers",
       type: "input",
       question: "Write the prime factorisation of <strong>60</strong> using multiplication (e.g. write your answer as 2x2x3x5).",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Factor tree for 60">
+  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
+  <!-- Title -->
+  <text x="160" y="18" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">Factor Tree for 60</text>
+  <!-- Root node: 60 -->
+  <circle cx="160" cy="42" r="18" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
+  <text x="160" y="47" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">60</text>
+  <!-- Branch: 60 -> 2 and 30 -->
+  <line x1="148" y1="57" x2="100" y2="88" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="172" y1="57" x2="220" y2="88" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Node: 2 (prime) -->
+  <circle cx="100" cy="100" r="18" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="2"/>
+  <text x="100" y="105" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">2</text>
+  <!-- Node: 30 -->
+  <circle cx="220" cy="100" r="18" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
+  <text x="220" y="105" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">30</text>
+  <!-- Branch: 30 -> 2 and 15 -->
+  <line x1="208" y1="115" x2="170" y2="145" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="232" y1="115" x2="270" y2="145" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Node: 2 (prime) -->
+  <circle cx="170" cy="158" r="18" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="2"/>
+  <text x="170" y="163" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">2</text>
+  <!-- Node: 15 -->
+  <circle cx="270" cy="158" r="18" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
+  <text x="270" y="163" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">15</text>
+  <!-- Branch: 15 -> 3 and 5 -->
+  <line x1="258" y1="173" x2="234" y2="196" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="282" y1="173" x2="296" y2="196" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Node: 3 (prime) -->
+  <circle cx="230" cy="205" r="13" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="2"/>
+  <text x="230" y="210" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">3</text>
+  <!-- Node: 5 (prime) -->
+  <circle cx="294" cy="205" r="13" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="2"/>
+  <text x="294" y="210" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">5</text>
+  <!-- Legend -->
+  <circle cx="18" cy="195" r="8" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="30" y="199" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">= prime</text>
+</svg>`,
       answer: "2x2x3x5",
       acceptableAnswers: ["2x2x3x5", "2×2×3×5", "2*2*3*5", "2 x 2 x 3 x 5", "2 × 2 × 3 × 5"],
       explanation: "60 = 2 × 30 = 2 × 2 × 15 = 2 × 2 × 3 × 5. All factors in the prime factorisation must be prime numbers."
@@ -146,6 +184,34 @@ const ch04 = {
       topic: "Highest common factor",
       type: "mcq",
       question: "What is the <strong>Highest Common Factor (HCF)</strong> of 24 and 36?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 220" aria-label="Venn diagram showing factors of 24 and 36">
+  <rect width="380" height="220" fill="#f8fafc" rx="8"/>
+  <!-- Title -->
+  <text x="190" y="18" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">Factors of 24 and 36</text>
+  <!-- Left circle: factors of 24 only -->
+  <circle cx="145" cy="118" r="85" fill="rgba(91,94,244,0.10)" stroke="#5b5ef4" stroke-width="2"/>
+  <!-- Right circle: factors of 36 only -->
+  <circle cx="235" cy="118" r="85" fill="rgba(244,63,94,0.10)" stroke="#f43f5e" stroke-width="2"/>
+  <!-- Circle labels -->
+  <text x="90" y="48" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">24</text>
+  <text x="290" y="48" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">36</text>
+  <!-- Factors only in 24 -->
+  <text x="95" y="100" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">8</text>
+  <text x="82" y="120" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">24</text>
+  <!-- Common factors (centre) -->
+  <text x="190" y="88" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">1</text>
+  <text x="190" y="106" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">2</text>
+  <text x="190" y="124" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">3</text>
+  <text x="190" y="142" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">4</text>
+  <text x="190" y="160" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700" fill="#f43f5e">6</text>
+  <text x="190" y="178" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">12</text>
+  <!-- Factors only in 36 -->
+  <text x="283" y="100" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">9</text>
+  <text x="290" y="120" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">18</text>
+  <text x="283" y="140" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">36</text>
+  <!-- HCF label -->
+  <text x="190" y="210" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">HCF = 12 (largest common factor)</text>
+</svg>`,
       options: ["4", "6", "12", "18"],
       answer: 2,
       explanation: "The factors of 24 are 1, 2, 3, 4, 6, 8, 12, 24 and the factors of 36 are 1, 2, 3, 4, 6, 9, 12, 18, 36. The largest factor in common is 12."
@@ -191,9 +257,328 @@ const ch04 = {
       topic: "Square numbers",
       type: "mcq",
       question: "A square patio is made of <strong>49</strong> identical square tiles arranged in a square grid. How many tiles are along <strong>one side</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="7 by 7 grid of 49 tiles">
+  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
+  <!-- Title -->
+  <text x="160" y="16" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">49 tiles arranged in a square grid</text>
+  <!-- Draw 7x7 grid of tiles, each tile 26x26px, grid starts at x=55, y=26 -->
+  <!-- Row 1 -->
+  <rect x="55" y="26" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="81" y="26" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="107" y="26" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="133" y="26" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="159" y="26" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="185" y="26" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="211" y="26" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <!-- Row 2 -->
+  <rect x="55" y="52" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="81" y="52" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="107" y="52" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="133" y="52" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="159" y="52" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="185" y="52" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="211" y="52" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <!-- Row 3 -->
+  <rect x="55" y="78" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="81" y="78" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="107" y="78" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="133" y="78" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="159" y="78" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="185" y="78" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="211" y="78" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <!-- Row 4 -->
+  <rect x="55" y="104" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="81" y="104" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="107" y="104" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="133" y="104" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="159" y="104" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="185" y="104" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="211" y="104" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <!-- Row 5 -->
+  <rect x="55" y="130" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="81" y="130" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="107" y="130" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="133" y="130" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="159" y="130" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="185" y="130" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="211" y="130" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <!-- Row 6 -->
+  <rect x="55" y="156" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="81" y="156" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="107" y="156" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="133" y="156" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="159" y="156" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="185" y="156" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="211" y="156" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <!-- Row 7 -->
+  <rect x="55" y="182" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="81" y="182" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="107" y="182" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="133" y="182" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="159" y="182" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="185" y="182" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="211" y="182" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <!-- Side label: 7 tiles -->
+  <text x="244" y="119" text-anchor="start" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">7 tiles</text>
+  <line x1="240" y1="26" x2="240" y2="208" stroke="#5b5ef4" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Bottom label: 7 tiles -->
+  <text x="133" y="216" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">7 tiles</text>
+  <line x1="55" y1="212" x2="237" y2="212" stroke="#5b5ef4" stroke-width="1.5" stroke-dasharray="4,3"/>
+</svg>`,
       options: ["5", "6", "7", "8"],
       answer: 2,
       explanation: "If the total number of tiles is 49 and they are arranged in a square, we need to find the square root of 49. Since 7 × 7 = 49, there are 7 tiles along each side."
+    },
+
+    // ── NEW QUESTIONS START HERE ─────────────────────────────────────────────
+
+    // Factor pairs
+    {
+      id: "c4_q21",
+      topic: "Factors",
+      type: "mcq",
+      question: "Which of the following is a <strong>factor pair</strong> of 48?",
+      options: ["5 and 9", "6 and 8", "7 and 7", "4 and 13"],
+      answer: 1,
+      explanation: "A factor pair multiplies to give the number. 6 × 8 = 48, so (6, 8) is a factor pair of 48. You can check the others: 5 × 9 = 45, 7 × 7 = 49, and 4 × 13 = 52 — none of those equal 48."
+    },
+    {
+      id: "c4_q22",
+      topic: "Factors",
+      type: "input",
+      question: "List all the <strong>factor pairs</strong> of 20 by finding them systematically. How many factor pairs does 20 have? (Count each pair once.)",
+      answer: "3",
+      acceptableAnswers: ["3"],
+      explanation: "Work through systematically, starting from 1: 1 × 20 ✓, 2 × 10 ✓, 3 × ? — 20 ÷ 3 is not a whole number, so skip. 4 × 5 ✓. 5 × 4 is the same as 4 × 5, so stop here. The factor pairs are: (1, 20), (2, 10), and (4, 5) — that is <strong>3 factor pairs</strong>. Since 20 is not a perfect square, every factor pairs up with a different partner."
+    },
+    // Composite numbers
+    {
+      id: "c4_q23",
+      topic: "Prime and composite numbers",
+      type: "mcq",
+      question: "Which of the following is a <strong>composite number</strong>?",
+      options: ["11", "19", "23", "25"],
+      answer: 3,
+      explanation: "A composite number has more than two factors. 25 = 5 × 5, so its factors are 1, 5, and 25 — more than two factors, making it composite. The numbers 11, 19, and 23 are all prime (they have exactly two factors: 1 and themselves)."
+    },
+    {
+      id: "c4_q24",
+      topic: "Prime and composite numbers",
+      type: "mcq",
+      question: "How many <strong>prime numbers</strong> are there between 1 and 20 (not including 1 or 20)?",
+      options: ["6", "7", "8", "9"],
+      answer: 2,
+      explanation: "The prime numbers between 1 and 20 (exclusive) are: 2, 3, 5, 7, 11, 13, 17, 19. That is 8 prime numbers. Remember, 1 is not prime, and 4, 6, 8, 9, 10, 12, 14, 15, 16, 18 are all composite."
+    },
+    // Multiples (standalone listing/common multiples)
+    {
+      id: "c4_q25",
+      topic: "Multiples",
+      type: "mcq",
+      question: "Which of the following is the <strong>4th multiple</strong> of 7?",
+      options: ["21", "28", "35", "42"],
+      answer: 1,
+      explanation: "The multiples of 7 in order are: 7 (1st), 14 (2nd), 21 (3rd), 28 (4th). So the 4th multiple of 7 is 28."
+    },
+    {
+      id: "c4_q26",
+      topic: "Multiples",
+      type: "input",
+      question: "What is the <strong>Lowest Common Multiple (LCM)</strong> of 6 and 9?",
+      answer: "18",
+      acceptableAnswers: ["18"],
+      explanation: "List the multiples: Multiples of 6: 6, 12, <strong>18</strong>, 24... Multiples of 9: 9, <strong>18</strong>, 27... The first number appearing in both lists is 18, so LCM(6, 9) = 18."
+    },
+    // Divisibility rules — 2, 3, 8 individually
+    {
+      id: "c4_q27",
+      topic: "Divisibility tests",
+      type: "mcq",
+      question: "Which of the following numbers is divisible by <strong>3</strong>?",
+      options: ["142", "253", "364", "471"],
+      answer: 3,
+      explanation: "A number is divisible by 3 if the sum of its digits is divisible by 3. Check each: 1+4+2=7 (not divisible by 3), 2+5+3=10 (no), 3+6+4=13 (no), 4+7+1=12 — yes! 12 ÷ 3 = 4, so 471 is divisible by 3."
+    },
+    {
+      id: "c4_q28",
+      topic: "Divisibility tests",
+      type: "mcq",
+      question: "Which of the following numbers is divisible by <strong>8</strong>?",
+      options: ["1,316", "1,424", "1,530", "1,614"],
+      answer: 1,
+      explanation: "A number is divisible by 8 if its <strong>last three digits</strong> form a number divisible by 8. Check: 316 ÷ 8 = 39.5 (no), 424 ÷ 8 = 53 (yes!), 530 ÷ 8 = 66.25 (no), 614 ÷ 8 = 76.75 (no). So 1,424 is divisible by 8."
+    },
+    {
+      id: "c4_q29",
+      topic: "Divisibility tests",
+      type: "mcq",
+      question: "The number <strong>2,_46</strong> has a missing digit in the thousands place. For the number to be divisible by <strong>2</strong>, which statement is true?",
+      options: [
+        "The missing digit must be even",
+        "The missing digit must be odd",
+        "Any digit from 0–9 works, because divisibility by 2 depends only on the last digit",
+        "The digit sum must be even"
+      ],
+      answer: 2,
+      explanation: "Divisibility by 2 depends <strong>only on the last digit</strong>. Since the last digit of 2,_46 is 6, which is even, this number is divisible by 2 no matter what the missing digit is. The missing digit can be anything from 0 to 9."
+    },
+    // Square roots
+    {
+      id: "c4_q30",
+      topic: "Square numbers",
+      type: "input",
+      question: "What is &radic;144 (the square root of 144)?",
+      answer: "12",
+      acceptableAnswers: ["12"],
+      explanation: "The square root of 144 is 12, because 12 × 12 = 144. Finding a square root is the reverse of squaring: if n² = 144, then n = 12."
+    },
+    {
+      id: "c4_q31",
+      topic: "Square numbers",
+      type: "mcq",
+      question: "Which of the following is equal to &radic;225?",
+      options: ["13", "14", "15", "16"],
+      answer: 2,
+      explanation: "15 × 15 = 225, so &radic;225 = 15. You can check: 13² = 169, 14² = 196, 15² = 225 ✓, 16² = 256. Great work using squaring to check square roots!"
+    },
+    // Cube roots
+    {
+      id: "c4_q32",
+      topic: "Cubic numbers",
+      type: "input",
+      question: "What is the <strong>cube root</strong> of 64? (That is, what number multiplied by itself three times gives 64?)",
+      answer: "4",
+      acceptableAnswers: ["4"],
+      explanation: "The cube root of 64 is 4, because 4 × 4 × 4 = 16 × 4 = 64. Finding a cube root is the reverse of cubing: if n³ = 64, then n = 4."
+    },
+    {
+      id: "c4_q33",
+      topic: "Cubic numbers",
+      type: "mcq",
+      question: "Which of the following is a <strong>cube number</strong>?",
+      options: ["16", "25", "36", "64"],
+      answer: 3,
+      explanation: "64 = 4 × 4 × 4 = 4³, so 64 is a cube number. The others are not: 16 = 2⁴ (not a perfect cube), 25 = 5² (a square number but not a cube), and 36 = 6² (also a square but not a cube)."
+    },
+    // Index notation / exponent form
+    {
+      id: "c4_q34",
+      topic: "Index notation",
+      type: "mcq",
+      question: "What is the value of 2<sup>4</sup> (2 to the power of 4)?",
+      options: ["6", "8", "16", "24"],
+      answer: 2,
+      explanation: "2⁴ means 2 × 2 × 2 × 2 = 4 × 4 = 16. The index (or exponent) tells you how many times to multiply the base by itself. Don't confuse 2⁴ with 2 × 4 = 8!"
+    },
+    {
+      id: "c4_q35",
+      topic: "Index notation",
+      type: "mcq",
+      question: "The prime factorisation of 72 written in <strong>index notation</strong> is:",
+      options: ["2<sup>2</sup> × 3<sup>2</sup>", "2<sup>3</sup> × 3<sup>2</sup>", "2<sup>2</sup> × 3<sup>3</sup>", "2<sup>4</sup> × 3"],
+      answer: 1,
+      explanation: "Start with a factor tree: 72 = 2 × 36 = 2 × 2 × 18 = 2 × 2 × 2 × 9 = 2 × 2 × 2 × 3 × 3. That gives three 2s and two 3s, so 72 = 2³ × 3². Index notation groups repeated prime factors using powers."
+    },
+    {
+      id: "c4_q36",
+      topic: "Index notation",
+      type: "input",
+      question: "Write 2<sup>3</sup> × 5 as an ordinary number (e.g. if the answer were 12, type 12).",
+      answer: "40",
+      acceptableAnswers: ["40"],
+      explanation: "2³ × 5 = (2 × 2 × 2) × 5 = 8 × 5 = 40. Always work out the powers first, then multiply."
+    },
+    // HCF using prime factorisation
+    {
+      id: "c4_q37",
+      topic: "Highest common factor",
+      type: "mcq",
+      question: "Use prime factorisation to find the <strong>HCF</strong> of 48 and 72.<br>48 = 2<sup>4</sup> × 3 &nbsp;&nbsp; 72 = 2<sup>3</sup> × 3<sup>2</sup>",
+      options: ["12", "16", "24", "36"],
+      answer: 2,
+      explanation: "To find the HCF using prime factorisation, take the <strong>lowest power</strong> of each common prime factor. Both numbers share 2 and 3. Lowest power of 2: min(4, 3) = 2³ = 8. Lowest power of 3: min(1, 2) = 3¹ = 3. HCF = 8 × 3 = 24."
+    },
+    // LCM using prime factorisation
+    {
+      id: "c4_q38",
+      topic: "Multiples",
+      type: "mcq",
+      question: "Use prime factorisation to find the <strong>LCM</strong> of 12 and 18.<br>12 = 2<sup>2</sup> × 3 &nbsp;&nbsp; 18 = 2 × 3<sup>2</sup>",
+      options: ["24", "36", "54", "72"],
+      answer: 1,
+      explanation: "To find the LCM using prime factorisation, take the <strong>highest power</strong> of each prime factor that appears. Primes: 2 and 3. Highest power of 2: max(2, 1) = 2² = 4. Highest power of 3: max(1, 2) = 3² = 9. LCM = 4 × 9 = 36."
+    },
+    // ── CHALLENGING QUESTIONS ────────────────────────────────────────────────
+
+    {
+      id: "c4_q39",
+      topic: "Multiples",
+      difficulty: "challenging",
+      type: "input",
+      question: "Two bells in a clock tower ring together at noon. Bell A rings every <strong>4 minutes</strong> and Bell B rings every <strong>6 minutes</strong>. How many minutes after noon will they <strong>next ring together</strong>?",
+      answer: "12",
+      acceptableAnswers: ["12", "12 minutes"],
+      explanation: "We need the Lowest Common Multiple of 4 and 6. Multiples of 4: 4, 8, <strong>12</strong>, 16... Multiples of 6: 6, <strong>12</strong>, 18... The first common multiple is 12. So the bells will ring together again <strong>12 minutes</strong> after noon, at 12:12. Well done — this is LCM in a real-world context!"
+    },
+    {
+      id: "c4_q40",
+      topic: "Highest common factor",
+      difficulty: "challenging",
+      type: "input",
+      question: "A baker has <strong>48 chocolate muffins</strong> and <strong>60 blueberry muffins</strong>. She wants to arrange them into identical gift boxes, with the same mix in each box and no muffins left over. What is the <strong>maximum number of gift boxes</strong> she can make?",
+      answer: "12",
+      acceptableAnswers: ["12", "12 boxes"],
+      explanation: "We need the HCF of 48 and 60. Factors of 48: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48. Factors of 60: 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60. The largest number in both lists is <strong>12</strong>. She can make 12 boxes, each with 48÷12 = 4 chocolate and 60÷12 = 5 blueberry muffins. Dividing into equal groups = HCF problem!"
+    },
+    {
+      id: "c4_q41",
+      topic: "Prime and composite numbers",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "The prime factorisation of a mystery number is 2<sup>2</sup> × 3 × 5. Which of the following is <strong>not</strong> a factor of this number?",
+      options: ["15", "20", "30", "35"],
+      answer: 3,
+      explanation: "The mystery number is 2² × 3 × 5 = 4 × 15 = 60. To be a factor of 60, a number can only use the primes 2, 3, and 5 (and no higher powers than 2² for the prime 2). Check each option: 15 = 3 × 5 ✓ (60 ÷ 15 = 4), 20 = 2² × 5 ✓ (60 ÷ 20 = 3), 30 = 2 × 3 × 5 ✓ (60 ÷ 30 = 2), 35 = 5 × 7 — but <strong>7 is not a prime factor of 60</strong>, so 35 cannot be a factor. 60 ÷ 35 = 1.71... not a whole number. The answer is 35."
+    },
+    {
+      id: "c4_q42",
+      topic: "Index notation",
+      difficulty: "challenging",
+      type: "input",
+      question: "A number written in index notation is 2<sup>3</sup> × 3<sup>2</sup>. Write this number as an ordinary number.",
+      answer: "72",
+      acceptableAnswers: ["72"],
+      explanation: "Work it out step by step: 2³ = 2 × 2 × 2 = 8. 3² = 3 × 3 = 9. Then 8 × 9 = <strong>72</strong>. Index notation is a compact way of writing prime factorisations — 72 = 2³ × 3² is much neater than writing 2 × 2 × 2 × 3 × 3!"
+    },
+    {
+      id: "c4_q43",
+      topic: "Highest common factor",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "The <strong>HCF</strong> of two numbers is 8 and their <strong>LCM</strong> is 48. One of the numbers is 16. What is the <strong>other number</strong>?",
+      options: ["12", "24", "32", "48"],
+      answer: 1,
+      explanation: "There is a handy rule: HCF × LCM = first number × second number. So 8 × 48 = 16 × second number. That gives 384 = 16 × second number, so second number = 384 ÷ 16 = <strong>24</strong>. Check: HCF(16, 24) — factors of 16: 1,2,4,8,16; factors of 24: 1,2,3,4,6,8,12,24. HCF = 8 ✓. LCM(16,24) = 48 ✓. Brilliant — this question connects HCF and LCM together!"
+    },
+    {
+      id: "c4_q44",
+      topic: "Prime and composite numbers",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "Which of the following numbers has <strong>exactly 3 factors</strong>?",
+      options: ["9", "10", "12", "15"],
+      answer: 0,
+      explanation: "A number has exactly 3 factors only if it is the <strong>square of a prime</strong>. Check 9 = 3²: its factors are 1, 3, 9 — exactly 3 ✓. Check 10: factors are 1, 2, 5, 10 — that is 4 factors. Check 12: factors are 1,2,3,4,6,12 — 6 factors. Check 15: factors are 1,3,5,15 — 4 factors. So 9 is the only one with exactly 3 factors. This is a great pattern to remember: p² always has exactly 3 factors!"
+    },
+    {
+      id: "c4_q45",
+      topic: "Divisibility tests",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "The six-digit number <strong>47_,8_2</strong> (where _ are missing digits) is divisible by <strong>9</strong>. The digit sum so far is 4+7+8+2 = 21. If the two missing digits are <em>identical</em>, what are they?",
+      options: ["0", "3", "6", "9"],
+      answer: 1,
+      explanation: "For divisibility by 9, the sum of ALL digits must be divisible by 9. The known digits sum to 4 + 7 + 8 + 2 = 21. Let the missing digit be d (used twice). Total sum = 21 + 2d. We need 21 + 2d to be divisible by 9. Test the options: d=0 → 21 (not divisible by 9). d=3 → 21 + 6 = 27 ✓ (27 ÷ 9 = 3). d=6 → 21 + 12 = 33 (no). d=9 → 21 + 18 = 39 (no). The missing digit is <strong>3</strong>. Excellent multi-step reasoning!"
     }
   ]
 };

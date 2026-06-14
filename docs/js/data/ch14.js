@@ -123,6 +123,57 @@ const ch14 = {
       topic: "Patterns",
       type: "mcq",
       question: "Matchsticks are arranged to make a row of squares.<br>1 square needs 4 matchsticks, 2 squares need 7 matchsticks, 3 squares need 10 matchsticks.<br>How many matchsticks are needed for <strong>5 squares</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Matchstick squares pattern showing 1, 2, and 3 squares">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <!-- Title -->
+  <text x="200" y="18" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Matchstick Square Patterns</text>
+  <!-- Pattern 1: 1 square, 4 matchsticks -->
+  <!-- Square at x=30, y=40, side=50 -->
+  <!-- top -->
+  <line x1="30" y1="40" x2="80" y2="40" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <!-- bottom -->
+  <line x1="30" y1="90" x2="80" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <!-- left -->
+  <line x1="30" y1="40" x2="30" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <!-- right -->
+  <line x1="80" y1="40" x2="80" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <text x="55" y="110" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">n=1</text>
+  <text x="55" y="126" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">4 sticks</text>
+
+  <!-- Pattern 2: 2 squares, 7 matchsticks -->
+  <!-- Square 1 at x=110, y=40 -->
+  <line x1="110" y1="40" x2="160" y2="40" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="110" y1="90" x2="160" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="110" y1="40" x2="110" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="160" y1="40" x2="160" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <!-- Square 2 shares left wall with square 1 -->
+  <line x1="160" y1="40" x2="210" y2="40" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="160" y1="90" x2="210" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="210" y1="40" x2="210" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <text x="160" y="110" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">n=2</text>
+  <text x="160" y="126" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">7 sticks</text>
+
+  <!-- Pattern 3: 3 squares, 10 matchsticks -->
+  <!-- Square 1 at x=240, y=40 -->
+  <line x1="240" y1="40" x2="290" y2="40" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="240" y1="90" x2="290" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="240" y1="40" x2="240" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="290" y1="40" x2="290" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <!-- Square 2 -->
+  <line x1="290" y1="40" x2="340" y2="40" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="290" y1="90" x2="340" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="340" y1="40" x2="340" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <!-- Square 3 -->
+  <line x1="340" y1="40" x2="390" y2="40" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="340" y1="90" x2="390" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="390" y1="40" x2="390" y2="90" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <text x="315" y="110" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">n=3</text>
+  <text x="315" y="126" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">10 sticks</text>
+
+  <!-- Pattern sequence label -->
+  <text x="200" y="155" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Pattern: 4, 7, 10, 13, … (add 3 each time)</text>
+  <text x="200" y="172" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">How many matchsticks for n = 5?</text>
+</svg>`,
       options: ["15", "16", "20", "18"],
       answer: 1,
       explanation: "The pattern adds 3 matchsticks for each new square: 4, 7, 10, 13, 16. The rule is: start at 4, add 3 each time. For 5 squares: 4 + (5−1) × 3 = 4 + 12 = 16."
@@ -132,6 +183,59 @@ const ch14 = {
       topic: "Patterns",
       type: "mcq",
       question: "Dots are arranged in triangular patterns:<br>Pattern 1: 1 dot, Pattern 2: 3 dots, Pattern 3: 6 dots, Pattern 4: 10 dots.<br>How many dots are in <strong>Pattern 5</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Triangular dot patterns showing patterns 1 through 4">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <text x="200" y="18" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Triangular Number Patterns</text>
+
+  <!-- Pattern 1: 1 dot, centered at x=40 -->
+  <circle cx="40" cy="70" r="7" fill="#5b5ef4"/>
+  <text x="40" y="100" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P1</text>
+  <text x="40" y="114" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">1 dot</text>
+
+  <!-- Pattern 2: 3 dots (triangle: 1 top + 2 bottom), centered at x=110 -->
+  <!-- row 1: 1 dot at top -->
+  <circle cx="110" cy="50" r="7" fill="#5b5ef4"/>
+  <!-- row 2: 2 dots -->
+  <circle cx="95" cy="78" r="7" fill="#5b5ef4"/>
+  <circle cx="125" cy="78" r="7" fill="#5b5ef4"/>
+  <text x="110" y="100" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P2</text>
+  <text x="110" y="114" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">3 dots</text>
+
+  <!-- Pattern 3: 6 dots (1+2+3), centered at x=200 -->
+  <!-- row 1: 1 dot -->
+  <circle cx="200" cy="38" r="7" fill="#5b5ef4"/>
+  <!-- row 2: 2 dots -->
+  <circle cx="185" cy="64" r="7" fill="#5b5ef4"/>
+  <circle cx="215" cy="64" r="7" fill="#5b5ef4"/>
+  <!-- row 3: 3 dots -->
+  <circle cx="170" cy="90" r="7" fill="#5b5ef4"/>
+  <circle cx="200" cy="90" r="7" fill="#5b5ef4"/>
+  <circle cx="230" cy="90" r="7" fill="#5b5ef4"/>
+  <text x="200" y="110" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P3</text>
+  <text x="200" y="124" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">6 dots</text>
+
+  <!-- Pattern 4: 10 dots (1+2+3+4), centered at x=320 -->
+  <!-- row 1: 1 dot -->
+  <circle cx="320" cy="28" r="6" fill="#5b5ef4"/>
+  <!-- row 2: 2 dots -->
+  <circle cx="307" cy="51" r="6" fill="#5b5ef4"/>
+  <circle cx="333" cy="51" r="6" fill="#5b5ef4"/>
+  <!-- row 3: 3 dots -->
+  <circle cx="294" cy="74" r="6" fill="#5b5ef4"/>
+  <circle cx="320" cy="74" r="6" fill="#5b5ef4"/>
+  <circle cx="346" cy="74" r="6" fill="#5b5ef4"/>
+  <!-- row 4: 4 dots -->
+  <circle cx="281" cy="97" r="6" fill="#5b5ef4"/>
+  <circle cx="307" cy="97" r="6" fill="#5b5ef4"/>
+  <circle cx="333" cy="97" r="6" fill="#5b5ef4"/>
+  <circle cx="359" cy="97" r="6" fill="#5b5ef4"/>
+  <text x="320" y="117" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P4</text>
+  <text x="320" y="131" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">10 dots</text>
+
+  <!-- Sequence note -->
+  <text x="200" y="158" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Differences: +2, +3, +4, +5, …</text>
+  <text x="200" y="174" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">How many dots in Pattern 5?</text>
+</svg>`,
       options: ["12", "13", "15", "16"],
       answer: 2,
       explanation: "The differences between terms are: 2, 3, 4, 5 — each increases by 1. After Pattern 4 (10 dots), add 5 to get Pattern 5: 10 + 5 = 15."
@@ -141,6 +245,52 @@ const ch14 = {
       topic: "Patterns",
       type: "input",
       question: "Equilateral triangles are made from matchsticks.<br>1 triangle uses 3 matchsticks, 2 triangles in a row use 5 matchsticks, 3 triangles in a row use 7 matchsticks.<br>How many matchsticks are needed for a row of <strong>8 triangles</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Matchstick triangle patterns showing 1, 2, and 3 triangles in a row">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <text x="200" y="18" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Matchstick Triangle Patterns</text>
+
+  <!-- Pattern 1: 1 triangle (equilateral), centered at ~x=55 -->
+  <!-- vertices: bottom-left (30,95), bottom-right (80,95), top (55,52) -->
+  <line x1="30" y1="95" x2="80" y2="95" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="30" y1="95" x2="55" y2="52" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="80" y1="95" x2="55" y2="52" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <text x="55" y="115" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">n=1</text>
+  <text x="55" y="129" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">3 sticks</text>
+
+  <!-- Pattern 2: 2 triangles sharing a side -->
+  <!-- Triangle 1: (120,95)-(170,95)-(145,52) -->
+  <line x1="120" y1="95" x2="170" y2="95" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="120" y1="95" x2="145" y2="52" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="170" y1="95" x2="145" y2="52" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <!-- Triangle 2: (170,95)-(220,95)-(195,52) — shares right side of T1? No, shares vertex at (170,95) -->
+  <!-- For row triangles alternating up/down: T2 is inverted -->
+  <!-- inverted triangle: (170,95)-(220,95) bottom, apex at (195,52) pointing up? No, inverted means apex down -->
+  <!-- Actually: alternating up-pointing and down-pointing. T2 inverted: top-left(170,52), top-right(220,52), bottom(195,95) -->
+  <line x1="170" y1="52" x2="220" y2="52" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="170" y1="52" x2="195" y2="95" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="220" y1="52" x2="195" y2="95" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <text x="170" y="115" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">n=2</text>
+  <text x="170" y="129" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">5 sticks</text>
+
+  <!-- Pattern 3: 3 triangles -->
+  <!-- T1 up: (250,95)-(300,95)-(275,52) -->
+  <line x1="250" y1="95" x2="300" y2="95" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="250" y1="95" x2="275" y2="52" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="300" y1="95" x2="275" y2="52" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <!-- T2 down: (275,52)-(325,52)-(300,95) -->
+  <line x1="275" y1="52" x2="325" y2="52" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="325" y1="52" x2="300" y2="95" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <!-- T3 up: (300,95)-(350,95)-(325,52) -->
+  <line x1="300" y1="95" x2="350" y2="95" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <line x1="350" y1="95" x2="325" y2="52" stroke="#5b5ef4" stroke-width="4" stroke-linecap="round"/>
+  <text x="300" y="115" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">n=3</text>
+  <text x="300" y="129" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">7 sticks</text>
+
+  <!-- Sequence note -->
+  <text x="200" y="158" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Pattern: 3, 5, 7, … (add 2 each time)</text>
+  <text x="200" y="174" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Rule: 2n + 1 matchsticks for n triangles</text>
+  <text x="200" y="192" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">How many sticks for 8 triangles?</text>
+</svg>`,
       answer: "17",
       acceptableAnswers: ["17"],
       explanation: "Each new triangle adds 2 matchsticks. The rule is: number of matchsticks = 2n + 1, where n is the number of triangles. For 8 triangles: 2 × 8 + 1 = 17."
@@ -150,6 +300,57 @@ const ch14 = {
       topic: "Patterns",
       type: "mcq",
       question: "A pattern of squares uses tiles:<br>Pattern 1: 1 tile, Pattern 2: 4 tiles, Pattern 3: 9 tiles, Pattern 4: 16 tiles.<br>What type of numbers are these?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Square number tile patterns showing patterns 1 through 4">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <text x="200" y="16" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Square Number Patterns</text>
+
+  <!-- Pattern 1: 1x1 = 1 tile, at x=18, y=30 -->
+  <rect x="18" y="30" width="28" height="28" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <text x="32" y="72" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P1: 1²=1</text>
+
+  <!-- Pattern 2: 2x2 = 4 tiles, at x=68, y=24 -->
+  <rect x="68" y="24" width="28" height="28" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="96" y="24" width="28" height="28" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="68" y="52" width="28" height="28" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="96" y="52" width="28" height="28" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <text x="96" y="95" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P2: 2²=4</text>
+
+  <!-- Pattern 3: 3x3 = 9 tiles, at x=150, y=18 -->
+  <rect x="150" y="18" width="26" height="26" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="176" y="18" width="26" height="26" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="202" y="18" width="26" height="26" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="150" y="44" width="26" height="26" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="176" y="44" width="26" height="26" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="202" y="44" width="26" height="26" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="150" y="70" width="26" height="26" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="176" y="70" width="26" height="26" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="202" y="70" width="26" height="26" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <text x="176" y="112" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P3: 3²=9</text>
+
+  <!-- Pattern 4: 4x4 = 16 tiles, at x=248, y=14 -->
+  <rect x="248" y="14" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="272" y="14" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="296" y="14" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="320" y="14" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="248" y="38" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="272" y="38" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="296" y="38" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="320" y="38" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="248" y="62" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="272" y="62" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="296" y="62" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="320" y="62" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="248" y="86" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="272" y="86" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="296" y="86" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <rect x="320" y="86" width="24" height="24" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="1.5"/>
+  <text x="284" y="126" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P4: 4²=16</text>
+
+  <!-- Sequence note -->
+  <text x="200" y="152" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Sequence: 1, 4, 9, 16, …</text>
+  <text x="200" y="168" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Each pattern forms a perfect square grid</text>
+  <text x="200" y="186" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">What type of numbers are 1, 4, 9, 16?</text>
+</svg>`,
       options: ["Prime numbers", "Triangular numbers", "Square numbers", "Even numbers"],
       answer: 2,
       explanation: "1, 4, 9, 16 are 1², 2², 3², 4² — they are square numbers. Each pattern forms a square shape, with the number of tiles equal to the pattern number squared."
@@ -159,6 +360,64 @@ const ch14 = {
       topic: "Patterns",
       type: "input",
       question: "A pattern of pentagons is made from matchsticks.<br>1 pentagon uses 5 matchsticks, 2 pentagons share a side and use 9 matchsticks, 3 pentagons use 13 matchsticks.<br>How many matchsticks are needed for <strong>6 pentagons</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Matchstick pentagon patterns showing 1, 2, and 3 pentagons">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <text x="200" y="16" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Matchstick Pentagon Patterns</text>
+
+  <!-- Pattern 1: 1 pentagon (regular, centered at ~x=52, y=75) -->
+  <!-- Pentagon vertices (top, upper-right, lower-right, lower-left, upper-left) -->
+  <!-- center (52,75), radius 32 -->
+  <!-- angles: 90, 162, 234, 306, 18 degrees -->
+  <!-- top:      52 + 32*cos(90°)=52,     75 - 32*sin(90°)=43  -->
+  <!-- upper-R:  52 + 32*cos(18°)=82.4,   75 - 32*sin(18°)=65.1 -->
+  <!-- lower-R:  52 + 32*cos(306°)=70.8,  75 - 32*sin(306°)=100.9 -->
+  <!-- lower-L:  52 + 32*cos(234°)=33.2,  75 - 32*sin(234°)=100.9 -->
+  <!-- upper-L:  52 + 32*cos(162°)=21.6,  75 - 32*sin(162°)=65.1 -->
+  <polygon points="52,43 82,65 71,101 33,101 22,65" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="3.5"/>
+  <text x="52" y="120" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">n=1</text>
+  <text x="52" y="134" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">5 sticks</text>
+
+  <!-- Pattern 2: 2 pentagons sharing right side of P1 -->
+  <!-- P1 centered at (155,75) -->
+  <!-- top: 155,43  upper-R: 185,65  lower-R: 174,101  lower-L: 136,101  upper-L: 125,65 -->
+  <polygon points="155,43 185,65 174,101 136,101 125,65" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="3.5"/>
+  <!-- P2 shares the right side (185,65)-(174,101) of P1 -->
+  <!-- P2: right side of P1 is left side of P2 -->
+  <!-- P2 vertices: upper-L=185,65  lower-L=174,101  lower-R=213,101  upper-R=224,65  top=204,43 -->
+  <!-- Actually for a regular pentagon sharing one full side, mirror geometry is complex. -->
+  <!-- Simpler: P2 is shifted right so it shares the right edge of P1 -->
+  <!-- P2 center at (233,75): top:233,43 upper-R:263,65 lower-R:252,101 lower-L:214,101 upper-L:203,65 -->
+  <!-- shared side: P1 upper-R(185,65)-lower-R(174,101) = P2 upper-L(203,65)-lower-L(214,101)  — not matching exactly, approximate -->
+  <!-- Use a simpler flat-bottom pentagon for clarity -->
+  <!-- Pentagon sharing a vertical right side: place P2 so its left edge aligns with P1's right edge -->
+  <!-- P1 right-side endpoints: (185,65) and (174,101) — these become left side of P2 -->
+  <!-- P2 mirrored: upper-L=185,65  lower-L=174,101  then mirror the rest -->
+  <!-- offset dx = 185-125 = 60. P2: 125+60=185, 185+60=245... -->
+  <!-- Let us just draw a flat pentagon (flat top/bottom) for clarity -->
+  <!-- Flat-bottom regular pentagon: center (155,75), but use flat-sided arrangement -->
+  <!-- Skip complex geometry, use offset pentagons with shared side approximated -->
+  <polygon points="185,65 215,65 226,101 174,101" fill="none" stroke="none"/>
+  <!-- P2 sharing right side (185,65)-(174,101): draw remaining 4 sides of P2 -->
+  <!-- New vertices added for P2: top (204,38), upper-R (224,65), lower-R (213,101) -->
+  <!-- 5 vertices of P2: (185,65),(204,38),(224,65),(213,101),(174,101) -->
+  <polygon points="185,65 204,38 224,65 213,101 174,101" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="3.5"/>
+  <text x="175" y="120" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">n=2</text>
+  <text x="175" y="134" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">9 sticks</text>
+
+  <!-- Pattern 3: 3 pentagons, P1 at center (295,75) -->
+  <polygon points="295,43 325,65 314,101 276,101 265,65" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="3.5"/>
+  <!-- P2 sharing right side (325,65)-(314,101) -->
+  <polygon points="325,65 344,38 364,65 353,101 314,101" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="3.5"/>
+  <!-- P3 sharing right side of P2 (364,65)-(353,101) -->
+  <polygon points="364,65 383,38 396,65 392,101 353,101" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="3.5"/>
+  <text x="315" y="120" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">n=3</text>
+  <text x="315" y="134" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">13 sticks</text>
+
+  <!-- Sequence note -->
+  <text x="200" y="158" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Pattern: 5, 9, 13, … (add 4 each time)</text>
+  <text x="200" y="174" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Rule: 4n + 1 matchsticks for n pentagons</text>
+  <text x="200" y="192" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">How many sticks for 6 pentagons?</text>
+</svg>`,
       answer: "25",
       acceptableAnswers: ["25"],
       explanation: "Each new pentagon adds 4 matchsticks (they share one side). The rule is: 4n + 1, where n is the number of pentagons. For 6 pentagons: 4 × 6 + 1 = 25."
@@ -189,6 +448,245 @@ const ch14 = {
       options: ["21", "23", "25", "28"],
       answer: 1,
       explanation: "Substitute n = 7 into the rule: 3 × 7 + 2 = 21 + 2 = 23. Pattern 7 needs 23 matchsticks."
+    },
+    {
+      id: "c14_q21",
+      topic: "Fibonacci sequence",
+      type: "mcq",
+      question: "The Fibonacci sequence starts: <strong>1, 1, 2, 3, 5, 8, 13, 21, …</strong><br>What is the rule for getting each new term?",
+      options: [
+        "Add 2 to the previous term",
+        "Multiply the previous term by 2",
+        "Add the two previous terms together",
+        "Add the position number to the previous term"
+      ],
+      answer: 2,
+      explanation: "In the Fibonacci sequence, each term is found by adding the two terms before it: 1+1=2, 1+2=3, 2+3=5, 3+5=8, 5+8=13, and so on. This is what makes it special!"
+    },
+    {
+      id: "c14_q22",
+      topic: "Fibonacci sequence",
+      type: "input",
+      question: "The Fibonacci sequence is: 1, 1, 2, 3, 5, 8, 13, 21, 34, …<br>What is the <strong>11th term</strong> of the Fibonacci sequence?",
+      answer: "89",
+      acceptableAnswers: ["89"],
+      explanation: "Continue the sequence: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89. The 10th term is 55 (34+21) and the 11th term is 89 (55+34). Great pattern spotting!"
+    },
+    {
+      id: "c14_q23",
+      topic: "Fibonacci sequence",
+      type: "mcq",
+      question: "Which of the following sequences is <strong>not</strong> the Fibonacci sequence?",
+      options: [
+        "1, 1, 2, 3, 5, 8, 13",
+        "1, 1, 2, 3, 5, 8, 14",
+        "The next term after 8 is 13",
+        "It begins with two 1s"
+      ],
+      answer: 1,
+      explanation: "In the Fibonacci sequence, 5 + 8 = 13, not 14. The sequence 1, 1, 2, 3, 5, 8, 14 has an error at the last term — it should be 13. All the other statements are true."
+    },
+    {
+      id: "c14_q24",
+      topic: "Square number sequence",
+      type: "mcq",
+      question: "Which list shows the first six <strong>square numbers</strong>?",
+      options: [
+        "1, 3, 6, 10, 15, 21",
+        "1, 4, 9, 16, 25, 36",
+        "2, 4, 6, 8, 10, 12",
+        "1, 2, 4, 8, 16, 32"
+      ],
+      answer: 1,
+      explanation: "Square numbers are made by squaring whole numbers: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25, 6²=36. Option A is the triangular numbers; options C and D are even numbers and powers of 2."
+    },
+    {
+      id: "c14_q25",
+      topic: "Square number sequence",
+      type: "input",
+      question: "Is <strong>49</strong> a square number? If yes, write the number that was squared to make it (e.g. write 7 if the answer is 7²). If no, write 0.",
+      answer: "7",
+      acceptableAnswers: ["7"],
+      explanation: "Yes! 7 × 7 = 49, so 49 = 7². It is the 7th square number in the sequence 1, 4, 9, 16, 25, 36, 49."
+    },
+    {
+      id: "c14_q26",
+      topic: "Triangular number sequence",
+      type: "mcq",
+      question: "The triangular numbers are: <strong>1, 3, 6, 10, 15, 21, …</strong><br>What is the <strong>8th triangular number</strong>?",
+      options: ["28", "30", "36", "24"],
+      answer: 0,
+      explanation: "The triangular numbers grow by adding one more each time: +2, +3, +4, +5, +6, +7, +8, … The sequence continues: 1, 3, 6, 10, 15, 21, 28. The 8th term is 21 + 7 = 28."
+    },
+    {
+      id: "c14_q27",
+      topic: "Triangular number sequence",
+      type: "mcq",
+      question: "Which of the following is <strong>not</strong> a triangular number?",
+      options: ["10", "15", "18", "21"],
+      answer: 2,
+      explanation: "The triangular numbers are 1, 3, 6, 10, 15, 21, 28, … 18 is not in this list — it falls between 15 and 21. You can check: 15+6=21, so there is no triangular number equal to 18."
+    },
+    {
+      id: "c14_q28",
+      topic: "nth term formula",
+      type: "mcq",
+      question: "An arithmetic sequence has first term <strong>a = 3</strong> and common difference <strong>d = 5</strong>.<br>The nth term formula is T(n) = a + (n−1)d.<br>What is the <strong>6th term</strong>?",
+      options: ["25", "28", "30", "33"],
+      answer: 1,
+      explanation: "Using T(n) = a + (n−1)d with a=3, d=5 and n=6:<br>T(6) = 3 + (6−1) × 5 = 3 + 5 × 5 = 3 + 25 = 28. The 6th term is 28."
+    },
+    {
+      id: "c14_q29",
+      topic: "nth term formula",
+      type: "input",
+      question: "The nth term of a sequence is given by <strong>T(n) = 4n − 1</strong>.<br>What is the <strong>12th term</strong>?",
+      answer: "47",
+      acceptableAnswers: ["47"],
+      explanation: "Substitute n = 12 into the formula: T(12) = 4 × 12 − 1 = 48 − 1 = 47. Always substitute carefully and remember to follow the order of operations!"
+    },
+    {
+      id: "c14_q30",
+      topic: "nth term formula",
+      type: "mcq",
+      question: "The sequence 5, 8, 11, 14, 17, … has the nth term formula T(n) = 3n + 2.<br>Which term of the sequence equals <strong>32</strong>?",
+      options: ["9th", "10th", "11th", "12th"],
+      answer: 1,
+      explanation: "Set T(n) = 32: 3n + 2 = 32, so 3n = 30, so n = 10. The 10th term is 32. Check: 3×10 + 2 = 32. Correct!"
+    },
+    {
+      id: "c14_q31",
+      topic: "Geometric sequences",
+      type: "input",
+      question: "A geometric sequence starts: <strong>5, 15, 45, 135, …</strong><br>What is the common ratio?",
+      answer: "3",
+      acceptableAnswers: ["3"],
+      explanation: "To find the common ratio, divide any term by the one before it: 15 ÷ 5 = 3, 45 ÷ 15 = 3, 135 ÷ 45 = 3. The common ratio is 3."
+    },
+    {
+      id: "c14_q32",
+      topic: "Geometric sequences",
+      type: "mcq",
+      question: "A geometric sequence has first term <strong>2</strong> and common ratio <strong>5</strong>.<br>What is the <strong>4th term</strong>?",
+      options: ["40", "50", "250", "20"],
+      answer: 2,
+      explanation: "Multiply by 5 each time: 2, 2×5=10, 10×5=50, 50×5=250. The 4th term is 250. In a geometric sequence with large ratios, terms grow quickly!"
+    },
+    {
+      id: "c14_q33",
+      topic: "Finding a missing term",
+      type: "input",
+      question: "Find the <strong>missing term</strong> in the geometric sequence: 4, 12, ___, 108.",
+      answer: "36",
+      acceptableAnswers: ["36"],
+      explanation: "The common ratio is 12 ÷ 4 = 3. Multiplying: 4, 12, 12×3=36, 36×3=108. The missing term is 36. Always check by dividing the next term: 108 ÷ 36 = 3. Correct!"
+    },
+    {
+      id: "c14_q34",
+      topic: "Describing a rule in words",
+      type: "mcq",
+      question: "Which rule <strong>best describes</strong> the sequence: <strong>2, 5, 10, 17, 26</strong>?",
+      options: [
+        "Add 3 each time",
+        "Multiply by 2 each time",
+        "Add consecutive odd numbers (3, 5, 7, 9, …)",
+        "Square each position number and add 1"
+      ],
+      answer: 2,
+      explanation: "The differences are: 3, 5, 7, 9 — consecutive odd numbers increasing by 2. Both options C and D describe the same sequence (since n²+1 gives 2,5,10,17,26), but the rule 'add consecutive odd numbers' is the best description in words."
+    },
+    {
+      id: "c14_q35",
+      topic: "Describing a rule in words",
+      type: "mcq",
+      question: "Pragathy writes down a sequence: <strong>1000, 100, 10, 1, 0.1</strong>.<br>Which rule describes her sequence?",
+      options: [
+        "Subtract 900 each time",
+        "Divide by 10 each time",
+        "Multiply by 0.01 each time",
+        "Subtract 100 each time"
+      ],
+      answer: 1,
+      explanation: "Each term is divided by 10: 1000÷10=100, 100÷10=10, 10÷10=1, 1÷10=0.1. The rule is divide by 10 each time. This is a geometric sequence with common ratio 1/10."
+    },
+    {
+      id: "c14_q36",
+      topic: "Finding a missing term",
+      type: "mcq",
+      question: "Find the two missing terms in the sequence: <strong>3, ___, 11, ___, 19, 23</strong>.",
+      options: ["6 and 15", "7 and 15", "6 and 14", "7 and 16"],
+      answer: 1,
+      explanation: "The common difference is 23−19=4. Working forward from 3: 3+4=7, 7+4=11 ✓. Working forward from 11: 11+4=15, 15+4=19 ✓. The two missing terms are 7 and 15."
+    },
+    {
+      id: "c14_q37",
+      topic: "nth term formula",
+      difficulty: "challenging",
+      type: "input",
+      question: "The <strong>5th term</strong> of an arithmetic sequence is <strong>23</strong> and the <strong>8th term</strong> is <strong>35</strong>.<br>What is the <strong>1st term</strong> of the sequence?",
+      answer: "7",
+      acceptableAnswers: ["7"],
+      explanation: "From the 5th term to the 8th term is 3 steps. The sequence increases by 35−23=12 over 3 steps, so the common difference d = 12÷3 = 4.<br>Working backwards from the 5th term (23): 23−4=19 (4th), 19−4=15 (3rd), 15−4=11 (2nd), 11−4=7 (1st).<br>Check using T(n) = 7 + (n−1)×4: T(5)=7+16=23 ✓, T(8)=7+28=35 ✓. The 1st term is 7."
+    },
+    {
+      id: "c14_q38",
+      topic: "Geometric sequences",
+      difficulty: "challenging",
+      type: "input",
+      question: "A geometric sequence has <strong>1st term = 2</strong> and <strong>4th term = 54</strong>.<br>What is the common ratio?",
+      answer: "3",
+      acceptableAnswers: ["3"],
+      explanation: "From the 1st term to the 4th term, we multiply by the ratio 3 times. So: 2 × r³ = 54. Divide both sides by 2: r³ = 27. Since 3³ = 27, the common ratio r = 3.<br>Check: 2, 2×3=6, 6×3=18, 18×3=54 ✓. Well done — this is tricky thinking!"
+    },
+    {
+      id: "c14_q39",
+      topic: "Triangular number sequence",
+      difficulty: "challenging",
+      type: "input",
+      question: "The triangular numbers are: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, …<br>Which triangular number equals <strong>55</strong>? Write the position (e.g. write 5 if it is the 5th triangular number).",
+      answer: "10",
+      acceptableAnswers: ["10"],
+      explanation: "List the triangular numbers with their positions:<br>T1=1, T2=3, T3=6, T4=10, T5=15, T6=21, T7=28, T8=36, T9=45, T10=55.<br>Each new triangular number adds the next whole number: T10 = T9 + 10 = 45 + 10 = 55.<br>So 55 is the 10th triangular number. Brilliant pattern work!"
+    },
+    {
+      id: "c14_q40",
+      topic: "nth term formula",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "The sequence 3, 7, 11, 15, … has the nth term formula T(n) = 4n − 1.<br>Does the number <strong>97</strong> appear in this sequence? Choose the correct answer and justification.",
+      options: [
+        "Yes — it is the 24th term (T(24) = 97)",
+        "Yes — it is the 25th term (T(25) = 97)",
+        "No — 4n − 1 = 97 gives n = 24.5, which is not a whole number",
+        "No — 97 is odd so it cannot be in the sequence"
+      ],
+      answer: 2,
+      explanation: "Set T(n) = 97: 4n − 1 = 97, so 4n = 98, so n = 24.5. Since 24.5 is not a whole number, 97 does NOT appear in the sequence.<br>Check: T(24) = 4×24 − 1 = 95 and T(25) = 4×25 − 1 = 99. So 97 falls between two terms and is skipped. The key skill is checking whether n is a whole number!"
+    },
+    {
+      id: "c14_q41",
+      topic: "nth term formula",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "The sequence 3, 7, 11, 15, … has nth term formula T(n) = 4n − 1.<br>Does the number <strong>99</strong> appear in this sequence? Choose the correct justification.",
+      options: [
+        "Yes — T(25) = 99",
+        "Yes — T(24) = 99",
+        "No — 99 is odd so it cannot appear",
+        "No — the sequence only goes up to 95"
+      ],
+      answer: 0,
+      explanation: "Set T(n) = 99: 4n − 1 = 99, so 4n = 100, so n = 25. Since 25 is a whole number, 99 does appear in the sequence. Check: T(25) = 4×25 − 1 = 100 − 1 = 99 ✓. The key step is to check whether (answer + 1) is divisible by 4."
+    },
+    {
+      id: "c14_q42",
+      topic: "nth term formula",
+      difficulty: "challenging",
+      type: "input",
+      question: "An arithmetic sequence has first term <strong>6</strong> and common difference <strong>4</strong>.<br>Using the formula T(n) = a + (n−1)d, what is the <strong>100th term</strong>?",
+      answer: "402",
+      acceptableAnswers: ["402"],
+      explanation: "Using T(n) = a + (n−1)d with a=6, d=4, n=100:<br>T(100) = 6 + (100−1) × 4 = 6 + 99 × 4 = 6 + 396 = 402.<br>This shows how powerful the nth term formula is — without it, you would have to write out all 100 terms!"
     }
   ]
 };

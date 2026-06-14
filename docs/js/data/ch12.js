@@ -12,7 +12,11 @@ const ch12 = {
     "Number lines",
     "Expressing one quantity as a percentage of another",
     "Finding a percentage of a quantity",
-    "Percentage increase or decrease"
+    "Percentage increase or decrease",
+    "Percentage change",
+    "Profit and loss",
+    "Simple interest",
+    "Reverse percentages"
   ],
   questions: [
     {
@@ -110,6 +114,28 @@ const ch12 = {
       topic: "Number lines",
       type: "mcq",
       question: "On a number line from 0% to 100%, which percentage is exactly halfway?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Number line from 0% to 100%">
+  <rect width="380" height="80" fill="#f8fafc" rx="8"/>
+  <!-- Main line -->
+  <line x1="40" y1="40" x2="340" y2="40" stroke="#64748b" stroke-width="2"/>
+  <!-- Left end cap -->
+  <line x1="40" y1="32" x2="40" y2="48" stroke="#64748b" stroke-width="2"/>
+  <!-- Right end cap -->
+  <line x1="340" y1="32" x2="340" y2="48" stroke="#64748b" stroke-width="2"/>
+  <!-- Midpoint tick -->
+  <line x1="190" y1="32" x2="190" y2="48" stroke="#64748b" stroke-width="2"/>
+  <!-- Quarter tick -->
+  <line x1="115" y1="36" x2="115" y2="44" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Three-quarter tick -->
+  <line x1="265" y1="36" x2="265" y2="44" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Midpoint highlight circle -->
+  <circle cx="190" cy="40" r="7" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="2"/>
+  <!-- Question mark at midpoint -->
+  <text x="190" y="22" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">?</text>
+  <!-- Labels -->
+  <text x="40" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">0%</text>
+  <text x="340" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">100%</text>
+</svg>`,
       options: ["25%", "75%", "50%", "40%"],
       answer: 2,
       explanation: "The midpoint between 0% and 100% is (0 + 100) ÷ 2 = 50%. On a number line, 50% sits exactly in the middle."
@@ -119,6 +145,28 @@ const ch12 = {
       topic: "Number lines",
       type: "mcq",
       question: "A number line goes from 0% to 100% divided into 4 equal parts. What percentage is marked at the <strong>third</strong> division point from zero?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Number line from 0% to 100% in 4 equal parts">
+  <rect width="380" height="80" fill="#f8fafc" rx="8"/>
+  <!-- Main line -->
+  <line x1="40" y1="40" x2="340" y2="40" stroke="#64748b" stroke-width="2"/>
+  <!-- End caps -->
+  <line x1="40" y1="32" x2="40" y2="48" stroke="#64748b" stroke-width="2"/>
+  <line x1="340" y1="32" x2="340" y2="48" stroke="#64748b" stroke-width="2"/>
+  <!-- Division ticks: each part = 75px, positions at 115, 190, 265 -->
+  <line x1="115" y1="30" x2="115" y2="50" stroke="#64748b" stroke-width="2"/>
+  <line x1="190" y1="30" x2="190" y2="50" stroke="#64748b" stroke-width="2"/>
+  <!-- Third division point highlighted -->
+  <line x1="265" y1="28" x2="265" y2="52" stroke="#f43f5e" stroke-width="2.5"/>
+  <circle cx="265" cy="40" r="7" fill="rgba(244,63,94,0.18)" stroke="#f43f5e" stroke-width="2"/>
+  <!-- Question mark above third tick -->
+  <text x="265" y="22" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">?</text>
+  <!-- Tick labels -->
+  <text x="40" y="64" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">0%</text>
+  <text x="115" y="64" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1st</text>
+  <text x="190" y="64" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2nd</text>
+  <text x="265" y="64" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">3rd</text>
+  <text x="340" y="64" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">100%</text>
+</svg>`,
       options: ["25%", "50%", "75%", "80%"],
       answer: 2,
       explanation: "Each part = 100% ÷ 4 = 25%. The division points are at 25%, 50%, and 75%. The third one is 75%."
@@ -164,6 +212,24 @@ const ch12 = {
       topic: "Percentage increase or decrease",
       type: "mcq",
       question: "A jacket costs $<strong>120</strong>. Its price increases by <strong>25%</strong>. What is the new price?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 100" aria-label="Percentage bar showing 25% increase on $120">
+  <rect width="380" height="100" fill="#f8fafc" rx="8"/>
+  <!-- Full new price bar outline (125% = $150) -->
+  <rect x="30" y="28" width="320" height="34" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3" rx="4"/>
+  <!-- Original price bar (100% = $120): 320 * (100/125) = 256px -->
+  <rect x="30" y="28" width="256" height="34" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2" rx="4"/>
+  <!-- Increase portion (25% = $30): 320 * (25/125) = 64px -->
+  <rect x="286" y="28" width="64" height="34" fill="rgba(34,197,94,0.25)" stroke="#22c55e" stroke-width="2" rx="4"/>
+  <!-- Label: original -->
+  <text x="158" y="50" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">$120 (100%)</text>
+  <!-- Label: increase -->
+  <text x="318" y="50" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">+25%</text>
+  <!-- Brace / arrow below -->
+  <line x1="30" y1="72" x2="350" y2="72" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="30" y1="68" x2="30" y2="76" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="350" y1="68" x2="350" y2="76" stroke="#64748b" stroke-width="1.5"/>
+  <text x="190" y="88" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">New price = 125% of $120</text>
+</svg>`,
       options: ["$25", "$145", "$150", "$95"],
       answer: 2,
       explanation: "25% of 120 = 0.25 × 120 = 30. New price = 120 + 30 = $150. You can also calculate 125% of 120 = 1.25 × 120 = $150."
@@ -173,6 +239,24 @@ const ch12 = {
       topic: "Percentage increase or decrease",
       type: "mcq",
       question: "A shop reduces the price of a bike from $<strong>200</strong> to $<strong>160</strong>. What is the percentage decrease?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 100" aria-label="Percentage bar showing price decrease from $200 to $160">
+  <rect width="380" height="100" fill="#f8fafc" rx="8"/>
+  <!-- Original price bar (100% = $200): full width 320px -->
+  <rect x="30" y="28" width="320" height="34" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2" rx="4"/>
+  <!-- Decrease portion (right side, $40 out of $200 = 20%): 320 * 0.2 = 64px -->
+  <rect x="286" y="28" width="64" height="34" fill="rgba(244,63,94,0.22)" stroke="#f43f5e" stroke-width="2" rx="4"/>
+  <!-- Label: new price -->
+  <text x="158" y="50" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">$160</text>
+  <!-- Label: decrease -->
+  <text x="318" y="50" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">−$40</text>
+  <!-- Full bar label -->
+  <text x="190" y="20" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Original price: $200 (100%)</text>
+  <!-- Brace below -->
+  <line x1="30" y1="72" x2="350" y2="72" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="30" y1="68" x2="30" y2="76" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="350" y1="68" x2="350" y2="76" stroke="#64748b" stroke-width="1.5"/>
+  <text x="190" y="88" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Decrease = (40 ÷ 200) × 100 = ?%</text>
+</svg>`,
       options: ["20%", "25%", "40%", "80%"],
       answer: 0,
       explanation: "Decrease = 200 − 160 = 40. Percentage decrease = (40 ÷ 200) × 100 = 20%."
@@ -194,6 +278,183 @@ const ch12 = {
       options: ["120", "140", "160", "180"],
       answer: 1,
       explanation: "40% of 350 = (40 ÷ 100) × 350 = 0.4 × 350 = 140 people prefer tea."
+    },
+    {
+      id: "c12_q21",
+      topic: "Finding a percentage of a quantity",
+      type: "input",
+      question: "Find <strong>35%</strong> of <strong>240</strong>. Write only the number.",
+      answer: "84",
+      acceptableAnswers: ["84"],
+      explanation: "35% of 240 = (35 ÷ 100) × 240 = 0.35 × 240 = 84. Well done!"
+    },
+    {
+      id: "c12_q22",
+      topic: "Expressing one quantity as a percentage of another",
+      type: "mcq",
+      question: "A bag of flour weighs <strong>500 g</strong>. A recipe uses <strong>75 g</strong>. What percentage of the bag is used?",
+      options: ["7.5%", "15%", "20%", "25%"],
+      answer: 1,
+      explanation: "(75 ÷ 500) × 100 = 0.15 × 100 = 15%. So 15% of the bag is used in the recipe."
+    },
+    {
+      id: "c12_q23",
+      topic: "Percentage change",
+      type: "mcq",
+      question: "A phone cost $<strong>250</strong> last year. It now costs $<strong>275</strong>. What is the percentage increase?",
+      options: ["8%", "10%", "11%", "25%"],
+      answer: 1,
+      explanation: "Change = 275 − 250 = 25. Percentage change = (25 ÷ 250) × 100 = 10%. The formula is: % change = (change ÷ original) × 100."
+    },
+    {
+      id: "c12_q24",
+      topic: "Percentage change",
+      type: "input",
+      question: "A train ticket was £<strong>40</strong>. It is now £<strong>34</strong>. What is the percentage decrease? Write only the number.",
+      answer: "15",
+      acceptableAnswers: ["15", "15%"],
+      explanation: "Decrease = 40 − 34 = 6. Percentage decrease = (6 ÷ 40) × 100 = 0.15 × 100 = 15%. Always divide the change by the <strong>original</strong> value."
+    },
+    {
+      id: "c12_q25",
+      topic: "Percentage change",
+      type: "mcq",
+      question: "A plant was <strong>50 cm</strong> tall in March and <strong>65 cm</strong> tall in June. What is the percentage increase in height?",
+      options: ["13%", "23%", "30%", "33%"],
+      answer: 2,
+      explanation: "Increase = 65 − 50 = 15 cm. Percentage increase = (15 ÷ 50) × 100 = 30%. Divide the increase by the original height, then multiply by 100."
+    },
+    {
+      id: "c12_q26",
+      topic: "Profit and loss",
+      type: "mcq",
+      question: "A trader buys a watch for $<strong>80</strong> and sells it for $<strong>100</strong>. What is the percentage profit?",
+      options: ["20%", "25%", "80%", "125%"],
+      answer: 1,
+      explanation: "Profit = 100 − 80 = $20. Percentage profit = (profit ÷ cost price) × 100 = (20 ÷ 80) × 100 = 25%. Always divide by the <strong>cost price</strong> (what you paid)."
+    },
+    {
+      id: "c12_q27",
+      topic: "Profit and loss",
+      type: "input",
+      question: "A shop buys a jacket for £<strong>60</strong> and sells it for £<strong>45</strong>. What is the percentage loss? Write only the number.",
+      answer: "25",
+      acceptableAnswers: ["25", "25%"],
+      explanation: "Loss = 60 − 45 = £15. Percentage loss = (15 ÷ 60) × 100 = 25%. The shop made a 25% loss on the jacket."
+    },
+    {
+      id: "c12_q28",
+      topic: "Profit and loss",
+      type: "mcq",
+      question: "Mia buys a second-hand book for $<strong>5</strong> and sells it at a car-boot sale for $<strong>8</strong>. What is her percentage profit?",
+      options: ["37.5%", "60%", "62.5%", "3%"],
+      answer: 1,
+      explanation: "Profit = 8 − 5 = $3. Percentage profit = (3 ÷ 5) × 100 = 60%. Mia made a 60% profit — great selling!"
+    },
+    {
+      id: "c12_q29",
+      topic: "Simple interest",
+      type: "mcq",
+      question: "The formula for simple interest is <strong>I = PRT ÷ 100</strong>, where P = principal, R = rate (%), T = time (years).<br>Calculate the simple interest on £<strong>200</strong> invested at <strong>5%</strong> per year for <strong>3</strong> years.",
+      options: ["£10", "£30", "£60", "£300"],
+      answer: 1,
+      explanation: "I = PRT ÷ 100 = (200 × 5 × 3) ÷ 100 = 3000 ÷ 100 = £30. Simple interest does not change each year — it is always calculated on the original principal."
+    },
+    {
+      id: "c12_q30",
+      topic: "Simple interest",
+      type: "input",
+      question: "Using the formula <strong>I = PRT ÷ 100</strong>, find the simple interest on £<strong>400</strong> at <strong>3%</strong> per year for <strong>2</strong> years. Write only the number (in £).",
+      answer: "24",
+      acceptableAnswers: ["24", "£24", "24.00"],
+      explanation: "I = PRT ÷ 100 = (400 × 3 × 2) ÷ 100 = 2400 ÷ 100 = £24. Multiply principal × rate × time, then divide by 100."
+    },
+    {
+      id: "c12_q31",
+      topic: "Simple interest",
+      type: "mcq",
+      question: "Lena invests £<strong>1000</strong> at a simple interest rate of <strong>4%</strong> per year. After <strong>3</strong> years, what is the <strong>total amount</strong> she has (principal + interest)?",
+      options: ["£1040", "£1120", "£1160", "£1400"],
+      answer: 1,
+      explanation: "Interest I = PRT ÷ 100 = (1000 × 4 × 3) ÷ 100 = £120. Total amount = 1000 + 120 = £1120. Don't forget to add the interest to the original principal!"
+    },
+    {
+      id: "c12_q32",
+      topic: "Percentage increase or decrease",
+      type: "mcq",
+      question: "A coat is priced at £<strong>90</strong>. In a sale it is reduced by <strong>30%</strong>. What is the sale price?",
+      options: ["£27", "£60", "£63", "£87"],
+      answer: 2,
+      explanation: "30% of 90 = 0.3 × 90 = 27. Sale price = 90 − 27 = £63. You can also find 70% of 90: 0.7 × 90 = £63."
+    },
+    {
+      id: "c12_q33",
+      topic: "Percentage increase or decrease",
+      type: "input",
+      question: "A school has <strong>850</strong> students. Enrolment increases by <strong>12%</strong> next year. How many students will there be? Write only the number.",
+      answer: "952",
+      acceptableAnswers: ["952"],
+      explanation: "12% of 850 = 0.12 × 850 = 102. New number = 850 + 102 = 952 students."
+    },
+    {
+      id: "c12_q34",
+      topic: "Reverse percentages",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "After a <strong>20% increase</strong>, a price is now £<strong>96</strong>. What was the original price?",
+      options: ["£76", "£76.80", "£80", "£115.20"],
+      answer: 2,
+      explanation: "After a 20% increase, the new price = 120% of the original. So: original × 1.2 = 96. Divide both sides by 1.2: original = 96 ÷ 1.2 = £80. Always divide by the multiplier to reverse a percentage change."
+    },
+    {
+      id: "c12_q35",
+      topic: "Reverse percentages",
+      difficulty: "challenging",
+      type: "input",
+      question: "In a sale, all prices are reduced by <strong>15%</strong>. Alice pays £<strong>34</strong> for a bag. What was the original price? Write only the number (in £).",
+      answer: "40",
+      acceptableAnswers: ["40", "£40", "40.00"],
+      explanation: "After a 15% decrease, the sale price = 85% of the original. So: original × 0.85 = 34. Divide: original = 34 ÷ 0.85 = £40. Check: 15% of £40 = £6, and £40 − £6 = £34. Correct!"
+    },
+    {
+      id: "c12_q36",
+      topic: "Profit and loss",
+      difficulty: "challenging",
+      type: "input",
+      question: "A shop buys an item for £<strong>40</strong> and sells it for £<strong>52</strong>. What is the percentage profit? Write only the number.",
+      answer: "30",
+      acceptableAnswers: ["30", "30%"],
+      explanation: "Profit = 52 − 40 = £12. Percentage profit = (12 ÷ 40) × 100 = 30%. Remember: always divide by the <strong>cost price</strong> (£40), not the selling price."
+    },
+    {
+      id: "c12_q37",
+      topic: "Simple interest",
+      difficulty: "challenging",
+      type: "input",
+      question: "£<strong>500</strong> is invested at a simple interest rate of <strong>4%</strong> per year. How many years does it take for the interest earned to reach £<strong>60</strong>? Write only the number of years.",
+      answer: "3",
+      acceptableAnswers: ["3", "3 years"],
+      explanation: "Using I = PRT ÷ 100: 60 = (500 × 4 × T) ÷ 100. Simplify: 60 = 20T. Divide both sides by 20: T = 3 years. Great algebraic thinking!"
+    },
+    {
+      id: "c12_q38",
+      topic: "Percentage change",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "A price is increased by <strong>10%</strong> and then decreased by <strong>10%</strong>. Is the final price higher than, lower than, or equal to the original?",
+      options: ["Higher — the two changes cancel out to give the original", "Lower — the result is 99% of the original", "Equal — 10% up and 10% down always cancel", "Lower — the result is 90% of the original"],
+      answer: 1,
+      explanation: "Say the original price is £100. After 10% increase: £100 × 1.1 = £110. After 10% decrease on the NEW price: £110 × 0.9 = £99. The result is £99, which is <strong>1% less</strong> than the original £100. The two percentages do not cancel because the second 10% is applied to a bigger number. This is a classic trap!"
+    },
+    {
+      id: "c12_q39",
+      topic: "Reverse percentages",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "A car's value decreased by <strong>25%</strong> to become £<strong>18 000</strong>. What was its original value?",
+      options: ["£13 500", "£22 500", "£24 000", "£22 000"],
+      answer: 2,
+      explanation: "After a 25% decrease, the new value = 75% of the original. So: original × 0.75 = 18 000. Divide: original = 18 000 ÷ 0.75 = £24 000. Check: 25% of £24 000 = £6 000, and £24 000 − £6 000 = £18 000. Correct!"
     }
   ]
 };

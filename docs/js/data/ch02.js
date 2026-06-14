@@ -184,6 +184,238 @@ const ch02 = {
       options: ["189", "191", "195", "179"],
       answer: 0,
       explanation: "Using long division: 9÷5=1 remainder 4; bring down 4 → 44÷5=8 remainder 4; bring down 5 → 45÷5=9. The answer is 189. Check: 189×5=945."
+    },
+
+    // ── NEW QUESTIONS FROM HERE ──────────────────────────────────────────
+
+    // Mental addition strategies
+    {
+      id: "c2_q21",
+      topic: "Mental addition strategies",
+      type: "mcq",
+      question: "A quick mental strategy for <strong>68 + 37</strong> is to add <strong>40</strong> to 68 (getting 108) then subtract <strong>3</strong>. What is the answer?",
+      options: ["104", "105", "106", "107"],
+      answer: 1,
+      explanation: "This is the <strong>compensating strategy</strong>: round 37 up to 40 (easy to add), then adjust back. 68 + 40 = 108, then 108 − 3 = 105. Great for mental maths!"
+    },
+    {
+      id: "c2_q22",
+      topic: "Mental addition strategies",
+      type: "mcq",
+      question: "Using number bonds to 100, which pair adds to <strong>100</strong>?",
+      options: ["43 and 67", "56 and 44", "72 and 29", "35 and 75"],
+      answer: 1,
+      explanation: "<strong>Number bonds to 100</strong> are pairs that sum to 100. Check: 56 + 44 = 100. The ones digits must sum to 10 (or both be 0), and the tens digits must sum to 9 (or 10 with a carry). 6+4=10 ✓ and 5+4+1=10 ✓. The answer is 56 and 44."
+    },
+    {
+      id: "c2_q23",
+      topic: "Mental addition strategies",
+      type: "input",
+      question: "Use a mental strategy to find <strong>297 + 156</strong>.<br>Hint: round 297 up to 300, add 156, then adjust.",
+      answer: "453",
+      acceptableAnswers: ["453"],
+      explanation: "<strong>Compensating method:</strong> 297 is close to 300 (just 3 less). So: 300 + 156 = 456, then subtract 3 (because we added 3 too many) → 456 − 3 = 453. Much faster than column addition!"
+    },
+
+    // Mental subtraction strategies
+    {
+      id: "c2_q24",
+      topic: "Mental subtraction strategies",
+      type: "mcq",
+      question: "What is <strong>503 − 298</strong> using the compensating strategy?",
+      options: ["205", "195", "215", "207"],
+      answer: 0,
+      explanation: "<strong>Compensating:</strong> 298 is close to 300. So subtract 300 first: 503 − 300 = 203, then add back 2 (because we subtracted 2 too many): 203 + 2 = 205."
+    },
+    {
+      id: "c2_q25",
+      topic: "Mental subtraction strategies",
+      type: "input",
+      question: "Find <strong>1,000 − 374</strong> mentally.<br>Hint: use number bonds — the hundreds, tens and ones digits must each make the right bond.",
+      answer: "626",
+      acceptableAnswers: ["626"],
+      explanation: "To subtract from 1,000: each digit 'pairs up' to make 9 (except the last digit, which pairs to 10). So: 3 pairs with 6 (hundreds), 7 pairs with 2 (tens), 4 pairs with 6 (ones) → 626. Check: 374 + 626 = 1,000."
+    },
+
+    // Division with remainders
+    {
+      id: "c2_q26",
+      topic: "Division",
+      type: "mcq",
+      question: "What is <strong>47 ÷ 5</strong>? Write the answer as a quotient and remainder.",
+      options: ["9 remainder 3", "9 remainder 2", "8 remainder 7", "10 remainder 3"],
+      answer: 1,
+      explanation: "5 goes into 47 nine times: 5 × 9 = 45. The remainder is 47 − 45 = <strong>2</strong>. So 47 ÷ 5 = <strong>9 remainder 2</strong>. Always check: (quotient × divisor) + remainder = dividend: (9 × 5) + 2 = 47 ✓"
+    },
+    {
+      id: "c2_q27",
+      topic: "Division",
+      type: "mcq",
+      question: "<strong>263</strong> students are divided into teams of <strong>6</strong>. How many complete teams are there, and how many students are left over?",
+      options: ["43 teams, 3 left over", "44 teams, 0 left over", "43 teams, 5 left over", "42 teams, 11 left over"],
+      answer: 2,
+      explanation: "263 ÷ 6: 6 × 40 = 240, remainder 23. 6 × 3 = 18, remainder 5. So 6 × 43 = 258, remainder 5. There are <strong>43 complete teams</strong> with <strong>5 students left over</strong>. Check: 43 × 6 + 5 = 258 + 5 = 263 ✓"
+    },
+
+    // Squares and square roots
+    {
+      id: "c2_q28",
+      topic: "Exponent notation",
+      type: "mcq",
+      question: "What is <strong>9<sup>2</sup></strong> (9 squared)?",
+      options: ["18", "81", "72", "27"],
+      answer: 1,
+      explanation: "9<sup>2</sup> = 9 × 9 = <strong>81</strong>. 'Squared' means multiplied by itself once. Don't confuse with 9 × 2 = 18 — that's a common mistake!"
+    },
+    {
+      id: "c2_q29",
+      topic: "Square roots",
+      type: "mcq",
+      question: "What is <strong>√49</strong> (the square root of 49)?",
+      options: ["6", "7", "8", "9"],
+      answer: 1,
+      explanation: "√49 = <strong>7</strong>, because 7 × 7 = 49. The square root asks: 'what number multiplied by itself gives 49?' The perfect squares to know: 1,4,9,16,25,36,<strong>49</strong>,64,81,100."
+    },
+    {
+      id: "c2_q30",
+      topic: "Square roots",
+      type: "mcq",
+      question: "What is <strong>√144</strong>?",
+      options: ["11", "12", "13", "14"],
+      answer: 1,
+      explanation: "√144 = <strong>12</strong>, because 12 × 12 = 144. It helps to know your multiplication table: 12 × 12 = 144."
+    },
+    {
+      id: "c2_q31",
+      topic: "Square roots",
+      type: "input",
+      question: "A square floor tile has an area of <strong>64 cm²</strong>. What is the length of one side of the tile?",
+      answer: "8",
+      acceptableAnswers: ["8", "8 cm"],
+      explanation: "To find the side length of a square, take the <strong>square root</strong> of the area: √64 = 8, because 8 × 8 = 64. Each side is <strong>8 cm</strong> long."
+    },
+
+    // Cube roots
+    {
+      id: "c2_q32",
+      topic: "Square roots",
+      type: "mcq",
+      question: "What is <strong>∛27</strong> (the cube root of 27)?",
+      options: ["2", "3", "4", "9"],
+      answer: 1,
+      explanation: "∛27 = <strong>3</strong>, because 3 × 3 × 3 = 27. The cube root asks: 'what number multiplied by itself three times gives 27?' Key cube roots to remember: ∛1=1, ∛8=2, <strong>∛27=3</strong>, ∛64=4, ∛125=5."
+    },
+    {
+      id: "c2_q33",
+      topic: "Square roots",
+      type: "input",
+      question: "A cube-shaped box has a volume of <strong>125 cm³</strong>. What is the length of one edge?",
+      answer: "5",
+      acceptableAnswers: ["5", "5 cm"],
+      explanation: "Volume of a cube = edge³. So edge = ∛125 = <strong>5</strong>, because 5 × 5 × 5 = 125. Each edge is <strong>5 cm</strong> long."
+    },
+
+    // More order of operations
+    {
+      id: "c2_q34",
+      topic: "Order of operations",
+      type: "mcq",
+      question: "What is <strong>2<sup>3</sup> + 4 × 3 − 6 ÷ 2</strong>?",
+      options: ["23", "29", "17", "19"],
+      answer: 2,
+      explanation: "BODMAS — Orders (powers) first: 2<sup>3</sup> = 8. Then × and ÷ left to right: 4×3 = 12, 6÷2 = 3. Then + and − left to right: 8 + 12 − 3 = <strong>17</strong>. A common mistake is to calculate left-to-right without following BODMAS, which would give a wrong answer."
+    },
+    {
+      id: "c2_q35",
+      topic: "Order of operations",
+      type: "mcq",
+      question: "What is <strong>50 − (3 + 2) × 6</strong>?",
+      options: ["282", "20", "270", "18"],
+      answer: 1,
+      explanation: "BODMAS: Brackets first → 3+2=5. Then multiplication → 5×6=30. Then subtraction → 50−30 = <strong>20</strong>. Notice: if you ignored the brackets and went left-to-right you'd get the wrong answer!"
+    },
+
+    // More multiplication word problems
+    {
+      id: "c2_q36",
+      topic: "Multiplication",
+      type: "input",
+      question: "A school orders <strong>24</strong> boxes of crayons. Each box contains <strong>48</strong> crayons. How many crayons are there in total?",
+      answer: "1152",
+      acceptableAnswers: ["1152", "1,152"],
+      explanation: "24 × 48: split as 24 × 40 + 24 × 8 = 960 + 192 = <strong>1,152</strong>. Or use column multiplication: 24×8=192, 24×40=960, sum = 1,152."
+    },
+    {
+      id: "c2_q37",
+      topic: "Column multiplication",
+      type: "mcq",
+      question: "A cinema has <strong>35</strong> rows of seats and <strong>42</strong> seats in each row. What is the total number of seats?",
+      options: ["1,370", "1,470", "1,540", "1,570"],
+      answer: 1,
+      explanation: "35 × 42: use column multiplication. 35 × 2 = 70 (first partial product). 35 × 40 = 1,400 (second partial product). Total: 70 + 1,400 = <strong>1,470</strong>."
+    },
+
+    // ── CHALLENGING QUESTIONS ────────────────────────────────────────────
+
+    {
+      id: "c2_q38",
+      topic: "Order of operations",
+      difficulty: "challenging",
+      type: "input",
+      question: "Evaluate <strong>((3 + 4) × 2) ÷ 7 − 1</strong>.<br>Show careful use of BODMAS with nested brackets.",
+      answer: "1",
+      acceptableAnswers: ["1"],
+      explanation: "Work from the <strong>innermost</strong> brackets outward. Step 1 — inner brackets: 3+4=7. Step 2 — outer brackets: 7×2=14. Step 3 — division: 14÷7=2. Step 4 — subtraction: 2−1=<strong>1</strong>. Nested brackets mean 'do the innermost first, then work outward.'"
+    },
+    {
+      id: "c2_q39",
+      topic: "Multiple operations",
+      difficulty: "challenging",
+      type: "input",
+      question: "Find the <strong>missing number</strong>: &nbsp;<strong>5 × ? + 12 = 47</strong>",
+      answer: "7",
+      acceptableAnswers: ["7"],
+      explanation: "Work <strong>backwards</strong>: the equation says 'multiply something by 5, add 12, and get 47.' Undo addition first: 47 − 12 = 35. Then undo multiplication: 35 ÷ 5 = <strong>7</strong>. Check: 5 × 7 + 12 = 35 + 12 = 47 ✓. This 'working backwards' technique is really useful!"
+    },
+    {
+      id: "c2_q40",
+      topic: "Multiple operations",
+      difficulty: "challenging",
+      type: "input",
+      question: "The answer is <strong>144</strong> after dividing a mystery number by <strong>4</strong> and then adding <strong>8</strong>. What was the mystery number?",
+      answer: "544",
+      acceptableAnswers: ["544"],
+      explanation: "Work <strong>backwards</strong> through the operations. The last step was '+8', so undo it: 144 − 8 = 136. The first step was '÷4', so undo it (multiply): 136 × 4 = <strong>544</strong>. Check: 544 ÷ 4 + 8 = 136 + 8 = 144 ✓. Always undo operations in reverse order!"
+    },
+    {
+      id: "c2_q41",
+      topic: "Exponent notation",
+      difficulty: "challenging",
+      type: "input",
+      question: "Calculate <strong>2<sup>5</sup> + 3<sup>3</sup> − √64</strong>.",
+      answer: "51",
+      acceptableAnswers: ["51"],
+      explanation: "Evaluate each part separately. <strong>2<sup>5</sup></strong> = 2×2×2×2×2 = 32. <strong>3<sup>3</sup></strong> = 3×3×3 = 27. <strong>√64</strong> = 8 (because 8×8=64). Now combine: 32 + 27 − 8 = 59 − 8 = <strong>51</strong>. Powers and roots must be evaluated before adding and subtracting (BODMAS — 'O' for Orders/pOwers)."
+    },
+    {
+      id: "c2_q42",
+      topic: "Multiple operations",
+      difficulty: "challenging",
+      type: "input",
+      question: "Pragathy earns $<strong>8</strong> per hour babysitting. She works for <strong>6</strong> hours on Saturday and <strong>4</strong> hours on Sunday. She spends $<strong>15</strong> on a book and saves the rest. How much does she save?",
+      answer: "65",
+      acceptableAnswers: ["65", "$65"],
+      explanation: "This needs <strong>3 steps</strong>. Step 1 — total hours: 6 + 4 = 10 hours. Step 2 — total earnings: 10 × $8 = $80. Step 3 — savings: $80 − $15 = <strong>$65</strong>. Multi-step problems become easier when you write down each step clearly."
+    },
+    {
+      id: "c2_q43",
+      topic: "Multiple operations",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "A box holds <strong>144</strong> chocolates arranged in <strong>12</strong> equal rows. If <strong>3</strong> complete rows are eaten, how many chocolates remain? Then if these are shared equally among <strong>9</strong> friends, how many does each friend get?",
+      options: ["9", "10", "11", "12"],
+      answer: 3,
+      explanation: "Step 1 — chocolates per row: 144 ÷ 12 = 12. Step 2 — rows eaten: 3 rows × 12 = 36 chocolates eaten. Step 3 — remaining: 144 − 36 = 108. Step 4 — per friend: 108 ÷ 9 = <strong>12</strong>. Four operations in one problem — well done for keeping track!"
     }
   ]
 };
