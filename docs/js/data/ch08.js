@@ -25,39 +25,39 @@ const ch08 = {
     },
     {
       id: "c8_q3",
-      topic: "Units",
+      topic: "Mass",
       type: "mcq",
-      question: "How many centimetres are in <strong>1 metre</strong>?",
-      options: ["10", "100", "1000", "10 000"],
-      answer: 1,
-      explanation: "The prefix <em>centi-</em> means one hundredth, so there are <strong>100 centimetres</strong> in 1 metre. This is a fundamental metric conversion to remember."
+      question: "A bag of flour has a mass of <strong>2.5 kg</strong>. What is this mass in grams?<br><br>1 kg = 1000 g.",
+      options: ["25 g", "250 g", "2500 g", "25 000 g"],
+      answer: 2,
+      explanation: "To convert kilograms to grams, multiply by 1000. 2.5 × 1000 = <strong>2500 g</strong>. Moving to a smaller unit always means multiplying."
     },
     {
       id: "c8_q4",
-      topic: "Units",
-      type: "mcq",
-      question: "A swimming pool holds about 2 500 000 litres of water. Which of the following is the same amount written in kilolitres (kL), given that 1 kL = 1000 L?",
-      options: ["250 kL", "2 500 kL", "25 000 kL", "2 500 000 kL"],
-      answer: 1,
-      explanation: "To convert litres to kilolitres, divide by 1000. 2 500 000 ÷ 1000 = <strong>2 500 kL</strong>. Using a larger unit gives a more manageable number."
+      topic: "Mass",
+      type: "input",
+      question: "A recipe needs <strong>750 g</strong> of butter. The cook already has <strong>0.5 kg</strong> of butter.<br><br>How many <strong>more</strong> grams of butter does the cook still need? Write your answer in grams.",
+      answer: "250",
+      acceptableAnswers: ["250", "250 g", "250g"],
+      explanation: "First convert 0.5 kg to grams: 0.5 × 1000 = 500 g. Then subtract: 750 − 500 = <strong>250 g</strong>. Always convert all measurements to the same unit before calculating."
     },
     {
       id: "c8_q5",
-      topic: "Units",
+      topic: "Mass",
       type: "input",
-      question: "Convert <strong>3.5 kilometres</strong> to metres.<br><br>1 km = 1000 m. Write your answer in metres.",
-      answer: "3500",
-      acceptableAnswers: ["3500", "3,500", "3500 m", "3,500 m"],
-      explanation: "To convert kilometres to metres, multiply by 1000. 3.5 × 1000 = <strong>3500 m</strong>. Moving to a smaller unit always means multiplying."
+      question: "A tablet contains <strong>500 mg</strong> of medicine. How many grams is this?<br><br>1000 mg = 1 g. Write your answer in grams.",
+      answer: "0.5",
+      acceptableAnswers: ["0.5", "0.5 g", "0.50", "0.50 g"],
+      explanation: "To convert milligrams to grams, divide by 1000. 500 ÷ 1000 = <strong>0.5 g</strong>. Moving to a larger unit always means dividing."
     },
     {
       id: "c8_q6",
-      topic: "Units",
+      topic: "Mass",
       type: "input",
-      question: "Convert <strong>850 cm</strong> to metres.<br><br>100 cm = 1 m. Write your answer in metres.",
-      answer: "8.5",
-      acceptableAnswers: ["8.5", "8.5 m", "8.50", "8.50 m"],
-      explanation: "To convert centimetres to metres, divide by 100. 850 ÷ 100 = <strong>8.5 m</strong>. Moving to a larger unit always means dividing."
+      question: "A truck carries <strong>3.2 t</strong> of cargo. Express this mass in kilograms.<br><br>1 t = 1000 kg. Write your answer in kilograms.",
+      answer: "3200",
+      acceptableAnswers: ["3200", "3200 kg", "3,200", "3,200 kg"],
+      explanation: "To convert tonnes to kilograms, multiply by 1000. 3.2 × 1000 = <strong>3200 kg</strong>. Moving to a smaller unit always means multiplying."
     },
     {
       id: "c8_q7",
@@ -340,7 +340,7 @@ const ch08 = {
       options: [
         "3.2 kg, because 3.2 is greater than 3.15",
         "3150 g, because 3150 > 3200 when compared directly",
-        "3150 g, because 3150 g = 3.15 kg which is less than 3.2 kg — wait, that means 3.2 kg is heavier",
+        "3150 g, because you must always compare the numbers as written without converting",
         "They are equal"
       ],
       answer: 0,

@@ -182,63 +182,46 @@ const ch14 = {
       id: "c14_q14",
       topic: "Patterns",
       type: "mcq",
-      question: "Dots are arranged in triangular patterns:<br>Pattern 1: 1 dot, Pattern 2: 3 dots, Pattern 3: 6 dots, Pattern 4: 10 dots.<br>How many dots are in <strong>Pattern 5</strong>?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Triangular dot patterns showing patterns 1 through 4">
-  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
-  <text x="200" y="18" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Triangular Number Patterns</text>
+      question: "Dots are arranged in rows to make a growing pattern.<br>Pattern 1: 3 dots, Pattern 2: 6 dots, Pattern 3: 9 dots.<br>How many dots are in <strong>Pattern 5</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" aria-label="Dot row patterns showing patterns 1 through 3">
+  <rect width="400" height="200" fill="#f8fafc" rx="8"/>
+  <text x="200" y="18" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Dot Row Patterns</text>
 
-  <!-- Pattern 1: 1 dot, centered at x=40 -->
-  <circle cx="40" cy="70" r="7" fill="#5b5ef4"/>
-  <text x="40" y="100" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P1</text>
-  <text x="40" y="114" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">1 dot</text>
+  <!-- Pattern 1: 1 row of 3 dots, centered at x=60 -->
+  <circle cx="42" cy="70" r="8" fill="#5b5ef4"/>
+  <circle cx="62" cy="70" r="8" fill="#5b5ef4"/>
+  <circle cx="82" cy="70" r="8" fill="#5b5ef4"/>
+  <text x="62" y="98" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P1</text>
+  <text x="62" y="112" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">3 dots</text>
 
-  <!-- Pattern 2: 3 dots (triangle: 1 top + 2 bottom), centered at x=110 -->
-  <!-- row 1: 1 dot at top -->
-  <circle cx="110" cy="50" r="7" fill="#5b5ef4"/>
-  <!-- row 2: 2 dots -->
-  <circle cx="95" cy="78" r="7" fill="#5b5ef4"/>
-  <circle cx="125" cy="78" r="7" fill="#5b5ef4"/>
-  <text x="110" y="100" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P2</text>
-  <text x="110" y="114" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">3 dots</text>
+  <!-- Pattern 2: 2 rows of 3 dots, centered at x=170 -->
+  <circle cx="152" cy="55" r="8" fill="#5b5ef4"/>
+  <circle cx="172" cy="55" r="8" fill="#5b5ef4"/>
+  <circle cx="192" cy="55" r="8" fill="#5b5ef4"/>
+  <circle cx="152" cy="80" r="8" fill="#5b5ef4"/>
+  <circle cx="172" cy="80" r="8" fill="#5b5ef4"/>
+  <circle cx="192" cy="80" r="8" fill="#5b5ef4"/>
+  <text x="172" y="104" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P2</text>
+  <text x="172" y="118" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">6 dots</text>
 
-  <!-- Pattern 3: 6 dots (1+2+3), centered at x=200 -->
-  <!-- row 1: 1 dot -->
-  <circle cx="200" cy="38" r="7" fill="#5b5ef4"/>
-  <!-- row 2: 2 dots -->
-  <circle cx="185" cy="64" r="7" fill="#5b5ef4"/>
-  <circle cx="215" cy="64" r="7" fill="#5b5ef4"/>
-  <!-- row 3: 3 dots -->
-  <circle cx="170" cy="90" r="7" fill="#5b5ef4"/>
-  <circle cx="200" cy="90" r="7" fill="#5b5ef4"/>
-  <circle cx="230" cy="90" r="7" fill="#5b5ef4"/>
-  <text x="200" y="110" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P3</text>
-  <text x="200" y="124" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">6 dots</text>
+  <!-- Pattern 3: 3 rows of 3 dots, centered at x=290 -->
+  <circle cx="272" cy="42" r="8" fill="#5b5ef4"/>
+  <circle cx="292" cy="42" r="8" fill="#5b5ef4"/>
+  <circle cx="312" cy="42" r="8" fill="#5b5ef4"/>
+  <circle cx="272" cy="67" r="8" fill="#5b5ef4"/>
+  <circle cx="292" cy="67" r="8" fill="#5b5ef4"/>
+  <circle cx="312" cy="67" r="8" fill="#5b5ef4"/>
+  <circle cx="272" cy="92" r="8" fill="#5b5ef4"/>
+  <circle cx="292" cy="92" r="8" fill="#5b5ef4"/>
+  <circle cx="312" cy="92" r="8" fill="#5b5ef4"/>
+  <text x="292" y="116" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P3</text>
+  <text x="292" y="130" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">9 dots</text>
 
-  <!-- Pattern 4: 10 dots (1+2+3+4), centered at x=320 -->
-  <!-- row 1: 1 dot -->
-  <circle cx="320" cy="28" r="6" fill="#5b5ef4"/>
-  <!-- row 2: 2 dots -->
-  <circle cx="307" cy="51" r="6" fill="#5b5ef4"/>
-  <circle cx="333" cy="51" r="6" fill="#5b5ef4"/>
-  <!-- row 3: 3 dots -->
-  <circle cx="294" cy="74" r="6" fill="#5b5ef4"/>
-  <circle cx="320" cy="74" r="6" fill="#5b5ef4"/>
-  <circle cx="346" cy="74" r="6" fill="#5b5ef4"/>
-  <!-- row 4: 4 dots -->
-  <circle cx="281" cy="97" r="6" fill="#5b5ef4"/>
-  <circle cx="307" cy="97" r="6" fill="#5b5ef4"/>
-  <circle cx="333" cy="97" r="6" fill="#5b5ef4"/>
-  <circle cx="359" cy="97" r="6" fill="#5b5ef4"/>
-  <text x="320" y="117" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">P4</text>
-  <text x="320" y="131" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">10 dots</text>
-
-  <!-- Sequence note -->
-  <text x="200" y="158" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Differences: +2, +3, +4, +5, …</text>
-  <text x="200" y="174" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">How many dots in Pattern 5?</text>
+  <text x="200" y="162" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">How many dots in Pattern 5?</text>
 </svg>`,
-      options: ["12", "13", "15", "16"],
-      answer: 2,
-      explanation: "The differences between terms are: 2, 3, 4, 5 — each increases by 1. After Pattern 4 (10 dots), add 5 to get Pattern 5: 10 + 5 = 15."
+      options: ["12", "15", "18", "20"],
+      answer: 1,
+      explanation: "Each new pattern adds one more row of 3 dots. The sequence is 3, 6, 9, … (add 3 each time). Pattern 5: 3 × 5 = 15 dots."
     },
     {
       id: "c14_q15",
@@ -287,9 +270,8 @@ const ch14 = {
   <text x="300" y="129" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">7 sticks</text>
 
   <!-- Sequence note -->
-  <text x="200" y="158" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Pattern: 3, 5, 7, … (add 2 each time)</text>
-  <text x="200" y="174" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Rule: 2n + 1 matchsticks for n triangles</text>
-  <text x="200" y="192" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">How many sticks for 8 triangles?</text>
+  <text x="200" y="162" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Pattern: 3, 5, 7, … (add 2 each time)</text>
+  <text x="200" y="182" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">How many sticks for 8 triangles?</text>
 </svg>`,
       answer: "17",
       acceptableAnswers: ["17"],
@@ -414,9 +396,8 @@ const ch14 = {
   <text x="315" y="134" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">13 sticks</text>
 
   <!-- Sequence note -->
-  <text x="200" y="158" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Pattern: 5, 9, 13, … (add 4 each time)</text>
-  <text x="200" y="174" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Rule: 4n + 1 matchsticks for n pentagons</text>
-  <text x="200" y="192" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">How many sticks for 6 pentagons?</text>
+  <text x="200" y="162" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Pattern: 5, 9, 13, … (add 4 each time)</text>
+  <text x="200" y="182" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">How many sticks for 6 pentagons?</text>
 </svg>`,
       answer: "25",
       acceptableAnswers: ["25"],
@@ -444,10 +425,15 @@ const ch14 = {
       id: "c14_q20",
       topic: "Patterns",
       type: "mcq",
-      question: "A rule for a matchstick pattern is <em>number of matchsticks = 3n + 2</em>, where n is the pattern number.<br>How many matchsticks does <strong>Pattern 7</strong> need?",
-      options: ["21", "23", "25", "28"],
+      question: "A matchstick pattern gives the sequence: <strong>5, 8, 11, 14, …</strong><br>Which sentence <strong>best describes</strong> the rule for this pattern?",
+      options: [
+        "Start at 5 and multiply by 3 each time",
+        "Start at 5 and add 3 each time",
+        "Start at 8 and add 5 each time",
+        "Start at 5 and add 4 each time"
+      ],
       answer: 1,
-      explanation: "Substitute n = 7 into the rule: 3 × 7 + 2 = 21 + 2 = 23. Pattern 7 needs 23 matchsticks."
+      explanation: "The differences are: 8−5=3, 11−8=3, 14−11=3. The rule is: start at 5 and add 3 each time. This is an arithmetic sequence with a common difference of 3."
     },
     {
       id: "c14_q24",
@@ -503,15 +489,15 @@ const ch14 = {
       id: "c14_q34",
       topic: "Describing a rule in words",
       type: "mcq",
-      question: "Which rule <strong>best describes</strong> the sequence: <strong>2, 5, 10, 17, 26</strong>?",
+      question: "Which rule <strong>best describes</strong> the sequence: <strong>4, 11, 18, 25, 32</strong>?",
       options: [
-        "Add 3 each time",
-        "Multiply by 2 each time",
-        "Add consecutive odd numbers (3, 5, 7, 9, …)",
-        "Square each position number and add 1"
+        "Start at 4, multiply by 3 each time",
+        "Start at 4, add 6 each time",
+        "Start at 4, add 7 each time",
+        "Start at 11, add 4 each time"
       ],
       answer: 2,
-      explanation: "The differences are: 3, 5, 7, 9 — consecutive odd numbers increasing by 2. Both options C and D describe the same sequence (since n²+1 gives 2,5,10,17,26), but the rule 'add consecutive odd numbers' is the best description in words."
+      explanation: "The differences are: 11−4=7, 18−11=7, 25−18=7, 32−25=7. The rule is: start at 4, add 7 each time. This is an arithmetic sequence with a common difference of 7."
     },
     {
       id: "c14_q35",

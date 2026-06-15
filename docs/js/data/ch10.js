@@ -151,7 +151,7 @@ const ch10 = {
   <!-- Scale: 6 cm height => 120px, length unknown => show as wider shape -->
   <rect x="60" y="50" width="200" height="120" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
   <!-- Area label inside -->
-  <text x="160" y="117" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="600">Area = ? cm²</text>
+  <text x="160" y="117" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="600">Area = 48 cm²</text>
   <!-- Length label (top) with question mark -->
   <text x="160" y="38" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">? cm</text>
   <!-- Width label (left) -->
@@ -363,38 +363,19 @@ const ch10 = {
       id: "c10_q18",
       topic: "Capacity",
       type: "mcq",
-      question: "A rectangular container is <strong>10 cm</strong> long, <strong>5 cm</strong> wide, and <strong>8 cm</strong> tall. If 1 cm³ = 1 mL, what is its capacity in mL?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Rectangular container 10 cm by 5 cm by 8 cm">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Oblique projection: L=10, W=5, H=8 -->
-  <!-- Scale: 10cm=>150px, W depth offset=25px,19px, H=8cm=>120px -->
-  <!-- Front face: BL=(65,105), W=150px, H=120px -->
-  <rect x="65" y="90" width="150" height="120" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Top face parallelogram -->
-  <polygon points="65,90 90,71 240,71 215,90" fill="rgba(91,94,244,0.20)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Right face parallelogram -->
-  <polygon points="215,90 240,71 240,191 215,210" fill="rgba(91,94,244,0.08)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Water fill -->
-  <rect x="66" y="130" width="148" height="79" fill="rgba(56,189,248,0.20)" stroke="none"/>
-  <!-- Length label on front bottom edge -->
-  <text x="140" y="213" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">L = 10 cm</text>
-  <!-- Height label on left front edge -->
-  <text x="47" y="152" text-anchor="end" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">H = 8 cm</text>
-  <!-- Width label on top receding edge -->
-  <text x="163" y="62" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">W = 5 cm</text>
-</svg>`,
-      options: ["23 mL", "230 mL", "400 mL", "4,000 mL"],
-      answer: 2,
-      explanation: "Volume = 10 × 5 × 8 = 400 cm³. Since 1 cm³ = 1 mL, the capacity is 400 mL."
+      question: "A fish tank holds <strong>45 000 mL</strong> of water. How many litres is this?",
+      options: ["4.5 L", "45 L", "450 L", "4 500 L"],
+      answer: 1,
+      explanation: "To convert mL to L, divide by 1,000: 45 000 ÷ 1 000 = 45 L."
     },
     {
       id: "c10_q19",
       topic: "Capacity",
       type: "input",
-      question: "A rectangular fish tank has a volume of <strong>6,000 cm³</strong>. Since 1 cm³ = 1 mL, how many litres of water can it hold?",
-      answer: "6",
-      acceptableAnswers: ["6", "6 L", "6L", "6 litres", "6 liters"],
-      explanation: "Volume = 6,000 cm³ = 6,000 mL. Convert to litres: 6,000 ÷ 1,000 = 6 L."
+      question: "A water barrel holds <strong>3.5 kL</strong> of rainwater. How many litres is this?<br>(1 kL = 1 000 L)",
+      answer: "3500",
+      acceptableAnswers: ["3500", "3,500", "3500 L", "3,500 L", "3500L"],
+      explanation: "To convert kL to L, multiply by 1 000: 3.5 × 1 000 = 3 500 L."
     },
     {
       id: "c10_q20",
@@ -408,49 +389,61 @@ const ch10 = {
 
     // ── NEW QUESTIONS ────────────────────────────────────────────────────────
 
-    // Area of parallelogram (0 questions before)
+    // Triangle area and composite shapes (replacing OOS parallelogram questions)
     {
       id: "c10_q21",
-      topic: "Area of a parallelogram",
+      topic: "The area of a triangle",
       type: "mcq",
-      question: "What is the formula for the area of a parallelogram with base <em>b</em> and perpendicular height <em>h</em>?",
-      options: ["b + h", "½ × b × h", "b × h", "2 × (b + h)"],
-      answer: 2,
-      explanation: "Area of a parallelogram = base × perpendicular height (A = b × h). The height must be the <strong>perpendicular</strong> height — the vertical distance between the two parallel sides, not the slanted side length."
+      question: "A triangle has a base of <strong>8 cm</strong> and a height of <strong>5 cm</strong>. What is its area?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Triangle with base 8 cm and height 5 cm">
+  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
+  <!-- Triangle: base=8cm ~ 160px, height=5cm ~ 100px -->
+  <!-- Base from (80,170) to (240,170), apex at (160,70) -->
+  <polygon points="80,170 240,170 160,70" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
+  <!-- Height dashed line from apex to base -->
+  <line x1="160" y1="70" x2="160" y2="170" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- Right angle box at base of height -->
+  <rect x="160" y="158" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Base label -->
+  <text x="160" y="192" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">8 cm</text>
+  <!-- Height label -->
+  <text x="175" y="123" text-anchor="start" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">5 cm</text>
+</svg>`,
+      options: ["13 cm²", "20 cm²", "40 cm²", "80 cm²"],
+      answer: 1,
+      explanation: "Area of a triangle = ½ × base × height = ½ × 8 × 5 = 20 cm²."
     },
     {
       id: "c10_q22",
-      topic: "Area of a parallelogram",
+      topic: "The area of a triangle",
       type: "mcq",
-      question: "A parallelogram has a base of <strong>9 cm</strong> and a perpendicular height of <strong>5 cm</strong>. What is its area?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Parallelogram with base 9 cm and height 5 cm">
+      question: "A triangular garden has a base of <strong>12 m</strong> and a height of <strong>7 m</strong>. What is its area?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Triangle with base 12 m and height 7 m">
   <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Parallelogram: base 9cm ~ 180px, height 5cm ~ 100px, offset 30px -->
-  <!-- BL=(60,165), BR=(240,165), TR=(270,65), TL=(90,65) -->
-  <polygon points="70,165 250,165 280,65 100,65" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Perpendicular height dashed line -->
-  <line x1="100" y1="65" x2="100" y2="165" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <!-- Right angle marker at base of height -->
-  <rect x="100" y="153" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Triangle: base=12m ~ 200px, height=7m ~ 110px -->
+  <!-- Base from (60,180) to (260,180), apex at (160,70) -->
+  <polygon points="60,180 260,180 160,70" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="2"/>
+  <!-- Height dashed line from apex to base -->
+  <line x1="160" y1="70" x2="160" y2="180" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- Right angle box at base of height -->
+  <rect x="160" y="168" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
   <!-- Base label -->
-  <text x="160" y="185" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">9 cm</text>
+  <text x="160" y="200" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">12 m</text>
   <!-- Height label -->
-  <text x="85" y="118" text-anchor="end" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">5 cm</text>
-  <!-- h label -->
-  <text x="122" y="118" text-anchor="start" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" font-style="italic">h</text>
+  <text x="175" y="130" text-anchor="start" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">7 m</text>
 </svg>`,
-      options: ["14 cm²", "22.5 cm²", "45 cm²", "50 cm²"],
-      answer: 2,
-      explanation: "Area of a parallelogram = base × height = 9 × 5 = 45 cm². Remember: use the <strong>perpendicular</strong> height, not the slanted side."
+      options: ["19 m²", "42 m²", "84 m²", "168 m²"],
+      answer: 1,
+      explanation: "Area of a triangle = ½ × base × height = ½ × 12 × 7 = 42 m²."
     },
     {
       id: "c10_q23",
-      topic: "Area of a parallelogram",
+      topic: "Composite shapes",
       type: "input",
-      question: "A parallelogram-shaped sign has a base of <strong>14 cm</strong> and a perpendicular height of <strong>6 cm</strong>. What is its area in cm²?",
-      answer: "84",
-      acceptableAnswers: ["84", "84 cm²", "84cm²"],
-      explanation: "Area = base × height = 14 × 6 = 84 cm². Great work — parallelogram area is just like a rectangle: base times height!"
+      question: "A shape is made of two rectangles joined together.<br>Rectangle A is <strong>6 cm × 4 cm</strong>. Rectangle B is <strong>3 cm × 2 cm</strong>.<br>What is the total area of the shape in cm²?",
+      answer: "30",
+      acceptableAnswers: ["30", "30 cm²", "30cm²"],
+      explanation: "Add the areas of the two rectangles:<br>• Rectangle A = 6 × 4 = 24 cm²<br>• Rectangle B = 3 × 2 = 6 cm²<br>• Total = 24 + 6 = <strong>30 cm²</strong>"
     },
 
     // Area of trapezium (0 questions before)
@@ -485,7 +478,7 @@ const ch10 = {
   <line x1="220" y1="60" x2="220" y2="140" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3"/>
 </svg>`,
       options: ["16 cm²", "28 cm²", "32 cm²", "48 cm²"],
-      answer: 2,
+      answer: 1,
       explanation: "Split the L-shape into two rectangles:<br>• Bottom rectangle: 8 cm × 2 cm = 16 cm²<br>• Top-left rectangle: 3 cm × 4 cm = 12 cm²<br>• Total = 16 + 12 = <strong>28 cm²</strong>.<br>(Alternatively: full 8×6 rectangle = 48 cm², minus the missing 5×4 = 20 cm² corner → 48 − 20 = 28 cm²)"
     },
     {
@@ -564,10 +557,30 @@ const ch10 = {
       topic: "Composite shapes",
       difficulty: "challenging",
       type: "mcq",
-      question: "A rectangular piece of card is <strong>20 cm</strong> long and <strong>15 cm</strong> wide. A circular hole of radius <strong>3 cm</strong> is cut from the middle. Using π ≈ 3.14, what is the remaining area of the card (to the nearest whole number)?",
-      options: ["245 cm²", "272 cm²", "271 cm²", "300 cm²"],
+      question: "An L-shaped room has the dimensions shown. The overall rectangle is <strong>10 m × 8 m</strong>, and a rectangular section of <strong>4 m × 3 m</strong> has been removed from one corner. What is the area of the L-shaped room?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="L-shaped room: overall 10 m by 8 m with 4 m by 3 m corner removed">
+  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
+  <!-- Scale: 1m = 17px. Overall 10m=170px wide, 8m=136px tall. -->
+  <!-- L-shape: start BL=(75,193), going clockwise -->
+  <!-- BL=(75,193), BR=(245,193), up to notch=(245,109), left to (185,109), up=(185,57), left to (75,57) close -->
+  <polygon points="75,193 245,193 245,109 185,109 185,57 75,57" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
+  <!-- Dashed lines to show missing corner -->
+  <line x1="185" y1="57" x2="245" y2="57" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="245" y1="57" x2="245" y2="109" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- Right angle at notch corner -->
+  <rect x="185" y="109" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Full width at bottom: 10 m -->
+  <text x="160" y="210" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">10 m</text>
+  <!-- Full height on left: 8 m -->
+  <text x="58" y="128" text-anchor="end" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">8 m</text>
+  <!-- Removed piece width: 4 m (top-right) -->
+  <text x="215" y="49" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">4 m</text>
+  <!-- Removed piece height: 3 m (right edge, top section) -->
+  <text x="257" y="86" text-anchor="start" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">3 m</text>
+</svg>`,
+      options: ["56 m²", "68 m²", "80 m²", "92 m²"],
       answer: 1,
-      explanation: "Step 1: Rectangle area = 20 × 15 = 300 cm²<br>Step 2: Circle area = π × r² = 3.14 × 3² = 3.14 × 9 = 28.26 cm²<br>Step 3: Remaining area = 300 − 28.26 ≈ <strong>271.74 ≈ 272 cm²</strong> (to the nearest whole number).<br>This combines two area formulas — excellent multi-step thinking!"
+      explanation: "Step 1: Area of full rectangle = 10 × 8 = 80 m²<br>Step 2: Area of removed corner = 4 × 3 = 12 m²<br>Step 3: L-shape area = 80 − 12 = <strong>68 m²</strong><br>Subtracting the missing piece from the full rectangle is a reliable method for L-shapes!"
     },
     {
       id: "c10_q40",

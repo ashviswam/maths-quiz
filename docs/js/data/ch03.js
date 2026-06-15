@@ -29,7 +29,6 @@ const ch03 = {
   <line x1="258" y1="75" x2="258" y2="130" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3"/>
   <line x1="253" y1="75" x2="263" y2="75" stroke="#64748b" stroke-width="1"/>
   <line x1="253" y1="130" x2="263" y2="130" stroke="#64748b" stroke-width="1"/>
-  <text x="140" y="50" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">Parallel lines — same distance apart, never meet</text>
   <text x="269" y="106" text-anchor="start" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">same</text>
   <text x="269" y="118" text-anchor="start" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">gap</text>
 </svg>`,
@@ -64,7 +63,6 @@ const ch03 = {
   <path d="M 110,150 A 40,40 0 0,0 40.7,122.7" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
   <!-- 137° label -->
   <text x="100" y="135" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">137°</text>
-  <text x="140" y="185" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">Obtuse angle (between 90° and 180°)</text>
 </svg>`,
       options: ["Acute", "Right", "Obtuse", "Reflex"],
       answer: 2,
@@ -141,7 +139,6 @@ const ch03 = {
   <!-- Label for reflex angle -->
   <text x="55" y="165" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">320°</text>
   <!-- Arrow hint -->
-  <text x="140" y="190" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">Reflex angle (180° – 360°)</text>
 </svg>`,
       options: ["Exactly 90°", "Between 0° and 90°", "Between 90° and 180°", "Between 180° and 360°"],
       answer: 3,
@@ -333,13 +330,12 @@ const ch03 = {
   <!-- Arc for top angle (42°) -->
   <path d="M 140,90 A 20,20 0 0,1 156.6,96.7" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
   <text x="142" y="88" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">42°</text>
-  <!-- Arc for bottom vertically opposite (42°) -->
+  <!-- Arc for bottom vertically opposite (unknown) -->
   <path d="M 140,130 A 20,20 0 0,1 123.4,123.3" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <text x="138" y="147" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">42°</text>
+  <text x="138" y="147" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">?</text>
   <!-- Labels for side angles -->
   <text x="108" y="115" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">138°</text>
   <text x="152" y="115" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">138°</text>
-  <text x="140" y="190" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">Vertically opposite angles are equal</text>
 </svg>`,
       options: ["48°", "138°", "42°", "90°"],
       answer: 2,
@@ -360,15 +356,15 @@ const ch03 = {
   <!-- Line 1 angle from +x: atan2(80-130, 260-20) = atan2(-50,240) ≈ -11.8° -->
   <!-- Line 2 angle from +x: atan2(190-20, 225-55) = atan2(170,170) = 45° -->
   <!-- Angle between lines = 45 - (-11.8) = 56.8° ... let me just label approx positions -->
-  <!-- Label the four angles -->
-  <!-- Top angle (75°) -->
+  <!-- Label the four angles: only one given, rest unknown -->
+  <!-- Top angle given as 75° -->
   <text x="140" y="80" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">75°</text>
-  <!-- Bottom opposite (75°) -->
-  <text x="140" y="140" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">75°</text>
-  <!-- Left angle (105°) -->
-  <text x="100" y="110" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">105°</text>
-  <!-- Right angle (105°) -->
-  <text x="183" y="110" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">105°</text>
+  <!-- Bottom opposite (unknown) -->
+  <text x="140" y="140" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">?</text>
+  <!-- Left angle (unknown) -->
+  <text x="100" y="110" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">?</text>
+  <!-- Right angle (unknown) -->
+  <text x="183" y="110" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">?</text>
 </svg>`,
       options: [
         "75°, 105°, 75°, 105°",
@@ -428,32 +424,34 @@ const ch03 = {
       id: "c3_q22",
       topic: "Lines",
       type: "mcq",
-      question: "Look at the diagram. Which pair of lines are <strong>perpendicular</strong> to each other?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Four lines: horizontal, vertical, diagonal, and curved">
-  <rect width="320" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Line A: horizontal -->
-  <line x1="20" y1="60" x2="150" y2="60" stroke="#5b5ef4" stroke-width="2.5"/>
-  <text x="155" y="64" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">A</text>
-  <!-- Line B: vertical -->
-  <line x1="70" y1="20" x2="70" y2="110" stroke="#f43f5e" stroke-width="2.5"/>
-  <text x="75" y="118" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">B</text>
-  <!-- Right-angle marker -->
-  <rect x="70" y="48" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Line C: diagonal (not perpendicular to A) -->
-  <line x1="180" y1="30" x2="300" y2="130" stroke="#22c55e" stroke-width="2.5"/>
-  <text x="305" y="134" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">C</text>
-  <!-- Line D: horizontal (parallel to A) -->
-  <line x1="20" y1="170" x2="150" y2="170" stroke="#f59e0b" stroke-width="2.5"/>
-  <text x="155" y="174" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">D</text>
+      question: "Two straight lines intersect and form four equal angles. What is the size of each angle?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" aria-label="Two intersecting lines forming four equal angles">
+  <rect width="280" height="200" fill="#f8fafc" rx="8"/>
+  <!-- Intersection at (140, 100) -->
+  <!-- Horizontal line -->
+  <line x1="20" y1="100" x2="260" y2="100" stroke="#5b5ef4" stroke-width="2.5"/>
+  <!-- Vertical line -->
+  <line x1="140" y1="20" x2="140" y2="180" stroke="#5b5ef4" stroke-width="2.5"/>
+  <!-- Right-angle markers in all four corners -->
+  <rect x="140" y="88" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="128" y="88" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="140" y="100" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="128" y="100" width="12" height="12" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Question marks in each sector -->
+  <text x="105" y="88" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">?</text>
+  <text x="175" y="88" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">?</text>
+  <text x="105" y="120" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">?</text>
+  <text x="175" y="120" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">?</text>
+  <text x="140" y="195" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">All four angles are equal</text>
 </svg>`,
       options: [
-        "Lines A and C",
-        "Lines A and D",
-        "Lines A and B",
-        "Lines C and D"
+        "45°",
+        "60°",
+        "90°",
+        "180°"
       ],
       answer: 2,
-      explanation: "Lines A and B are perpendicular — they cross at exactly 90°, shown by the small square at their intersection. Lines A and D are parallel (same direction), and lines A and C cross at an angle other than 90°."
+      explanation: "When two straight lines cross and form four equal angles, each angle must be 90°. This follows from the straight-line angle rule: the four angles together make a full revolution of 360°, and 360° ÷ 4 = 90°. Alternatively, any two adjacent angles lie on a straight line and must add to 180°; if they are equal, each is 180° ÷ 2 = 90°."
     },
     {
       id: "c3_q23",
@@ -475,9 +473,8 @@ const ch03 = {
   <line x1="20" y1="70" x2="300" y2="70" stroke="#5b5ef4" stroke-width="2.5"/>
   <!-- Vertex dot -->
   <circle cx="160" cy="70" r="4" fill="#5b5ef4"/>
-  <!-- Semi-circle arc above to show 180° -->
+  <!-- Semi-circle arc above to show the angle -->
   <path d="M 120,70 A 40,40 0 0,0 200,70" fill="rgba(91,94,244,0.12)" stroke="#f59e0b" stroke-width="1.5"/>
-  <text x="160" y="52" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">180°</text>
   <text x="160" y="100" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">A straight angle forms a flat line</text>
 </svg>`,
       options: ["90°", "270°", "360°", "180°"],
@@ -509,21 +506,67 @@ const ch03 = {
     },
     {
       id: "c3_q41",
-      topic: "Angle bisectors",
+      topic: "Calculating angles",
       type: "mcq",
-      question: "An angle bisector divides an angle into two equal parts. If an angle bisector divides an angle into two parts each measuring <strong>38°</strong>, what was the original angle?",
-      options: ["19°", "76°", "52°", "142°"],
+      question: "Angles <em>x</em> and <em>y</em> lie on a straight line. Angle <em>x</em> is three times the size of angle <em>y</em>. What is the size of angle <em>y</em>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" aria-label="Angles x and y on a straight line where x is three times y">
+  <rect width="280" height="180" fill="#f8fafc" rx="8"/>
+  <!-- Straight horizontal line -->
+  <line x1="20" y1="120" x2="260" y2="120" stroke="#64748b" stroke-width="2"/>
+  <!-- Vertex at (100, 120): ray goes up-right splitting the line -->
+  <!-- y is 45°, x is 135°: ray at 45° from left = 135° from +x-axis -->
+  <!-- cos(135°)=-0.707, sin(135°)=0.707; length 80 -->
+  <!-- x=100+80*(-0.707)=100-56.6=43.4, y=120-80*0.707=120-56.6=63.4 -->
+  <line x1="100" y1="120" x2="43" y2="63" stroke="#5b5ef4" stroke-width="2.5"/>
+  <!-- Arc for x (larger, left portion) -->
+  <path d="M 60,120 A 40,40 0 0,1 71.7,91.7" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="50" y="105" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">x</text>
+  <!-- Arc for y (smaller, right portion) -->
+  <path d="M 71.7,91.7 A 40,40 0 0,1 140,120" fill="none" stroke="#5b5ef4" stroke-width="1.5"/>
+  <text x="120" y="108" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">y</text>
+  <text x="140" y="160" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">x + y = 180°, and x = 3y</text>
+</svg>`,
+      options: ["30°", "45°", "60°", "90°"],
       answer: 1,
-      explanation: "An angle bisector cuts an angle exactly in half. If each half is 38°, the original angle = 2 × 38° = 76°. 'Bisect' always means to cut exactly in two equal parts."
+      explanation: "Angles on a straight line add up to 180°. If x = 3y, then 3y + y = 180°, so 4y = 180°, giving y = 45°. Check: x = 3 × 45° = 135°, and 135° + 45° = 180°. Correct!"
     },
     {
       id: "c3_q42",
-      topic: "Angle bisectors",
+      topic: "Calculating angles",
       type: "input",
-      question: "An angle of <strong>124°</strong> is bisected (cut exactly in half). What is the size of each new angle in degrees?",
-      answer: "62",
-      acceptableAnswers: ["62", "62°", "62 degrees"],
-      explanation: "Bisecting means splitting into two equal halves. Each new angle = 124° ÷ 2 = 62°. You can check: 62° + 62° = 124°. Correct!"
+      question: "Four rays meet at a point, dividing a full revolution into four angles. Three of the angles are 85°, 110°, and 72°. What is the size of the fourth angle in degrees?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" aria-label="Four rays at a point: three angles given as 85, 110, 72 degrees; fourth unknown">
+  <rect width="280" height="200" fill="#f8fafc" rx="8"/>
+  <!-- Centre at (140, 105) -->
+  <!-- Four rays at cumulative angles: 0°, 85°, 195°, 267°, (360°) -->
+  <!-- Ray 1: 0° (right): (220, 105) -->
+  <line x1="140" y1="105" x2="220" y2="105" stroke="#64748b" stroke-width="2"/>
+  <!-- Ray 2: 85° CCW: cos(85°)≈0.0872, sin(85°)≈0.9962; length 70 -->
+  <!-- x=140+70*0.0872=146.1, y=105-70*0.9962=105-69.7=35.3 -->
+  <line x1="140" y1="105" x2="146" y2="35" stroke="#64748b" stroke-width="2"/>
+  <!-- Ray 3: 195°: cos(195°)≈-0.9659, sin(195°)≈-0.2588; length 70 -->
+  <!-- x=140+70*(-0.9659)=140-67.6=72.4, y=105-70*(-0.2588)=105+18.1=123.1 -->
+  <line x1="140" y1="105" x2="72" y2="123" stroke="#64748b" stroke-width="2"/>
+  <!-- Ray 4: 267°: cos(267°)≈0.0523, sin(267°)≈-0.9986; length 70 -->
+  <!-- x=140+70*0.0523=143.7, y=105-70*(-0.9986)=105+69.9=174.9 -->
+  <line x1="140" y1="105" x2="144" y2="175" stroke="#64748b" stroke-width="2"/>
+  <!-- Arc labels for the three known angles -->
+  <!-- 85° sector (between ray1 and ray2, top-right) -->
+  <path d="M 175,105 A 35,35 0 0,0 143.1,70.1" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="175" y="88" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">85°</text>
+  <!-- 110° sector (between ray2 and ray3, left) -->
+  <path d="M 143.1,70.1 A 35,35 0 0,0 106.4,122.5" fill="none" stroke="#5b5ef4" stroke-width="1.5"/>
+  <text x="96" y="88" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">110°</text>
+  <!-- 72° sector (between ray3 and ray4, bottom-left) -->
+  <path d="M 106.4,122.5 A 35,35 0 0,0 141.8,140.0" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="96" y="148" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">72°</text>
+  <!-- Unknown sector (between ray4 and ray1, bottom-right) -->
+  <path d="M 141.8,140.0 A 35,35 0 0,0 175,105" fill="none" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="170" y="148" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">?</text>
+</svg>`,
+      answer: "93",
+      acceptableAnswers: ["93", "93°", "93 degrees"],
+      explanation: "Angles at a point (a full revolution) add up to 360°. Fourth angle = 360° − 85° − 110° − 72° = 360° − 267° = 93°."
     },
     // ─── CHALLENGING QUESTIONS ────────────────────────────────────────────────
   ]

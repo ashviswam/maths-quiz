@@ -25,8 +25,6 @@ const ch05 = {
     fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
   <!-- Side count label -->
   <text x="160" y="116" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">8 sides</text>
-  <!-- Vertex label hint -->
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Octagon</text>
 </svg>`,
       options: ["Hexagon", "Heptagon", "Octagon", "Nonagon"],
       answer: 2,
@@ -64,7 +62,6 @@ const ch05 = {
   <!-- Label -->
   <text x="160" y="108" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">All sides equal</text>
   <text x="160" y="124" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">All angles equal</text>
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Regular Polygon (hexagon shown)</text>
 </svg>`,
       options: [
         "All angles are different",
@@ -103,7 +100,6 @@ const ch05 = {
   <text x="160" y="20" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">A</text>
   <text x="48" y="210" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">B</text>
   <text x="272" y="210" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">C</text>
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">All sides equal — all angles 60°</text>
 </svg>`,
       options: ["Isosceles", "Scalene", "Right-angled", "Equilateral"],
       answer: 3,
@@ -140,7 +136,6 @@ const ch05 = {
   <text x="35" y="200" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">A</text>
   <text x="265" y="200" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">B</text>
   <text x="184" y="120" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">C</text>
-  <text x="160" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">All sides different → Scalene</text>
 </svg>`,
       options: ["Equilateral", "Isosceles", "Scalene", "Right-angled"],
       answer: 2,
@@ -169,8 +164,6 @@ const ch05 = {
   <text x="252" y="200" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">B</text>
   <text x="218" y="58" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">C</text>
   <text x="102" y="58" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">D</text>
-  <text x="160" y="132" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Trapezoid</text>
-  <text x="160" y="148" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1 pair of parallel sides</text>
 </svg>`,
       options: ["Parallelogram", "Rhombus", "Trapezoid", "Rectangle"],
       answer: 2,
@@ -204,8 +197,6 @@ const ch05 = {
   <text x="252" y="36" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">B</text>
   <text x="252" y="194" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">C</text>
   <text x="68" y="194" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">D</text>
-  <text x="160" y="116" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">Square</text>
-  <text x="160" y="132" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">All sides equal, all angles 90°</text>
 </svg>`,
       options: ["Rhombus", "Square", "Rectangle", "Kite"],
       answer: 1,
@@ -239,8 +230,6 @@ const ch05 = {
   <text x="273" y="114" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">B</text>
   <text x="160" y="210" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">C</text>
   <text x="47" y="114" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">D</text>
-  <text x="160" y="110" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Rhombus</text>
-  <text x="160" y="126" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">All 4 sides equal</text>
 </svg>`,
       options: [
         "All angles are 90°",
@@ -395,8 +384,6 @@ const ch05 = {
   <rect x="122" y="170" width="48" height="48" fill="rgba(91,94,244,0.10)" stroke="#5b5ef4" stroke-width="2"/>
   <!-- Far right extra square for 6th -->
   <rect x="222" y="70" width="48" height="48" fill="rgba(91,94,244,0.08)" stroke="#5b5ef4" stroke-width="2"/>
-  <!-- Label -->
-  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Flat net → folds to make a 3D solid</text>
 </svg>`,
       options: [
         "A 3D model of the solid made from clay",
@@ -437,9 +424,6 @@ const ch05 = {
   <!-- Square 6: bottom-bottom -->
   <rect x="126" y="157" width="46" height="46" fill="rgba(91,94,244,0.10)" stroke="#5b5ef4" stroke-width="2"/>
   <text x="149" y="185" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">6</text>
-  <!-- Count label -->
-  <text x="255" y="100" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">6</text>
-  <text x="255" y="116" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">squares</text>
 </svg>`,
       options: ["4", "5", "6", "8"],
       answer: 2,
@@ -463,8 +447,6 @@ const ch05 = {
   <circle cx="268" cy="120" r="32" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
   <text x="268" y="117" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">circle</text>
   <text x="268" y="131" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">(top/bottom)</text>
-  <!-- Arrow showing folding -->
-  <text x="160" y="212" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Folds to make a cylinder</text>
 </svg>`,
       options: ["Sphere", "Cone", "Cylinder", "Prism"],
       answer: 2,
@@ -502,8 +484,6 @@ const ch05 = {
   <line x1="49" y1="102" x2="61" y2="108" stroke="#5b5ef4" stroke-width="2"/>
   <line x1="259" y1="113" x2="271" y2="107" stroke="#5b5ef4" stroke-width="2"/>
   <line x1="259" y1="108" x2="271" y2="102" stroke="#5b5ef4" stroke-width="2"/>
-  <text x="160" y="116" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Rectangle</text>
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Opposite sides equal, all angles 90°</text>
 </svg>`,
       options: [
         "All four sides are equal and all angles are 90°",
@@ -537,8 +517,6 @@ const ch05 = {
   <!-- Tick marks: single on top/bottom, double on left/right -->
   <line x1="143" y1="169" x2="149" y2="181" stroke="#5b5ef4" stroke-width="2"/>
   <line x1="173" y1="49" x2="179" y2="61" stroke="#5b5ef4" stroke-width="2"/>
-  <text x="160" y="125" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Parallelogram</text>
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2 pairs of parallel sides, opposite sides equal</text>
 </svg>`,
       options: [
         "All four sides are equal in length",
@@ -571,8 +549,6 @@ const ch05 = {
   <!-- CD midpoint: (115,150) -->
   <line x1="112" y1="145" x2="120" y2="155" stroke="#f43f5e" stroke-width="2"/>
   <line x1="109" y1="150" x2="117" y2="140" stroke="#f43f5e" stroke-width="2"/>
-  <text x="160" y="112" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Kite</text>
-  <text x="160" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2 pairs of adjacent equal sides</text>
 </svg>`,
       options: [
         "Two pairs of opposite sides are equal",
@@ -617,11 +593,6 @@ const ch05 = {
   <line x1="70" y1="175" x2="115" y2="140" stroke="#5b5ef4" stroke-width="1.5" stroke-dasharray="5,3"/>
   <line x1="115" y1="45" x2="115" y2="140" stroke="#5b5ef4" stroke-width="1.5" stroke-dasharray="5,3"/>
   <line x1="115" y1="140" x2="275" y2="140" stroke="#5b5ef4" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <!-- Labels -->
-  <text x="150" y="134" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">6 faces</text>
-  <text x="150" y="149" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">12 edges</text>
-  <text x="150" y="164" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">8 vertices</text>
-  <text x="160" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Cuboid (rectangular box)</text>
 </svg>`,
       options: [
         "4 faces, 6 edges, 4 vertices",
@@ -745,16 +716,16 @@ const ch05 = {
 
     // CHALLENGING: symmetry of a regular hexagon
 
-    // CHALLENGING: multi-step — net identification + Euler check
+    // CHALLENGING: net matching — cone net
     {
       id: "c5_q47",
       topic: "Nets of solids",
       difficulty: "challenging",
       type: "mcq",
-      question: "A net has <strong>2 circles and 1 rectangle</strong>. The 3D solid it makes has V vertices, E edges, and F faces. What is V + F?",
-      options: ["2", "3", "5", "0"],
+      question: "A net consists of <strong>1 circle</strong> and <strong>1 sector</strong> (a fan-shaped piece). Which 3D solid does this net make?",
+      options: ["Cylinder", "Cone", "Pyramid", "Sphere"],
       answer: 1,
-      explanation: "The net of 2 circles + 1 rectangle makes a <strong>cylinder</strong>. A cylinder has: 0 vertices (V = 0), 2 edges (the two circular rims, E = 2), and 3 faces (2 circular + 1 curved, F = 3). So V + F = 0 + 3 = <strong>3</strong>. Note: cylinders are not polyhedra so Euler's formula (V − E + F = 2) gives 0 − 2 + 3 = 1, not 2 — that is expected for curved solids."
+      explanation: "The net of a <strong>cone</strong> is made of one circle (the flat base) and one sector — a fan or wedge shape that wraps around to form the curved surface. When the sector is rolled up and the circle is attached at the base, it forms a cone."
     }
   ]
 };

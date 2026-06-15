@@ -116,7 +116,7 @@ const ch01 = {
       topic: "Number lines",
       type: "mcq",
       question: "On a number line from 0 to 10,000, what number is exactly halfway between <strong>3,000</strong> and <strong>4,000</strong>?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Number line from 3000 to 4000 showing midpoint 3500">
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Number line diagram">
   <rect width="380" height="80" fill="#f8fafc" rx="8"/>
   <!-- Number line axis -->
   <line x1="30" y1="40" x2="350" y2="40" stroke="#64748b" stroke-width="1.5"/>
@@ -147,7 +147,7 @@ const ch01 = {
       topic: "Number lines",
       type: "mcq",
       question: "A number line goes from 0 to 10,000 with marks every 1,000. Point P is <strong>two marks past 6,000</strong>. What number does P represent?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Number line from 0 to 10000 with marks every 1000, point P at 8000">
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Number line diagram">
   <rect width="380" height="80" fill="#f8fafc" rx="8"/>
   <!-- Number line axis -->
   <line x1="20" y1="40" x2="370" y2="40" stroke="#64748b" stroke-width="1.5"/>
@@ -196,7 +196,7 @@ const ch01 = {
       topic: "Number lines",
       type: "mcq",
       question: "On a number line, which number is <strong>500 less</strong> than 7,200?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Number line showing 500 less than 7200 equals 6700">
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Number line diagram">
   <rect width="380" height="80" fill="#f8fafc" rx="8"/>
   <!-- Number line axis -->
   <line x1="20" y1="40" x2="365" y2="40" stroke="#64748b" stroke-width="1.5"/>
@@ -550,10 +550,10 @@ const ch01 = {
       topic: "Rounding numbers",
       difficulty: "challenging",
       type: "mcq",
-      question: "A number rounds to <strong>47,000</strong> when rounded to the nearest 1,000, and rounds to <strong>47,400</strong> when rounded to the nearest 100. Which of the following could be the number?",
+      question: "A number rounds to <strong>47,000</strong> when rounded to the nearest 1,000, rounds to <strong>47,400</strong> when rounded to the nearest 100, and has a <strong>4</strong> in the hundreds place. Which of the following is the number?",
       options: ["47,449", "47,350", "47,451", "46,951"],
       answer: 0,
-      explanation: "Work out the range that satisfies both conditions:<br><strong>Condition 1</strong> — rounds to 47,000 (nearest 1,000): the hundreds digit must be 0, 1, 2, 3, or 4, so the number is between 47,000 and 47,499.<br><strong>Condition 2</strong> — rounds to 47,400 (nearest 100): the tens digit must be 0, 1, 2, 3, or 4, so the number is between 47,400 and 47,449.<br>The overlap is <strong>47,400 to 47,449</strong>. Now check the options: 47,449 lies in this range ✓. Check 47,350: its tens digit is 5, so it rounds up to 47,400 ✓ for condition 2, but this is option B not A. The cleanest answer is <strong>47,449</strong> — it clearly satisfies both. (47,451 would round to 47,500, not 47,400. 46,951 rounds to 47,000 but also rounds to 47,000 for nearest 100.)"
+      explanation: "Work through all three conditions:<br><strong>Condition 1</strong> — rounds to 47,000 (nearest 1,000): the hundreds digit must be 0–4, so the number is in the range 47,000–47,499.<br><strong>Condition 2</strong> — rounds to 47,400 (nearest 100): the tens digit must be 0–4, so the number is in the range 47,400–47,449.<br><strong>Condition 3</strong> — hundreds digit is 4: the number must be in 47,4xx, which fits the range above.<br>The only option in 47,400–47,449 with a hundreds digit of 4 is <strong>47,449</strong> ✓.<br>Why the others fail: 47,350 has hundreds digit 3 (fails condition 3); 47,451 rounds to 47,500 not 47,400 (fails condition 2); 46,951 rounds to 47,000 for nearest 1,000 but rounds to 47,000 not 47,400 for nearest 100 (fails condition 2)."
     },
     {
       id: "c1_q41",
@@ -570,10 +570,15 @@ const ch01 = {
       topic: "Roman numerals",
       difficulty: "challenging",
       type: "mcq",
-      question: "Which of the following calculations gives the <strong>largest result</strong> when the Roman numerals are converted to numbers?<br>A: XCIX + XI &nbsp;&nbsp; B: L × II &nbsp;&nbsp; C: C − IV &nbsp;&nbsp; D: XX × V",
-      options: ["XCIX + XI = 110", "L × II = 100", "C − IV = 96", "XX × V = 100"],
+      question: "Arrange these Roman numerals in <strong>ascending order</strong> (smallest to largest):<br><strong>XLVII &nbsp;&nbsp; XCIX &nbsp;&nbsp; XXIV &nbsp;&nbsp; LXXXV</strong>",
+      options: [
+        "XXIV → XLVII → LXXXV → XCIX",
+        "XXIV → LXXXV → XLVII → XCIX",
+        "XLVII → XXIV → XCIX → LXXXV",
+        "XCIX → LXXXV → XLVII → XXIV"
+      ],
       answer: 0,
-      explanation: "Convert each Roman numeral and calculate:<br>• A: XCIX = 99, XI = 11 → 99 + 11 = <strong>110</strong><br>• B: L = 50, II = 2 → 50 × 2 = 100<br>• C: C = 100, IV = 4 → 100 − 4 = 96<br>• D: XX = 20, V = 5 → 20 × 5 = 100<br>The largest result is A = 110."
+      explanation: "Convert each Roman numeral to a Hindu-Arabic number first:<br>• XXIV = 24 (XX = 20, IV = 4)<br>• XLVII = 47 (XL = 40, VII = 7)<br>• LXXXV = 85 (L = 50, XXX = 30, V = 5)<br>• XCIX = 99 (XC = 90, IX = 9)<br>Now order them: 24 &lt; 47 &lt; 85 &lt; 99, so ascending order is <strong>XXIV → XLVII → LXXXV → XCIX</strong>."
     },
     {
       id: "c1_q43",

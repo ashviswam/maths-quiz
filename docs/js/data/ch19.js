@@ -56,17 +56,6 @@ const ch19 = {
   <!-- Point A at (2,3): svgX=170+2*25=220, svgY=170-3*25=95 -->
   <circle cx="220" cy="95" r="5" fill="#5b5ef4"/>
   <text x="226" y="91" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">A(2,3)</text>
-  <!-- Point A' at (6,5): svgX=170+6*25=320, svgY=170-5*25=45 -->
-  <circle cx="320" cy="45" r="5" fill="#f43f5e"/>
-  <text x="296" y="41" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">A'(6,5)</text>
-  <!-- translation arrow -->
-  <line x1="220" y1="95" x2="316" y2="49" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr1)"/>
-  <defs>
-    <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
-    </marker>
-  </defs>
-  <text x="255" y="63" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">+4, +2</text>
 </svg>`,
       options: ["(6, 1)", "(6, 5)", "(−2, 5)", "(2, 7)"],
       answer: 1,
@@ -118,17 +107,6 @@ const ch19 = {
   <!-- Point at (5,4): svgX=170+5*25=295, svgY=170-4*25=70 -->
   <circle cx="295" cy="70" r="5" fill="#5b5ef4"/>
   <text x="300" y="67" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">(5,4)</text>
-  <!-- Image at (2,7): svgX=170+2*25=220, svgY=170-7*25=45 -->
-  <circle cx="220" cy="45" r="5" fill="#f43f5e"/>
-  <text x="225" y="42" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">(2,7)</text>
-  <!-- arrow -->
-  <defs>
-    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
-    </marker>
-  </defs>
-  <line x1="295" y1="70" x2="224" y2="49" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr2)"/>
-  <text x="240" y="75" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">-3, +3</text>
 </svg>`,
       options: ["Right 3, down 3", "Left 3, up 3", "Right 3, up 3", "Left 3, down 3"],
       answer: 1,
@@ -175,17 +153,6 @@ const ch19 = {
   <!-- P at (-3,1): svgX=170+(-3)*25=95, svgY=170-1*25=145 -->
   <circle cx="95" cy="145" r="5" fill="#5b5ef4"/>
   <text x="100" y="141" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">P(-3,1)</text>
-  <!-- P' at (2,-3): svgX=170+2*25=220, svgY=170-(-3)*25=245 -->
-  <circle cx="220" cy="245" r="5" fill="#f43f5e"/>
-  <text x="225" y="241" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">P'(2,-3)</text>
-  <!-- arrow -->
-  <defs>
-    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
-    </marker>
-  </defs>
-  <line x1="95" y1="145" x2="216" y2="241" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr3)"/>
-  <text x="135" y="205" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">+5, -4</text>
 </svg>`,
       answer: "(2, -3)",
       acceptableAnswers: ["(2, -3)", "(2,−3)", "(2, −3)", "2, -3"],
@@ -245,11 +212,6 @@ const ch19 = {
   <!-- B at (3,-2): svgX=170+3*25=245, svgY=170-(-2)*25=220 -->
   <circle cx="245" cy="220" r="5" fill="#5b5ef4"/>
   <text x="250" y="216" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">B(3,-2)</text>
-  <!-- B' at (3,2): svgX=245, svgY=170-2*25=120 -->
-  <circle cx="245" cy="120" r="5" fill="#f43f5e"/>
-  <text x="250" y="116" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">B'(3,2)</text>
-  <!-- dashed line showing reflection -->
-  <line x1="245" y1="220" x2="245" y2="124" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3"/>
 </svg>`,
       options: ["(−3, −2)", "(3, 2)", "(−3, 2)", "(2, 3)"],
       answer: 1,
@@ -294,11 +256,6 @@ const ch19 = {
   <!-- C at (-4,5): svgX=170+(-4)*25=70, svgY=170-5*25=45 -->
   <circle cx="70" cy="45" r="5" fill="#5b5ef4"/>
   <text x="22" y="41" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">C(-4,5)</text>
-  <!-- C' at (4,5): svgX=170+4*25=270, svgY=45 -->
-  <circle cx="270" cy="45" r="5" fill="#f43f5e"/>
-  <text x="274" y="41" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">C'(4,5)</text>
-  <!-- dashed line showing reflection over y-axis -->
-  <line x1="70" y1="45" x2="266" y2="45" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3"/>
 </svg>`,
       options: ["(4, 5)", "(−4, −5)", "(5, −4)", "(4, −5)"],
       answer: 0,
@@ -308,109 +265,100 @@ const ch19 = {
       id: "c19_q7",
       topic: "Reflections",
       type: "input",
-      question: "Point D is at (3, 7). It is reflected in the line <strong>y = x</strong>. Write the coordinates of the image D' in the form (x, y).",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" aria-label="Reflection of D(3,7) in the line y=x">
-  <rect width="340" height="340" fill="#f8fafc" rx="8"/>
-  <!-- grid -->
-  <line x1="20" y1="20" x2="320" y2="20" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="45" x2="320" y2="45" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="70" x2="320" y2="70" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="95" x2="320" y2="95" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="120" x2="320" y2="120" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="145" x2="320" y2="145" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="170" x2="320" y2="170" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="20" x2="20" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="45" y1="20" x2="45" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="70" y1="20" x2="70" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="95" y1="20" x2="95" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="120" y1="20" x2="120" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="145" y1="20" x2="145" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="170" y1="20" x2="170" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="195" y1="20" x2="195" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="220" y1="20" x2="220" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="245" y1="20" x2="245" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="270" y1="20" x2="270" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="295" y1="20" x2="295" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="320" y1="20" x2="320" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- axes: origin at (170,170) -->
-  <line x1="20" y1="170" x2="320" y2="170" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="170" y1="20" x2="170" y2="220" stroke="#64748b" stroke-width="1.5"/>
-  <!-- mirror line y=x: passes through origin, slope 1 (in math), slope -1 in SVG -->
-  <!-- SVG line: at (x,y) math => SVG (170+25x, 170-25y). y=x means SVG y=170-25x, SVG x=170+25x. From x=-4 to x=8 -->
-  <!-- x=-4: SVG(70,270); x=8: SVG(370,70) clip to viewbox -->
-  <line x1="70" y1="270" x2="320" y2="20" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="305" y="18" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">y=x</text>
-  <text x="174" y="183" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="243" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <text x="343" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">7</text>
-  <text x="157" y="45" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
-  <text x="157" y="95" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <!-- D at (3,7): svgX=170+3*25=245, svgY=170-7*25=20 -->
-  <circle cx="245" cy="20" r="5" fill="#5b5ef4"/>
-  <text x="249" y="17" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">D(3,7)</text>
-  <!-- D' at (7,3): svgX=170+7*25=345 (out of view), use 320; svgY=170-3*25=95 -->
-  <!-- Actually (7,3) => svgX=345 which is off-canvas. Let's note it with a label -->
-  <circle cx="320" cy="95" r="5" fill="#f43f5e"/>
-  <text x="268" y="91" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">D'(7,3)</text>
-  <!-- dashed line between D and D' -->
-  <line x1="245" y1="20" x2="320" y2="95" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
-</svg>`,
-      answer: "(7, 3)",
-      acceptableAnswers: ["(7, 3)", "7, 3"],
-      explanation: "When reflecting in the line y = x, the x and y coordinates are swapped. So D(3, 7) maps to D'(7, 3)."
-    },
-    {
-      id: "c19_q8",
-      topic: "Reflections",
-      type: "mcq",
-      question: "Point E is at (1, 4). It is reflected in the vertical line <strong>x = 3</strong>. What are the coordinates of the image E'?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" aria-label="Reflection of E(1,4) in the line x=3">
-  <rect width="340" height="340" fill="#f8fafc" rx="8"/>
-  <!-- grid -->
+      question: "Point D is at (5, 3). It is reflected in the vertical line <strong>x = 2</strong> (shown as a dashed green line on the grid). Write the coordinates of image D' in the form (x, y).",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 280" aria-label="Reflection of D(5,3) in the line x=2">
+  <rect width="340" height="280" fill="#f8fafc" rx="8"/>
+  <!-- grid lines -->
   <line x1="20" y1="70" x2="320" y2="70" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="95" x2="320" y2="95" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="120" x2="320" y2="120" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="145" x2="320" y2="145" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="170" x2="320" y2="170" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="195" x2="320" y2="195" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="70" x2="20" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="45" y1="70" x2="45" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="70" y1="70" x2="70" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="95" y1="70" x2="95" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="120" y1="70" x2="120" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="145" y1="70" x2="145" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="170" y1="70" x2="170" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="195" y1="70" x2="195" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="220" y1="70" x2="220" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="245" y1="70" x2="245" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="270" y1="70" x2="270" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="295" y1="70" x2="295" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="320" y1="70" x2="320" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- axes: origin at (170,170) -->
+  <line x1="20" y1="220" x2="320" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="245" x2="320" y2="245" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="70" x2="20" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="45" y1="70" x2="45" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="70" y1="70" x2="70" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="95" y1="70" x2="95" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="120" y1="70" x2="120" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="145" y1="70" x2="145" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="170" y1="70" x2="170" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="195" y1="70" x2="195" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="220" y1="70" x2="220" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="245" y1="70" x2="245" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="270" y1="70" x2="270" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="295" y1="70" x2="295" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="320" y1="70" x2="320" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- axes: origin at (170,170), 1 unit=25px -->
   <line x1="20" y1="170" x2="320" y2="170" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="170" y1="70" x2="170" y2="210" stroke="#64748b" stroke-width="1.5"/>
-  <!-- mirror line x=3: svgX = 170+3*25 = 245 -->
-  <line x1="245" y1="65" x2="245" y2="210" stroke="#22c55e" stroke-width="2" stroke-dasharray="6,3"/>
-  <text x="248" y="62" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">x=3</text>
+  <line x1="170" y1="70" x2="170" y2="260" stroke="#64748b" stroke-width="1.5"/>
+  <!-- mirror line x=2: svgX=170+2*25=220 -->
+  <line x1="220" y1="65" x2="220" y2="260" stroke="#22c55e" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="223" y="63" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">x=2</text>
+  <!-- axis labels -->
+  <text x="174" y="183" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
+  <text x="220" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="295" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <text x="145" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-1</text>
+  <text x="157" y="95" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <!-- D at (5,3): svgX=170+5*25=295, svgY=170-3*25=95 -->
+  <circle cx="295" cy="95" r="5" fill="#5b5ef4"/>
+  <text x="299" y="92" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">D(5,3)</text>
+</svg>`,
+      answer: "(-1, 3)",
+      acceptableAnswers: ["(-1, 3)", "(−1, 3)", "-1, 3", "−1, 3"],
+      explanation: "D is at x = 5, and the mirror line is x = 2. Distance from D to the mirror is 5 − 2 = 3. The image is 3 units to the left of x = 2: 2 − 3 = −1. The y-coordinate stays the same. So D'(−1, 3)."
+    },
+    {
+      id: "c19_q8",
+      topic: "Rotations",
+      type: "mcq",
+      question: "Triangle ABC has vertices A(1, 2), B(3, 2), C(3, 4). It is rotated <strong>90° clockwise</strong> about the origin. What are the coordinates of the image A'?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 280" aria-label="Triangle ABC to rotate 90 degrees clockwise">
+  <rect width="340" height="280" fill="#f8fafc" rx="8"/>
+  <!-- grid lines -->
+  <line x1="20" y1="70" x2="320" y2="70" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="95" x2="320" y2="95" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="120" x2="320" y2="120" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="145" x2="320" y2="145" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="170" x2="320" y2="170" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="195" x2="320" y2="195" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="220" x2="320" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="245" x2="320" y2="245" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="70" x2="20" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="45" y1="70" x2="45" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="70" y1="70" x2="70" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="95" y1="70" x2="95" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="120" y1="70" x2="120" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="145" y1="70" x2="145" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="170" y1="70" x2="170" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="195" y1="70" x2="195" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="220" y1="70" x2="220" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="245" y1="70" x2="245" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="270" y1="70" x2="270" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="295" y1="70" x2="295" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="320" y1="70" x2="320" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- axes: origin at (170,170), 1 unit=25px -->
+  <line x1="20" y1="170" x2="320" y2="170" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="170" y1="70" x2="170" y2="260" stroke="#64748b" stroke-width="1.5"/>
+  <!-- axis labels -->
   <text x="174" y="183" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
   <text x="195" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="220" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
   <text x="245" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <text x="295" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <text x="157" y="125" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="157" y="100" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
   <text x="157" y="75" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
-  <!-- E at (1,4): svgX=170+1*25=195, svgY=170-4*25=70 -->
-  <circle cx="195" cy="70" r="5" fill="#5b5ef4"/>
-  <text x="167" y="66" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">E(1,4)</text>
-  <!-- E' at (5,4): svgX=170+5*25=295, svgY=70 -->
-  <circle cx="295" cy="70" r="5" fill="#f43f5e"/>
-  <text x="298" y="66" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">E'(5,4)</text>
-  <!-- horizontal dashed line showing equal distance from mirror -->
-  <line x1="195" y1="70" x2="291" y2="70" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="215" y="85" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="249" y="85" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <!-- Triangle ABC: A(1,2)=svgX195,svgY120; B(3,2)=245,120; C(3,4)=245,70 -->
+  <polygon points="195,120 245,120 245,70" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2"/>
+  <text x="182" y="117" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">A</text>
+  <text x="248" y="117" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">B</text>
+  <text x="248" y="68" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">C</text>
 </svg>`,
-      options: ["(5, 4)", "(1, 2)", "(3, 4)", "(−1, 4)"],
+      options: ["(2, −1)", "(−1, 2)", "(2, 1)", "(1, −2)"],
       answer: 0,
-      explanation: "Point E is 2 units to the left of the line x = 3 (since 3 − 1 = 2). The image is 2 units to the right of x = 3, so x = 3 + 2 = 5. The y-coordinate stays the same: E'(5, 4)."
+      explanation: "For a 90° clockwise rotation about the origin, the rule is (x, y) → (y, −x). Applying this to A(1, 2): A' = (2, −1)."
     },
     {
       id: "c19_q9",
@@ -464,12 +412,6 @@ const ch19 = {
   <!-- F at (4,2): svgX=170+4*25=270, svgY=170-2*25=120 -->
   <circle cx="270" cy="120" r="5" fill="#5b5ef4"/>
   <text x="274" y="117" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">F(4,2)</text>
-  <!-- F' at (-2,4): svgX=170+(-2)*25=120, svgY=170-4*25=70 -->
-  <circle cx="120" cy="70" r="5" fill="#f43f5e"/>
-  <text x="55" y="67" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">F'(-2,4)</text>
-  <!-- arc indicating rotation -->
-  <path d="M 253 128 A 88 88 0 0 0 126 78" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="175" y="100" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">90° ACW</text>
 </svg>`,
       options: ["(2, −4)", "(−2, 4)", "(−4, −2)", "(2, 4)"],
       answer: 1,
@@ -512,13 +454,6 @@ const ch19 = {
   <!-- G at (3,-1): svgX=245, svgY=170-(-1)*25=195 -->
   <circle cx="245" cy="195" r="5" fill="#5b5ef4"/>
   <text x="249" y="192" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">G(3,-1)</text>
-  <!-- G' at (-3,1): svgX=95, svgY=170-1*25=145 -->
-  <circle cx="95" cy="145" r="5" fill="#f43f5e"/>
-  <text x="22" y="142" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">G'(-3,1)</text>
-  <!-- line through origin showing 180 rotation -->
-  <line x1="95" y1="145" x2="245" y2="195" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <circle cx="170" cy="170" r="4" fill="#f59e0b"/>
-  <text x="173" y="163" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">180°</text>
 </svg>`,
       options: ["(1, 3)", "(−3, 1)", "(1, −3)", "(3, 1)"],
       answer: 1,
@@ -564,12 +499,6 @@ const ch19 = {
   <!-- H at (2,5): svgX=220, svgY=170-5*25=45 -->
   <circle cx="220" cy="45" r="5" fill="#5b5ef4"/>
   <text x="224" y="42" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">H(2,5)</text>
-  <!-- H' at (5,-2): svgX=170+5*25=295, svgY=170-(-2)*25=220 -->
-  <circle cx="295" cy="220" r="5" fill="#f43f5e"/>
-  <text x="299" y="217" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">H'(5,-2)</text>
-  <!-- arc indicating clockwise rotation -->
-  <path d="M 207 51 A 88 88 0 0 1 288 212" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="268" y="130" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">90° CW</text>
 </svg>`,
       answer: "(5, -2)",
       acceptableAnswers: ["(5, -2)", "(5, −2)", "5, -2", "5, −2"],
@@ -628,25 +557,6 @@ const ch19 = {
   <!-- J at (1,2): svgX=195, svgY=170-2*25=120 -->
   <circle cx="195" cy="120" r="5" fill="#5b5ef4"/>
   <text x="199" y="117" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">J(1,2)</text>
-  <!-- After reflection in y-axis: (-1,2) svgX=145, svgY=120 -->
-  <circle cx="145" cy="120" r="5" fill="#a855f7"/>
-  <text x="90" y="117" fill="#a855f7" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">(-1,2)</text>
-  <!-- After translation +3,-1: (2,1) svgX=220, svgY=145 -->
-  <circle cx="220" cy="145" r="5" fill="#f43f5e"/>
-  <text x="224" y="142" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">J''(2,1)</text>
-  <!-- arrows -->
-  <defs>
-    <marker id="arr14a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#a855f7"/>
-    </marker>
-    <marker id="arr14b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#f43f5e"/>
-    </marker>
-  </defs>
-  <line x1="191" y1="120" x2="149" y2="120" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr14a)"/>
-  <text x="163" y="113" fill="#a855f7" font-family="Nunito,Arial,sans-serif" font-size="10">reflect</text>
-  <line x1="148" y1="122" x2="216" y2="142" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr14b)"/>
-  <text x="155" y="140" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10">translate</text>
 </svg>`,
       options: ["(−4, 1)", "(4, 1)", "(2, 1)", "(−2, 3)"],
       answer: 2,
@@ -691,24 +601,6 @@ const ch19 = {
   <!-- K at (-2,3): svgX=120, svgY=170-3*25=95 -->
   <circle cx="120" cy="95" r="5" fill="#5b5ef4"/>
   <text x="80" y="92" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">K(-2,3)</text>
-  <!-- After 90CW: (y,-x) = (3,2) => svgX=245, svgY=170-2*25=120 -->
-  <circle cx="245" cy="120" r="5" fill="#a855f7"/>
-  <text x="249" y="117" fill="#a855f7" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">(3,2)</text>
-  <!-- After reflect x-axis: (3,-2) => svgX=245, svgY=170+2*25=220 -->
-  <circle cx="245" cy="220" r="5" fill="#f43f5e"/>
-  <text x="249" y="217" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">K''(3,-2)</text>
-  <defs>
-    <marker id="arr15a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#a855f7"/>
-    </marker>
-    <marker id="arr15b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#f43f5e"/>
-    </marker>
-  </defs>
-  <path d="M 130 100 Q 185 80 241 118" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr15a)"/>
-  <text x="175" y="90" fill="#a855f7" font-family="Nunito,Arial,sans-serif" font-size="10">90° CW</text>
-  <line x1="245" y1="124" x2="245" y2="216" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr15b)"/>
-  <text x="249" y="172" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10">reflect</text>
 </svg>`,
       options: ["(3, 2)", "(−3, 2)", "(3, −2)", "(2, 3)"],
       answer: 2,
@@ -770,19 +662,6 @@ const ch19 = {
   <text x="272" y="180" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">B</text>
   <text x="272" y="116" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">C</text>
   <text x="157" y="116" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">D</text>
-  <!-- Translated rectangle: A'(2,3), B'(6,3), C'(6,5), D'(2,5) -->
-  <!-- A'(2,3)=220,95; B'(6,3)=320,95; C'(6,5)=320,45 (clipped); D'(2,5)=220,45 -->
-  <polygon points="220,95 320,95 320,45 220,45" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="207" y="92" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">A'</text>
-  <text x="322" y="92" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">B'(6,3)</text>
-  <!-- translation arrow from B to B' -->
-  <defs>
-    <marker id="arr17" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
-    </marker>
-  </defs>
-  <line x1="270" y1="170" x2="316" y2="99" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr17)"/>
-  <text x="278" y="145" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">+2,+3</text>
 </svg>`,
       answer: "(6, 3)",
       acceptableAnswers: ["(6, 3)", "6, 3"],
@@ -825,12 +704,6 @@ const ch19 = {
   <!-- M at (2,5): svgX=220, svgY=170-5*25=45 -->
   <circle cx="220" cy="45" r="5" fill="#5b5ef4"/>
   <text x="224" y="42" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">M(2,5)</text>
-  <!-- M' at (2,-5): svgX=220, svgY=170+5*25=295 -->
-  <circle cx="220" cy="295" r="5" fill="#f43f5e"/>
-  <text x="224" y="292" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">M'(2,-5)</text>
-  <!-- dashed vertical line showing reflection -->
-  <line x1="220" y1="49" x2="220" y2="291" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="223" y="175" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">x-axis</text>
 </svg>`,
       options: [
         "Reflection in the y-axis",
@@ -890,16 +763,6 @@ const ch19 = {
   <text x="247" y="158" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(3,1)</text>
   <text x="247" y="92" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(3,3)</text>
   <text x="163" y="92" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(1,3)</text>
-  <!-- Image after 180°: (-1,-1),(-3,-1),(-3,-3),(-1,-3) -->
-  <!-- (-1,-1)=145,195; (-3,-1)=95,195; (-3,-3)=95,245; (-1,-3)=145,245 -->
-  <polygon points="145,195 95,195 95,245 145,245" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="125" y="208" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(-1,-1)</text>
-  <text x="60" y="208" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(-3,-1)</text>
-  <text x="60" y="258" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(-3,-3)</text>
-  <text x="125" y="258" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(-1,-3)</text>
-  <!-- center of rotation -->
-  <circle cx="170" cy="170" r="4" fill="#f59e0b"/>
-  <text x="174" y="167" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="600">180°</text>
 </svg>`,
       options: [
         "(−1,−1), (−3,−1), (−3,−3), (−1,−3)",
@@ -948,25 +811,6 @@ const ch19 = {
   <!-- L at (2,1): svgX=220, svgY=145 -->
   <circle cx="220" cy="145" r="5" fill="#5b5ef4"/>
   <text x="224" y="142" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">L(2,1)</text>
-  <!-- After translate -4,+2: (-2,3) => svgX=120, svgY=95 -->
-  <circle cx="120" cy="95" r="5" fill="#a855f7"/>
-  <text x="62" y="92" fill="#a855f7" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">(-2,3)</text>
-  <!-- After reflect y-axis: (2,3) => svgX=220, svgY=95 -->
-  <circle cx="220" cy="95" r="5" fill="#f43f5e"/>
-  <text x="224" y="92" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">L''(2,3)</text>
-  <!-- arrows -->
-  <defs>
-    <marker id="arr20a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#a855f7"/>
-    </marker>
-    <marker id="arr20b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#f43f5e"/>
-    </marker>
-  </defs>
-  <line x1="216" y1="143" x2="124" y2="99" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr20a)"/>
-  <text x="155" y="128" fill="#a855f7" font-family="Nunito,Arial,sans-serif" font-size="10">-4,+2</text>
-  <line x1="124" y1="95" x2="216" y2="95" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr20b)"/>
-  <text x="155" y="88" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10">reflect y</text>
 </svg>`,
       answer: "(2, 3)",
       acceptableAnswers: ["(2, 3)", "2, 3"],
@@ -976,121 +820,47 @@ const ch19 = {
       id: "c19_q21",
       topic: "Translations",
       type: "mcq",
-      question: "A translation is described by the column vector <strong>(-3 / 5)</strong> (top number −3, bottom number 5). What does this vector mean?",
+      question: "Point P is at (1, 5). After a translation, the image P' is at (4, 2). Describe the translation.",
       options: [
-        "3 right and 5 up",
-        "3 left and 5 down",
-        "3 left and 5 up",
-        "3 right and 5 down"
+        "3 right and 3 down",
+        "3 left and 3 up",
+        "3 right and 7 down",
+        "4 right and 3 down"
       ],
-      answer: 2,
-      explanation: "In a column vector, the <strong>top number</strong> gives the horizontal movement (positive = right, negative = left) and the <strong>bottom number</strong> gives the vertical movement (positive = up, negative = down). So (−3 / 5) means 3 left and 5 up."
+      answer: 0,
+      explanation: "x-change: 4 − 1 = +3 (right 3). y-change: 2 − 5 = −3 (down 3). The translation is 3 right and 3 down."
     },
     {
       id: "c19_q22",
       topic: "Translations",
       type: "input",
-      question: "Point P is at (4, −1). It is translated by the column vector <strong>(2 / −3)</strong> (top 2, bottom −3). Write the coordinates of the image P' in the form (x, y).",
-      answer: "(6, -4)",
-      acceptableAnswers: ["(6, -4)", "(6, −4)", "6, -4", "6, −4"],
-      explanation: "The column vector (2 / −3) means move 2 right and 3 down. So: x: 4 + 2 = 6, y: −1 + (−3) = −4. The image is P'(6, −4)."
+      question: "Triangle PQR has vertex P at (−1, 2). It is translated <strong>5 right and 3 down</strong>. Write the coordinates of image P' in the form (x, y).",
+      answer: "(4, -1)",
+      acceptableAnswers: ["(4, -1)", "(4, −1)", "4, -1", "4, −1"],
+      explanation: "Add 5 to the x-coordinate: −1 + 5 = 4. Subtract 3 from the y-coordinate: 2 − 3 = −1. Image P' is at (4, −1)."
     },
     {
       id: "c19_q23",
       topic: "Translations",
       type: "mcq",
-      question: "Shape A is translated to shape B. Vertex (1, 3) on A maps to vertex (4, −2) on B. Which column vector describes this translation?",
+      question: "Shape A is translated to shape B. Vertex (2, 6) on A maps to vertex (−1, 4) on B. Which description gives the translation?",
       options: [
-        "(3 / 5)",
-        "(3 / −5)",
-        "(−3 / 5)",
-        "(5 / 3)"
+        "3 right and 2 down",
+        "3 left and 2 down",
+        "3 left and 2 up",
+        "1 right and 4 down"
       ],
       answer: 1,
-      explanation: "Find the change in each coordinate: x-change = 4 − 1 = +3 (right 3), y-change = −2 − 3 = −5 (down 5). The column vector is (3 / −5) — top 3, bottom −5."
+      explanation: "x-change: −1 − 2 = −3 (left 3). y-change: 4 − 6 = −2 (down 2). The translation is 3 left and 2 down."
     },
     {
       id: "c19_q24",
       topic: "Reflections",
       type: "mcq",
-      question: "Point Q is at (5, 2). It is reflected in the horizontal line <strong>y = −1</strong>. What are the coordinates of image Q'?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" aria-label="Reflection of Q(5,2) in the line y=-1">
-  <rect width="340" height="340" fill="#f8fafc" rx="8"/>
-  <!-- grid -->
-  <line x1="20" y1="95" x2="320" y2="95" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="120" x2="320" y2="120" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="145" x2="320" y2="145" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="170" x2="320" y2="170" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="195" x2="320" y2="195" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="220" x2="320" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="245" x2="320" y2="245" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="270" x2="320" y2="270" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="95" x2="20" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="45" y1="95" x2="45" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="70" y1="95" x2="70" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="95" y1="95" x2="95" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="120" y1="95" x2="120" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="145" y1="95" x2="145" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="170" y1="95" x2="170" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="195" y1="95" x2="195" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="220" y1="95" x2="220" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="245" y1="95" x2="245" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="270" y1="95" x2="270" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="295" y1="95" x2="295" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="320" y1="95" x2="320" y2="285" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- axes: origin at (170,170), 1 unit=25px -->
-  <line x1="20" y1="170" x2="320" y2="170" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="170" y1="95" x2="170" y2="285" stroke="#64748b" stroke-width="1.5"/>
-  <!-- mirror line y=-1: svgY=170-(-1)*25=195 -->
-  <line x1="20" y1="195" x2="320" y2="195" stroke="#22c55e" stroke-width="2" stroke-dasharray="6,3"/>
-  <text x="322" y="198" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">y=−1</text>
-  <!-- axis labels -->
-  <text x="174" y="183" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="295" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
-  <text x="157" y="125" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="157" y="200" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-1</text>
-  <text x="157" y="270" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-4</text>
-  <!-- Q at (5,2): svgX=170+5*25=295, svgY=170-2*25=120 -->
-  <circle cx="295" cy="120" r="5" fill="#5b5ef4"/>
-  <text x="299" y="117" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Q(5,2)</text>
-  <!-- Q' at (5,-4): svgX=295, svgY=170+4*25=270 -->
-  <circle cx="295" cy="270" r="5" fill="#f43f5e"/>
-  <text x="299" y="267" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Q'(5,-4)</text>
-  <!-- dashed vertical line between Q and Q' through mirror -->
-  <line x1="295" y1="124" x2="295" y2="266" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="299" y="198" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <text x="299" y="240" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-</svg>`,
-      options: ["(5, 0)", "(5, −3)", "(5, −4)", "(−5, 2)"],
-      answer: 2,
-      explanation: "Q is at y = 2, and the mirror line is y = −1. The distance from Q to the mirror is 2 − (−1) = 3. The image is 3 units below the mirror line: −1 − 3 = −4. The x-coordinate stays the same: Q'(5, −4)."
-    },
-    {
-      id: "c19_q25",
-      topic: "Reflections",
-      type: "mcq",
-      question: "Point R is at (−2, 6). It is reflected in the horizontal line <strong>y = 3</strong>. What are the coordinates of image R'?",
-      options: ["(−2, 0)", "(2, 6)", "(−2, −6)", "(2, 0)"],
-      answer: 0,
-      explanation: "R is at y = 6. Distance from R to mirror line y = 3 is 6 − 3 = 3 units (above). The image is 3 units below the mirror: 3 − 3 = 0. The x-coordinate stays the same: R'(−2, 0)."
-    },
-    {
-      id: "c19_q26",
-      topic: "Reflections",
-      type: "mcq",
-      question: "Shape P maps to Shape P' on a coordinate grid. Every point (x, y) on P maps to (x, −y + 4) on P'. What is the mirror line?",
-      options: ["y = 4", "y = 2", "x = 2", "y = −2"],
-      answer: 1,
-      explanation: "The rule (x, y) → (x, −y + 4) reflects in a horizontal line. For the mirror line y = k, the rule is (x, y) → (x, 2k − y). So 2k = 4, giving k = 2. The mirror line is <strong>y = 2</strong>."
-    },
-    {
-      id: "c19_q27",
-      topic: "Rotations",
-      type: "mcq",
-      question: "Point S is at (5, 1). It is rotated <strong>90° anticlockwise about the point (2, 1)</strong>. What are the coordinates of S'?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 280" aria-label="90 anticlockwise rotation of S(5,1) about centre (2,1)">
+      question: "Point Q is at (3, 4). It is reflected in the horizontal line <strong>y = 1</strong> (shown as a dashed green line on the grid). What are the coordinates of image Q'?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 280" aria-label="Reflection of Q(3,4) in the line y=1">
   <rect width="340" height="280" fill="#f8fafc" rx="8"/>
-  <!-- grid -->
+  <!-- grid lines -->
   <line x1="20" y1="70" x2="320" y2="70" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="95" x2="320" y2="95" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="120" x2="320" y2="120" stroke="#e2e8f0" stroke-width="1"/>
@@ -1115,27 +885,92 @@ const ch19 = {
   <!-- axes: origin at (170,170), 1 unit=25px -->
   <line x1="20" y1="170" x2="320" y2="170" stroke="#64748b" stroke-width="1.5"/>
   <line x1="170" y1="70" x2="170" y2="260" stroke="#64748b" stroke-width="1.5"/>
+  <!-- mirror line y=1: svgY=170-1*25=145 -->
+  <line x1="20" y1="145" x2="320" y2="145" stroke="#22c55e" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="322" y="148" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">y=1</text>
+  <!-- axis labels -->
   <text x="174" y="183" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="220" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="295" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
-  <text x="157" y="145" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
-  <text x="157" y="95" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <!-- centre of rotation at (2,1): svgX=220, svgY=145 -->
-  <circle cx="220" cy="145" r="5" fill="#f59e0b"/>
-  <text x="224" y="142" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">C(2,1)</text>
-  <!-- S at (5,1): svgX=295, svgY=145 -->
-  <circle cx="295" cy="145" r="5" fill="#5b5ef4"/>
-  <text x="299" y="142" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">S(5,1)</text>
-  <!-- S' at (2,4): svgX=220, svgY=170-4*25=70 -->
-  <circle cx="220" cy="70" r="5" fill="#f43f5e"/>
-  <text x="224" y="67" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">S'(2,4)</text>
-  <!-- arc from S to S' -->
-  <path d="M 291 138 A 76 76 0 0 0 223 74" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="268" y="95" fill="#a855f7" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">90° ACW</text>
+  <text x="245" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <text x="157" y="75" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <text x="157" y="100" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <text x="157" y="150" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="157" y="225" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-2</text>
+  <!-- Q at (3,4): svgX=170+3*25=245, svgY=170-4*25=70 -->
+  <circle cx="245" cy="70" r="5" fill="#5b5ef4"/>
+  <text x="249" y="67" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Q(3,4)</text>
 </svg>`,
-      options: ["(2, 4)", "(−1, 1)", "(2, −2)", "(5, 4)"],
+      options: ["(3, −2)", "(3, 2)", "(−3, 4)", "(3, 0)"],
       answer: 0,
-      explanation: "To rotate about a non-origin point C(2, 1): first translate so C is at the origin by subtracting (2, 1). S(5, 1) becomes (3, 0). Apply 90° ACW rule (x,y)→(−y, x): (3, 0)→(0, 3). Then translate back by adding (2, 1): (0+2, 3+1) = (2, 4). So S'(2, 4)."
+      explanation: "Q is at y = 4, and the mirror line is y = 1. Distance from Q to mirror = 4 − 1 = 3. Image is 3 units below the mirror: 1 − 3 = −2. The x-coordinate stays the same. So Q'(3, −2)."
+    },
+    {
+      id: "c19_q25",
+      topic: "Reflections",
+      type: "mcq",
+      question: "Point R is at (−2, 6). It is reflected in the horizontal line <strong>y = 3</strong>. What are the coordinates of image R'?",
+      options: ["(−2, 0)", "(2, 6)", "(−2, −6)", "(2, 0)"],
+      answer: 0,
+      explanation: "R is at y = 6. Distance from R to mirror line y = 3 is 6 − 3 = 3 units (above). The image is 3 units below the mirror: 3 − 3 = 0. The x-coordinate stays the same: R'(−2, 0)."
+    },
+    {
+      id: "c19_q26",
+      topic: "Reflections",
+      type: "mcq",
+      question: "Shape P maps to Shape P' on a coordinate grid. Every point (x, y) on P maps to (x, −y + 4) on P'. What is the mirror line?",
+      options: ["y = 4", "y = 2", "x = 2", "y = −2"],
+      answer: 1,
+      explanation: "The rule (x, y) → (x, −y + 4) reflects in a horizontal line. For the mirror line y = k, the rule is (x, y) → (x, 2k − y). So 2k = 4, giving k = 2. The mirror line is <strong>y = 2</strong>."
+    },
+    {
+      id: "c19_q27",
+      topic: "Rotations",
+      type: "mcq",
+      question: "Triangle ABC has vertices A(1, 1), B(4, 1), and C(4, 3). It is rotated <strong>180° about the origin</strong>. What are the coordinates of A'?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 280" aria-label="Triangle ABC to rotate 180 degrees about origin">
+  <rect width="340" height="280" fill="#f8fafc" rx="8"/>
+  <!-- grid lines -->
+  <line x1="20" y1="70" x2="320" y2="70" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="95" x2="320" y2="95" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="120" x2="320" y2="120" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="145" x2="320" y2="145" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="170" x2="320" y2="170" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="195" x2="320" y2="195" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="220" x2="320" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="245" x2="320" y2="245" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="20" y1="70" x2="20" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="45" y1="70" x2="45" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="70" y1="70" x2="70" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="95" y1="70" x2="95" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="120" y1="70" x2="120" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="145" y1="70" x2="145" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="170" y1="70" x2="170" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="195" y1="70" x2="195" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="220" y1="70" x2="220" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="245" y1="70" x2="245" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="270" y1="70" x2="270" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="295" y1="70" x2="295" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="320" y1="70" x2="320" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- axes: origin at (170,170), 1 unit=25px -->
+  <line x1="20" y1="170" x2="320" y2="170" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="170" y1="70" x2="170" y2="260" stroke="#64748b" stroke-width="1.5"/>
+  <!-- axis labels -->
+  <text x="174" y="183" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
+  <text x="195" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="245" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <text x="157" y="145" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="157" y="100" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <!-- Triangle ABC: A(1,1)=195,145; B(4,1)=270,145; C(4,3)=270,95 -->
+  <polygon points="195,145 270,145 270,95" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2"/>
+  <text x="182" y="142" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">A</text>
+  <text x="272" y="142" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">B</text>
+  <text x="272" y="92" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">C</text>
+  <!-- centre of rotation at origin -->
+  <circle cx="170" cy="170" r="4" fill="#f59e0b"/>
+  <text x="174" y="167" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="600">O</text>
+</svg>`,
+      options: ["(−1, −1)", "(1, −1)", "(−1, 1)", "(−4, −1)"],
+      answer: 0,
+      explanation: "A 180° rotation about the origin uses the rule (x, y) → (−x, −y). So A(1, 1) maps to A'(−1, −1)."
     },
     {
       id: "c19_q28",
@@ -1169,15 +1004,15 @@ const ch19 = {
       id: "c19_q37",
       topic: "Combinations of transformations",
       type: "mcq",
-      question: "Shape A is reflected in the line x = 1, then the image is reflected in the line x = 4. What <strong>single transformation</strong> maps Shape A to the final image?",
+      question: "Shape A is reflected in the line <strong>x = 1</strong>, then the image is reflected in the line <strong>x = 4</strong>. What <strong>single transformation</strong> maps Shape A to the final image?",
       options: [
         "Reflection in x = 2.5",
         "Rotation 90° about the origin",
-        "Translation by vector (6 / 0)",
-        "Translation by vector (3 / 0)"
+        "Translation 6 units right",
+        "Translation 3 units right"
       ],
       answer: 2,
-      explanation: "Two reflections in <strong>parallel vertical lines</strong> x = 1 and x = 4 produce a translation. The distance between the lines is 4 − 1 = 3, so the translation is <strong>twice</strong> that distance = 6 units in the direction from first line to second (rightward). The single transformation is a translation by vector (6 / 0)."
+      explanation: "Two reflections in parallel vertical lines produce a translation. The distance between the lines x = 1 and x = 4 is 3 units. The translation distance is twice that: 2 × 3 = 6 units. Since we go from x = 1 toward x = 4 (rightward), the single transformation is a translation 6 units right."
     },
     {
       id: "c19_q38",
@@ -1197,25 +1032,25 @@ const ch19 = {
       id: "c19_q39",
       topic: "Combinations of transformations",
       type: "mcq",
-      question: "A shape undergoes two successive reflections: first in the line y = 1, then in the line y = 5. What single transformation is equivalent?",
+      question: "A shape undergoes two reflections: first in the line <strong>y = 1</strong>, then in the line <strong>y = 5</strong>. What single transformation is equivalent?",
       options: [
-        "Translation by vector (0 / 8)",
-        "Translation by vector (0 / 4)",
+        "Translation 8 units up",
+        "Translation 4 units up",
         "Reflection in the line y = 3",
-        "Rotation 180° about (0, 3)"
+        "Rotation 180° about the origin"
       ],
       answer: 0,
-      explanation: "Two reflections in parallel horizontal lines produce a translation perpendicular to those lines. The distance between y = 1 and y = 5 is 4 units. The translation is twice that = 8 units upward (since we go from y=1 to y=5, i.e. upward). The single transformation is translation by vector (0 / 8)."
+      explanation: "Two reflections in parallel horizontal lines produce a translation perpendicular to those lines. The distance between y = 1 and y = 5 is 4 units. The translation distance is twice that: 2 × 4 = 8 units. Since we go from y = 1 toward y = 5 (upward), the single transformation is a translation 8 units up."
     },
     {
       id: "c19_q41",
       topic: "Rotations",
       difficulty: "challenging",
       type: "mcq",
-      question: "Point T is at (1, 4). It is rotated <strong>90° clockwise about the point (3, 2)</strong>. What are the coordinates of T'?",
-      options: ["(5, 4)", "(5, 0)", "(1, 0)", "(−1, 4)"],
+      question: "Point T is at (3, 0). It is rotated <strong>90° anticlockwise about the origin</strong>. What are the coordinates of T'?",
+      options: ["(0, 3)", "(0, −3)", "(−3, 0)", "(3, 0)"],
       answer: 0,
-      explanation: "To rotate 90° CW about centre C(3, 2): Step 1 — translate so C is at origin: T(1, 4) → (1−3, 4−2) = (−2, 2). Step 2 — apply 90° CW rule (x, y) → (y, −x): (−2, 2) → (2, −(−2)) = (2, 2). Step 3 — translate back by adding (3, 2): (2+3, 2+2) = (5, 4). So T'(5, 4)."
+      explanation: "For a 90° anticlockwise rotation about the origin, the rule is (x, y) → (−y, x). Applying to T(3, 0): T' = (−0, 3) = (0, 3)."
     },
     {
       id: "c19_q42",
@@ -1237,20 +1072,20 @@ const ch19 = {
       topic: "Combinations of transformations",
       difficulty: "challenging",
       type: "mcq",
-      question: "Point U is at (3, 1). It is rotated <strong>180° about the origin</strong>, then enlarged with <strong>scale factor 2 from the origin</strong>. What are the final coordinates of U?",
-      options: ["(−6, −2)", "(6, 2)", "(−3, −1)", "(6, −2)"],
+      question: "Point U is at (1, 3). It is first rotated <strong>90° clockwise about the origin</strong>, then translated <strong>2 right and 1 up</strong>. What are the final coordinates of U?",
+      options: ["(5, 0)", "(3, −1)", "(5, −1)", "(3, 0)"],
       answer: 0,
-      explanation: "Step 1 — rotate 180° about origin: (x,y)→(−x,−y), so (3,1)→(−3,−1). Step 2 — enlarge scale factor 2 from origin: multiply by 2, so (−3,−1)→(−6,−2). The final image is U''(−6, −2). Great thinking combining two transformations!"
+      explanation: "Step 1 — rotate 90° CW about origin: (x,y)→(y,−x), so U(1,3)→(3,−1). Step 2 — translate 2 right and 1 up: (3+2, −1+1) = (5, 0). The final image is U''(5, 0)."
     },
     {
       id: "c19_q45",
       topic: "Reflections",
       difficulty: "challenging",
       type: "mcq",
-      question: "Point V is at (4, 7). It is reflected in the line <strong>y = x</strong>, and then the image is reflected in the <strong>y-axis</strong>. What are the final coordinates of V?",
-      options: ["(7, 4)", "(−7, 4)", "(4, −7)", "(−4, 7)"],
-      answer: 1,
-      explanation: "Step 1 — reflect in y=x: swap coordinates. V(4,7) → V'(7, 4). Step 2 — reflect in y-axis: change sign of x-coordinate. V'(7, 4) → V''(−7, 4). The final image is V''(−7, 4). Well done if you tracked both steps!"
+      question: "Point V is at (2, 5). It is first reflected in the <strong>x-axis</strong>, then translated <strong>3 right and 4 up</strong>. What are the final coordinates of V?",
+      options: ["(5, −1)", "(−1, 5)", "(5, 1)", "(5, −5)"],
+      answer: 0,
+      explanation: "Step 1 — reflect in x-axis: (x,y)→(x,−y), so V(2,5)→V'(2,−5). Step 2 — translate 3 right, 4 up: (2+3, −5+4) = (5, −1). The final image is V''(5, −1)."
     }
   ]
 };

@@ -38,8 +38,7 @@ const ch15 = {
   <rect x="150" y="150" width="50" height="40" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="2"/>
   <!-- library icon text -->
   <text x="175" y="174" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Library</text>
-  <!-- label -->
-  <text x="140" y="210" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Grid ref: C4</text>
+  <!-- label removed to avoid answer leakage -->
 </svg>`,
       options: ["4C", "C4", "34", "43"],
       answer: 1,
@@ -85,7 +84,7 @@ const ch15 = {
   <!-- highlight D2 cell -->
   <rect x="165" y="58" width="40" height="28" fill="rgba(244,63,94,0.18)" stroke="#f43f5e" stroke-width="2"/>
   <text x="185" y="77" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="14">★</text>
-  <text x="160" y="212" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">D2 = Column D, Row 2</text>
+
 </svg>`,
       options: ["Column 2, Row D", "Column D, Row 2", "Column 4, Row 2", "Column D, Row 4"],
       answer: 1,
@@ -113,17 +112,17 @@ const ch15 = {
   <!-- column labels -->
   <text x="75" y="22" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">A</text>
   <text x="125" y="22" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">B</text>
-  <text x="175" y="22" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">C ✓</text>
+  <text x="175" y="22" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">C</text>
   <text x="225" y="22" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">D</text>
   <!-- row labels -->
-  <text x="40" y="58" text-anchor="end" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">1 ✓</text>
+  <text x="40" y="58" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">1</text>
   <text x="40" y="103" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">2</text>
   <text x="40" y="148" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">3</text>
   <text x="40" y="185" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">4</text>
   <!-- highlight C1 -->
   <rect x="150" y="30" width="50" height="45" fill="rgba(91,94,244,0.18)" stroke="#5b5ef4" stroke-width="2"/>
   <text x="175" y="58" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Post Office</text>
-  <text x="140" y="212" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">3rd column = C, 1st row = 1</text>
+
 </svg>`,
       answer: "C1",
       acceptableAnswers: ["C1"],
@@ -168,7 +167,7 @@ const ch15 = {
   <!-- B5 cell -->
   <rect x="100" y="162" width="50" height="33" fill="rgba(34,197,94,0.25)" stroke="#22c55e" stroke-width="2"/>
   <text x="125" y="183" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">Park B5</text>
-  <text x="140" y="212" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Both are in column B</text>
+
 </svg>`,
       options: ["They are in the same row", "They are in the same column", "They are at the same point", "They are diagonally opposite"],
       answer: 1,
@@ -197,8 +196,6 @@ const ch15 = {
   <!-- origin -->
   <circle cx="140" cy="100" r="3" fill="#64748b"/>
   <text x="133" y="115" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">O</text>
-  <!-- horizontal label -->
-  <text x="140" y="190" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">x-axis runs horizontally ←→</text>
   <!-- vertical label -->
   <text x="20" y="55" text-anchor="start" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">y-axis</text>
   <text x="20" y="68" text-anchor="start" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">vertical</text>
@@ -257,9 +254,8 @@ const ch15 = {
   <!-- dashed lines to point -->
   <line x1="180" y1="250" x2="180" y2="160" stroke="#5b5ef4" stroke-width="1" stroke-dasharray="4,3"/>
   <line x1="30" y1="160" x2="180" y2="160" stroke="#5b5ef4" stroke-width="1" stroke-dasharray="4,3"/>
-  <!-- point (5,3) -->
+  <!-- point at (5,3) -->
   <circle cx="180" cy="160" r="6" fill="#f43f5e"/>
-  <text x="190" y="155" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">(5, 3)</text>
 </svg>`,
       options: ["(3, 5)", "(5, 3)", "(−5, 3)", "(5, −3)"],
       answer: 1,
@@ -320,7 +316,7 @@ const ch15 = {
   <line x1="30" y1="40" x2="150" y2="40" stroke="#5b5ef4" stroke-width="1" stroke-dasharray="4,3"/>
   <!-- point P -->
   <circle cx="150" cy="40" r="6" fill="#5b5ef4"/>
-  <text x="158" y="36" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">P(4, 7)</text>
+  <text x="158" y="36" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">P</text>
 </svg>`,
       answer: "(4, 7)",
       acceptableAnswers: ["(4, 7)", "4, 7", "4,7"],
@@ -349,8 +345,7 @@ const ch15 = {
   <line x1="136" y1="140" x2="144" y2="140" stroke="#64748b" stroke-width="1.5"/>
   <!-- origin highlighted -->
   <circle cx="140" cy="100" r="7" fill="#f43f5e"/>
-  <text x="148" y="94" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">Origin (0, 0)</text>
-  <text x="140" y="190" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">x and y both equal 0 at the origin</text>
+  <text x="148" y="94" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">Origin</text>
 </svg>`,
       options: ["(1, 1)", "(0, 1)", "(1, 0)", "(0, 0)"],
       answer: 3,
@@ -396,7 +391,7 @@ const ch15 = {
   <!-- point A at (6,0): x=140+6*20=260, y=100 -->
   <circle cx="260" cy="100" r="6" fill="#f43f5e"/>
   <text x="258" y="88" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">A(6, 0)</text>
-  <text x="140" y="190" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">y = 0, so A is on the x-axis</text>
+
 </svg>`,
       options: ["On the y-axis", "At the origin", "On the x-axis", "In Quadrant 1"],
       answer: 2,
@@ -563,12 +558,8 @@ const ch15 = {
   <text x="200" y="91" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11">(+, +)</text>
   <text x="200" y="200" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Q4</text>
   <text x="200" y="216" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11">(+, −)</text>
-  <!-- Q3 highlighted -->
-  <text x="80" y="197" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">Q3 ✓</text>
-  <text x="80" y="213" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">(−, −)</text>
-  <!-- example point in Q3 -->
-  <circle cx="80" cy="230" r="5" fill="#f43f5e"/>
-  <text x="88" y="234" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">e.g. (−2,−3)</text>
+  <!-- Q3 label (unlabelled to avoid answer leakage) -->
+  <text x="80" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Q3</text>
 </svg>`,
       options: ["Quadrant 1", "Quadrant 2", "Quadrant 3", "Quadrant 4"],
       answer: 2,
@@ -639,9 +630,7 @@ const ch15 = {
   <text x="50" y="320" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">(−5,−6)</text>
   <!-- (2,-8): x=170+2*25=220, y=170+8*25=370 but clamped; show at y=310 -->
   <circle cx="220" cy="310" r="6" fill="#f43f5e"/>
-  <text x="225" y="308" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(2,−8) ✓ Q4</text>
-  <!-- Q4 region label -->
-  <text x="258" y="260" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Q4: (+,−)</text>
+  <text x="225" y="308" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(2,−8)</text>
 </svg>`,
       options: ["(3, 7)", "(−4, 2)", "(−5, −6)", "(2, −8)"],
       answer: 3,
@@ -706,9 +695,9 @@ const ch15 = {
   <!-- B(-4,-3): x=170+(-4)*25=70, y=170+3*25=245 -->
   <circle cx="70" cy="245" r="6" fill="#5b5ef4"/>
   <text x="55" y="240" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">B(−4,−3)</text>
-  <!-- C(4,-3): x=170+4*25=270, y=245 -->
+  <!-- C: reflected point -->
   <circle cx="270" cy="245" r="6" fill="#f43f5e"/>
-  <text x="272" y="240" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">C(4,−3)</text>
+  <text x="272" y="240" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">C</text>
   <!-- mirror label -->
   <text x="178" y="35" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">y-axis (mirror)</text>
 </svg>`,
@@ -776,17 +765,15 @@ const ch15 = {
   <line x1="110" y1="110" x2="35" y2="110" stroke="#64748b" stroke-width="2"/>
   <polygon points="28,110 40,105 40,115" fill="#64748b"/>
   <text x="16" y="114" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">W</text>
-  <!-- SW highlighted -->
+  <!-- highlighted diagonal direction between S and W -->
   <line x1="110" y1="110" x2="50" y2="170" stroke="#f43f5e" stroke-width="3"/>
   <polygon points="44,176 52,162 62,172" fill="#f43f5e"/>
-  <text x="32" y="194" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">SW</text>
   <!-- NE, NW, SE dim labels -->
   <text x="188" y="46" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">NE</text>
   <text x="22" y="46" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">NW</text>
   <text x="186" y="192" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">SE</text>
-  <!-- arc showing SW is between S and W -->
+  <!-- arc showing highlighted direction is between S and W -->
   <path d="M 110 185 A 75 75 0 0 1 35 110" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="48" y="163" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">SW = 225°</text>
 </svg>`,
       options: ["SE", "NW", "SW", "WS"],
       answer: 2,
@@ -815,12 +802,10 @@ const ch15 = {
   <!-- E arrow highlighted -->
   <line x1="110" y1="110" x2="185" y2="110" stroke="#f43f5e" stroke-width="3"/>
   <polygon points="192,110 178,104 178,116" fill="#f43f5e"/>
-  <text x="204" y="107" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">E</text>
-  <text x="204" y="119" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(90°)</text>
+  <text x="204" y="114" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">E</text>
   <!-- arc from N to E -->
   <path d="M 110 35 A 75 75 0 0 1 185 110" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
   <polygon points="185,110 176,101 180,114" fill="#f59e0b"/>
-  <text x="162" y="60" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">90°</text>
 </svg>`,
       options: ["45°", "90°", "180°", "270°"],
       answer: 1,
@@ -867,41 +852,37 @@ const ch15 = {
       id: "c15_q19",
       topic: "Compass points",
       type: "mcq",
-      question: "Town B is directly <strong>North-East</strong> of Town A. Which bearing (degrees clockwise from North) describes this direction?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" aria-label="Compass showing NE at 45 degrees bearing">
+      question: "On the 8-point compass, which direction is directly <strong>opposite</strong> to South-West (SW)?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" aria-label="8-point compass rose">
   <rect width="220" height="220" fill="#f8fafc" rx="8"/>
   <circle cx="110" cy="110" r="85" fill="white" stroke="#e2e8f0" stroke-width="2"/>
-  <!-- cardinal lines dim -->
-  <line x1="110" y1="25" x2="110" y2="195" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="25" y1="110" x2="195" y2="110" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- diagonal lines dim -->
-  <line x1="50" y1="50" x2="170" y2="170" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="50" y1="170" x2="170" y2="50" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- N arrow -->
-  <line x1="110" y1="110" x2="110" y2="35" stroke="#64748b" stroke-width="2"/>
-  <polygon points="110,28 105,40 115,40" fill="#64748b"/>
-  <text x="110" y="20" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">N (0°)</text>
-  <!-- E label -->
-  <text x="200" y="114" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13">E (90°)</text>
-  <!-- S, W -->
-  <text x="110" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12">S</text>
-  <text x="16" y="114" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12">W</text>
-  <!-- NE arrow highlighted: from (110,110) toward (170,50) direction -->
-  <line x1="110" y1="110" x2="170" y2="50" stroke="#f43f5e" stroke-width="3"/>
-  <polygon points="174,46 164,52 158,42" fill="#f43f5e"/>
-  <text x="180" y="42" text-anchor="start" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">NE (45°)</text>
-  <!-- arc from N to NE -->
-  <path d="M 110 40 A 70 70 0 0 1 159 61" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
-  <text x="148" y="56" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">45°</text>
-  <!-- Town A at center, Town B at NE -->
-  <circle cx="110" cy="110" r="5" fill="#64748b"/>
-  <text x="110" y="125" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Town A</text>
-  <circle cx="170" cy="50" r="5" fill="#f43f5e"/>
-  <text x="168" y="47" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11">Town B</text>
+  <!-- all 8 direction lines -->
+  <line x1="110" y1="110" x2="110" y2="30" stroke="#5b5ef4" stroke-width="2"/>
+  <line x1="110" y1="110" x2="170" y2="50" stroke="#5b5ef4" stroke-width="2"/>
+  <line x1="110" y1="110" x2="190" y2="110" stroke="#5b5ef4" stroke-width="2"/>
+  <line x1="110" y1="110" x2="170" y2="170" stroke="#5b5ef4" stroke-width="2"/>
+  <line x1="110" y1="110" x2="110" y2="190" stroke="#5b5ef4" stroke-width="2"/>
+  <line x1="110" y1="110" x2="50" y2="170" stroke="#5b5ef4" stroke-width="2"/>
+  <line x1="110" y1="110" x2="30" y2="110" stroke="#5b5ef4" stroke-width="2"/>
+  <line x1="110" y1="110" x2="50" y2="50" stroke="#5b5ef4" stroke-width="2"/>
+  <!-- direction labels -->
+  <text x="110" y="20" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">N</text>
+  <text x="176" y="42" text-anchor="start" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">NE</text>
+  <text x="198" y="114" text-anchor="start" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">E</text>
+  <text x="174" y="184" text-anchor="start" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">SE</text>
+  <text x="110" y="208" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">S</text>
+  <text x="32" y="184" text-anchor="end" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">SW</text>
+  <text x="22" y="114" text-anchor="end" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">W</text>
+  <text x="38" y="42" text-anchor="end" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">NW</text>
+  <!-- SW direction highlighted -->
+  <line x1="110" y1="110" x2="50" y2="170" stroke="#f43f5e" stroke-width="3"/>
+  <polygon points="44,176 52,162 62,172" fill="#f43f5e"/>
+  <!-- center dot -->
+  <circle cx="110" cy="110" r="4" fill="#64748b"/>
 </svg>`,
-      options: ["45°", "90°", "135°", "315°"],
-      answer: 0,
-      explanation: "North-East is exactly halfway between North (0°) and East (90°). Halfway between 0° and 90° is 45°, so NE has a bearing of 45°."
+      options: ["NW", "NE", "SE", "N"],
+      answer: 1,
+      explanation: "The direction directly opposite SW on the compass is NE. SW points toward the lower-left; NE points toward the upper-right — they are 180° apart."
     },
     {
       id: "c15_q20",
@@ -955,10 +936,7 @@ const ch15 = {
   <!-- point (0,-5): x=140, y=140+5*25=265 -->
   <circle cx="140" cy="265" r="6" fill="#f43f5e"/>
   <text x="150" y="262" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">(0, −5)</text>
-  <!-- arrow showing it's on y-axis -->
-  <line x1="140" y1="145" x2="140" y2="258" stroke="#5b5ef4" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="155" y="210" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">on y-axis</text>
-  <text x="155" y="224" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">x = 0</text>
+
 </svg>`,
       options: [
         "It is 5 units above the x-axis on the y-axis",
@@ -982,10 +960,10 @@ const ch15 = {
       id: "c15_q33",
       topic: "Map scale",
       type: "mcq",
-      question: "On a map with scale <strong>1 : 100 000</strong>, a road measures <strong>3 cm</strong> on the map. How long is the road in real life? Give your answer in km.",
-      options: ["3 km", "30 km", "0.3 km", "300 km"],
-      answer: 0,
-      explanation: "A scale of 1 : 100 000 means 1 cm on the map = 100 000 cm in real life. Real length = 3 × 100 000 cm = 300 000 cm. Converting: 300 000 cm ÷ 100 000 = 3 km."
+      question: "A map has a scale where <strong>1 cm represents 2 km</strong>. A river measures <strong>6 cm</strong> on the map. How long is the river in real life?",
+      options: ["3 km", "8 km", "12 km", "20 km"],
+      answer: 2,
+      explanation: "If 1 cm represents 2 km, then 6 cm represents 6 × 2 = 12 km."
     },
     {
       id: "c15_q34",
@@ -1101,51 +1079,68 @@ const ch15 = {
       id: "c15_q40",
       topic: "Coordinates of shapes",
       type: "mcq",
-      question: "A rectangle has opposite corners at <strong>(1, 1)</strong> and <strong>(5, 4)</strong>. What is the <strong>area</strong> of the rectangle?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" aria-label="Rectangle with opposite corners at (1,1) and (5,4) on coordinate grid">
+      question: "Three corners of a rectangle are at <strong>(2, 1)</strong>, <strong>(6, 1)</strong> and <strong>(6, 4)</strong>. What are the coordinates of the <strong>fourth corner</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" aria-label="Rectangle with three known corners and one missing corner on coordinate grid">
   <rect width="300" height="240" fill="#f8fafc" rx="8"/>
-  <!-- grid: origin at (30,210), 40px/unit -->
+  <!-- grid: origin at (30,210), 30px/unit -->
   <line x1="30" y1="210" x2="290" y2="210" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="30" y1="170" x2="290" y2="170" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="30" y1="130" x2="290" y2="130" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="30" y1="180" x2="290" y2="180" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="30" y1="150" x2="290" y2="150" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="30" y1="120" x2="290" y2="120" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="30" y1="90" x2="290" y2="90" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="30" y1="50" x2="290" y2="50" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="30" y1="20" x2="30" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="70" y1="20" x2="70" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="110" y1="20" x2="110" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="150" y1="20" x2="150" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="190" y1="20" x2="190" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="230" y1="20" x2="230" y2="220" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="270" y1="20" x2="270" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="30" y1="60" x2="290" y2="60" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="30" y1="30" x2="30" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="60" y1="30" x2="60" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="90" y1="30" x2="90" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="120" y1="30" x2="120" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="150" y1="30" x2="150" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="180" y1="30" x2="180" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="210" y1="30" x2="210" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="240" y1="30" x2="240" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="270" y1="30" x2="270" y2="220" stroke="#e2e8f0" stroke-width="1"/>
   <!-- axes -->
   <line x1="30" y1="210" x2="290" y2="210" stroke="#64748b" stroke-width="2"/>
-  <line x1="30" y1="210" x2="30" y2="20" stroke="#64748b" stroke-width="2"/>
-  <!-- axis labels: x=30+n*40, y=210-n*40 -->
+  <line x1="30" y1="210" x2="30" y2="25" stroke="#64748b" stroke-width="2"/>
+  <polygon points="290,210 282,205 282,215" fill="#64748b"/>
+  <polygon points="30,25 25,33 35,33" fill="#64748b"/>
+  <text x="293" y="214" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">x</text>
+  <text x="33" y="23" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">y</text>
+  <!-- axis labels: x=30+n*30, y=210-n*30 -->
   <text x="30" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="70" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
-  <text x="110" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="150" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <text x="190" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
-  <text x="230" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <text x="60" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="90" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="120" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <text x="150" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <text x="180" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <text x="210" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">6</text>
+  <text x="240" y="225" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">7</text>
   <text x="22" y="214" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="22" y="174" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
-  <text x="22" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="22" y="94" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <text x="22" y="54" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
-  <!-- (1,1)=(70,170), (5,4)=(230,50) — rectangle (1,1),(5,1),(5,4),(1,4) -->
-  <rect x="70" y="50" width="160" height="120" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2.5"/>
-  <circle cx="70" cy="170" r="5" fill="#f43f5e"/>
-  <text x="55" y="184" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11">(1,1)</text>
-  <circle cx="230" cy="50" r="5" fill="#f43f5e"/>
-  <text x="234" y="47" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11">(5,4)</text>
-  <!-- dimension labels -->
-  <text x="150" y="190" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">width = 4</text>
-  <text x="255" y="110" text-anchor="start" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">height = 3</text>
+  <text x="22" y="184" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="22" y="154" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="22" y="124" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <text x="22" y="94" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <text x="22" y="64" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <!-- (2,1)=(90,180), (6,1)=(210,180), (6,4)=(210,90): rectangle (2,1),(6,1),(6,4),(2,4) -->
+  <!-- three solid sides -->
+  <line x1="90" y1="180" x2="210" y2="180" stroke="#5b5ef4" stroke-width="2.5"/>
+  <line x1="210" y1="180" x2="210" y2="90" stroke="#5b5ef4" stroke-width="2.5"/>
+  <line x1="210" y1="90" x2="90" y2="90" stroke="#5b5ef4" stroke-width="2.5"/>
+  <!-- dashed side for missing vertex -->
+  <line x1="90" y1="90" x2="90" y2="180" stroke="#5b5ef4" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <!-- known vertices -->
+  <circle cx="90" cy="180" r="5" fill="#5b5ef4"/>
+  <text x="78" y="194" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(2,1)</text>
+  <circle cx="210" cy="180" r="5" fill="#5b5ef4"/>
+  <text x="214" y="194" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(6,1)</text>
+  <circle cx="210" cy="90" r="5" fill="#5b5ef4"/>
+  <text x="214" y="87" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">(6,4)</text>
+  <!-- missing vertex with question mark -->
+  <circle cx="90" cy="90" r="6" fill="#f43f5e" stroke="#f43f5e" stroke-width="2"/>
+  <text x="56" y="87" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">? (?,?)</text>
 </svg>`,
-      options: ["7 sq units", "12 sq units", "14 sq units", "16 sq units"],
-      answer: 1,
-      explanation: "First find the width and height. Width = 5 − 1 = 4 units. Height = 4 − 1 = 3 units. Area = width × height = 4 × 3 = 12 square units.",
-      difficulty: "challenging"
+      options: ["(2, 4)", "(1, 4)", "(2, 3)", "(4, 2)"],
+      answer: 0,
+      explanation: "The rectangle has corners at (2,1), (6,1) and (6,4). The fourth corner must be directly above (2,1) and to the left of (6,4), giving x = 2 and y = 4. So the fourth corner is (2, 4)."
     },
   ]
 };

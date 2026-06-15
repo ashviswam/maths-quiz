@@ -75,11 +75,6 @@ const ch18 = {
   <circle cx="260" cy="152" r="7" fill="#5b5ef4"/>
   <!-- 3 siblings: 1 dot -->
   <circle cx="340" cy="170" r="7" fill="#5b5ef4"/>
-  <!-- count labels above each stack -->
-  <text x="100" y="122" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <text x="180" y="86" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
-  <text x="260" y="140" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="340" y="158" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
 </svg>`,
       options: ["4", "9", "11", "12"],
       answer: 2,
@@ -119,8 +114,6 @@ const ch18 = {
   <circle cx="260" cy="152" r="7" fill="#5b5ef4"/>
   <!-- 3 siblings: 1 dot -->
   <circle cx="340" cy="170" r="7" fill="#5b5ef4"/>
-  <!-- mode label -->
-  <text x="180" y="84" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">MODE</text>
 </svg>`,
       options: ["0", "1", "2", "3"],
       answer: 1,
@@ -371,10 +364,8 @@ const ch18 = {
   <circle cx="115" cy="115" r="85" fill="none" stroke="#64748b" stroke-width="1.5"/>
   <!-- Right angle box at center for the 90 degree angle -->
   <rect x="115" y="105" width="10" height="10" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
-  <!-- Angle arc label -->
-  <text x="148" y="75" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">90°</text>
   <!-- Sector label -->
-  <text x="150" y="92" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">25%</text>
+  <text x="150" y="82" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">25%</text>
   <!-- Other label -->
   <text x="90" y="155" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">75%</text>
   <!-- Note -->
@@ -440,11 +431,11 @@ const ch18 = {
     {
       id: "c18_q17",
       topic: "Measuring the centre of a data set",
-      type: "mcq",
-      question: "Find the <strong>median</strong> of the data set: 3, 9, 5, 1, 7.",
-      options: ["1", "5", "7", "9"],
-      answer: 1,
-      explanation: "First arrange the values in order: 1, 3, 5, 7, 9. The middle value (3rd of 5) is 5. The median is the middle value when data is sorted from smallest to largest."
+      type: "input",
+      question: "The daily high temperatures one week were: 15, 18, 21, 24, 12, 20, 16°C. What is the <strong>mean</strong> temperature? Write your answer as a number.",
+      answer: "18",
+      acceptableAnswers: ["18", "18.0"],
+      explanation: "Mean = sum ÷ count = (15 + 18 + 21 + 24 + 12 + 20 + 16) ÷ 7 = 126 ÷ 7 = 18°C. Add all the values together, then divide by how many there are."
     },
     {
       id: "c18_q18",
@@ -468,28 +459,28 @@ const ch18 = {
       id: "c18_q20",
       topic: "Measuring the centre of a data set",
       type: "mcq",
-      question: "A student scores 60, 70, 80, 70, 90, 70 on six tests. Which measure of centre would be the <strong>most appropriate</strong> to describe the typical score, and what is its value?",
-      options: ["Mean = 73.3", "Median = 70", "Mode = 70", "Mean = 70"],
+      question: "Find the <strong>mean</strong> of the data set: 11, 14, 8, 17, 10.",
+      options: ["10", "11", "12", "13"],
       answer: 2,
-      explanation: "The mode is 70 because it appears 3 times. Both the mode and median equal 70, but the mode directly shows the most repeated score. Here all three measures are close, but the mode at 70 is easy to identify as the most frequent score."
+      explanation: "Mean = sum ÷ count = (11 + 14 + 8 + 17 + 10) ÷ 5 = 60 ÷ 5 = 12. Add all the values together, then divide by how many there are."
     },
     {
       id: "c18_q21",
-      topic: "Primary vs secondary data",
+      topic: "Tally charts and frequency tables",
       type: "mcq",
-      question: "Pragathy goes outside and measures the heights of 20 plants in the school garden herself. What type of data collection is this?",
-      options: ["Secondary data, because it involves plants", "Primary data, because she collected it herself", "Categorical data, because heights are labels", "Secondary data, because the school garden already exists"],
+      question: "A frequency table records the number of books students read last month:<br><br><strong>Books | Frequency</strong><br>0 | 3<br>1 | 8<br>2 | 5<br>3 | 4<br><br>What is the <strong>mode</strong>?",
+      options: ["0", "1", "2", "3"],
       answer: 1,
-      explanation: "<strong>Primary data</strong> is data you collect yourself, first-hand. Pragathy measured the plants herself, so this is primary data. Secondary data is data that someone else collected (for example, from a book, website, or database)."
+      explanation: "The mode is the value with the highest frequency. The frequency for 1 book is 8, which is higher than any other row. So the mode is 1."
     },
     {
       id: "c18_q22",
-      topic: "Primary vs secondary data",
+      topic: "Pie charts",
       type: "mcq",
-      question: "A student downloads population figures from the government website to use in a project. Which type of data is this?",
-      options: ["Primary data", "Secondary data", "Discrete data", "Continuous data"],
+      question: "A pie chart shows favourite sports. The sector for swimming represents a frequency of 8 out of a total of 40 students. What is the <strong>sector angle</strong> for swimming?",
+      options: ["36°", "72°", "80°", "90°"],
       answer: 1,
-      explanation: "<strong>Secondary data</strong> is data that was collected by someone else and already exists. Downloading government statistics means using data that others gathered — so this is secondary data."
+      explanation: "Sector angle = (frequency ÷ total) × 360° = (8 ÷ 40) × 360° = 0.2 × 360° = 72°. Always divide the category frequency by the total, then multiply by 360."
     },
     {
       id: "c18_q23",
@@ -520,76 +511,39 @@ const ch18 = {
     },
     {
       id: "c18_q37",
-      topic: "Misleading statistics",
+      topic: "Pictograms",
       type: "mcq",
-      question: "A newspaper headline says: <em>'Our town's average salary is £45,000!'</em> However, one billionaire lives in the town and earns £10,000,000 per year. Why might this average be misleading?",
-      options: ["The mean is always the best average to use", "The billionaire's huge salary pulls the mean up, making it unrepresentative of most people", "The median would be lower than £45,000 so the mean is correct", "The mode would equal the mean in this case"],
-      answer: 1,
-      explanation: "When there is a very large <strong>outlier</strong> (like the billionaire's salary), the <strong>mean</strong> is dragged upward and no longer represents a typical person's salary. The <strong>median</strong> would be a fairer measure here, as it is not affected by extreme values."
+      question: "A pictogram shows books read by students. The key is: <strong>1 book symbol = 5 books</strong>. The rows show:<br>Monday: ★★★<br>Tuesday: ★★★★½<br>Wednesday: ★★<br><br>How many books in total were read across all three days?",
+      options: ["42", "42.5", "45", "47.5"],
+      answer: 3,
+      explanation: "Monday: 3 × 5 = 15. Tuesday: 4.5 × 5 = 22.5. Wednesday: 2 × 5 = 10. Total = 15 + 22.5 + 10 = 47.5. A half symbol represents half the key value (5 ÷ 2 = 2.5)."
     },
     {
       id: "c18_q38",
-      topic: "Misleading statistics",
+      topic: "Dot plots",
       type: "mcq",
-      question: "A column graph shows sales with the y-axis starting at 980 instead of 0. The bars for Week 1 (995) and Week 2 (1000) look very different in height. Why is this misleading?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Two versions of a bar chart side by side: left starts y-axis at 980, right starts at 0">
-  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
-  <!-- LEFT CHART: axis starts at 980 (misleading) -->
-  <text x="95" y="15" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">Misleading (starts at 980)</text>
-  <line x1="30" y1="20" x2="30" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="30" y1="185" x2="175" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <!-- range 980-1000=20. height=165 per 20 units. 1 unit=8.25px -->
-  <!-- 980: y=185, 990: y=185-82=103, 1000: y=185-165=20 -->
-  <text x="28" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="9">980</text>
-  <text x="28" y="107" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="9">990</text>
-  <text x="28" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="9">1000</text>
-  <!-- Week1=995: y=185-((995-980)/20)*165=185-123.75=61 -->
-  <rect x="45" y="61" width="35" height="124" fill="#5b5ef4" rx="3"/>
-  <text x="62" y="56" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="9" font-weight="700">995</text>
-  <text x="62" y="200" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="9">Wk 1</text>
-  <!-- Week2=1000: y=20 -->
-  <rect x="100" y="20" width="35" height="165" fill="#f43f5e" rx="3"/>
-  <text x="117" y="15" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="9" font-weight="700">1000</text>
-  <text x="117" y="200" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="9">Wk 2</text>
-  <!-- RIGHT CHART: axis starts at 0 (honest) -->
-  <text x="300" y="15" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">Honest (starts at 0)</text>
-  <line x1="220" y1="20" x2="220" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="220" y1="185" x2="390" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <!-- range 0-1000. height=165. 1 unit=0.165px -->
-  <!-- 0:185, 500:102.5≈103, 1000:20 -->
-  <text x="218" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="9">0</text>
-  <text x="218" y="107" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="9">500</text>
-  <text x="218" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="9">1000</text>
-  <!-- Week1=995: y=185-(995/1000)*165=185-164.2=20.8≈21 -->
-  <rect x="235" y="21" width="35" height="164" fill="#5b5ef4" rx="3"/>
-  <text x="252" y="16" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="9" font-weight="700">995</text>
-  <text x="252" y="200" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="9">Wk 1</text>
-  <!-- Week2=1000: y=20 -->
-  <rect x="285" y="20" width="35" height="165" fill="#f43f5e" rx="3"/>
-  <text x="302" y="15" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="9" font-weight="700">1000</text>
-  <text x="302" y="200" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="9">Wk 2</text>
-</svg>`,
-      options: ["It is not misleading — the bars correctly show a large difference", "Starting the axis at 980 exaggerates the difference, making a small change look enormous", "The graph is misleading because bars should always be the same colour", "The y-axis should start at 100, not 0 or 980"],
+      question: "A dot plot shows the number of pets students own:<br><strong>0:</strong> ● ●<br><strong>1:</strong> ● ● ● ●<br><strong>2:</strong> ● ● ●<br><strong>3:</strong> ●<br><br>What is the <strong>mode</strong> of this data set?",
+      options: ["0", "1", "2", "3"],
       answer: 1,
-      explanation: "When a bar chart's y-axis starts at a value other than 0, it <strong>exaggerates differences</strong>. Here, the actual difference is only 5 units (995 vs 1000), but starting the axis at 980 makes Week 2 look much, much taller than Week 1. Always check where the y-axis starts!"
+      explanation: "The mode is the value with the most dots. The value 1 has 4 dots, which is more than any other value. On a dot plot, the tallest stack shows the mode."
     },
     {
       id: "c18_q39",
-      topic: "Misleading statistics",
-      type: "mcq",
-      question: "A company claims: <em>'Our most popular product is loved by the majority of customers!'</em> The mode score is 5/5 but the mean score is 2.8/5. Why might the company's claim be misleading?",
-      options: ["The mode is always more reliable than the mean", "A few customers giving 5 stars makes 5 the mode, but the mean shows most customers actually rated it poorly", "The mean of 2.8 proves the product is very good", "Both the mode and mean agree that the product is popular"],
-      answer: 1,
-      explanation: "The <strong>mode</strong> only tells you the most common single value, but if many customers gave low scores (1, 2, 3) and a few gave 5, the mode of 5 can be very misleading. The <strong>mean of 2.8</strong> tells us the overall experience was below average. This is a classic example of choosing a statistic that sounds best rather than the most representative one."
+      topic: "Pie charts",
+      type: "input",
+      question: "A survey of 60 students found that 15 students chose cycling as their favourite activity. What is the <strong>sector angle</strong> for cycling in a pie chart? Write your answer in degrees (just the number).",
+      answer: "90",
+      acceptableAnswers: ["90", "90°"],
+      explanation: "Sector angle = (frequency ÷ total) × 360° = (15 ÷ 60) × 360° = 0.25 × 360° = 90°. A quarter of the students chose cycling, so the sector is a quarter of the full circle."
     },
     {
       id: "c18_q40",
       topic: "Measuring the centre of a data set",
       type: "input",
-      question: "A frequency table shows marks in a test:<br><br>Mark 5: frequency 2<br>Mark 6: frequency 4<br>Mark 7: frequency 3<br>Mark 8: frequency 1<br><br>What is the <strong>mean</strong> mark? Write your answer as a decimal.",
-      answer: "6.3",
-      acceptableAnswers: ["6.3"],
-      explanation: "First find the total: (5×2) + (6×4) + (7×3) + (8×1) = 10 + 24 + 21 + 8 = 63. Total frequency = 2 + 4 + 3 + 1 = 10. Mean = 63 ÷ 10 = <strong>6.3</strong>."
+      question: "Eight friends counted how many text messages they sent yesterday: 5, 3, 8, 6, 4, 7, 3, 4. What is the <strong>mean</strong> number of messages? Write your answer as a number.",
+      answer: "5",
+      acceptableAnswers: ["5", "5.0"],
+      explanation: "Mean = sum ÷ count = (5 + 3 + 8 + 6 + 4 + 7 + 3 + 4) ÷ 8 = 40 ÷ 8 = 5. Add all values together, then divide by how many there are."
     },
     {
       id: "c18_q41",
@@ -632,13 +586,13 @@ const ch18 = {
     },
     {
       id: "c18_q47",
-      topic: "Misleading statistics",
+      topic: "Pie charts",
       difficulty: "challenging",
-      type: "mcq",
-      question: "Two graphs show the same data about a shop's profits (£1000 in Year 1, £1100 in Year 2). Graph A has a y-axis starting at 0. Graph B has a y-axis starting at 900. In Graph B, Year 2's bar looks <strong>10 times taller</strong> than Year 1's bar. What is the <strong>actual</strong> percentage increase in profit?",
-      options: ["10%", "100%", "110%", "1000%"],
-      answer: 0,
-      explanation: "Actual increase = £1100 − £1000 = £100. Percentage increase = (100 ÷ 1000) × 100% = <strong>10%</strong>. Graph B is misleading because starting the axis at 900 makes Year 1's bar very short (just 100 units tall) vs Year 2's bar (200 units tall), making the increase look 100% visually when it's really only 10%. Always check the scale before drawing conclusions!"
+      type: "input",
+      question: "A pie chart has 5 sectors. Four of the sector angles are 80°, 65°, 72°, and 55°. What is the angle of the <strong>fifth</strong> sector? Write your answer in degrees (just the number).",
+      answer: "88",
+      acceptableAnswers: ["88", "88°"],
+      explanation: "All sector angles in a pie chart add up to 360°. Fifth sector = 360° − 80° − 65° − 72° − 55° = 360° − 272° = 88°."
     },
     {
       id: "c18_q49",
@@ -651,12 +605,12 @@ const ch18 = {
     },
     {
       id: "c18_q50",
-      topic: "Primary vs secondary data",
+      topic: "Pie charts",
       type: "mcq",
-      question: "Which of the following is an example of <strong>primary data collection</strong>?",
-      options: ["Using results from last year's school sports day that are stored on a spreadsheet", "Looking up the average rainfall for your city in an encyclopedia", "Asking your classmates to rate their favourite food out of 10", "Reading a scientific report about the effects of exercise"],
+      question: "A pie chart shows 25% red, 35% blue, and 40% green. How many <strong>degrees</strong> is the green sector?",
+      options: ["40°", "100°", "144°", "160°"],
       answer: 2,
-      explanation: "When you ask your classmates yourself, you are collecting data first-hand — this is <strong>primary data</strong>. The other options all involve using data that was collected by someone else (secondary data)."
+      explanation: "Sector angle = percentage ÷ 100 × 360°. Green sector = 40/100 × 360° = 0.4 × 360° = 144°. Always multiply the percentage as a decimal by 360 to convert to degrees."
     }
   ]
 };

@@ -114,38 +114,7 @@ const ch11 = {
       topic: "Time calculations",
       type: "mcq",
       question: "A film starts at <strong>6:50 pm</strong> and lasts <strong>1 hour 45 minutes</strong>. What time does it end?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-label="Clock showing 6:50 pm">
-  <rect width="200" height="200" fill="#f8fafc" rx="8"/>
-  <circle cx="100" cy="100" r="80" fill="white" stroke="#64748b" stroke-width="2"/>
-  <!-- Hour tick marks -->
-  <line x1="100" y1="24" x2="100" y2="34" stroke="#64748b" stroke-width="2"/>
-  <line x1="140" y1="34" x2="135" y2="43" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="166" y1="60" x2="158" y2="65" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="176" y1="100" x2="166" y2="100" stroke="#64748b" stroke-width="2"/>
-  <line x1="166" y1="140" x2="158" y2="135" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="140" y1="166" x2="135" y2="157" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="100" y1="176" x2="100" y2="166" stroke="#64748b" stroke-width="2"/>
-  <line x1="60" y1="166" x2="65" y2="157" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="34" y1="140" x2="42" y2="135" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="24" y1="100" x2="34" y2="100" stroke="#64748b" stroke-width="2"/>
-  <line x1="34" y1="60" x2="42" y2="65" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="60" y1="34" x2="65" y2="43" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Numbers -->
-  <text x="100" y="28" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">12</text>
-  <text x="172" y="104" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">3</text>
-  <text x="100" y="180" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">6</text>
-  <text x="28" y="104" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">9</text>
-  <!-- Hour hand at 6:50 — angle = 6*30 + 50*0.5 = 205 degrees -->
-  <!-- sin(205°)=-0.4226, cos(205°)=-0.9063 -->
-  <!-- x = 100 + 44*(-0.4226) = 81.4, y = 100 - 44*(-0.9063) = 139.9 -->
-  <line x1="100" y1="100" x2="81" y2="140" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
-  <!-- Minute hand at 6:50 — angle = 50*6 = 300 degrees -->
-  <!-- sin(300°)=-0.8660, cos(300°)=0.5 -->
-  <!-- x = 100 + 60*(-0.8660) = 48, y = 100 - 60*0.5 = 70 -->
-  <line x1="100" y1="100" x2="48" y2="70" stroke="#5b5ef4" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="100" cy="100" r="4" fill="#1e293b"/>
-  <text x="100" y="196" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Start: 6:50 pm</text>
-</svg>`,
+      diagram: null,
       options: ["7:95 pm", "8:25 pm", "8:35 pm", "9:05 pm"],
       answer: 2,
       explanation: "Add 1 hour to 6:50 pm to get 7:50 pm, then add 45 minutes: 7:50 + 45 minutes = 8:35 pm."
@@ -155,38 +124,7 @@ const ch11 = {
       topic: "Time calculations",
       type: "input",
       question: "Sofia started her homework at <strong>4:15 pm</strong> and finished at <strong>5:50 pm</strong>. How many minutes did she spend on her homework?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-label="Clock showing 4:15 pm">
-  <rect width="200" height="200" fill="#f8fafc" rx="8"/>
-  <circle cx="100" cy="100" r="80" fill="white" stroke="#64748b" stroke-width="2"/>
-  <!-- Hour tick marks -->
-  <line x1="100" y1="24" x2="100" y2="34" stroke="#64748b" stroke-width="2"/>
-  <line x1="140" y1="34" x2="135" y2="43" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="166" y1="60" x2="158" y2="65" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="176" y1="100" x2="166" y2="100" stroke="#64748b" stroke-width="2"/>
-  <line x1="166" y1="140" x2="158" y2="135" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="140" y1="166" x2="135" y2="157" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="100" y1="176" x2="100" y2="166" stroke="#64748b" stroke-width="2"/>
-  <line x1="60" y1="166" x2="65" y2="157" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="34" y1="140" x2="42" y2="135" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="24" y1="100" x2="34" y2="100" stroke="#64748b" stroke-width="2"/>
-  <line x1="34" y1="60" x2="42" y2="65" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="60" y1="34" x2="65" y2="43" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Numbers -->
-  <text x="100" y="28" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">12</text>
-  <text x="172" y="104" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">3</text>
-  <text x="100" y="180" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">6</text>
-  <text x="28" y="104" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">9</text>
-  <!-- Hour hand at 4:15 — angle = 4*30 + 15*0.5 = 127.5 degrees -->
-  <!-- sin(127.5°)=0.7934, cos(127.5°)=-0.6088 -->
-  <!-- x = 100 + 44*0.7934 = 134.9, y = 100 - 44*(-0.6088) = 126.8 -->
-  <line x1="100" y1="100" x2="135" y2="127" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
-  <!-- Minute hand at 4:15 — angle = 15*6 = 90 degrees -->
-  <!-- sin(90°)=1, cos(90°)=0 -->
-  <!-- x = 100 + 60*1 = 160, y = 100 - 60*0 = 100 -->
-  <line x1="100" y1="100" x2="160" y2="100" stroke="#5b5ef4" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="100" cy="100" r="4" fill="#1e293b"/>
-  <text x="100" y="196" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Start: 4:15 pm</text>
-</svg>`,
+      diagram: null,
       answer: "95",
       acceptableAnswers: ["95", "95 minutes", "95 mins", "1 hour 35 minutes", "1 hr 35 min"],
       explanation: "From 4:15 pm to 5:15 pm is 60 minutes, and from 5:15 pm to 5:50 pm is 35 minutes. Total = 60 + 35 = 95 minutes."
@@ -196,38 +134,7 @@ const ch11 = {
       topic: "24-hour time",
       type: "mcq",
       question: "What is <strong>3:45 pm</strong> in 24-hour time?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-label="Clock showing 3:45 pm">
-  <rect width="200" height="200" fill="#f8fafc" rx="8"/>
-  <circle cx="100" cy="100" r="80" fill="white" stroke="#64748b" stroke-width="2"/>
-  <!-- Hour tick marks -->
-  <line x1="100" y1="24" x2="100" y2="34" stroke="#64748b" stroke-width="2"/>
-  <line x1="140" y1="34" x2="135" y2="43" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="166" y1="60" x2="158" y2="65" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="176" y1="100" x2="166" y2="100" stroke="#64748b" stroke-width="2"/>
-  <line x1="166" y1="140" x2="158" y2="135" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="140" y1="166" x2="135" y2="157" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="100" y1="176" x2="100" y2="166" stroke="#64748b" stroke-width="2"/>
-  <line x1="60" y1="166" x2="65" y2="157" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="34" y1="140" x2="42" y2="135" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="24" y1="100" x2="34" y2="100" stroke="#64748b" stroke-width="2"/>
-  <line x1="34" y1="60" x2="42" y2="65" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="60" y1="34" x2="65" y2="43" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Numbers -->
-  <text x="100" y="28" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">12</text>
-  <text x="172" y="104" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">3</text>
-  <text x="100" y="180" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">6</text>
-  <text x="28" y="104" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">9</text>
-  <!-- Hour hand at 3:45 — angle = 3*30 + 45*0.5 = 112.5 degrees -->
-  <!-- sin(112.5°)=0.9239, cos(112.5°)=-0.3827 -->
-  <!-- x = 100 + 44*0.9239 = 140.7, y = 100 - 44*(-0.3827) = 116.8 -->
-  <line x1="100" y1="100" x2="141" y2="117" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
-  <!-- Minute hand at 3:45 — angle = 45*6 = 270 degrees -->
-  <!-- sin(270°)=-1, cos(270°)=0 -->
-  <!-- x = 100 + 60*(-1) = 40, y = 100 - 60*0 = 100 -->
-  <line x1="100" y1="100" x2="40" y2="100" stroke="#5b5ef4" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="100" cy="100" r="4" fill="#1e293b"/>
-  <text x="100" y="196" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3:45 pm</text>
-</svg>`,
+      diagram: null,
       options: ["0345", "1345", "1545", "2145"],
       answer: 2,
       explanation: "For times after noon (pm), add 12 to the hours: 3 + 12 = 15. So 3:45 pm = 15:45 in 24-hour time."
@@ -267,7 +174,6 @@ const ch11 = {
   <!-- x = 100 + 60*0.8660 = 152, y = 100 - 60*0.5 = 70 -->
   <line x1="100" y1="100" x2="152" y2="70" stroke="#5b5ef4" stroke-width="2.5" stroke-linecap="round"/>
   <circle cx="100" cy="100" r="4" fill="#1e293b"/>
-  <text x="100" y="196" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">24-hour: 22:10</text>
 </svg>`,
       options: ["10:10 am", "10:10 pm", "11:10 am", "11:10 pm"],
       answer: 1,
@@ -278,38 +184,7 @@ const ch11 = {
       topic: "24-hour time",
       type: "input",
       question: "Write <strong>8:05 am</strong> in 24-hour time. (Write 4 digits, e.g. 0730)",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-label="Clock showing 8:05 am">
-  <rect width="200" height="200" fill="#f8fafc" rx="8"/>
-  <circle cx="100" cy="100" r="80" fill="white" stroke="#64748b" stroke-width="2"/>
-  <!-- Hour tick marks -->
-  <line x1="100" y1="24" x2="100" y2="34" stroke="#64748b" stroke-width="2"/>
-  <line x1="140" y1="34" x2="135" y2="43" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="166" y1="60" x2="158" y2="65" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="176" y1="100" x2="166" y2="100" stroke="#64748b" stroke-width="2"/>
-  <line x1="166" y1="140" x2="158" y2="135" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="140" y1="166" x2="135" y2="157" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="100" y1="176" x2="100" y2="166" stroke="#64748b" stroke-width="2"/>
-  <line x1="60" y1="166" x2="65" y2="157" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="34" y1="140" x2="42" y2="135" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="24" y1="100" x2="34" y2="100" stroke="#64748b" stroke-width="2"/>
-  <line x1="34" y1="60" x2="42" y2="65" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="60" y1="34" x2="65" y2="43" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Numbers -->
-  <text x="100" y="28" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">12</text>
-  <text x="172" y="104" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">3</text>
-  <text x="100" y="180" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">6</text>
-  <text x="28" y="104" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">9</text>
-  <!-- Hour hand at 8:05 — angle = 8*30 + 5*0.5 = 242.5 degrees -->
-  <!-- sin(242.5°)=-0.8870, cos(242.5°)=-0.4617 -->
-  <!-- x = 100 + 44*(-0.8870) = 61.0, y = 100 - 44*(-0.4617) = 120.3 -->
-  <line x1="100" y1="100" x2="61" y2="120" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
-  <!-- Minute hand at 8:05 — angle = 5*6 = 30 degrees -->
-  <!-- sin(30°)=0.5, cos(30°)=0.8660 -->
-  <!-- x = 100 + 60*0.5 = 130, y = 100 - 60*0.8660 = 48 -->
-  <line x1="100" y1="100" x2="130" y2="48" stroke="#5b5ef4" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="100" cy="100" r="4" fill="#1e293b"/>
-  <text x="100" y="196" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">8:05 am</text>
-</svg>`,
+      diagram: null,
       answer: "0805",
       acceptableAnswers: ["0805", "08:05"],
       explanation: "Times before 10:00 am in 24-hour format use a leading zero. 8:05 am = 0805 in 24-hour time. The am/pm is not needed in 24-hour time."
@@ -532,10 +407,10 @@ const ch11 = {
       topic: "Units of time",
       difficulty: "challenging",
       type: "input",
-      question: "Pragathy's summer holiday is <strong>6 weeks and 3 days</strong> long. She spends exactly <strong>half</strong> of this time at her grandparents' house. How many days does she spend at her grandparents' house?",
+      question: "Pragathy's summer holiday is <strong>6 weeks and 2 days</strong> long. She spends exactly <strong>half</strong> of this time at her grandparents' house. How many days does she spend at her grandparents' house?",
       answer: "22",
-      acceptableAnswers: ["22", "22 days", "22.5", "22.5 days"],
-      explanation: "6 weeks = 6 × 7 = 42 days. Adding 3 days: 42 + 3 = 45 days total. Half of 45 = 45 ÷ 2 = 22.5 days. Since we can't have half a day in a whole-number answer, she spends <strong>22 days</strong> (or 22.5 days if decimals are allowed). This tests whether you can combine unit conversion with fraction thinking!"
+      acceptableAnswers: ["22", "22 days"],
+      explanation: "6 weeks = 6 × 7 = 42 days. Adding 2 days: 42 + 2 = 44 days total. Half of 44 = 44 ÷ 2 = <strong>22 days</strong>. This tests whether you can combine unit conversion with fraction thinking!"
     }
   ]
 };

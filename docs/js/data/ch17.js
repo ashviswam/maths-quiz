@@ -118,7 +118,7 @@ const ch17 = {
       topic: "Using numbers to describe probabilities",
       type: "mcq",
       question: "Which probability value represents an <strong>even chance</strong>?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Probability scale with 1/2 highlighted">
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Probability scale from 0 to 1 with quarter marks">
   <rect width="380" height="80" fill="#f8fafc" rx="8"/>
   <!-- Main line -->
   <line x1="40" y1="40" x2="340" y2="40" stroke="#64748b" stroke-width="2"/>
@@ -129,17 +129,14 @@ const ch17 = {
   <line x1="115" y1="36" x2="115" y2="44" stroke="#64748b" stroke-width="1.5"/>
   <line x1="190" y1="34" x2="190" y2="46" stroke="#64748b" stroke-width="2"/>
   <line x1="265" y1="36" x2="265" y2="44" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Highlighted point at 1/2 -->
-  <circle cx="190" cy="40" r="7" fill="#5b5ef4" stroke="#fff" stroke-width="2"/>
   <!-- Labels below ticks -->
   <text x="40" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">0</text>
   <text x="115" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1/4</text>
-  <text x="190" y="62" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">1/2</text>
+  <text x="190" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">1/2</text>
   <text x="265" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3/4</text>
   <text x="340" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">1</text>
   <!-- Labels above -->
   <text x="40" y="24" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="600">Impossible</text>
-  <text x="190" y="22" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">Even chance</text>
   <text x="340" y="24" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="600">Certain</text>
 </svg>`,
       options: ["0", "1/4", "1/2", "1"],
@@ -151,7 +148,7 @@ const ch17 = {
       topic: "Using numbers to describe probabilities",
       type: "mcq",
       question: "Which of the following correctly places the probabilities in order from <strong>least likely</strong> to <strong>most likely</strong>?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Probability scale showing 0, 1/4, 1/2, 3/4, 1 in order">
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" aria-label="Probability scale with five marked points">
   <rect width="380" height="80" fill="#f8fafc" rx="8"/>
   <!-- Main line -->
   <line x1="40" y1="40" x2="340" y2="40" stroke="#64748b" stroke-width="2"/>
@@ -162,27 +159,20 @@ const ch17 = {
   <line x1="265" y1="34" x2="265" y2="46" stroke="#64748b" stroke-width="2"/>
   <line x1="340" y1="32" x2="340" y2="48" stroke="#64748b" stroke-width="2.5"/>
   <!-- Circles at each position -->
-  <circle cx="40" cy="40" r="5" fill="#f43f5e"/>
-  <circle cx="115" cy="40" r="5" fill="#f59e0b"/>
-  <circle cx="190" cy="40" r="5" fill="#5b5ef4"/>
-  <circle cx="265" cy="40" r="5" fill="#a855f7"/>
-  <circle cx="340" cy="40" r="5" fill="#22c55e"/>
-  <!-- Labels below -->
-  <text x="40" y="63" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">0</text>
-  <text x="115" y="63" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">1/4</text>
-  <text x="190" y="63" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">1/2</text>
-  <text x="265" y="63" text-anchor="middle" fill="#a855f7" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">3/4</text>
-  <text x="340" y="63" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">1</text>
-  <!-- Arrow and labels above -->
-  <text x="40" y="24" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="600">Least</text>
-  <text x="340" y="24" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="600">Most</text>
-  <!-- Arrow -->
-  <line x1="60" y1="19" x2="318" y2="19" stroke="#64748b" stroke-width="1" marker-end="url(#arr)"/>
-  <defs>
-    <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/>
-    </marker>
-  </defs>
+  <circle cx="40" cy="40" r="5" fill="#64748b"/>
+  <circle cx="115" cy="40" r="5" fill="#64748b"/>
+  <circle cx="190" cy="40" r="5" fill="#64748b"/>
+  <circle cx="265" cy="40" r="5" fill="#64748b"/>
+  <circle cx="340" cy="40" r="5" fill="#64748b"/>
+  <!-- Labels below — letters only, not values -->
+  <text x="40" y="63" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">A</text>
+  <text x="115" y="63" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">B</text>
+  <text x="190" y="63" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">C</text>
+  <text x="265" y="63" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">D</text>
+  <text x="340" y="63" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">E</text>
+  <!-- Scale endpoints labelled -->
+  <text x="40" y="24" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="600">0</text>
+  <text x="340" y="24" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="600">1</text>
 </svg>`,
       options: ["1/2, 1/4, 3/4, 0, 1", "0, 1/4, 1/2, 3/4, 1", "1, 3/4, 1/2, 1/4, 0", "1/4, 0, 1/2, 1, 3/4"],
       answer: 1,
@@ -210,68 +200,10 @@ const ch17 = {
       id: "c17_q12",
       topic: "Outcomes",
       type: "mcq",
-      question: "A coin is flipped and a die is rolled at the same time. How many different outcomes are possible in total?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 220" aria-label="Sample space grid for coin and die">
-  <rect width="380" height="220" fill="#f8fafc" rx="8"/>
-  <!-- Title -->
-  <text x="190" y="18" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Sample Space: Coin and Die</text>
-  <!-- Column headers (die values) -->
-  <text x="100" y="38" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">Die →</text>
-  <text x="145" y="38" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">1</text>
-  <text x="185" y="38" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">2</text>
-  <text x="225" y="38" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">3</text>
-  <text x="265" y="38" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">4</text>
-  <text x="305" y="38" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">5</text>
-  <text x="345" y="38" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">6</text>
-  <!-- Row headers (coin) -->
-  <text x="60" y="85" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">H</text>
-  <text x="60" y="145" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">T</text>
-  <text x="60" y="60" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">Coin ↓</text>
-  <!-- Grid lines -->
-  <line x1="120" y1="45" x2="365" y2="45" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="120" y1="105" x2="365" y2="105" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="120" y1="165" x2="365" y2="165" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="120" y1="45" x2="120" y2="165" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="165" y1="45" x2="165" y2="165" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="205" y1="45" x2="205" y2="165" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="245" y1="45" x2="245" y2="165" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="285" y1="45" x2="285" y2="165" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="325" y1="45" x2="325" y2="165" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="365" y1="45" x2="365" y2="165" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- Row H outcomes -->
-  <rect x="122" y="47" width="41" height="56" fill="rgba(91,94,244,0.10)" rx="3"/>
-  <rect x="163" y="47" width="41" height="56" fill="rgba(91,94,244,0.10)" rx="3"/>
-  <rect x="203" y="47" width="41" height="56" fill="rgba(91,94,244,0.10)" rx="3"/>
-  <rect x="243" y="47" width="41" height="56" fill="rgba(91,94,244,0.10)" rx="3"/>
-  <rect x="283" y="47" width="41" height="56" fill="rgba(91,94,244,0.10)" rx="3"/>
-  <rect x="323" y="47" width="41" height="56" fill="rgba(91,94,244,0.10)" rx="3"/>
-  <!-- Row T outcomes -->
-  <rect x="122" y="107" width="41" height="56" fill="rgba(244,63,94,0.08)" rx="3"/>
-  <rect x="163" y="107" width="41" height="56" fill="rgba(244,63,94,0.08)" rx="3"/>
-  <rect x="203" y="107" width="41" height="56" fill="rgba(244,63,94,0.08)" rx="3"/>
-  <rect x="243" y="107" width="41" height="56" fill="rgba(244,63,94,0.08)" rx="3"/>
-  <rect x="283" y="107" width="41" height="56" fill="rgba(244,63,94,0.08)" rx="3"/>
-  <rect x="323" y="107" width="41" height="56" fill="rgba(244,63,94,0.08)" rx="3"/>
-  <!-- Outcome labels Row H -->
-  <text x="143" y="78" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">H,1</text>
-  <text x="183" y="78" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">H,2</text>
-  <text x="223" y="78" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">H,3</text>
-  <text x="263" y="78" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">H,4</text>
-  <text x="303" y="78" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">H,5</text>
-  <text x="343" y="78" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">H,6</text>
-  <!-- Outcome labels Row T -->
-  <text x="143" y="138" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">T,1</text>
-  <text x="183" y="138" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">T,2</text>
-  <text x="223" y="138" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">T,3</text>
-  <text x="263" y="138" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">T,4</text>
-  <text x="303" y="138" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">T,5</text>
-  <text x="343" y="138" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="600">T,6</text>
-  <!-- Total count label -->
-  <text x="190" y="195" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Total outcomes = ?</text>
-</svg>`,
-      options: ["2", "6", "8", "12"],
-      answer: 3,
-      explanation: "The coin has 2 outcomes (H, T) and the die has 6 outcomes (1–6). Using the multiplication principle: 2 × 6 = 12 possible outcomes in total."
+      question: "A bag contains 1 red (R), 1 yellow (Y), 1 green (G), and 1 white (W) marble. You pick one marble at random. Which list correctly shows <strong>all</strong> possible outcomes?",
+      options: ["R, Y, G", "R, Y, G, W, R", "R, Y, G, W", "Red and White only"],
+      answer: 2,
+      explanation: "The sample space lists every possible result. Since there are four different coloured marbles (R, Y, G, W), all four must be included. The complete sample space is: R, Y, G, W — giving 4 outcomes."
     },
     {
       id: "c17_q13",
@@ -313,10 +245,10 @@ const ch17 = {
       id: "c17_q17",
       topic: "Calculating probabilities",
       type: "mcq",
-      question: "The probability that it rains tomorrow is 3/5. What is the probability that it does <strong>not</strong> rain tomorrow?",
-      options: ["3/5", "2/5", "1/5", "5/3"],
-      answer: 1,
-      explanation: "P(not event) = 1 − P(event). So P(no rain) = 1 − 3/5 = 2/5."
+      question: "A spinner has 8 equal sections numbered 1 to 8. What is the probability of spinning a number <strong>greater than 5</strong>?",
+      options: ["3/8", "5/8", "2/8", "4/8"],
+      answer: 0,
+      explanation: "Numbers greater than 5 on the spinner are 6, 7, and 8 — that is 3 favourable outcomes out of 8 total equally likely outcomes. P(greater than 5) = 3/8."
     },
     {
       id: "c17_q18",
@@ -340,10 +272,10 @@ const ch17 = {
       id: "c17_q20",
       topic: "Calculating probabilities",
       type: "input",
-      question: "The probability of picking a red counter from a bag is 1/4. What is the probability of <strong>not</strong> picking a red counter? Write your answer as a fraction.",
-      answer: "3/4",
-      acceptableAnswers: ["3/4"],
-      explanation: "P(not red) = 1 − P(red) = 1 − 1/4 = 3/4. The probabilities of an event and its complement always add to 1."
+      question: "A bag has 5 red counters and 3 blue counters. One counter is picked at random. What is P(red)? Write your answer as a fraction.",
+      answer: "5/8",
+      acceptableAnswers: ["5/8"],
+      explanation: "Total counters = 5 + 3 = 8. There are 5 red counters. P(red) = favourable outcomes ÷ total outcomes = 5/8."
     },
     {
       id: "c17_q21",
@@ -383,48 +315,48 @@ const ch17 = {
     },
     {
       id: "c17_q23",
-      topic: "Complementary events",
+      topic: "Calculating probabilities",
       type: "mcq",
-      question: "P(winning a game) = 0.35. What is P(not winning)?",
-      options: ["0.35", "0.65", "0.75", "1.35"],
-      answer: 1,
-      explanation: "Complementary events always add up to 1. P(not winning) = 1 − 0.35 = 0.65. The event 'not winning' is the complement of 'winning'."
+      question: "A box contains 4 orange, 6 purple, and 2 white balls. One ball is chosen at random. What is the probability of choosing an <strong>orange</strong> ball?",
+      options: ["4/6", "4/8", "4/12", "6/12"],
+      answer: 2,
+      explanation: "Total balls = 4 + 6 + 2 = 12. There are 4 orange balls. P(orange) = 4/12 = 1/3. Always count the total number of outcomes first."
     },
     {
       id: "c17_q24",
-      topic: "Complementary events",
+      topic: "Using numbers to describe probabilities",
       type: "input",
-      question: "A spinner lands on green with probability 2/9, red with probability 4/9, and blue otherwise. What is the probability of landing on <strong>blue</strong>? Write your answer as a fraction.",
-      answer: "3/9",
-      acceptableAnswers: ["3/9", "1/3"],
-      explanation: "All probabilities must add up to 1. P(green) + P(red) + P(blue) = 1. So P(blue) = 1 − 2/9 − 4/9 = 3/9 = 1/3. Well done using the complement rule with three events!"
+      question: "Write the probability 3/5 as a <strong>decimal</strong>.",
+      answer: "0.6",
+      acceptableAnswers: ["0.6", "0.60"],
+      explanation: "To convert a fraction to a decimal, divide the numerator by the denominator: 3 ÷ 5 = 0.6. So P = 3/5 = 0.6. As a percentage this would be 60%."
     },
     {
       id: "c17_q25",
-      topic: "Expected frequency",
+      topic: "Describing probability",
       type: "mcq",
-      question: "A fair die is rolled 60 times. How many times would you <strong>expect</strong> to roll a 3?",
-      options: ["3", "6", "10", "12"],
-      answer: 2,
-      explanation: "Expected frequency = P(event) × number of trials. P(rolling a 3) = 1/6. Expected frequency = 1/6 × 60 = 10. So you would expect to roll a 3 about 10 times."
+      question: "Which word best describes the probability of rolling a 7 on a standard six-sided die?",
+      options: ["Unlikely", "Even chance", "Likely", "Impossible"],
+      answer: 3,
+      explanation: "A standard die has faces numbered 1 to 6 only. Rolling a 7 cannot happen — there is no 7 on the die. So the probability is 0, which means the event is impossible."
     },
     {
       id: "c17_q26",
-      topic: "Expected frequency",
+      topic: "Describing probability",
       type: "mcq",
-      question: "The probability of a drawing pin landing point-up is 0.4. If you drop it 50 times, how many times would you expect it to land point-up?",
-      options: ["4", "10", "20", "40"],
-      answer: 2,
-      explanation: "Expected frequency = P(event) × number of trials = 0.4 × 50 = 20. You would expect it to land point-up about 20 times out of 50."
+      question: "A bag has 9 red balls and 1 blue ball. You pick one without looking. Which word best describes the probability of picking <strong>blue</strong>?",
+      options: ["Impossible", "Unlikely", "Likely", "Certain"],
+      answer: 1,
+      explanation: "Only 1 out of 10 balls is blue. P(blue) = 1/10, which is close to 0. The event is possible but not very likely — so 'unlikely' is the best description."
     },
     {
       id: "c17_q27",
-      topic: "Expected frequency",
+      topic: "Outcomes",
       type: "input",
-      question: "A bag has 3 red counters and 7 white counters. You pick a counter, note its colour, and put it back. You do this 100 times. How many times would you <strong>expect</strong> to pick a red counter?",
-      answer: "30",
-      acceptableAnswers: ["30"],
-      explanation: "P(red) = 3/10 = 0.3. Expected frequency = P(red) × number of trials = 0.3 × 100 = 30. You'd expect to pick red about 30 times."
+      question: "A fair coin is flipped once. Write down <strong>all</strong> possible outcomes. How many outcomes are there in the sample space?",
+      answer: "2",
+      acceptableAnswers: ["2"],
+      explanation: "When flipping a coin, there are exactly two possible outcomes: Heads (H) and Tails (T). The sample space is {H, T}, which has 2 outcomes."
     },
     {
       id: "c17_q28",
@@ -466,10 +398,10 @@ const ch17 = {
       id: "c17_q32",
       topic: "Theoretical vs experimental probability",
       type: "mcq",
-      question: "A fair die has theoretical probability 1/6 for each number. After 600 rolls, how many times would you <strong>theoretically expect</strong> to roll a 5?",
-      options: ["5", "60", "100", "120"],
-      answer: 2,
-      explanation: "Expected frequency = P(5) × total rolls = 1/6 × 600 = 100. With many trials, the experimental results should be close to this theoretical expectation."
+      question: "A fair die is rolled 30 times. The number 4 comes up 8 times. What is the <strong>experimental</strong> probability of rolling a 4, and how does it compare to the theoretical probability?",
+      options: ["Experimental P(4) = 8/30; theoretical P(4) = 1/6 — they are very close", "Experimental P(4) = 8/30; theoretical P(4) = 1/6 — they are completely different numbers", "Experimental P(4) = 4/30; theoretical P(4) = 1/4", "Experimental P(4) = 1/6; theoretical P(4) = 8/30"],
+      answer: 0,
+      explanation: "Experimental P(4) = number of 4s ÷ total rolls = 8/30 ≈ 0.267. Theoretical P(4) = 1/6 ≈ 0.167. These are not identical but are in the same region. With only 30 trials, some variation from theoretical is expected."
     },
     {
       id: "c17_q33",
@@ -482,21 +414,21 @@ const ch17 = {
     },
     {
       id: "c17_q40",
-      topic: "Listing sample spaces",
+      topic: "Calculating probabilities",
       type: "mcq",
-      question: "Two spinners are each labelled with A, B, C. You spin both. How many outcomes are in the combined sample space?",
-      options: ["3", "6", "9", "12"],
-      answer: 2,
-      explanation: "Each spinner has 3 outcomes. For two spinners: 3 × 3 = 9 outcomes in total. The outcomes are: AA, AB, AC, BA, BB, BC, CA, CB, CC."
+      question: "A spinner has 5 equal sections numbered 1, 2, 3, 4, 5. What is the probability of spinning a number <strong>greater than 3</strong>?",
+      options: ["1/5", "2/5", "3/5", "4/5"],
+      answer: 1,
+      explanation: "Numbers greater than 3 on this spinner are 4 and 5 — that is 2 favourable outcomes out of 5 total equally likely outcomes. P(greater than 3) = 2/5."
     },
     {
       id: "c17_q41",
-      topic: "Listing sample spaces",
+      topic: "Calculating probabilities",
       type: "mcq",
-      question: "A lunch menu has 2 mains (pizza, pasta) and 3 drinks (water, juice, milk). How many different lunch combinations are possible?",
-      options: ["2", "3", "5", "6"],
-      answer: 3,
-      explanation: "For combined sample spaces, multiply the number of choices: 2 mains × 3 drinks = 6 different combinations. For example: pizza+water, pizza+juice, pizza+milk, pasta+water, pasta+juice, pasta+milk."
+      question: "A bag contains 4 red, 3 blue, and 2 green marbles. One marble is chosen at random. What is P(blue)?",
+      options: ["3/4", "3/7", "3/9", "2/9"],
+      answer: 2,
+      explanation: "Total marbles = 4 + 3 + 2 = 9. There are 3 blue marbles. P(blue) = 3/9 = 1/3. Always count the total number of marbles before writing the probability."
     },
     {
       id: "c17_q42",
@@ -518,12 +450,12 @@ const ch17 = {
     },
     {
       id: "c17_q44",
-      topic: "Expected frequency",
+      topic: "Experimental probability",
       type: "mcq",
-      question: "A fair spinner has 5 equal sections. If you spin it 150 times, how many times would you expect to land on <strong>any one particular section</strong>?",
-      options: ["5", "15", "30", "50"],
-      answer: 2,
-      explanation: "P(one section) = 1/5. Expected frequency = 1/5 × 150 = 30. You'd expect to land on each section about 30 times."
+      question: "Yuki rolls a die 50 times. She records these results: 1 appears 9 times, 2 appears 7 times, 3 appears 8 times, 4 appears 10 times, 5 appears 6 times, 6 appears 10 times. What is the experimental probability of rolling a <strong>1</strong>?",
+      options: ["1/6", "9/50", "9/41", "1/9"],
+      answer: 1,
+      explanation: "Experimental probability = number of times the event occurred ÷ total number of trials = 9 ÷ 50 = 9/50. This is close to, but not exactly, the theoretical probability of 1/6 ≈ 0.167."
     },
     {
       id: "c17_q45",
@@ -537,33 +469,33 @@ const ch17 = {
     // CHALLENGING QUESTIONS
     {
       id: "c17_q47",
-      topic: "Expected frequency",
+      topic: "Calculating probabilities",
       difficulty: "challenging",
       type: "input",
-      question: "A biased coin has P(head) = 0.6. If the coin is tossed 200 times, how many <strong>tails</strong> would you expect?",
-      answer: "80",
-      acceptableAnswers: ["80"],
-      explanation: "First find P(tail): P(tail) = 1 − P(head) = 1 − 0.6 = 0.4. Then use expected frequency = P(tail) × number of trials = 0.4 × 200 = 80. The key step is finding the complement probability first!"
+      question: "A class jar has 15 red tokens and some blue tokens. A token is chosen at random and P(red) = 3/5. How many <strong>blue</strong> tokens are in the jar?",
+      answer: "10",
+      acceptableAnswers: ["10"],
+      explanation: "P(red) = 3/5 means 3 out of every 5 tokens are red. If there are 15 red tokens and 15 = 3 × 5, then the total number of tokens = 5 × 5 = 25. Blue tokens = 25 − 15 = 10. Check: P(red) = 15/25 = 3/5 ✓"
     },
     {
       id: "c17_q48",
       topic: "Calculating probabilities",
       difficulty: "challenging",
       type: "mcq",
-      question: "A bag has 3 red, 5 blue, and 2 green balls. One ball is removed at random. Which colour is <strong>most likely</strong> to be removed, and what is P(not green)?",
-      options: ["Red is most likely; P(not green) = 7/10", "Blue is most likely; P(not green) = 8/10", "Green is most likely; P(not green) = 9/10", "Blue is most likely; P(not green) = 2/10"],
+      question: "A bag has 3 red, 5 blue, and 2 green balls. One ball is removed at random. Compare P(red), P(blue), and P(green). Which colour is <strong>most likely</strong> to be removed?",
+      options: ["Red, because it is listed first", "Blue, because P(blue) = 5/10 is the largest probability", "Green, because P(green) = 2/10 is the smallest probability", "Red and green together, because 3 + 2 = 5 = P(blue)"],
       answer: 1,
-      explanation: "Total balls = 3 + 5 + 2 = 10. P(red) = 3/10, P(blue) = 5/10, P(green) = 2/10. Blue has the highest probability (5/10), so blue is most likely. P(not green) = 1 − P(green) = 1 − 2/10 = 8/10 = 4/5. Two steps: compare probabilities, then apply the complement rule."
+      explanation: "Total balls = 3 + 5 + 2 = 10. P(red) = 3/10, P(blue) = 5/10, P(green) = 2/10. Blue has the highest probability (5/10 = 1/2), so picking blue is most likely. Compare fractions with the same denominator to decide."
     },
     {
       id: "c17_q49",
       topic: "Calculating probabilities",
       difficulty: "challenging",
       type: "input",
-      question: "P(red) = 3/8 and P(blue) = 1/4. These are the only colours on a spinner. What is P(neither red nor blue)? Write your answer as a fraction.",
-      answer: "3/8",
-      acceptableAnswers: ["3/8"],
-      explanation: "All probabilities must sum to 1. First write P(blue) with the same denominator: 1/4 = 2/8. Then P(red) + P(blue) = 3/8 + 2/8 = 5/8. P(neither red nor blue) = 1 − 5/8 = 3/8. This is a multi-step complement problem — excellent work!"
+      question: "A spinner is spun 40 times. Red comes up 14 times, blue comes up 10 times, green comes up 16 times. Write the experimental probability of landing on <strong>green</strong> as a fraction in its simplest form.",
+      answer: "2/5",
+      acceptableAnswers: ["2/5", "16/40"],
+      explanation: "Experimental P(green) = number of greens ÷ total spins = 16/40. Simplify by dividing both by 8: 16/40 = 2/5. Check: 14 + 10 + 16 = 40 ✓"
     },
     {
       id: "c17_q50",

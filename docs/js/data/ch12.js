@@ -254,7 +254,7 @@ const ch12 = {
   <line x1="30" y1="72" x2="350" y2="72" stroke="#64748b" stroke-width="1.5"/>
   <line x1="30" y1="68" x2="30" y2="76" stroke="#64748b" stroke-width="1.5"/>
   <line x1="350" y1="68" x2="350" y2="76" stroke="#64748b" stroke-width="1.5"/>
-  <text x="190" y="88" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Decrease = (40 ÷ 200) × 100 = ?%</text>
+  <text x="190" y="88" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">New price: $160 — what is the % decrease?</text>
 </svg>`,
       options: ["20%", "25%", "40%", "80%"],
       answer: 0,

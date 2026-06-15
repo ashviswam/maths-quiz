@@ -3,7 +3,7 @@ const ch07 = {
   title: "Decimals",
   icon: "🔢",
   color: "#8b5cf6",
-  topics: ["Decimal numbers","Decimal numbers on a number line","Ordering decimal numbers","Rounding decimal numbers","Converting decimals to fractions","Converting fractions to decimals","Adding and subtracting decimal numbers","Multiplying by powers of 10","Dividing by powers of 10","Multiplying decimals by a whole number","Dividing decimals by a whole number","Multiplying decimals by decimals","Dividing decimals by decimals","Terminating and recurring decimals","Significant figures"],
+  topics: ["Decimal numbers","Decimal numbers on a number line","Ordering decimal numbers","Rounding decimal numbers","Converting decimals to fractions","Converting fractions to decimals","Adding and subtracting decimal numbers","Multiplying by powers of 10","Dividing by powers of 10","Multiplying decimals by a whole number","Dividing decimals by a whole number"],
   questions: [
     {
       id: "c7_q1",
@@ -367,13 +367,13 @@ const ch07 = {
     },
     {
       id: "c7_q42",
-      topic: "Rounding decimal numbers",
+      topic: "Ordering decimal numbers",
       difficulty: "challenging",
       type: "mcq",
-      question: "A decimal rounded to <strong>2 decimal places</strong> gives <strong>5.40</strong>. What is the <strong>largest</strong> possible original value?",
-      options: ["5.404", "5.409", "5.404999...", "5.405"],
-      answer: 2,
-      explanation: "For a number to round to 5.40, it must satisfy 5.395 ≤ x < 5.405. The largest possible value approaches 5.405 but never quite reaches it (because 5.405 would round up to 5.41). The largest value is just under 5.405, which we can write as 5.4049999... . This is a really important idea — the upper boundary is not included!"
+      question: "Which of the following decimals, when placed in order from smallest to largest, is in the <strong>correct</strong> position as the <strong>second smallest</strong>?<br>0.502, 0.52, 0.5, 0.052",
+      options: ["0.052", "0.5", "0.502", "0.52"],
+      answer: 1,
+      explanation: "First convert all to the same number of decimal places: 0.502, 0.520, 0.500, 0.052. Now compare: 0.052 is smallest (only 5 hundredths), then 0.500, then 0.502, then 0.520. The correct order is 0.052, 0.5, 0.502, 0.52 — so the second smallest is 0.5."
     },
     {
       id: "c7_q44",

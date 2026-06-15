@@ -142,9 +142,6 @@ const ch16 = {
   <!-- value labels -->
   <text x="50" y="115" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">3</text>
   <text x="380" y="33" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">7</text>
-  <!-- difference arrow -->
-  <line x1="395" y1="41" x2="395" y2="123" stroke="#22c55e" stroke-width="2"/>
-  <text x="395" y="86" text-anchor="start" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700" dx="3">+4</text>
   <!-- x labels -->
   <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">January</text>
   <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">February</text>
@@ -297,7 +294,7 @@ const ch16 = {
   <!-- value labels -->
   <text x="50" y="153" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">14°</text>
   <text x="160" y="59" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">22°</text>
-  <text x="270" y="24" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">25° ★</text>
+  <text x="270" y="24" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">25°</text>
   <text x="380" y="95" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">19°</text>
   <!-- x labels -->
   <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">9 am</text>
@@ -342,9 +339,6 @@ const ch16 = {
   <circle cx="160" cy="75" r="5" fill="#f43f5e"/>
   <circle cx="270" cy="75" r="5" fill="#f43f5e"/>
   <circle cx="380" cy="20" r="4" fill="#5b5ef4"/>
-  <!-- annotation -->
-  <text x="215" y="65" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">STOPPED</text>
-  <line x1="215" y1="68" x2="215" y2="74" stroke="#f43f5e" stroke-width="1.5"/>
   <!-- y labels -->
   <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
   <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
@@ -441,8 +435,6 @@ const ch16 = {
   <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
   <circle cx="298" cy="20" r="5" fill="#f43f5e"/>
   <circle cx="380" cy="20" r="5" fill="#f43f5e"/>
-  <!-- annotation -->
-  <text x="339" y="14" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">At park</text>
   <!-- y labels -->
   <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
   <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
@@ -469,59 +461,9 @@ const ch16 = {
     {
       id: "c16_q10",
       topic: "Travel graphs",
-      type: "input",
-      question: "A travel graph shows a car journey. The car travels <strong>150 km</strong> in <strong>3 hours</strong>.<br><br>Use the formula: Average speed = Distance ÷ Time<br><br>What is the average speed of the car in km/h?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph: car travels 150km in 3 hours">
-  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
-  <!-- grid lines -->
-  <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="50" y1="75" x2="380" y2="75" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="50" y1="130" x2="380" y2="130" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="50" y1="185" x2="380" y2="185" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- vertical grid lines at 1h and 2h -->
-  <line x1="160" y1="20" x2="160" y2="185" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="270" y1="20" x2="270" y2="185" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- axes -->
-  <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <!-- car: 0km at t=0 → 150km at t=3hrs
-       xScale=330/3=110px/hr  yScale=165/150=1.1px/km
-       t=0:   x=50,  y=185
-       t=3:   x=380, y=20
-       t=1:   x=160, y=185-55=130  (50km)
-       t=2:   x=270, y=185-110=75  (100km) -->
-  <line x1="50" y1="185" x2="380" y2="20" stroke="#5b5ef4" stroke-width="2.5"/>
-  <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
-  <circle cx="380" cy="20" r="5" fill="#f43f5e"/>
-  <!-- dashed guide lines -->
-  <line x1="50" y1="20" x2="380" y2="20" stroke="#f43f5e" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="380" y1="20" x2="380" y2="185" stroke="#f43f5e" stroke-width="1" stroke-dasharray="4,3"/>
-  <!-- labels -->
-  <text x="390" y="24" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">150 km</text>
-  <!-- y labels -->
-  <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">50</text>
-  <text x="44" y="79" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">100</text>
-  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">150</text>
-  <!-- x labels -->
-  <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="160" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
-  <text x="270" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <!-- axis titles -->
-  <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Time (hours)</text>
-  <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Distance (km)</text>
-</svg>`,
-      answer: "50",
-      acceptableAnswers: ["50", "50 km/h", "50km/h"],
-      explanation: "Average speed = Distance ÷ Time = 150 ÷ 3 = <strong>50 km/h</strong>. On a travel graph, the average speed equals the total distance divided by the total time taken."
-    },
-    {
-      id: "c16_q11",
-      topic: "Travel graphs",
-      type: "input",
-      question: "A travel graph shows a cyclist leaving home. She cycles 24 km in 2 hours, rests for 1 hour, then cycles home in 2 hours.<br><br>What is her average speed (in km/h) for the <strong>first</strong> part of her journey (cycling away from home)?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph: cyclist 24km in 2hrs, rest 1hr, returns 2hrs">
+      type: "mcq",
+      question: "Look at the travel graph below showing a student's journey. The graph has three sections: A (rising steeply), B (horizontal), and C (rising gently).<br><br>In which section was the student <strong>stationary</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph with three sections: A steep rise, B horizontal, C gentle rise">
   <rect width="400" height="220" fill="#f8fafc" rx="8"/>
   <!-- grid lines -->
   <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
@@ -531,43 +473,95 @@ const ch16 = {
   <!-- axes -->
   <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
   <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Total 5hrs xScale=330/5=66px/hr, 0km=185, 24km=20
-       t=0: x=50,  y=185
-       t=2: x=50+2*66=182, y=20
-       t=3: x=50+3*66=248, y=20  (rest)
-       t=5: x=50+5*66=380, y=185 (back home) -->
-  <polyline points="50,185 182,20 248,20 380,185" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
-  <!-- highlight rest segment -->
-  <line x1="182" y1="20" x2="248" y2="20" stroke="#f59e0b" stroke-width="3.5"/>
+  <!-- Section A: steep 0→8km in 1hr, x=50→160, y=185→75
+       Section B: horizontal 8km for 1hr, x=160→270, y=75
+       Section C: gentle 8→12km in 1hr, x=270→380, y=75→20
+       yScale=165/12=13.75 -->
+  <polyline points="50,185 160,75 270,75 380,20" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
   <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
-  <circle cx="182" cy="20" r="5" fill="#5b5ef4"/>
-  <circle cx="248" cy="20" r="5" fill="#f59e0b"/>
-  <circle cx="380" cy="185" r="5" fill="#f43f5e"/>
-  <!-- labels -->
-  <text x="215" y="14" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">rest</text>
-  <text x="380" y="178" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">home</text>
-  <!-- annotation on first segment -->
-  <text x="100" y="120" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">24 km</text>
-  <text x="100" y="133" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11">2 hrs</text>
+  <circle cx="160" cy="75" r="4" fill="#5b5ef4"/>
+  <circle cx="270" cy="75" r="4" fill="#5b5ef4"/>
+  <circle cx="380" cy="20" r="4" fill="#5b5ef4"/>
+  <!-- section labels -->
+  <text x="105" y="145" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">A</text>
+  <text x="215" y="65" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">B</text>
+  <text x="330" y="40" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">C</text>
   <!-- y labels -->
   <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">8</text>
-  <text x="44" y="79" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">16</text>
-  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">24</text>
+  <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <text x="44" y="79" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">8</text>
+  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">12</text>
   <!-- x labels -->
   <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="116" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
-  <text x="182" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="248" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <text x="314" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
-  <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <text x="160" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="270" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
   <!-- axis titles -->
   <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Time (hours)</text>
   <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Distance (km)</text>
 </svg>`,
-      answer: "12",
-      acceptableAnswers: ["12", "12 km/h", "12km/h"],
-      explanation: "Average speed = Distance ÷ Time = 24 ÷ 2 = <strong>12 km/h</strong>. Only use the distance and time for the first section of the graph."
+      options: [
+        "Section A",
+        "Section B",
+        "Section C",
+        "None — the student is always moving"
+      ],
+      answer: 1,
+      explanation: "Section B is <strong>horizontal</strong> — the distance from home does not change over that hour. A horizontal line on a distance-time graph means the traveller is <strong>stationary</strong> (not moving)."
+    },
+    {
+      id: "c16_q11",
+      topic: "Travel graphs",
+      type: "mcq",
+      question: "The travel graph below shows Priya's journey. She leaves home and travels in three sections labelled P, Q, and R.<br><br>In which section did Priya travel the <strong>greatest distance</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph: three sections P, Q, R with different distances covered">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <!-- grid lines -->
+  <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="76" x2="380" y2="76" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="130" x2="380" y2="130" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="185" x2="380" y2="185" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- axes -->
+  <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Section P: 0→3km in 1hr, x=50→160, y=185→130
+       Section Q: 3→10km in 1hr, x=160→270, y=130→20
+       Section R: 10→14km in 1hr, x=270→380, y=20→-34... clamp to y=20 area
+       yScale=165/15=11px/km
+       P end: y=185-3*11=185-33=152
+       Q end: y=185-10*11=185-110=75
+       R end: y=185-14*11=185-154=31 -->
+  <polyline points="50,185 160,152 270,75 380,31" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
+  <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
+  <circle cx="160" cy="152" r="4" fill="#5b5ef4"/>
+  <circle cx="270" cy="75" r="4" fill="#5b5ef4"/>
+  <circle cx="380" cy="31" r="4" fill="#5b5ef4"/>
+  <!-- section labels -->
+  <text x="105" y="180" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">P</text>
+  <text x="215" y="100" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">Q</text>
+  <text x="330" y="45" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">R</text>
+  <!-- y labels -->
+  <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
+  <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <text x="44" y="79" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">10</text>
+  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">15</text>
+  <!-- x labels -->
+  <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
+  <text x="160" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="270" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <!-- axis titles -->
+  <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Time (hours)</text>
+  <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Distance (km)</text>
+</svg>`,
+      options: [
+        "Section P — 3 km",
+        "Section Q — 7 km",
+        "Section R — 4 km",
+        "All sections cover the same distance"
+      ],
+      answer: 1,
+      explanation: "Read the distance covered in each section from the graph: Section P goes from 0 km to 3 km (3 km), Section Q goes from 3 km to 10 km (<strong>7 km</strong>), Section R goes from 10 km to 14 km (4 km). Section Q covers the greatest distance."
     },
     {
       id: "c16_q12",
@@ -595,9 +589,6 @@ const ch16 = {
   <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
   <circle cx="215" cy="20" r="5" fill="#5b5ef4"/>
   <circle cx="380" cy="185" r="5" fill="#f43f5e"/>
-  <!-- annotation -->
-  <text x="310" y="120" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">RETURNING</text>
-  <text x="310" y="133" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11">back to start</text>
   <!-- y labels -->
   <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
   <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
@@ -942,8 +933,6 @@ const ch16 = {
   <!-- small circles at ends -->
   <circle cx="50" cy="167" r="3" fill="#5b5ef4"/>
   <circle cx="380" cy="176" r="3" fill="#5b5ef4"/>
-  <!-- peak label -->
-  <text x="200" y="14" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Peak (Jun)</text>
   <!-- x labels - selected months -->
   <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">Jan</text>
   <text x="200" y="200" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">Jun</text>
@@ -1087,8 +1076,8 @@ const ch16 = {
       id: "c16_q22",
       topic: "Line graphs",
       type: "mcq",
-      question: "A line graph shows a student's test scores over 5 weeks. The scores are: Week 1: 40, Week 2: 40, Week 3: 55, Week 4: 70, Week 5: 70.<br><br>Between which two weeks did the score <strong>increase the most</strong>?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Line graph: test scores 40, 40, 55, 70, 70 over 5 weeks">
+      question: "A line graph shows a student's test scores over 5 weeks. The scores are: Week 1: 40, Week 2: 45, Week 3: 55, Week 4: 75, Week 5: 75.<br><br>Between which two weeks did the score <strong>increase the most</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Line graph: test scores 40, 45, 55, 75, 75 over 5 weeks">
   <rect width="400" height="220" fill="#f8fafc" rx="8"/>
   <!-- grid lines minV=30 maxV=80 range=50 yScale=165/50=3.3 -->
   <line x1="50" y1="185" x2="380" y2="185" stroke="#e2e8f0" stroke-width="1"/>
@@ -1100,26 +1089,24 @@ const ch16 = {
   <!-- axes -->
   <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
   <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <!-- N=5 xStep=82.5
-       Wk1(i=0):x=50,  y=185-((40-30)/50)*165=185-33=152
-       Wk2(i=1):x=133, y=152
-       Wk3(i=2):x=215, y=185-((55-30)/50)*165=185-82.5=103
-       Wk4(i=3):x=298, y=185-((70-30)/50)*165=185-132=53
-       Wk5(i=4):x=380, y=53 -->
-  <polyline points="50,152 133,152 215,103 298,53 380,53" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
-  <!-- highlight steepest segment Wk3→Wk4 -->
-  <line x1="215" y1="103" x2="298" y2="53" stroke="#f43f5e" stroke-width="3.5"/>
+  <!-- N=5 xStep=82.5, minV=30 maxV=80 range=50 yScale=165/50=3.3
+       Wk1(i=0):x=50,  score=40, y=185-((40-30)/50)*165=185-33=152
+       Wk2(i=1):x=133, score=45, y=185-((45-30)/50)*165=185-49.5=136
+       Wk3(i=2):x=215, score=55, y=185-((55-30)/50)*165=185-82.5=103
+       Wk4(i=3):x=298, score=75, y=185-((75-30)/50)*165=185-148.5=37
+       Wk5(i=4):x=380, score=75, y=37 -->
+  <polyline points="50,152 133,136 215,103 298,37 380,37" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
   <circle cx="50" cy="152" r="4" fill="#5b5ef4"/>
-  <circle cx="133" cy="152" r="4" fill="#5b5ef4"/>
-  <circle cx="215" cy="103" r="5" fill="#f43f5e"/>
-  <circle cx="298" cy="53" r="5" fill="#f43f5e"/>
-  <circle cx="380" cy="53" r="4" fill="#5b5ef4"/>
+  <circle cx="133" cy="136" r="4" fill="#5b5ef4"/>
+  <circle cx="215" cy="103" r="4" fill="#5b5ef4"/>
+  <circle cx="298" cy="37" r="4" fill="#5b5ef4"/>
+  <circle cx="380" cy="37" r="4" fill="#5b5ef4"/>
   <!-- value labels -->
   <text x="50" y="144" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">40</text>
-  <text x="133" y="144" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">40</text>
+  <text x="133" y="128" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">45</text>
   <text x="215" y="95" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">55</text>
-  <text x="298" y="45" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">70</text>
-  <text x="380" y="45" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">70</text>
+  <text x="298" y="29" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">75</text>
+  <text x="380" y="29" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">75</text>
   <!-- x labels -->
   <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Wk 1</text>
   <text x="133" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Wk 2</text>
@@ -1129,20 +1116,22 @@ const ch16 = {
   <!-- y labels -->
   <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">30</text>
   <text x="44" y="156" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">40</text>
-  <text x="44" y="107" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">55</text>
-  <text x="44" y="57" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">70</text>
+  <text x="44" y="123" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">50</text>
+  <text x="44" y="91" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">60</text>
+  <text x="44" y="58" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">70</text>
+  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">80</text>
   <!-- axis titles -->
   <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Week</text>
   <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Score (%)</text>
 </svg>`,
       options: [
-        "Week 1 to Week 2 (increase of 0)",
-        "Week 2 to Week 3 (increase of 15)",
-        "Week 3 to Week 4 (increase of 15)",
+        "Week 1 to Week 2 (increase of 5)",
+        "Week 2 to Week 3 (increase of 10)",
+        "Week 3 to Week 4 (increase of 20)",
         "Week 4 to Week 5 (increase of 0)"
       ],
       answer: 2,
-      explanation: "Check each gap: Wk 1→2: 40−40=0, Wk 2→3: 55−40=<strong>15</strong>, Wk 3→4: 70−55=<strong>15</strong>. Both week 2→3 and week 3→4 have the same increase of 15! However, the question asks where it increased the most — both B and C tie at 15. The steepest visible segment is Wk 3 to Wk 4. Always check the differences carefully before choosing."
+      explanation: "Check each gap: Wk 1→2: 45−40=<strong>5</strong>, Wk 2→3: 55−45=<strong>10</strong>, Wk 3→4: 75−55=<strong>20</strong>, Wk 4→5: 75−75=<strong>0</strong>. The largest increase is from Week 3 to Week 4 (20 marks). Always calculate the difference for each interval before deciding."
     },
     {
       id: "c16_q23",
@@ -1179,11 +1168,6 @@ const ch16 = {
   <line x1="50" y1="70" x2="380" y2="144" stroke="#5b5ef4" stroke-width="2.5"/>
   <circle cx="50" cy="70" r="5" fill="#5b5ef4"/>
   <circle cx="380" cy="144" r="5" fill="#f43f5e"/>
-  <!-- dashed difference arrow -->
-  <line x1="395" y1="70" x2="395" y2="144" stroke="#22c55e" stroke-width="2"/>
-  <line x1="390" y1="70" x2="400" y2="70" stroke="#22c55e" stroke-width="1.5"/>
-  <line x1="390" y1="144" x2="400" y2="144" stroke="#22c55e" stroke-width="1.5"/>
-  <text x="403" y="112" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">−18</text>
   <!-- value labels -->
   <text x="62" y="65" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">48</text>
   <text x="335" y="139" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">30</text>
@@ -1207,68 +1191,105 @@ const ch16 = {
     {
       id: "c16_q25",
       topic: "Travel graphs",
-      type: "input",
-      question: "A travel graph shows Tom's walk. He walks <strong>6 km in 1 hour</strong>, then rests for 30 minutes, then walks a further <strong>4 km in 1 hour</strong>.<br><br>What is his speed (in km/h) during the <strong>second</strong> walking section?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph: Tom walks 6km in 1hr, rest 30min, walks 4km more in 1hr">
+      type: "mcq",
+      question: "The travel graph below shows Zara's walk from home. Look at the four sections labelled W, X, Y, Z.<br><br>In which section is the line the <strong>steepest</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph with four sections W, X, Y, Z of varying steepness">
   <rect width="400" height="220" fill="#f8fafc" rx="8"/>
   <!-- grid lines -->
   <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="50" y1="74" x2="380" y2="74" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="76" x2="380" y2="76" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="50" y1="130" x2="380" y2="130" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="50" y1="185" x2="380" y2="185" stroke="#e2e8f0" stroke-width="1"/>
   <!-- axes -->
   <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
   <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Total time = 2.5hrs xScale=330/2.5=132px/hr
-       0km=y=185, 10km=y=20, yScale=165/10=16.5px/km
-       t=0:    x=50,  y=185 (0km)
-       t=1:    x=50+132=182, y=185-6*16.5=185-99=86 (6km)
-       t=1.5:  x=50+1.5*132=248, y=86 (rest: still 6km)
-       t=2.5:  x=50+2.5*132=380, y=185-10*16.5=185-165=20 (10km) -->
-  <polyline points="50,185 182,86 248,86 380,20" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
-  <!-- highlight second walk segment -->
-  <line x1="248" y1="86" x2="380" y2="20" stroke="#f43f5e" stroke-width="3.5"/>
-  <!-- rest segment -->
-  <line x1="182" y1="86" x2="248" y2="86" stroke="#f59e0b" stroke-width="3.5"/>
+  <!-- W: gentle 0→2km in 1hr, x=50→132, y=185→157
+       X: steep 2→8km in 0.5hr, x=132→173, y=157→48
+       Y: horizontal 8km for 0.5hr, x=173→214, y=48
+       Z: gentle 8→10km in 1hr, x=214→296, y=48→12...
+       yScale=165/12=13.75
+       W end: y=185-2*13.75=185-27.5=158
+       X end: y=185-8*13.75=185-110=75
+       Z end: y=185-10*13.75=185-137.5=48 -->
+  <polyline points="50,185 132,158 173,75 214,75 296,48" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
   <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
-  <circle cx="182" cy="86" r="5" fill="#5b5ef4"/>
-  <circle cx="248" cy="86" r="5" fill="#f59e0b"/>
-  <circle cx="380" cy="20" r="5" fill="#f43f5e"/>
-  <!-- annotations -->
-  <text x="116" y="78" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">6 km / 1 hr</text>
-  <text x="215" y="79" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">rest</text>
-  <text x="315" y="45" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">4 km / 1 hr</text>
+  <circle cx="132" cy="158" r="4" fill="#5b5ef4"/>
+  <circle cx="173" cy="75" r="4" fill="#5b5ef4"/>
+  <circle cx="214" cy="75" r="4" fill="#5b5ef4"/>
+  <circle cx="296" cy="48" r="4" fill="#5b5ef4"/>
+  <!-- section labels -->
+  <text x="91" y="183" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">W</text>
+  <text x="153" y="120" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">X</text>
+  <text x="194" y="65" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Y</text>
+  <text x="258" y="55" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Z</text>
   <!-- y labels -->
   <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
   <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
-  <text x="44" y="90" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">6</text>
-  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">10</text>
+  <text x="44" y="79" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">8</text>
+  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">12</text>
   <!-- x labels -->
   <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="182" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
-  <text x="248" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1.5</text>
-  <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2.5</text>
+  <text x="132" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="173" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1.5</text>
+  <text x="214" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="296" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
   <!-- axis titles -->
   <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Time (hours)</text>
   <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Distance (km)</text>
 </svg>`,
-      answer: "4",
-      acceptableAnswers: ["4", "4 km/h", "4km/h"],
-      explanation: "For the second walking section: distance = <strong>4 km</strong>, time = <strong>1 hour</strong>. Speed = Distance ÷ Time = 4 ÷ 1 = <strong>4 km/h</strong>. Each segment of a travel graph has its own speed — always use only the distance and time for that segment."
+      options: [
+        "Section W",
+        "Section X",
+        "Section Y",
+        "Section Z"
+      ],
+      answer: 1,
+      explanation: "Section X is the <strong>steepest</strong> — it rises the most sharply out of all sections. On a distance-time graph, the steeper the line, the faster the traveller is moving. Section Y is horizontal (stationary) and sections W and Z are much gentler slopes than X."
     },
     {
       id: "c16_q26",
       topic: "Conversion graphs",
-      type: "mcq",
-      question: "A conversion graph shows that the gradient (steepness) of the line tells you the conversion rate. A graph converting seconds to minutes has the conversion rate of 1 minute = 60 seconds. Which point would lie on this conversion graph?",
-      options: [
-        "(60 seconds, 2 minutes)",
-        "(120 seconds, 2 minutes)",
-        "(2 seconds, 120 minutes)",
-        "(60 seconds, 60 minutes)"
-      ],
-      answer: 1,
-      explanation: "The conversion rate is 60 seconds = 1 minute. So 120 seconds = 2 minutes. The point <strong>(120 seconds, 2 minutes)</strong> lies on the graph. You can check: 120 ÷ 60 = 2. ✓ The gradient of this graph equals 1/60 (minutes per second)."
+      type: "input",
+      question: "A conversion graph converts Euros (€) to British pounds (£). The graph passes through (0, 0) and shows that <strong>€20 = £17</strong>.<br><br>Using the graph, how many pounds is <strong>€40</strong>? (Write just the number.)",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Conversion graph: Euros to pounds, 20 euros = 17 pounds">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <!-- grid lines -->
+  <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="62" x2="380" y2="62" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="103" x2="380" y2="103" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="144" x2="380" y2="144" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="185" x2="380" y2="185" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- axes -->
+  <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
+  <!-- x: 0-40 euros xScale=330/40=8.25px/€
+       y: 0-34 pounds yScale=165/34=4.853px/£
+       (0,0):   x=50, y=185
+       (20,17): x=50+20*8.25=215, y=185-17*4.853=185-82.5=103
+       (40,34): x=380, y=20 -->
+  <line x1="50" y1="185" x2="380" y2="20" stroke="#5b5ef4" stroke-width="2.5"/>
+  <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
+  <circle cx="215" cy="103" r="5" fill="#5b5ef4"/>
+  <circle cx="380" cy="20" r="4" fill="#5b5ef4"/>
+  <!-- dashed guides for 20€=17£ -->
+  <line x1="50" y1="103" x2="215" y2="103" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="215" y1="185" x2="215" y2="103" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- dashed guides for 40€ -->
+  <line x1="380" y1="185" x2="380" y2="20" stroke="#f43f5e" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- y labels -->
+  <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
+  <text x="44" y="107" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">17</text>
+  <!-- x labels -->
+  <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
+  <text x="215" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">20</text>
+  <text x="380" y="200" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">40</text>
+  <!-- axis titles -->
+  <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Euros (€)</text>
+  <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Pounds (£)</text>
+</svg>`,
+      answer: "34",
+      acceptableAnswers: ["34", "£34", "34 pounds"],
+      explanation: "The graph shows €20 = £17. Since €40 is double €20, the equivalent is also doubled: £17 × 2 = <strong>£34</strong>. Conversion graphs are straight lines through (0, 0), so doubling the amount on one axis doubles the amount on the other."
     },
     {
       id: "c16_q27",
@@ -1313,12 +1334,6 @@ const ch16 = {
   <circle cx="215" cy="75" r="4" fill="#5b5ef4"/>
   <circle cx="298" cy="130" r="4" fill="#5b5ef4"/>
   <circle cx="380" cy="48" r="4" fill="#5b5ef4"/>
-  <!-- value labels -->
-  <text x="50" y="95" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">8000</text>
-  <text x="133" y="150" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">6000</text>
-  <text x="215" y="67" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">9000</text>
-  <text x="298" y="122" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">7000</text>
-  <text x="380" y="40" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">10000</text>
   <!-- x labels -->
   <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Mon</text>
   <text x="133" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Tue</text>
@@ -1342,10 +1357,55 @@ const ch16 = {
       id: "c16_q29",
       topic: "Travel graphs",
       type: "mcq",
-      question: "Layla cycles from home to school. The distance-time graph shows: she leaves home at 8:00 am, travels 3 km to a shop in 15 minutes, waits 10 minutes, then cycles the remaining 5 km to school in 25 minutes.<br><br>What is her speed (in km/h) for the <strong>first</strong> part of her journey (home to shop)?",
-      options: ["8 km/h", "10 km/h", "12 km/h", "15 km/h"],
-      answer: 2,
-      explanation: "Distance = 3 km, time = 15 minutes = 15/60 = 0.25 hours. Speed = 3 ÷ 0.25 = <strong>12 km/h</strong>. Remember to convert minutes to hours before dividing: 15 minutes = 0.25 hours."
+      question: "The travel graph below shows Layla's journey from home. She leaves at 8:00 am.<br><br>Between which two times was Layla <strong>stationary</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph: Layla leaves home at 8am, travels, stops, then continues">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <!-- grid lines -->
+  <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="76" x2="380" y2="76" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="130" x2="380" y2="130" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="185" x2="380" y2="185" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- axes -->
+  <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Total 60 min xScale=330/60=5.5px/min
+       0km=y=185, 8km=y=20, yScale=165/8=20.625px/km
+       8:00 (t=0):   x=50,  y=185 (0km)
+       8:15 (t=15):  x=50+15*5.5=133, y=185-3*20.625=185-61.9=123 (3km)
+       8:25 (t=25):  x=50+25*5.5=188, y=123 (stopped at 3km)
+       8:50 (t=50):  x=50+50*5.5=325, y=185-8*20.625=185-165=20 (8km)
+       9:00 (t=60):  x=380, y=20 (stays at 8km) -->
+  <polyline points="50,185 133,123 188,123 325,20 380,20" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
+  <!-- horizontal (stationary) segment highlighted -->
+  <line x1="133" y1="123" x2="188" y2="123" stroke="#f43f5e" stroke-width="3"/>
+  <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
+  <circle cx="133" cy="123" r="5" fill="#f43f5e"/>
+  <circle cx="188" cy="123" r="5" fill="#f43f5e"/>
+  <circle cx="325" cy="20" r="4" fill="#5b5ef4"/>
+  <circle cx="380" cy="20" r="4" fill="#5b5ef4"/>
+  <!-- y labels -->
+  <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
+  <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="44" y="79" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">8</text>
+  <!-- x labels -->
+  <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">8:00</text>
+  <text x="133" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">8:15</text>
+  <text x="188" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">8:25</text>
+  <text x="325" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">8:50</text>
+  <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">9:00</text>
+  <!-- axis titles -->
+  <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Time</text>
+  <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Distance (km)</text>
+</svg>`,
+      options: [
+        "8:00 am and 8:15 am",
+        "8:15 am and 8:25 am",
+        "8:25 am and 8:50 am",
+        "8:50 am and 9:00 am"
+      ],
+      answer: 1,
+      explanation: "The graph is <strong>horizontal</strong> (flat) between 8:15 am and 8:25 am — Layla's distance from home stays the same during that period, which means she is <strong>stationary</strong>. A flat line on a distance-time graph always means the traveller has stopped."
     },
     {
       id: "c16_q30",
@@ -1380,7 +1440,6 @@ const ch16 = {
   <circle cx="281" cy="70" r="5" fill="#f43f5e"/>
   <!-- labels -->
   <text x="281" y="200" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">£7</text>
-  <text x="38" y="74" text-anchor="end" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">₹700</text>
   <!-- y labels -->
   <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
   <text x="44" y="107" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">500</text>
@@ -1400,10 +1459,10 @@ const ch16 = {
     {
       id: "c16_q31",
       topic: "Travel graphs",
-      type: "input",
+      type: "mcq",
       difficulty: "challenging",
-      question: "A cyclist's journey is shown on a distance-time graph with three segments:<br>• Segment 1: 0 to 1 hour — travels 15 km<br>• Segment 2: 1 to 2 hours — rests (stationary)<br>• Segment 3: 2 to 4 hours — returns home (travels 15 km back)<br><br>What is the cyclist's <strong>average speed</strong> (in km/h) for the <strong>entire journey</strong> (including the rest)?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph: 15km in 1hr, rest 1hr, return 15km in 2hrs, total 4hrs">
+      question: "The travel graph below shows a cyclist's full journey. The journey has three segments.<br><br>Which statement <strong>correctly describes</strong> segment 3?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph: rise in segment 1, flat in segment 2 (rest), falling line in segment 3 (return home)">
   <rect width="400" height="220" fill="#f8fafc" rx="8"/>
   <!-- grid lines -->
   <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
@@ -1414,23 +1473,19 @@ const ch16 = {
   <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
   <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
   <!-- Total 4hrs xScale=330/4=82.5, 0km=185, 15km=20, yScale=165/15=11
-       t=0: x=50,  y=185
-       t=1: x=50+82.5=133, y=20
-       t=2: x=50+2*82.5=215, y=20  (rest)
-       t=4: x=50+4*82.5=380, y=185 (home) -->
+       t=0: x=50,  y=185 (0km)
+       t=1: x=133, y=20  (15km — arrived)
+       t=2: x=215, y=20  (rest at 15km)
+       t=4: x=380, y=185 (returned home 0km) -->
   <polyline points="50,185 133,20 215,20 380,185" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
-  <!-- segment highlights -->
-  <line x1="50" y1="185" x2="133" y2="20" stroke="#5b5ef4" stroke-width="3"/>
-  <line x1="133" y1="20" x2="215" y2="20" stroke="#f59e0b" stroke-width="3.5"/>
-  <line x1="215" y1="20" x2="380" y2="185" stroke="#f43f5e" stroke-width="3"/>
   <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
-  <circle cx="133" cy="20" r="5" fill="#5b5ef4"/>
-  <circle cx="215" cy="20" r="5" fill="#f59e0b"/>
-  <circle cx="380" cy="185" r="5" fill="#f43f5e"/>
-  <!-- segment labels -->
-  <text x="80" y="85" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">Seg 1</text>
-  <text x="174" y="13" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">Rest</text>
-  <text x="305" y="85" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="10" font-weight="700">Seg 3</text>
+  <circle cx="133" cy="20" r="4" fill="#5b5ef4"/>
+  <circle cx="215" cy="20" r="4" fill="#5b5ef4"/>
+  <circle cx="380" cy="185" r="4" fill="#5b5ef4"/>
+  <!-- segment number labels -->
+  <text x="80" y="90" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">1</text>
+  <text x="174" y="13" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">2</text>
+  <text x="305" y="90" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">3</text>
   <!-- y labels -->
   <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
   <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
@@ -1446,17 +1501,22 @@ const ch16 = {
   <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Time (hours)</text>
   <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Distance (km)</text>
 </svg>`,
-      answer: "7.5",
-      acceptableAnswers: ["7.5", "7.5 km/h", "7.5km/h"],
-      explanation: "For <strong>average speed over the whole journey</strong>, use the <em>total distance travelled</em> (not just displacement) and <em>total time</em>.<br>Total distance = 15 km out + 15 km back = <strong>30 km</strong>.<br>Total time = 4 hours.<br>Average speed = 30 ÷ 4 = <strong>7.5 km/h</strong>.<br>Watch out: the rest period counts in the total time but not in the total distance!"
+      options: [
+        "The cyclist is stationary at 15 km from home",
+        "The cyclist is travelling further away from home",
+        "The cyclist is returning towards home",
+        "The cyclist is speeding up"
+      ],
+      answer: 2,
+      explanation: "In segment 3, the line <strong>slopes downward</strong> — the distance from home decreases from 15 km back to 0 km. A falling line on a distance-time graph means the traveller is <strong>returning towards their starting point</strong>."
     },
     {
       id: "c16_q32",
       topic: "Travel graphs",
       type: "mcq",
       difficulty: "challenging",
-      question: "Maya leaves home at 9:00 am walking at 4 km/h. Her brother Ethan leaves the same home at 9:30 am cycling at 12 km/h in the same direction.<br><br>At what time does Ethan catch up with Maya?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph: Maya walks from 9am at 4km/h, Ethan cycles from 9:30am at 12km/h — they meet">
+      question: "The travel graph below shows two friends, Maya (solid blue) and Ethan (dashed red), leaving the same home. Maya leaves at 9:00 am and Ethan leaves at 9:30 am. Both travel in the same direction.<br><br>What does the graph tell you about how fast each person is travelling?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph: Maya's line is less steep than Ethan's line — Ethan is faster">
   <rect width="400" height="220" fill="#f8fafc" rx="8"/>
   <!-- grid lines -->
   <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
@@ -1468,25 +1528,21 @@ const ch16 = {
   <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
   <!-- x: 9:00 to 10:30 (1.5hrs), xScale=330/1.5=220px/hr
        y: 0-6km, yScale=165/6=27.5px/km
-       Maya starts x=50 (9:00), slope=4km/h
-         At 9:00: x=50, y=185
-         At 9:45: x=50+0.75*220=215, y=185-3*27.5=185-82.5=103
-         At 10:30: x=380, y=185-6*27.5=185-165=20
-       Ethan starts x=50+0.5*220=160 (9:30), slope=12km/h
+       Maya: starts 9:00 at x=50, gentler slope (less steep)
+         At 9:00: x=50,  y=185
+         At 10:30: x=380, y=185-3.75*27.5=185-103=82 (3.75km in 1.5hr)
+       Ethan: starts 9:30 at x=160, steeper slope (faster)
          At 9:30: x=160, y=185 (0km)
-         At 9:45: x=215, y=185-3*27.5=103  ← they meet!
-         At 10:00: x=270, y=185-6*27.5=20  (but that's already 6km) -->
-  <!-- Maya full line 9:00 to 10:30 -->
-  <line x1="50" y1="185" x2="380" y2="20" stroke="#5b5ef4" stroke-width="2.5"/>
-  <!-- Ethan line 9:30 to meeting point 9:45 then continued -->
+         At 10:30: x=380, y=185-7.5*27.5=185-206... clamp: show 6km ending
+         At 10:00: x=270, y=185-5*27.5=185-137.5=48
+         At 10:30: x=380, y=20 (6km) -->
+  <line x1="50" y1="185" x2="380" y2="82" stroke="#5b5ef4" stroke-width="2.5"/>
   <line x1="160" y1="185" x2="380" y2="20" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="6,3"/>
-  <!-- meeting point circle -->
-  <circle cx="215" cy="103" r="7" fill="none" stroke="#22c55e" stroke-width="2.5"/>
-  <circle cx="215" cy="103" r="4" fill="#22c55e"/>
-  <!-- labels -->
+  <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
+  <circle cx="160" cy="185" r="4" fill="#f43f5e"/>
+  <!-- name labels -->
   <text x="100" y="155" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Maya</text>
-  <text x="270" y="165" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Ethan</text>
-  <text x="230" y="98" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Meet!</text>
+  <text x="280" y="165" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Ethan</text>
   <!-- y labels -->
   <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
   <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
@@ -1495,24 +1551,28 @@ const ch16 = {
   <!-- x labels -->
   <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">9:00</text>
   <text x="160" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">9:30</text>
-  <text x="215" y="200" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">9:45</text>
   <text x="270" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">10:00</text>
   <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">10:30</text>
   <!-- axis titles -->
   <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Time</text>
   <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Distance (km)</text>
 </svg>`,
-      options: ["9:40 am", "9:45 am", "9:50 am", "10:00 am"],
+      options: [
+        "Maya is faster because she left earlier",
+        "Ethan is faster because his line is steeper",
+        "Maya is faster because her line is less steep",
+        "They are travelling at the same speed"
+      ],
       answer: 1,
-      explanation: "By 9:30 am, Maya has already walked <strong>4 × 0.5 = 2 km</strong>. After 9:30, Ethan is closing the gap at 12 − 4 = <strong>8 km/h</strong>. Time to close 2 km gap: 2 ÷ 8 = 0.25 hours = <strong>15 minutes</strong>. So Ethan catches Maya at 9:30 + 15 min = <strong>9:45 am</strong>. You can also check on the graph: Maya's line and Ethan's line cross at the 9:45 mark. Well done if you got this — it's a tough one!"
+      explanation: "Ethan's line (dashed red) is <strong>steeper</strong> than Maya's line (solid blue). On a distance-time graph, a steeper line means the traveller is covering more distance in the same time — so <strong>Ethan is travelling faster</strong>. The time they started does not affect who is faster."
     },
     {
       id: "c16_q33",
       topic: "Conversion graphs",
       type: "mcq",
       difficulty: "challenging",
-      question: "A conversion graph for miles to kilometres ends at 40 km on the y-axis (vertical axis). The graph shows <strong>5 miles = 8 km</strong>.<br><br>The graph does not go beyond 40 km. By <strong>extrapolating</strong> (extending the pattern), approximately how many miles is <strong>50 km</strong>?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Conversion graph: miles to km, 5 miles = 8 km, shown up to 40km with extrapolation arrow to 50km">
+      question: "A conversion graph converts miles to kilometres. It shows that <strong>5 miles = 8 km</strong>. The graph is a straight line passing through the origin.<br><br>Using the graph, approximately how many kilometres is <strong>15 miles</strong>?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Conversion graph: miles to km, 5 miles = 8 km, straight line through origin">
   <rect width="400" height="220" fill="#f8fafc" rx="8"/>
   <!-- grid lines -->
   <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
@@ -1523,104 +1583,151 @@ const ch16 = {
   <!-- axes -->
   <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
   <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <!-- x: 0-32 miles xScale=330/32=10.3125
-       y: 0-50 km yScale=165/50=3.3
-       actual graph line (0,0) to (25mi, 40km)=(25,40)
-         x=50+25*10.3125=308, y=185-40*3.3=185-132=53
-       Key point (5mi, 8km): x=50+5*10.3125=102, y=185-8*3.3=185-26.4=159 -->
-  <!-- Solid graph line 0 to 25 miles (40km) -->
-  <line x1="50" y1="185" x2="308" y2="53" stroke="#5b5ef4" stroke-width="2.5"/>
-  <!-- Extrapolation dashed line 25 to ~31.25 miles (50km) -->
-  <line x1="308" y1="53" x2="375" y2="20" stroke="#5b5ef4" stroke-width="2" stroke-dasharray="6,3"/>
-  <!-- Annotation: graph ends here -->
-  <line x1="308" y1="40" x2="308" y2="185" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
-  <text x="308" y="38" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">graph ends</text>
-  <!-- dashed reading guide for 50km -->
-  <line x1="50" y1="20" x2="375" y2="20" stroke="#f43f5e" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="375" y1="20" x2="375" y2="185" stroke="#f43f5e" stroke-width="1" stroke-dasharray="4,3"/>
-  <!-- key points -->
+  <!-- x: 0-25 miles xScale=330/25=13.2px/mi
+       y: 0-40 km yScale=165/40=4.125px/km
+       (0,0):   x=50,  y=185
+       (5,8):   x=50+5*13.2=116, y=185-8*4.125=185-33=152
+       (10,16): x=50+10*13.2=182, y=185-16*4.125=185-66=119
+       (15,24): x=50+15*13.2=248, y=185-24*4.125=185-99=86
+       (25,40): x=380, y=20 -->
+  <line x1="50" y1="185" x2="380" y2="20" stroke="#5b5ef4" stroke-width="2.5"/>
   <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
-  <circle cx="102" cy="159" r="4" fill="#5b5ef4"/>
-  <circle cx="308" cy="53" r="5" fill="#5b5ef4"/>
-  <circle cx="375" cy="20" r="5" fill="#f43f5e"/>
+  <circle cx="116" cy="152" r="5" fill="#5b5ef4"/>
+  <circle cx="380" cy="20" r="4" fill="#5b5ef4"/>
+  <!-- dashed guides for 5mi=8km reference point -->
+  <line x1="50" y1="152" x2="116" y2="152" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="116" y1="185" x2="116" y2="152" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- dashed guide for reading 15 miles -->
+  <line x1="248" y1="185" x2="248" y2="86" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="50" y1="86" x2="248" y2="86" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="248" cy="86" r="5" fill="#f43f5e"/>
   <!-- labels -->
-  <text x="102" y="170" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">5 mi, 8 km</text>
-  <text x="375" y="200" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">≈31.25</text>
+  <text x="116" y="197" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">5</text>
+  <text x="248" y="197" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">15</text>
+  <text x="44" y="156" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">8</text>
   <!-- y labels -->
   <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="44" y="107" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">25</text>
-  <text x="44" y="57" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">40</text>
-  <text x="44" y="24" text-anchor="end" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">50</text>
+  <text x="44" y="107" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">20</text>
+  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">40</text>
   <!-- x labels -->
   <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="160" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">10</text>
-  <text x="270" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">20</text>
+  <text x="182" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">10</text>
+  <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">25</text>
   <!-- axis titles -->
   <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Miles</text>
   <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Kilometres</text>
 </svg>`,
-      options: ["28 miles", "30 miles", "31.25 miles", "35 miles"],
+      options: ["16 km", "20 km", "24 km", "30 km"],
       answer: 2,
-      explanation: "The rate is <strong>5 miles = 8 km</strong>. To find how many miles = 50 km: use the ratio.<br>miles = 50 × (5/8) = 250/8 = <strong>31.25 miles</strong>.<br><em>Extrapolation</em> means extending the straight line beyond the graph's scale. Since conversion graphs are straight lines, the ratio stays constant — so you can calculate values even outside the graph's range. This is a handy technique!"
+      explanation: "The graph shows 5 miles = 8 km. 15 miles is three times 5 miles, so the equivalent distance is 3 × 8 km = <strong>24 km</strong>. You can also read directly from the graph: go up from 15 on the miles axis until you reach the line, then read across to the km axis."
     },
     {
       id: "c16_q34",
       topic: "Line graphs",
       type: "input",
       difficulty: "challenging",
-      question: "A line graph shows sales of a product. In January, 200 items were sold. By March, sales had risen to 250 items.<br><br>What is the <strong>percentage increase</strong> in sales from January to March? (Give your answer as a percentage, without the % sign.)",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Line graph: sales rise from 200 in January to 250 in March">
+      question: "The line graph below shows the temperature (°C) in a greenhouse recorded every 2 hours. Use the graph to answer: what was the <strong>maximum temperature</strong> recorded, and at what time did it occur?<br><br>Write your answer as: temperature,time (e.g. 28,2pm)",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Line graph: greenhouse temperatures over a day, peak at 2pm">
   <rect width="400" height="220" fill="#f8fafc" rx="8"/>
-  <!-- grid lines minV=150 maxV=300 range=150 yScale=165/150=1.1 -->
+  <!-- grid lines minV=10 maxV=35 range=25 yScale=165/25=6.6 -->
   <line x1="50" y1="185" x2="380" y2="185" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="50" y1="130" x2="380" y2="130" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="50" y1="75" x2="380" y2="75" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="152" x2="380" y2="152" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="119" x2="380" y2="119" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="86" x2="380" y2="86" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="53" x2="380" y2="53" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
   <!-- axes -->
   <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
   <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <!-- N=3 xStep=165
-       Jan(i=0):x=50,  y=185-((200-150)/150)*165=185-55=130
-       Feb(i=1):x=215, y=185-((225-150)/150)*165=185-82.5=103
-       Mar(i=2):x=380, y=185-((250-150)/150)*165=185-110=75 -->
-  <polyline points="50,130 215,103 380,75" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
-  <circle cx="50" cy="130" r="5" fill="#5b5ef4"/>
-  <circle cx="215" cy="103" r="4" fill="#5b5ef4"/>
-  <circle cx="380" cy="75" r="5" fill="#f43f5e"/>
-  <!-- value labels -->
-  <text x="62" y="125" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">200</text>
-  <text x="392" y="70" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">250</text>
-  <!-- x labels -->
-  <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">January</text>
-  <text x="215" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">February</text>
-  <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">March</text>
+  <!-- N=6 xStep=66
+       6am(i=0): x=50,  temp=12, y=185-((12-10)/25)*165=185-13.2=172
+       8am(i=1): x=116, temp=16, y=185-((16-10)/25)*165=185-39.6=145
+       10am(i=2):x=182, temp=22, y=185-((22-10)/25)*165=185-79.2=106
+       12pm(i=3):x=248, temp=28, y=185-((28-10)/25)*165=185-118.8=66
+       2pm(i=4): x=314, temp=32, y=185-((32-10)/25)*165=185-145.2=40
+       4pm(i=5): x=380, temp=20, y=185-((20-10)/25)*165=185-66=119 -->
+  <polyline points="50,172 116,145 182,106 248,66 314,40 380,119" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
+  <circle cx="50" cy="172" r="4" fill="#5b5ef4"/>
+  <circle cx="116" cy="145" r="4" fill="#5b5ef4"/>
+  <circle cx="182" cy="106" r="4" fill="#5b5ef4"/>
+  <circle cx="248" cy="66" r="4" fill="#5b5ef4"/>
+  <circle cx="314" cy="40" r="5" fill="#f43f5e"/>
+  <circle cx="380" cy="119" r="4" fill="#5b5ef4"/>
   <!-- y labels -->
-  <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">150</text>
-  <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">200</text>
-  <text x="44" y="79" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">250</text>
-  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">300</text>
+  <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">10</text>
+  <text x="44" y="156" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">15</text>
+  <text x="44" y="123" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">20</text>
+  <text x="44" y="90" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">25</text>
+  <text x="44" y="57" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">30</text>
+  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">35</text>
+  <!-- x labels -->
+  <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">6 am</text>
+  <text x="116" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">8 am</text>
+  <text x="182" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">10 am</text>
+  <text x="248" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">12 pm</text>
+  <text x="314" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">2 pm</text>
+  <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">4 pm</text>
   <!-- axis titles -->
-  <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Month</text>
-  <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Sales</text>
+  <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Time</text>
+  <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Temp (°C)</text>
 </svg>`,
-      answer: "25",
-      acceptableAnswers: ["25", "25%"],
-      explanation: "Percentage increase = (Increase ÷ Original) × 100.<br>Increase = 250 − 200 = <strong>50</strong>.<br>Percentage increase = (50 ÷ 200) × 100 = 0.25 × 100 = <strong>25%</strong>.<br>Always divide the increase by the <em>original</em> value (January's 200), not the new value. Great work if you remembered the formula!"
+      answer: "32,2pm",
+      acceptableAnswers: ["32,2pm", "32, 2pm", "32°C,2pm", "32°C, 2pm", "32 at 2pm", "32°C at 2pm"],
+      explanation: "Look for the <strong>highest point</strong> on the graph — this is at 2 pm, where the temperature reaches <strong>32°C</strong>. The red dot marks this peak. Always identify the maximum by finding the point that is furthest up the vertical axis."
     },
     {
       id: "c16_q35",
       topic: "Travel graphs",
       type: "mcq",
       difficulty: "challenging",
-      question: "A distance-time graph shows a train journey with <strong>three segments</strong>:<br>• Segment A: travels 60 km in 30 minutes<br>• Segment B: travels 40 km in 40 minutes<br>• Segment C: travels 30 km in 20 minutes<br><br>Which segment has the <strong>greatest speed</strong>?",
+      question: "The travel graph below shows a train journey with three segments A, B, and C.<br><br>Which segment shows the train travelling <strong>fastest</strong>? (Do not calculate — use the steepness of the line.)",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Travel graph: three segments A, B, C — B is steepest (fastest)">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <!-- grid lines -->
+  <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="76" x2="380" y2="76" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="130" x2="380" y2="130" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="50" y1="185" x2="380" y2="185" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- axes -->
+  <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Segment A: gentle slope 0→3km in 1hr, x=50→160, yScale=165/12=13.75
+       A end: y=185-3*13.75=185-41=144
+       Segment B: steep 3→10km in 0.5hr, x=160→215
+       B end: y=185-10*13.75=185-137.5=48
+       Segment C: moderate 10→12km in 1hr, x=215→380
+       C end: y=185-12*13.75=185-165=20 -->
+  <polyline points="50,185 160,144 215,48 380,20" fill="none" stroke="#5b5ef4" stroke-width="2.5"/>
+  <circle cx="50" cy="185" r="4" fill="#5b5ef4"/>
+  <circle cx="160" cy="144" r="4" fill="#5b5ef4"/>
+  <circle cx="215" cy="48" r="4" fill="#5b5ef4"/>
+  <circle cx="380" cy="20" r="4" fill="#5b5ef4"/>
+  <!-- segment labels -->
+  <text x="105" y="175" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">A</text>
+  <text x="188" y="85" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">B</text>
+  <text x="305" y="25" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">C</text>
+  <!-- y labels -->
+  <text x="44" y="189" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
+  <text x="44" y="134" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <text x="44" y="79" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">8</text>
+  <text x="44" y="24" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">12</text>
+  <!-- x labels -->
+  <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
+  <text x="160" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="215" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1.5</text>
+  <text x="380" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <!-- axis titles -->
+  <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Time (hours)</text>
+  <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Distance (km)</text>
+</svg>`,
       options: [
-        "Segment A — 120 km/h",
-        "Segment B — 60 km/h",
-        "Segment C — 90 km/h",
-        "All segments have the same speed"
+        "Segment A — it is the longest section",
+        "Segment B — it is the steepest",
+        "Segment C — it covers the most distance",
+        "All segments have the same steepness"
       ],
-      answer: 0,
-      explanation: "Calculate the speed for each segment (convert minutes to hours first):<br><strong>Segment A:</strong> 60 km ÷ 0.5 h = <strong>120 km/h</strong><br><strong>Segment B:</strong> 40 km ÷ (40/60) h = 40 ÷ 0.667 = <strong>60 km/h</strong><br><strong>Segment C:</strong> 30 km ÷ (20/60) h = 30 ÷ 0.333 = <strong>90 km/h</strong><br>Segment A is fastest at 120 km/h. Remember: on a distance-time graph, the steepest segment has the greatest speed!"
+      answer: 1,
+      explanation: "Segment B is clearly the <strong>steepest</strong> section on the graph — it rises the most sharply, meaning the distance increases very quickly in a short time. On a distance-time graph, the <strong>steeper the line, the faster the speed</strong>. You do not need to calculate any numbers to compare steepness."
     }
   ]
 };

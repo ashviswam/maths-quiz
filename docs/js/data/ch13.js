@@ -106,7 +106,7 @@ const ch13 = {
   <line x1="88" y1="35" x2="88" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <line x1="122" y1="35" x2="122" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <line x1="156" y1="35" x2="156" y2="45" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="190" y1="35" x2="190" y2="45" stroke="#5b5ef4" stroke-width="2"/>
+  <line x1="190" y1="35" x2="190" y2="45" stroke="#64748b" stroke-width="2"/>
   <line x1="224" y1="35" x2="224" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <line x1="258" y1="33" x2="258" y2="47" stroke="#64748b" stroke-width="2.5"/>
   <line x1="292" y1="35" x2="292" y2="45" stroke="#64748b" stroke-width="1.5"/>
@@ -116,17 +116,17 @@ const ch13 = {
   <text x="88" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−5</text>
   <text x="122" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−4</text>
   <text x="156" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−3</text>
-  <text x="190" y="62" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">−2</text>
+  <text x="190" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">?</text>
   <text x="224" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−1</text>
   <text x="258" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">0</text>
   <text x="292" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
-  <text x="326" y="62" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">2</text>
+  <text x="326" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">2</text>
   <!-- Highlight -6 and 2 -->
   <circle cx="54" cy="40" r="5" fill="#f43f5e"/>
-  <circle cx="326" cy="40" r="5" fill="#22c55e"/>
-  <!-- Midpoint marker -->
-  <circle cx="190" cy="40" r="6" fill="#5b5ef4"/>
-  <text x="190" y="18" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">midpoint</text>
+  <circle cx="326" cy="40" r="5" fill="#f43f5e"/>
+  <!-- Midpoint marker (unlabelled) -->
+  <circle cx="190" cy="40" r="6" fill="#64748b"/>
+  <text x="190" y="18" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">midpoint</text>
 </svg>`,
       answer: "-2",
       acceptableAnswers: ["-2"],
@@ -292,7 +292,7 @@ const ch13 = {
   <line x1="171" y1="35" x2="171" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <line x1="209" y1="33" x2="209" y2="47" stroke="#64748b" stroke-width="2.5"/>
   <line x1="247" y1="35" x2="247" y2="45" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="284" y1="34" x2="284" y2="46" stroke="#22c55e" stroke-width="2"/>
+  <line x1="284" y1="34" x2="284" y2="46" stroke="#64748b" stroke-width="2"/>
   <line x1="322" y1="35" x2="322" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <!-- Labels -->
   <text x="58" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−4</text>
@@ -301,15 +301,15 @@ const ch13 = {
   <text x="171" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−1</text>
   <text x="209" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">0</text>
   <text x="247" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
-  <text x="284" y="62" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">2</text>
+  <text x="284" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
   <text x="322" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
   <!-- Start and end dots -->
   <circle cx="96" cy="40" r="5" fill="#f43f5e"/>
-  <circle cx="284" cy="40" r="6" fill="#22c55e"/>
-  <!-- Arrow from -3 to 2 -->
-  <path d="M 96 26 Q 190 10 278 26" fill="none" stroke="#22c55e" stroke-width="2"/>
-  <polygon points="284,26 274,20 278,30" fill="#22c55e"/>
-  <text x="190" y="10" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">+5 (move right)</text>
+  <circle cx="284" cy="40" r="6" fill="#64748b"/>
+  <!-- Arrow from -3 pointing right 5 steps -->
+  <path d="M 96 26 Q 190 10 278 26" fill="none" stroke="#5b5ef4" stroke-width="2"/>
+  <polygon points="284,26 274,20 278,30" fill="#5b5ef4"/>
+  <text x="190" y="10" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">+5 (move right)</text>
 </svg>`,
       options: ["-8", "2", "8", "-2"],
       answer: 1,
@@ -329,7 +329,7 @@ const ch13 = {
   <polygon points="20,40 28,35 28,45" fill="#64748b"/>
   <!-- Ticks -->
   <line x1="54" y1="35" x2="54" y2="45" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="88" y1="34" x2="88" y2="46" stroke="#22c55e" stroke-width="2"/>
+  <line x1="88" y1="34" x2="88" y2="46" stroke="#64748b" stroke-width="2"/>
   <line x1="122" y1="35" x2="122" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <line x1="156" y1="35" x2="156" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <line x1="190" y1="35" x2="190" y2="45" stroke="#64748b" stroke-width="1.5"/>
@@ -339,7 +339,7 @@ const ch13 = {
   <line x1="326" y1="35" x2="326" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <!-- Labels -->
   <text x="54" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−7</text>
-  <text x="88" y="62" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">−6</text>
+  <text x="88" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−6</text>
   <text x="122" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−5</text>
   <text x="156" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−4</text>
   <text x="190" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−3</text>
@@ -349,11 +349,11 @@ const ch13 = {
   <text x="326" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
   <!-- Start and end dots -->
   <circle cx="224" cy="40" r="5" fill="#f43f5e"/>
-  <circle cx="88" cy="40" r="6" fill="#22c55e"/>
-  <!-- Arrow from -2 to -6 (move left) -->
-  <path d="M 224 26 Q 156 10 94 26" fill="none" stroke="#f43f5e" stroke-width="2"/>
-  <polygon points="88,26 98,20 94,30" fill="#f43f5e"/>
-  <text x="156" y="10" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">−4 (move left)</text>
+  <circle cx="88" cy="40" r="6" fill="#64748b"/>
+  <!-- Arrow from -2 pointing left 4 steps -->
+  <path d="M 224 26 Q 156 10 94 26" fill="none" stroke="#5b5ef4" stroke-width="2"/>
+  <polygon points="88,26 98,20 94,30" fill="#5b5ef4"/>
+  <text x="156" y="10" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">−4 (move left)</text>
 </svg>`,
       answer: "-6",
       acceptableAnswers: ["-6"],
@@ -394,7 +394,7 @@ const ch13 = {
   <line x1="96" y1="35" x2="96" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <line x1="133" y1="35" x2="133" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <line x1="171" y1="35" x2="171" y2="45" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="209" y1="34" x2="209" y2="46" stroke="#22c55e" stroke-width="2"/>
+  <line x1="209" y1="34" x2="209" y2="46" stroke="#64748b" stroke-width="2"/>
   <line x1="247" y1="35" x2="247" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <line x1="284" y1="35" x2="284" y2="45" stroke="#64748b" stroke-width="1.5"/>
   <line x1="322" y1="33" x2="322" y2="47" stroke="#64748b" stroke-width="2.5"/>
@@ -403,17 +403,17 @@ const ch13 = {
   <text x="96" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−6</text>
   <text x="133" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−5</text>
   <text x="171" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−4</text>
-  <text x="209" y="62" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">−3</text>
+  <text x="209" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−3</text>
   <text x="247" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−2</text>
   <text x="284" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">−1</text>
   <text x="322" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">0</text>
   <!-- Start and end dots -->
   <circle cx="58" cy="40" r="5" fill="#f43f5e"/>
-  <circle cx="209" cy="40" r="6" fill="#22c55e"/>
-  <!-- Arrow from -7 to -3 (move right 4) -->
-  <path d="M 58 26 Q 133 10 203 26" fill="none" stroke="#22c55e" stroke-width="2"/>
-  <polygon points="209,26 199,20 203,30" fill="#22c55e"/>
-  <text x="133" y="10" text-anchor="middle" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">+?</text>
+  <circle cx="209" cy="40" r="6" fill="#64748b"/>
+  <!-- Arrow from -7 pointing right 4 steps -->
+  <path d="M 58 26 Q 133 10 203 26" fill="none" stroke="#5b5ef4" stroke-width="2"/>
+  <polygon points="209,26 199,20 203,30" fill="#5b5ef4"/>
+  <text x="133" y="10" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">+?</text>
 </svg>`,
       answer: "-3",
       acceptableAnswers: ["-3"],
@@ -524,7 +524,7 @@ const ch13 = {
       type: "mcq",
       question: "Calculate: <strong>(−3) × (−2) + (−8)</strong>",
       options: ["14", "−2", "2", "−14"],
-      answer: 2,
+      answer: 1,
       explanation: "Follow the order of operations — multiplication before addition. Step 1: (−3) × (−2) = +6 (negative times negative = positive). Step 2: 6 + (−8) = 6 − 8 = −2. The answer is −2."
     },
     {
@@ -607,10 +607,10 @@ const ch13 = {
       topic: "Mixed operations",
       difficulty: "challenging",
       type: "input",
-      question: "Calculate: <strong>(−3)² − (−2)³</strong><br><em>Hint: (−3)² means (−3) × (−3), and (−2)³ means (−2) × (−2) × (−2)</em>",
-      answer: "17",
-      acceptableAnswers: ["17"],
-      explanation: "Step 1: (−3)² = (−3) × (−3) = +9 (negative × negative = positive). Step 2: (−2)³ = (−2) × (−2) × (−2) = (+4) × (−2) = −8 (three negatives give a negative). Step 3: 9 − (−8) = 9 + 8 = 17. Excellent multi-step work!"
+      question: "Calculate: <strong>(−12) ÷ (−3) + 5</strong>",
+      answer: "9",
+      acceptableAnswers: ["9"],
+      explanation: "Follow the order of operations — division before addition. Step 1: (−12) ÷ (−3) = +4 (negative ÷ negative = positive). Step 2: 4 + 5 = 9. The answer is 9."
     },
     {
       id: "c13_q38",

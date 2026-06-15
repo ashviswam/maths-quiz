@@ -149,7 +149,6 @@ const ch04 = {
   <line x1="172" y1="57" x2="220" y2="88" stroke="#64748b" stroke-width="1.5"/>
   <!-- Node: 2 (prime) -->
   <circle cx="100" cy="100" r="18" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="2"/>
-  <text x="100" y="105" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">2</text>
   <!-- Node: 30 -->
   <circle cx="220" cy="100" r="18" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
   <text x="220" y="105" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">30</text>
@@ -158,7 +157,6 @@ const ch04 = {
   <line x1="232" y1="115" x2="270" y2="145" stroke="#64748b" stroke-width="1.5"/>
   <!-- Node: 2 (prime) -->
   <circle cx="170" cy="158" r="18" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="2"/>
-  <text x="170" y="163" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">2</text>
   <!-- Node: 15 -->
   <circle cx="270" cy="158" r="18" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="2"/>
   <text x="270" y="163" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700">15</text>
@@ -167,10 +165,8 @@ const ch04 = {
   <line x1="282" y1="173" x2="296" y2="196" stroke="#64748b" stroke-width="1.5"/>
   <!-- Node: 3 (prime) -->
   <circle cx="230" cy="205" r="13" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="2"/>
-  <text x="230" y="210" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">3</text>
   <!-- Node: 5 (prime) -->
   <circle cx="294" cy="205" r="13" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="2"/>
-  <text x="294" y="210" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">5</text>
   <!-- Legend -->
   <circle cx="18" cy="195" r="8" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="1.5"/>
   <text x="30" y="199" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="10">= prime</text>
@@ -318,11 +314,9 @@ const ch04 = {
   <rect x="159" y="182" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
   <rect x="185" y="182" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
   <rect x="211" y="182" width="26" height="26" fill="rgba(91,94,244,0.12)" stroke="#5b5ef4" stroke-width="1.5"/>
-  <!-- Side label: 7 tiles -->
-  <text x="244" y="119" text-anchor="start" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">7 tiles</text>
+  <!-- Side bracket (no label) -->
   <line x1="240" y1="26" x2="240" y2="208" stroke="#5b5ef4" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <!-- Bottom label: 7 tiles -->
-  <text x="133" y="216" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">7 tiles</text>
+  <!-- Bottom bracket (no label) -->
   <line x1="55" y1="212" x2="237" y2="212" stroke="#5b5ef4" stroke-width="1.5" stroke-dasharray="4,3"/>
 </svg>`,
       options: ["5", "6", "7", "8"],
@@ -403,10 +397,10 @@ const ch04 = {
       id: "c4_q28",
       topic: "Divisibility tests",
       type: "mcq",
-      question: "Which of the following numbers is divisible by <strong>8</strong>?",
-      options: ["1,316", "1,424", "1,530", "1,614"],
-      answer: 1,
-      explanation: "A number is divisible by 8 if its <strong>last three digits</strong> form a number divisible by 8. Check: 316 ÷ 8 = 39.5 (no), 424 ÷ 8 = 53 (yes!), 530 ÷ 8 = 66.25 (no), 614 ÷ 8 = 76.75 (no). So 1,424 is divisible by 8."
+      question: "The four-digit number <strong>5,_23</strong> has a missing digit. What must the missing digit be so that the number is divisible by <strong>9</strong>?",
+      options: ["5", "7", "8", "9"],
+      answer: 2,
+      explanation: "A number is divisible by 9 if the sum of its digits is divisible by 9. The known digits sum to 5 + 2 + 3 = 10. We need 10 + (missing digit) to be divisible by 9. The next multiple of 9 above 10 is 18, so the missing digit must be 18 − 10 = <strong>8</strong>. Check: 5 + 8 + 2 + 3 = 18, and 18 ÷ 9 = 2 ✓."
     },
     {
       id: "c4_q29",
@@ -422,34 +416,34 @@ const ch04 = {
       answer: 2,
       explanation: "Divisibility by 2 depends <strong>only on the last digit</strong>. Since the last digit of 2,_46 is 6, which is even, this number is divisible by 2 no matter what the missing digit is. The missing digit can be anything from 0 to 9."
     },
-    // Square roots
+    // Square numbers (extended)
     {
       id: "c4_q30",
       topic: "Square numbers",
       type: "input",
-      question: "What is &radic;144 (the square root of 144)?",
-      answer: "12",
-      acceptableAnswers: ["12"],
-      explanation: "The square root of 144 is 12, because 12 × 12 = 144. Finding a square root is the reverse of squaring: if n² = 144, then n = 12."
+      question: "What is 11<sup>2</sup> (eleven squared)?",
+      answer: "121",
+      acceptableAnswers: ["121"],
+      explanation: "11 squared means 11 × 11 = 121. You can work this out as (10 + 1) × 11 = 110 + 11 = 121. The square numbers continue: 10² = 100, 11² = 121, 12² = 144."
     },
     {
       id: "c4_q31",
       topic: "Square numbers",
       type: "mcq",
-      question: "Which of the following is equal to &radic;225?",
-      options: ["13", "14", "15", "16"],
+      question: "Which of the following is <strong>NOT</strong> a square number?",
+      options: ["36", "49", "55", "64"],
       answer: 2,
-      explanation: "15 × 15 = 225, so &radic;225 = 15. You can check: 13² = 169, 14² = 196, 15² = 225 ✓, 16² = 256. Great work using squaring to check square roots!"
+      explanation: "36 = 6 × 6, 49 = 7 × 7, and 64 = 8 × 8 are all perfect squares. 55 is not a square number — there is no whole number that multiplies by itself to give 55. (7 × 7 = 49 and 8 × 8 = 64, so 55 falls between two consecutive squares.)"
     },
-    // Cube roots
+    // Cubic numbers (extended)
     {
       id: "c4_q32",
       topic: "Cubic numbers",
       type: "input",
-      question: "What is the <strong>cube root</strong> of 64? (That is, what number multiplied by itself three times gives 64?)",
-      answer: "4",
-      acceptableAnswers: ["4"],
-      explanation: "The cube root of 64 is 4, because 4 × 4 × 4 = 16 × 4 = 64. Finding a cube root is the reverse of cubing: if n³ = 64, then n = 4."
+      question: "What is 4<sup>3</sup> (four cubed)?",
+      answer: "64",
+      acceptableAnswers: ["64"],
+      explanation: "4 cubed means 4 × 4 × 4. Working step by step: 4 × 4 = 16, then 16 × 4 = 64. The first five cubic numbers are 1³ = 1, 2³ = 8, 3³ = 27, 4³ = 64, and 5³ = 125."
     },
     {
       id: "c4_q33",

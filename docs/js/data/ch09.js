@@ -219,28 +219,28 @@ const ch09 = {
     },
     {
       id: "c9_q17", topic: "Scale diagrams", type: "mcq",
-      question: "A map has a scale of <strong>1 : 100</strong>. A wall on the map measures <strong>5 cm</strong>. What is the actual length of the wall?",
+      question: "A map uses a scale where <strong>1 cm represents 100 cm</strong>. A wall on the map measures <strong>5 cm</strong>. What is the actual length of the wall?",
       options: ["5 m", "50 m", "500 m", "0.5 m"],
       answer: 0,
-      explanation: "Scale 1 : 100 means 1 cm on the map represents 100 cm in real life. So 5 × 100 = 500 cm = 5 m."
+      explanation: "The scale means 1 cm on the map represents 100 cm in real life. So 5 × 100 = 500 cm = 5 m."
     },
     {
       id: "c9_q18", topic: "Scale diagrams", type: "mcq",
-      question: "On a map with scale <strong>1 : 50,000</strong>, the distance between two towns is <strong>4 cm</strong>. What is the actual distance in kilometres?",
+      question: "On a map where <strong>1 cm represents 50,000 cm</strong>, the distance between two towns is <strong>4 cm</strong>. What is the actual distance in kilometres?",
       options: ["2 km", "20 km", "200 km", "0.2 km"],
       answer: 0,
       explanation: "Actual distance = 4 × 50,000 = 200,000 cm. Converting: 200,000 ÷ 100 = 2,000 m, and 2,000 ÷ 1,000 = 2 km."
     },
     {
       id: "c9_q19", topic: "Scale diagrams", type: "input",
-      question: "A room is <strong>6 m</strong> long in real life. A scale drawing uses a scale of <strong>1 : 50</strong>. How many centimetres long is the room in the scale drawing?",
+      question: "A room is <strong>6 m</strong> long in real life. A scale drawing uses a scale where <strong>1 cm represents 50 cm</strong>. How many centimetres long is the room in the scale drawing?",
       answer: "12",
       acceptableAnswers: ["12", "12 cm"],
-      explanation: "Convert 6 m to cm: 6 × 100 = 600 cm. Using scale 1 : 50, the drawing length = 600 ÷ 50 = 12 cm."
+      explanation: "Convert 6 m to cm: 6 × 100 = 600 cm. The scale is 1 cm represents 50 cm, so the drawing length = 600 ÷ 50 = 12 cm."
     },
     {
       id: "c9_q20", topic: "Scale diagrams", type: "mcq",
-      question: "A scale diagram shows a garden path as <strong>3.5 cm</strong> long. The scale is <strong>1 : 200</strong>. What is the actual length of the path in metres?",
+      question: "A scale diagram shows a garden path as <strong>3.5 cm</strong> long. The scale is such that <strong>1 cm represents 200 cm</strong>. What is the actual length of the path in metres?",
       options: ["57 m", "7 m", "700 m", "0.7 m"],
       answer: 1,
       explanation: "Actual length = 3.5 × 200 = 700 cm. Converting to metres: 700 ÷ 100 = 7 m."
@@ -415,14 +415,14 @@ const ch09 = {
     // Scale drawings — extra coverage
     {
       id: "c9_q40", topic: "Scale diagrams", type: "input",
-      question: "A scale drawing uses a scale of <strong>1 : 500</strong>. A road on the drawing is <strong>6.4 cm</strong> long. What is the actual length of the road in metres?",
+      question: "A scale drawing uses a scale where <strong>1 cm represents 500 cm</strong>. A road on the drawing is <strong>6.4 cm</strong> long. What is the actual length of the road in metres?",
       answer: "32",
       acceptableAnswers: ["32", "32 m"],
       explanation: "Actual length = drawn length × scale factor = 6.4 × 500 = 3,200 cm. Converting to metres: 3,200 ÷ 100 = 32 m."
     },
     {
       id: "c9_q41", topic: "Scale diagrams", type: "mcq",
-      question: "Two cities are <strong>180 km</strong> apart in real life. On a map with scale <strong>1 : 3,000,000</strong>, how many centimetres apart are they on the map?",
+      question: "Two cities are <strong>180 km</strong> apart in real life. On a map where <strong>1 cm represents 3,000,000 cm</strong>, how many centimetres apart are they on the map?",
       options: ["6 cm", "0.6 cm", "60 cm", "600 cm"],
       answer: 0,
       explanation: "Convert 180 km to cm: 180 × 1,000 × 100 = 18,000,000 cm. Map distance = real distance ÷ scale factor = 18,000,000 ÷ 3,000,000 = 6 cm."
@@ -481,15 +481,11 @@ const ch09 = {
   <!-- Labels on inner -->
   <text x="138" y="112" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">8 m</text>
   <text x="138" y="105" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10">garden</text>
-  <!-- Labels on outer -->
-  <text x="120" y="22" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">10 m (outer)</text>
   <!-- 1m path indicator -->
   <line x1="30" y1="60" x2="66" y2="60" stroke="#f43f5e" stroke-width="1.5"/>
   <text x="48" y="57" text-anchor="middle" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">1 m</text>
   <!-- 5m label on garden side -->
   <text x="56" y="112" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">5 m</text>
-  <!-- outer width label -->
-  <text x="16" y="95" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">7 m</text>
 </svg>`,
       answer: "34",
       acceptableAnswers: ["34", "34 m"],
@@ -497,7 +493,7 @@ const ch09 = {
     },
     {
       id: "c9_q45", topic: "Scale diagrams", difficulty: "challenging", type: "mcq",
-      question: "A scale drawing shows a field as a rectangle <strong>4.5 cm long</strong> and <strong>3 cm wide</strong>. The scale is <strong>1 : 400</strong>. What is the <em>actual perimeter</em> of the field in metres?",
+      question: "A scale drawing shows a field as a rectangle <strong>4.5 cm long</strong> and <strong>3 cm wide</strong>. The scale is such that <strong>1 cm represents 400 cm</strong>. What is the <em>actual perimeter</em> of the field in metres?",
       options: ["30 m", "60 m", "1,200 m", "600 m"],
       answer: 1,
       explanation: "Step 1: Find the actual dimensions.<br>Actual length = 4.5 × 400 = 1,800 cm = 18 m.<br>Actual width = 3 × 400 = 1,200 cm = 12 m.<br><br>Step 2: Perimeter = 2 × (18 + 12) = 2 × 30 = 60 m.<br><br><strong>Shortcut:</strong> the perimeter on the drawing = 2 × (4.5 + 3) = 15 cm. Multiply by the scale: 15 × 400 = 6,000 cm = 60 m."

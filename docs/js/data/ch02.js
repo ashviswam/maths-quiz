@@ -269,50 +269,50 @@ const ch02 = {
     },
     {
       id: "c2_q29",
-      topic: "Square roots",
+      topic: "Order of operations",
       type: "mcq",
-      question: "What is <strong>√49</strong> (the square root of 49)?",
-      options: ["6", "7", "8", "9"],
-      answer: 1,
-      explanation: "√49 = <strong>7</strong>, because 7 × 7 = 49. The square root asks: 'what number multiplied by itself gives 49?' The perfect squares to know: 1,4,9,16,25,36,<strong>49</strong>,64,81,100."
+      question: "Find the value of <strong>4<sup>2</sup> × (3 + 2) − 10</strong>.",
+      options: ["70", "60", "80", "75"],
+      answer: 0,
+      explanation: "BODMAS — Brackets first: 3+2=5. Then Orders (powers): 4<sup>2</sup>=16. Then multiplication: 16×5=80. Then subtraction: 80−10=<strong>70</strong>. Remember: powers are evaluated before multiplication."
     },
     {
       id: "c2_q30",
-      topic: "Square roots",
+      topic: "Order of operations",
       type: "mcq",
-      question: "What is <strong>√144</strong>?",
-      options: ["11", "12", "13", "14"],
-      answer: 1,
-      explanation: "√144 = <strong>12</strong>, because 12 × 12 = 144. It helps to know your multiplication table: 12 × 12 = 144."
+      question: "Calculate <strong>(15 − 3<sup>2</sup>) × 4 ÷ 3</strong>.",
+      options: ["8", "6", "12", "4"],
+      answer: 0,
+      explanation: "BODMAS — Brackets (evaluate the inside): Orders first → 3<sup>2</sup>=9, then 15−9=6. So the brackets give 6. Then multiplication and division left to right: 6×4=24, then 24÷3=<strong>8</strong>."
     },
     {
       id: "c2_q31",
-      topic: "Square roots",
-      type: "input",
-      question: "A square floor tile has an area of <strong>64 cm²</strong>. What is the length of one side of the tile?",
-      answer: "8",
-      acceptableAnswers: ["8", "8 cm"],
-      explanation: "To find the side length of a square, take the <strong>square root</strong> of the area: √64 = 8, because 8 × 8 = 64. Each side is <strong>8 cm</strong> long."
+      topic: "Multiple operations",
+      type: "mcq",
+      question: "A school canteen sells sandwiches for $<strong>4</strong> each and juice for $<strong>2</strong> each. On Monday they sell <strong>35</strong> sandwiches and <strong>48</strong> juices. On Tuesday they sell <strong>27</strong> sandwiches and <strong>32</strong> juices. How much <em>more</em> did they earn on Monday than Tuesday?",
+      options: ["$64", "$54", "$74", "$44"],
+      answer: 0,
+      explanation: "Monday: 35×$4 + 48×$2 = $140 + $96 = $236. Tuesday: 27×$4 + 32×$2 = $108 + $64 = $172. Difference: $236 − $172 = <strong>$64</strong>. Break multi-step problems into one operation at a time."
     },
 
-    // Cube roots
+    // Exponent notation — writing repeated multiplication
     {
       id: "c2_q32",
-      topic: "Square roots",
+      topic: "Exponent notation",
       type: "mcq",
-      question: "What is <strong>∛27</strong> (the cube root of 27)?",
-      options: ["2", "3", "4", "9"],
+      question: "Write <strong>2 × 2 × 2 × 2 × 2</strong> using exponent notation.",
+      options: ["2<sup>4</sup>", "2<sup>5</sup>", "5<sup>2</sup>", "5<sup>3</sup>"],
       answer: 1,
-      explanation: "∛27 = <strong>3</strong>, because 3 × 3 × 3 = 27. The cube root asks: 'what number multiplied by itself three times gives 27?' Key cube roots to remember: ∛1=1, ∛8=2, <strong>∛27=3</strong>, ∛64=4, ∛125=5."
+      explanation: "Count how many times 2 is used as a factor: 2 × 2 × 2 × 2 × 2 — that's <strong>five</strong> twos. In exponent notation this is written <strong>2<sup>5</sup></strong> (base 2, exponent 5). Its value is 32."
     },
     {
       id: "c2_q33",
-      topic: "Square roots",
-      type: "input",
-      question: "A cube-shaped box has a volume of <strong>125 cm³</strong>. What is the length of one edge?",
-      answer: "5",
-      acceptableAnswers: ["5", "5 cm"],
-      explanation: "Volume of a cube = edge³. So edge = ∛125 = <strong>5</strong>, because 5 × 5 × 5 = 125. Each edge is <strong>5 cm</strong> long."
+      topic: "Exponent notation",
+      type: "mcq",
+      question: "What is the value of <strong>3<sup>3</sup> + 4<sup>2</sup></strong>?",
+      options: ["43", "91", "37", "49"],
+      answer: 0,
+      explanation: "Evaluate each power separately first (Orders before Addition in BODMAS). 3<sup>3</sup> = 3×3×3 = 27. 4<sup>2</sup> = 4×4 = 16. Then add: 27 + 16 = <strong>43</strong>."
     },
 
     // More order of operations
@@ -392,10 +392,10 @@ const ch02 = {
       topic: "Exponent notation",
       difficulty: "challenging",
       type: "input",
-      question: "Calculate <strong>2<sup>5</sup> + 3<sup>3</sup> − √64</strong>.",
-      answer: "51",
-      acceptableAnswers: ["51"],
-      explanation: "Evaluate each part separately. <strong>2<sup>5</sup></strong> = 2×2×2×2×2 = 32. <strong>3<sup>3</sup></strong> = 3×3×3 = 27. <strong>√64</strong> = 8 (because 8×8=64). Now combine: 32 + 27 − 8 = 59 − 8 = <strong>51</strong>. Powers and roots must be evaluated before adding and subtracting (BODMAS — 'O' for Orders/pOwers)."
+      question: "Calculate <strong>2<sup>5</sup> + 3<sup>3</sup> − 4<sup>2</sup></strong>.",
+      answer: "43",
+      acceptableAnswers: ["43"],
+      explanation: "Evaluate each power separately first (Orders before + and − in BODMAS). <strong>2<sup>5</sup></strong> = 2×2×2×2×2 = 32. <strong>3<sup>3</sup></strong> = 3×3×3 = 27. <strong>4<sup>2</sup></strong> = 4×4 = 16. Now combine left to right: 32 + 27 = 59, then 59 − 16 = <strong>43</strong>."
     },
     {
       id: "c2_q42",

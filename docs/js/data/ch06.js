@@ -86,7 +86,6 @@ const ch06 = {
   <text x="80" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1/6</text>
   <text x="130" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2/6</text>
   <text x="180" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3/6</text>
-  <text x="230" y="62" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">4/6</text>
   <text x="280" y="62" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5/6</text>
   <text x="330" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">1</text>
   <!-- "4th mark" label above -->
@@ -124,7 +123,6 @@ const ch06 = {
   <!-- Labels -->
   <text x="30" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">0</text>
   <text x="180" y="62" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">1/2</text>
-  <text x="217.5" y="62" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">5/8</text>
   <text x="255" y="62" text-anchor="middle" fill="#f59e0b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">3/4</text>
   <text x="330" y="62" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="600">1</text>
   <!-- Region label -->
@@ -154,8 +152,6 @@ const ch06 = {
   <line x1="245" y1="15" x2="245" y2="45" stroke="#64748b" stroke-width="1"/>
   <!-- "=" sign -->
   <text x="352" y="34" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="16" font-weight="700">=</text>
-  <!-- Label: 8/12 -->
-  <text x="10" y="84" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">8/12</text>
   <!-- Bar 2: divided into 12 parts, 8 shaded — each part = 25px wide -->
   <rect x="45" y="65" width="300" height="30" fill="white" stroke="#64748b" stroke-width="1.5" rx="3"/>
   <!-- Shade first 8 parts -->
@@ -241,7 +237,7 @@ const ch06 = {
   <!-- Dashed comparison line at 6/8 = 3/4 boundary (x=270) -->
   <line x1="270" y1="12" x2="270" y2="98" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3"/>
   <!-- Caption -->
-  <text x="190" y="113" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">3/4 shades more than 5/8 — so 3/4 &gt; 5/8</text>
+  <text x="190" y="113" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Both bars start at the same left edge — compare the shaded lengths</text>
 </svg>`,
       answer: 2,
       explanation: "Convert to a common denominator of 8: 3/4 = 6/8. Since 6/8 &gt; 5/8, we have 3/4 &gt; 5/8. Always rewrite fractions with a common denominator before comparing them."
@@ -467,13 +463,13 @@ const ch06 = {
     },
     {
       id: "c6_q45",
-      topic: "Multi-step fractions",
+      topic: "A fraction of a quantity",
       difficulty: "challenging",
       type: "input",
-      question: "Mia has a ribbon <strong>5/6 m</strong> long. She cuts off <strong>1/4 m</strong> and then cuts the remaining ribbon into <strong>5 equal pieces</strong>. How long is each piece? Write your answer as a fraction in metres.",
-      answer: "7/60",
-      acceptableAnswers: ["7/60"],
-      explanation: "Step 1 — Find the remaining ribbon after cutting 1/4 m off: 5/6 − 1/4. LCD of 6 and 4 is 12: 5/6 = 10/12, 1/4 = 3/12. Remaining = 10/12 − 3/12 = 7/12 m.<br>Step 2 — Divide into 5 equal pieces: 7/12 ÷ 5 = 7/12 × 1/5 = 7/60 m.<br>Each piece is 7/60 m long. Excellent multi-step thinking!"
+      question: "A farmer plants crops on <strong>2/5</strong> of a 35-hectare field. How many hectares have crops planted on them?",
+      answer: "14",
+      acceptableAnswers: ["14", "14 hectares"],
+      explanation: "To find a fraction of a quantity, divide by the denominator then multiply by the numerator.<br>35 ÷ 5 = 7, then 7 × 2 = 14.<br>So 2/5 of 35 = 14 hectares."
     }
   ]
 };
