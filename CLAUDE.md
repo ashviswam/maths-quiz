@@ -14,10 +14,12 @@ Eight subjects are planned. Current status:
 | Humanities | Coming soon  | docs/humanities/  | No content yet                 |
 | ICT        | Coming soon  | docs/ict/         | No content yet                 |
 | Maths      | ✅ Live       | docs/maths/       | 19 chapters, ~841 questions, Haese Grade 6 textbook |
-| Science    | ✅ Live       | docs/science/     | 5 topics, ~150 questions, RISS Grade 6 curriculum   |
+| Science    | ✅ Live       | docs/science/     | 5 topics, 195 questions (172 MCQ + 23 short), RISS Grade 6 |
 | Spanish    | Coming soon  | docs/spanish/     | No content yet                 |
 
-Source materials in `Downloads/pragathy/<subject>/` — PDFs of class slide decks and curriculum docs.
+Source materials in `~/Downloads/pragathy/<subject>/` — PDFs of class slide decks and curriculum docs. These live **outside** the git repo and are never committed. `docs/curriculum*.md` and anything in `private/` are gitignored.
+
+**GitHub remote:** `https://github.com/ashviswam/maths-quiz.git` (public repo — do not commit school-owned PDFs or curriculum text).
 
 ## File structure
 ```
@@ -48,6 +50,9 @@ docs/
 4. Copy source PDFs from `Downloads/pragathy/<subject>/` for reference.
 
 ## Question data format
+
+Three question types are supported:
+
 ```js
 const ch01 = {
   id: 1,
@@ -56,22 +61,50 @@ const ch01 = {
   color: "#6366f1",          // accent colour for the card
   topics: ["Topic A", "Topic B"],
   questions: [
+    // ── MCQ (auto-graded) ──────────────────────────────────────
     {
       id: "c1_q1",           // unique — prefix by subject (sc1_q1 for science, c1_q1 for maths)
       topic: "Topic A",
-      type: "mcq",           // or "input"
+      type: "mcq",
       question: "Question text (HTML allowed)",
-      options: ["A", "B", "C", "D"],   // MCQ only
-      answer: 0,             // 0-based index for MCQ; string for input type
-      acceptableAnswers: [], // optional, for input type (array of accepted strings)
+      options: ["A", "B", "C", "D"],
+      answer: 0,             // 0-based index
       explanation: "Why the answer is correct.",
       difficulty: "challenging",  // optional — adds ⭐ Stretch badge
       diagram: `<svg>...</svg>`   // optional SVG diagram
+    },
+    // ── Free-text input (auto-graded by exact/numeric match) ───
+    {
+      id: "c1_q2",
+      topic: "Topic A",
+      type: "input",
+      question: "What is 3 + 4?",
+      answer: "7",
+      acceptableAnswers: ["seven"],  // optional extra accepted strings
+      explanation: "3 + 4 = 7."
+    },
+    // ── Short answer (parent-reviewed) ────────────────────────
+    {
+      id: "sc1_q35",
+      topic: "Topic B",
+      type: "short",
+      question: "Explain in your own words why…",
+      answer: "Model answer shown to parent/student after submission.",
+      explanation: "Optional extra explanation shown after grading."
+      // No options field. explanation is optional for short type.
     }
   ]
 };
 ```
 `chapters.js` is always: `const CHAPTERS = [ch01, ch02, ...];`
+
+### Short answer flow
+1. Student types in a textarea and clicks "Submit Answer →"
+2. Feedback card opens showing **their answer** and the **model answer** (green box)
+3. Parent clicks **"✓ Got it!"** or **"✗ Need more practice"** — result recorded to progress
+4. `explanation` (if present) shows after grading
+
+Short answer HTML (`#q-short`, `#fb-review`) is only in `docs/science/index.html` currently. Copy from there when adding it to other subjects.
 
 ## SUBJECT_CONFIG (set in each subject's index.html, before loading app.js)
 ```js
@@ -103,10 +136,46 @@ Future topics to add: Reproduction, Elements & Compounds, Investigation Skills.
 - Retry mode: shows only previously wrong questions.
 - Parent notes: stored under `notesKey`; visible in notes overlay on the home screen.
 - Stretch questions: marked `difficulty: "challenging"` show a ⭐ badge.
-- Both MCQ (4 options) and free-text input types are supported.
+- MCQ (4 options, auto-graded), free-text input (auto-graded), and short answer (parent-reviewed) types are supported.
 
 ## GitHub Pages
 Deployed from `docs/` on the `main` branch. The root URL serves `docs/index.html` (subject selector). Each subject is at `/<subject>/`.
+
+## Privacy — what NOT to commit
+This is a **public** repo. School-owned content must stay out:
+- PDFs and slide decks → keep in `~/Downloads/pragathy/` (outside repo) or in `private/` (gitignored)
+- Curriculum documents → `docs/curriculum*.md` is gitignored
+- Generated quiz JS files (ch01.js etc.) are fine — they are our own work
+
+## Source PDFs
+- Maths textbook: `~/Downloads/Math6-3rdEd.pdf` (Haese Mathematics 6, 3rd edition, ~400 pages). Use this for auditing question coverage by chapter.
+- Science and other subjects: `~/Downloads/pragathy/<subject>/` — slide deck PDFs.
+
+## Pitfall: generating quiz content with background agents
+When spawning a background agent to write quiz data files, explicitly tell it the target path (`docs/<subject>/data/`) and variable naming convention (`const ch01`, not `const sc01`). In practice agents have written to the wrong directory; plan to move/rename files after the agent completes if needed.
+
+## SVG diagram patterns
+
+### Physical-interaction diagrams
+Some diagram types require the student to interact physically with the screen — these are fine to implement as SVGs:
+- **Protractor questions**: Draw a protractor SVG (semicircle, tick marks every 10°, labels at 0/30/60/90/120/150/180, centre dot). Show the angle ray and a `?°` label. The student places a real protractor on the laptop screen to verify. Never annotate the tick that matches the answer.
+- **Net identification**: Draw the unfolded net with filled squares/rectangles (blue tint) and triangles (pink tint) in the correct arrangement. The student looks at the net and predicts the 3D solid. Options name the solid; the diagram must not label faces with the solid's name.
+
+### SVG answer-safety rule
+Never include any text, label, or annotation in an SVG that identifies the correct answer. This includes:
+- Labelling a specific column/row with the place value being asked about
+- Annotating a tick mark with its degree value when that value is the answer
+- Writing the name of a shape on its net
+- Any comment-style text visible in the rendered output
+
+## Content accuracy checks
+Run these mentally before finalising any question:
+
+1. **Arithmetic consistency** — For mean/median/mode questions, verify the dataset's actual statistics match what the question claims. E.g. if the question says "the mean is 63", sum the values and divide — don't trust the numbers by eye.
+2. **No duplicate scenarios** — Grep the chapter file for keywords from a new question before adding it; duplicates (same context, same numbers) have appeared within the same chapter.
+3. **Conversion graph scope** — Not all conversion graphs pass through (0, 0). Proportional graphs (km↔miles, currency) do; non-proportional graphs (°C↔°F) do not. Questions asserting a universal rule about conversion graphs are factually wrong — scope any claim to the specific graph shown.
+4. **Cylinder net** — A cylinder net has **2** circles (top + bottom) and 1 curved rectangle. "1 circle" is a common mistake.
+5. **SVG arc direction** — In SVG (y-axis points down), `sweep-flag=0` draws counter-clockwise on screen (right → up → left). Use `A rx,ry 0 0,0 x,y` for arcs that sweep upward from the baseline.
 
 ## Key rules when editing quiz data
 - Never put the answer text in the question or option labels in a way that reveals it visually in SVG diagrams.
