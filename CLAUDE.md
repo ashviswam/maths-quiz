@@ -12,7 +12,7 @@ Eight subjects are planned. Current status:
 | English    | Coming soon  | docs/english/     | No content yet                 |
 | French     | Coming soon  | docs/french/      | No content yet                 |
 | Humanities | Coming soon  | docs/humanities/  | No content yet                 |
-| ICT        | Coming soon  | docs/ict/         | No content yet                 |
+| ICT        | ✅ Live       | docs/ict/         | 5 units, ~90 questions (logic gates, algorithms, digital citizenship, doc production, Scratch) |
 | Maths      | ✅ Live       | docs/maths/       | 19 chapters, ~841 questions, Haese Grade 6 textbook |
 | Science    | ✅ Live       | docs/science/     | 5 topics, 195 questions (172 MCQ + 23 short), RISS Grade 6 |
 | Spanish    | Coming soon  | docs/spanish/     | No content yet                 |
