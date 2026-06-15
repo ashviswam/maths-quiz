@@ -631,6 +631,78 @@ const ch13 = {
       answer: "11",
       acceptableAnswers: ["11"],
       explanation: "We need to find n such that −8 + n = 3. Work backwards: n = 3 − (−8) = 3 + 8 = 11. Check: −8 + 11 = 3. This type of problem is called solving an equation — you can think of it as 'what number do I add to −8 to get to 3 on the number line?'"
+    },
+    {
+      id: "c13_q41",
+      topic: "The number line",
+      type: "mcq",
+      question: "Is the number <strong>−7</strong> positive, negative, or neither?",
+      options: ["Positive", "Negative", "Neither", "It depends on context"],
+      answer: 1,
+      explanation: "−7 is a negative number because it is less than zero. Positive numbers are greater than zero, and zero itself is neither positive nor negative. The minus sign (−) before 7 tells us it is negative."
+    },
+    {
+      id: "c13_q42",
+      topic: "The number line",
+      type: "mcq",
+      question: "What is the <strong>opposite</strong> of −4?",
+      options: ["−4", "0", "+4", "−(−4) = 8"],
+      answer: 2,
+      explanation: "The opposite of a number is the same distance from zero on the number line, but on the other side. −4 is 4 units to the left of zero, so its opposite is +4, which is 4 units to the right of zero."
+    },
+    {
+      id: "c13_q43",
+      topic: "Words indicating positive and negative",
+      type: "mcq",
+      question: "A town is <strong>15 km south</strong> of the equator. If north is the positive direction, which integer represents this position?",
+      options: ["15", "−15", "0", "+150"],
+      answer: 1,
+      explanation: "North is positive, so south is negative. 15 km south is represented by −15. If the town were 15 km north, it would be +15."
+    },
+    {
+      id: "c13_q44",
+      topic: "Words indicating positive and negative",
+      type: "mcq",
+      question: "A clock is <strong>8 minutes slow</strong>. If fast is positive, which integer represents this?",
+      options: ["8", "−8", "0", "+80"],
+      answer: 1,
+      explanation: "Fast is defined as positive, so slow is negative. 8 minutes slow is represented by −8. If the clock were 8 minutes fast, it would be +8."
+    },
+    {
+      id: "c13_q45",
+      topic: "Words indicating positive and negative",
+      type: "mcq",
+      question: "What is the <strong>opposite</strong> of 'gaining $12'?",
+      options: ["Gaining $12", "Gaining $24", "Losing $12", "Losing $1"],
+      answer: 2,
+      explanation: "Gaining $12 means your money increases by $12, which is a positive change (+12). The opposite is losing $12, which means your money decreases by $12 (−12). Opposites have the same size but opposite sign."
+    },
+    {
+      id: "c13_q46",
+      topic: "Adding and subtracting negative numbers",
+      type: "input",
+      question: "Find the <strong>difference</strong> between 3 and −5.<br>(Hint: difference = greater number minus lesser number)",
+      answer: "8",
+      acceptableAnswers: ["8"],
+      explanation: "3 is to the right of −5 on the number line, so 3 is greater. Difference = 3 − (−5) = 3 + 5 = 8. You can also count the steps from −5 to 3 on the number line: 5 steps to reach 0, then 3 more steps to reach 3, giving 5 + 3 = 8."
+    },
+    {
+      id: "c13_q47",
+      topic: "Multiplying negative numbers",
+      type: "input",
+      question: "Calculate: <strong>(−2) × 3 × (−4)</strong>",
+      answer: "24",
+      acceptableAnswers: ["24"],
+      explanation: "Work left to right. Step 1: (−2) × 3 = −6 (different signs → negative). Step 2: −6 × (−4) = +24 (same signs → positive). The answer is 24. With three factors, count the negatives: two negatives give a positive overall sign."
+    },
+    {
+      id: "c13_q48",
+      topic: "Addition and subtraction on the number line",
+      type: "input",
+      question: "Use the number line to calculate: <strong>2 + 3 − 6</strong>",
+      answer: "-1",
+      acceptableAnswers: ["-1"],
+      explanation: "Work left to right on the number line. Start at 2. Step 1: add 3, move right → 2 + 3 = 5. Step 2: subtract 6, move left → 5 − 6 = −1. The answer is −1."
     }
   ]
 };

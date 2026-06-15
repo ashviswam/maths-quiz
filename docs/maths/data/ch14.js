@@ -532,5 +532,101 @@ const ch14 = {
       acceptableAnswers: ["3"],
       explanation: "From the 1st term to the 4th term, we multiply by the ratio 3 times. So: 2 × r³ = 54. Divide both sides by 2: r³ = 27. Since 3³ = 27, the common ratio r = 3.<br>Check: 2, 2×3=6, 6×3=18, 18×3=54 ✓. Well done — this is tricky thinking!"
     },
+    {
+      id: "c14_q39",
+      topic: "Generating a sequence",
+      type: "input",
+      question: "A sequence <strong>starts at −18</strong> and increases by <strong>7</strong> each time.<br>What is the <strong>4th term</strong> of this sequence?",
+      answer: "3",
+      acceptableAnswers: ["3"],
+      explanation: "Starting at −18 and adding 7 each time: −18, −18+7=−11, −11+7=−4, −4+7=3. The 4th term is 3. Notice the sequence crosses zero from negative to positive!"
+    },
+    {
+      id: "c14_q40",
+      topic: "Generating a sequence",
+      type: "mcq",
+      question: "A sequence starts at <strong>5</strong> and increases by <strong>1/2</strong> each time.<br>What are the first four terms?",
+      options: ["5, 5.5, 6, 6.5", "5, 10, 15, 20", "5, 4.5, 4, 3.5", "5, 2.5, 1.25, 0.625"],
+      answer: 0,
+      explanation: "Adding 1/2 (= 0.5) each time: 5, 5+0.5=5.5, 5.5+0.5=6, 6+0.5=6.5. This is an arithmetic sequence with common difference 1/2."
+    },
+    {
+      id: "c14_q41",
+      topic: "Generating a sequence",
+      type: "mcq",
+      question: "A sequence starts at <strong>4</strong> and increases by <strong>0.6</strong> each time.<br>What is the <strong>5th term</strong>?",
+      options: ["6.0", "6.4", "7.0", "5.8"],
+      answer: 1,
+      explanation: "Adding 0.6 each time: 4, 4.6, 5.2, 5.8, 6.4. The 5th term is 6.4. Each step adds six tenths, so four steps add 4 × 0.6 = 2.4, and 4 + 2.4 = 6.4."
+    },
+    {
+      id: "c14_q42",
+      topic: "Generating a sequence",
+      type: "mcq",
+      question: "A sequence starts at <strong>1</strong> and each term is multiplied by <strong>−2</strong> to get the next term.<br>What are the first four terms?",
+      options: ["1, −2, −4, −8", "1, 2, 4, 8", "1, −2, 4, −8", "−1, 2, −4, 8"],
+      answer: 2,
+      explanation: "Multiplying by −2 each time changes the sign and doubles the value: 1, 1×(−2)=−2, (−2)×(−2)=4, 4×(−2)=−8. The terms alternate between positive and negative."
+    },
+    {
+      id: "c14_q43",
+      topic: "Generating a sequence",
+      type: "mcq",
+      question: "Janet studies for <strong>10 minutes</strong> on Monday. Each day she doubles her study time.<br>How many minutes does she study on <strong>Thursday</strong> (the 4th day)?",
+      options: ["40 minutes", "60 minutes", "80 minutes", "120 minutes"],
+      answer: 2,
+      explanation: "Doubling each day: Monday=10, Tuesday=10×2=20, Wednesday=20×2=40, Thursday=40×2=80. This is a geometric sequence with first term 10 and common ratio 2."
+    },
+    {
+      id: "c14_q44",
+      topic: "Finding a rule for a sequence",
+      type: "mcq",
+      question: "Find the rule for the decimal sequence: <strong>5, 5.9, 6.8, 7.7, 8.6, …</strong>",
+      options: [
+        "Start at 5 and multiply by 1.9 each time",
+        "Start at 5 and add 0.9 each time",
+        "Start at 5 and add 1.9 each time",
+        "Start at 5 and add 0.8 each time"
+      ],
+      answer: 1,
+      explanation: "Subtract consecutive terms: 5.9 − 5 = 0.9, 6.8 − 5.9 = 0.9, 7.7 − 6.8 = 0.9. The common difference is 0.9. The rule is: start at 5 and add 0.9 each time."
+    },
+    {
+      id: "c14_q45",
+      topic: "Finding a rule for a sequence",
+      type: "mcq",
+      question: "Look at the sequence of fractions: <strong>3/7, 5/10, 7/13, 9/16, …</strong><br>The numerators follow one rule and the denominators follow another.<br>What are the <strong>next two fractions</strong>?",
+      options: [
+        "11/19 and 13/22",
+        "11/18 and 13/20",
+        "10/19 and 12/22",
+        "11/20 and 13/24"
+      ],
+      answer: 0,
+      explanation: "Numerators: 3, 5, 7, 9, … — start at 3 and add 2 each time. Next: 11, 13.<br>Denominators: 7, 10, 13, 16, … — start at 7 and add 3 each time. Next: 19, 22.<br>So the next two fractions are 11/19 and 13/22."
+    },
+    {
+      id: "c14_q46",
+      topic: "Patterns",
+      type: "mcq",
+      question: "Dots are arranged in a growing pattern.<br>Diagram 1 has <strong>4 dots</strong>, Diagram 2 has <strong>7 dots</strong>, Diagram 3 has <strong>10 dots</strong>.<br>Which rule describes the number of dots in each diagram?",
+      options: [
+        "Start at 4 and add 4 each time",
+        "Start at 4 and multiply by 2 each time",
+        "Start at 4 and add 3 each time",
+        "Start at 3 and add 4 each time"
+      ],
+      answer: 2,
+      explanation: "The differences are: 7 − 4 = 3, 10 − 7 = 3. The rule is: start at 4 and add 3 each time. Diagram 4 would have 10 + 3 = 13 dots, Diagram 5 would have 16 dots."
+    },
+    {
+      id: "c14_q47",
+      topic: "Finding a rule for a sequence",
+      type: "mcq",
+      question: "Two sequences are listed below.<br>Sequence A: <strong>15, 19, 23, 27, …</strong><br>Sequence B: <strong>53, 46, 39, 32, …</strong><br>Which number appears in <strong>both</strong> sequences?",
+      options: ["43", "39", "35", "47"],
+      answer: 1,
+      explanation: "Sequence A adds 4 each time: 15, 19, 23, 27, 31, 35, <strong>39</strong>, 43, …<br>Sequence B subtracts 7 each time: 53, 46, <strong>39</strong>, 32, 25, …<br>39 appears in both sequences! Always list several terms from each sequence and look for a match."
+    },
   ]
 };

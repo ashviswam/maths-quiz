@@ -416,6 +416,117 @@ const ch02 = {
       options: ["9", "10", "11", "12"],
       answer: 3,
       explanation: "Step 1 — chocolates per row: 144 ÷ 12 = 12. Step 2 — rows eaten: 3 rows × 12 = 36 chocolates eaten. Step 3 — remaining: 144 − 36 = 108. Step 4 — per friend: 108 ÷ 9 = <strong>12</strong>. Four operations in one problem — well done for keeping track!"
+    },
+
+    // ── ADDED IN AUDIT — missing textbook types ─────────────────────────────
+
+    {
+      id: "c2_q44",
+      topic: "Multiplication",
+      type: "mcq",
+      question: "What is <strong>346 × 10</strong>?",
+      options: ["3,046", "3,460", "34,600", "346"],
+      answer: 1,
+      explanation: "When you multiply a whole number by 10, each digit moves one place to the left and you add one zero on the end. So 346 × 10 = <strong>3,460</strong>. Quick rule: multiply by 10 → add one zero; multiply by 100 → add two zeros; multiply by 1,000 → add three zeros."
+    },
+    {
+      id: "c2_q45",
+      topic: "Multiplication",
+      type: "mcq",
+      question: "What is <strong>57 × 100</strong>?",
+      options: ["570", "5,007", "5,700", "57,000"],
+      answer: 2,
+      explanation: "Multiplying by 100 moves each digit two places to the left, so you add two zeros. 57 × 100 = <strong>5,700</strong>. Check: 57 × 10 = 570, then 570 × 10 = 5,700."
+    },
+    {
+      id: "c2_q46",
+      topic: "Multiplication",
+      type: "mcq",
+      question: "What is <strong>40 × 30</strong>?",
+      options: ["120", "1,200", "12,000", "400"],
+      answer: 1,
+      explanation: "Break it into parts: 40 × 30 = 4 × 3 × 10 × 10 = 12 × 100 = <strong>1,200</strong>. Multiply the non-zero digits first (4 × 3 = 12), then count the total zeros (one from 40, one from 30 = two zeros) and attach them: 1,200."
+    },
+    {
+      id: "c2_q47",
+      topic: "Multiplication",
+      type: "mcq",
+      question: "Find <strong>5 × 13 × 2</strong> by choosing the most convenient order.",
+      options: ["120", "130", "140", "150"],
+      answer: 1,
+      explanation: "Look for numbers whose product ends in 0 or 00 to make the calculation easier. 5 × 2 = 10, which ends in 0. So: 5 × 13 × 2 = (5 × 2) × 13 = 10 × 13 = <strong>130</strong>. Changing the order of multiplication does not change the answer!"
+    },
+    {
+      id: "c2_q48",
+      topic: "Division",
+      type: "mcq",
+      question: "What is <strong>4,700 ÷ 10</strong>?",
+      options: ["47", "470", "4,070", "47,000"],
+      answer: 1,
+      explanation: "When you divide a whole number by 10, each digit moves one place to the right — this removes one zero from the end. 4,700 ÷ 10 = <strong>470</strong>. Rule: divide by 10 → remove one zero; divide by 100 → remove two zeros; divide by 1,000 → remove three zeros."
+    },
+    {
+      id: "c2_q49",
+      topic: "Division",
+      type: "mcq",
+      question: "What is <strong>56,000 ÷ 1,000</strong>?",
+      options: ["560", "56", "5,600", "5.6"],
+      answer: 1,
+      explanation: "Dividing by 1,000 removes three zeros from the end. 56,000 ÷ 1,000 = <strong>56</strong>. Check: 56 × 1,000 = 56,000 ✓."
+    },
+    {
+      id: "c2_q50",
+      topic: "Division",
+      type: "mcq",
+      question: "You know that <strong>35 ÷ 7 = 5</strong>. Use this fact to find <strong>3,500 ÷ 7</strong>.",
+      options: ["5", "50", "500", "5,000"],
+      answer: 2,
+      explanation: "This is a scaling pattern: 3,500 is 35 × 100, so 3,500 ÷ 7 = (35 × 100) ÷ 7 = (35 ÷ 7) × 100 = 5 × 100 = <strong>500</strong>. Knowing your basic division facts lets you quickly solve much larger problems!"
+    },
+    {
+      id: "c2_q51",
+      topic: "Exponent notation",
+      type: "mcq",
+      question: "Write <strong>5 × 7 × 7</strong> using exponent notation.",
+      options: ["5<sup>1</sup> × 7<sup>2</sup>", "5<sup>2</sup> × 7<sup>1</sup>", "35<sup>2</sup>", "5 × 7<sup>2</sup>"],
+      answer: 3,
+      explanation: "Group the repeated factors: 7 appears twice (7 × 7 = 7<sup>2</sup>), and 5 appears once (5<sup>1</sup> = 5). So the expression is written <strong>5 × 7<sup>2</sup></strong>. Since 5<sup>1</sup> = 5, we don't need to write the exponent 1. Always group identical bases together."
+    },
+    {
+      id: "c2_q52",
+      topic: "Exponent notation",
+      type: "mcq",
+      question: "Which number is larger: <strong>2<sup>3</sup></strong> or <strong>3<sup>2</sup></strong>?",
+      options: ["2<sup>3</sup>, because the exponent 3 is larger", "3<sup>2</sup>, because 3<sup>2</sup> = 9 and 2<sup>3</sup> = 8", "They are equal", "3<sup>2</sup>, because the base 3 is larger"],
+      answer: 1,
+      explanation: "Calculate each one: 2<sup>3</sup> = 2 × 2 × 2 = <strong>8</strong> and 3<sup>2</sup> = 3 × 3 = <strong>9</strong>. So 3<sup>2</sup> is larger. You cannot compare powers just by looking at the base or exponent alone — you must evaluate them."
+    },
+    {
+      id: "c2_q53",
+      topic: "Exponent notation",
+      type: "input",
+      question: "What is the value of <strong>10<sup>4</sup></strong>? (Hint: count the number of zeros after the 1.)",
+      answer: "10000",
+      acceptableAnswers: ["10000", "10,000"],
+      explanation: "10<sup>4</sup> means 10 × 10 × 10 × 10. Each ×10 adds one zero: 10 → 100 → 1,000 → 10,000. The exponent tells you how many zeros follow the 1. So 10<sup>4</sup> = <strong>10,000</strong> (ten thousand)."
+    },
+    {
+      id: "c2_q54",
+      topic: "Order of operations",
+      type: "mcq",
+      question: "Find the value of <strong>17 − 8 + 6 − 3</strong>.",
+      options: ["0", "18", "12", "6"],
+      answer: 2,
+      explanation: "When an expression has <em>only</em> addition and subtraction, work from <strong>left to right</strong>. Step 1: 17 − 8 = 9. Step 2: 9 + 6 = 15. Step 3: 15 − 3 = <strong>12</strong>. A common mistake is to add all the subtracted numbers first — always go left to right!"
+    },
+    {
+      id: "c2_q55",
+      topic: "Order of operations",
+      type: "mcq",
+      question: "Insert <strong>+, −, ×,</strong> or <strong>÷</strong> into the box to make this statement true: <strong>6 □ 7 − 12 = 30</strong>.",
+      options: ["+", "−", "×", "÷"],
+      answer: 2,
+      explanation: "Test each operation, remembering BEDMAS (× and ÷ before − ):<br>6 + 7 − 12 = 13 − 12 = 1 (not 30).<br>6 − 7 − 12 = −13 (not 30).<br>6 × 7 − 12 = 42 − 12 = <strong>30</strong> ✓.<br>The answer is <strong>×</strong>. Always apply order of operations when testing each option."
     }
   ]
 };

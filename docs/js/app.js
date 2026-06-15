@@ -2,14 +2,17 @@
    Parent feedback notes, stored in localStorage by question ID.
 ──────────────────────────────────────────────────────────────── */
 const Notes = (() => {
-  const KEY = 'maths6_notes';
-  function all() { return JSON.parse(localStorage.getItem(KEY) || '{}'); }
+  function getKey() {
+    return (typeof SUBJECT_CONFIG !== 'undefined' && SUBJECT_CONFIG.notesKey)
+      ? SUBJECT_CONFIG.notesKey : 'maths6_notes';
+  }
+  function all() { return JSON.parse(localStorage.getItem(getKey()) || '{}'); }
   function get(qId) { return all()[qId] || ''; }
   function set(qId, text) {
     const d = all();
     if (text.trim()) d[qId] = text.trim();
     else delete d[qId];
-    localStorage.setItem(KEY, JSON.stringify(d));
+    localStorage.setItem(getKey(), JSON.stringify(d));
   }
   function count() { return Object.keys(all()).length; }
   return { all, get, set, count };
@@ -217,6 +220,8 @@ const App = (() => {
     state.index   = index;
     state.answered = false;
     document.getElementById('feedback-card').classList.add('hidden');
+    const fbReview = document.getElementById('fb-review');
+    if (fbReview) fbReview.classList.add('hidden');
     renderQuestion();
   }
 
@@ -266,19 +271,36 @@ const App = (() => {
       diagDiv.innerHTML = '';
       diagDiv.classList.add('hidden');
     }
-    document.getElementById('feedback-card').classList.add('hidden');
+    const fb = document.getElementById('feedback-card');
+    fb.classList.add('hidden');
+    const fbReview = document.getElementById('fb-review');
+    if (fbReview) fbReview.classList.add('hidden');
 
     const optDiv   = document.getElementById('q-options');
     const inputDiv = document.getElementById('q-input');
+    const shortDiv = document.getElementById('q-short');
     const inp      = document.getElementById('answer-input');
 
     if (q.type === 'mcq') {
       optDiv.classList.remove('hidden');
       inputDiv.classList.add('hidden');
+      if (shortDiv) shortDiv.classList.add('hidden');
       renderOptions(q);
+    } else if (q.type === 'short') {
+      optDiv.classList.add('hidden');
+      inputDiv.classList.add('hidden');
+      if (shortDiv) {
+        shortDiv.classList.remove('hidden');
+        const ta = document.getElementById('short-answer');
+        ta.value = '';
+        ta.disabled = false;
+        document.getElementById('btn-submit-short').disabled = false;
+        ta.focus();
+      }
     } else {
       optDiv.classList.add('hidden');
       inputDiv.classList.remove('hidden');
+      if (shortDiv) shortDiv.classList.add('hidden');
       inp.value = '';
       inp.className = '';
       inp.disabled = false;
@@ -388,6 +410,9 @@ const App = (() => {
   function showFeedback(correct, q) {
     const fb = document.getElementById('feedback-card');
     fb.classList.remove('hidden');
+    const fbReview = document.getElementById('fb-review');
+    if (fbReview) fbReview.classList.add('hidden');
+    document.getElementById('btn-next').classList.remove('hidden');
 
     document.getElementById('fb-icon').textContent = correct ? '🎉' : '💡';
     const heading = document.getElementById('fb-heading');
@@ -482,6 +507,44 @@ const App = (() => {
     startChapter(state.chapter, true);
   }
 
+  // ── Short answer (parent-reviewed) ───────────────────────────
+  function submitShort() {
+    if (state.answered) return;
+    const q  = state.questions[state.index];
+    const ta = document.getElementById('short-answer');
+    const text = ta.value.trim();
+    if (!text) { ta.focus(); return; }
+
+    state.answered = true;
+    ta.disabled = true;
+    document.getElementById('btn-submit-short').disabled = true;
+    state._shortText = text;
+
+    const fb = document.getElementById('feedback-card');
+    fb.classList.remove('hidden');
+    document.getElementById('fb-icon').textContent = '🧐';
+    const heading = document.getElementById('fb-heading');
+    heading.textContent = 'Check your answer:';
+    heading.className = 'fb-heading';
+    document.getElementById('fb-explanation').innerHTML = '';
+    document.getElementById('btn-next').classList.add('hidden');
+
+    const fbReview = document.getElementById('fb-review');
+    if (fbReview) {
+      document.getElementById('fb-review-text').textContent = text;
+      document.getElementById('fb-model-text').innerHTML = q.answer;
+      fbReview.classList.remove('hidden');
+    }
+
+    fb.classList.add('pop');
+    setTimeout(() => fb.classList.remove('pop'), 300);
+  }
+
+  function markShort(correct) {
+    const q = state.questions[state.index];
+    handleResult(correct, q);
+  }
+
   // ── Note functions ────────────────────────────────────────
   function toggleNote() {
     const panel = document.getElementById('note-panel');
@@ -557,7 +620,7 @@ const App = (() => {
     }
   });
 
-  return { init, goHome, startChapter, submitInput, nextQuestion, retryWrong, jumpToQuestion, showResults, toggleNote, cancelNote, saveNote, openNotes, closeNotes };
+  return { init, goHome, startChapter, submitInput, submitShort, markShort, nextQuestion, retryWrong, jumpToQuestion, showResults, toggleNote, cancelNote, saveNote, openNotes, closeNotes };
 })();
 
 document.addEventListener('DOMContentLoaded', App.init);

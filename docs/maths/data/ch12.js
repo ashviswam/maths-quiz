@@ -314,5 +314,91 @@ const ch12 = {
       acceptableAnswers: ["952"],
       explanation: "12% of 850 = 0.12 × 850 = 102. New number = 850 + 102 = 952 students."
     },
+    {
+      id: "c12_q34",
+      topic: "Converting percentages into fractions",
+      type: "mcq",
+      question: "Write <strong>59%</strong> as a fraction with denominator 100. (Do not simplify.)",
+      options: ["59/10", "59/1000", "59/100", "5/9"],
+      answer: 2,
+      explanation: "The word 'percent' means 'out of 100', so 59% = 59/100. There is no need to simplify — the denominator stays as 100."
+    },
+    {
+      id: "c12_q35",
+      topic: "Converting fractions into percentages",
+      type: "mcq",
+      question: "Write <strong>557/1000</strong> as a percentage.",
+      options: ["557%", "5.57%", "55.7%", "0.557%"],
+      answer: 2,
+      explanation: "To convert 557/1000 to a percentage, divide top and bottom by 10: 557 ÷ 10 = 55.7 and 1000 ÷ 10 = 100. So 557/1000 = 55.7/100 = 55.7%."
+    },
+    {
+      id: "c12_q36",
+      topic: "Converting fractions into percentages",
+      type: "mcq",
+      question: "Write the whole number <strong>2</strong> as a percentage.",
+      options: ["2%", "20%", "200%", "0.2%"],
+      answer: 2,
+      explanation: "To write 2 as a percentage, multiply by 100: 2 × 100 = 200%. You can also write 2 = 200/100 = 200%."
+    },
+    {
+      id: "c12_q37",
+      topic: "Converting percentages into decimals",
+      type: "mcq",
+      question: "Write <strong>6.7%</strong> as a decimal.",
+      options: ["6.7", "0.67", "0.067", "67"],
+      answer: 2,
+      explanation: "To convert a percentage to a decimal, divide by 100. 6.7 ÷ 100 = 0.067. Move the decimal point two places to the left: 6.7 → 0.67 → 0.067."
+    },
+    {
+      id: "c12_q38",
+      topic: "Converting decimals into percentages",
+      type: "mcq",
+      question: "Write <strong>0.306</strong> as a percentage.",
+      options: ["3.06%", "306%", "30.6%", "0.306%"],
+      answer: 2,
+      explanation: "To convert a decimal to a percentage, multiply by 100. 0.306 × 100 = 30.6%. Move the decimal point two places to the right: 0.306 → 30.6."
+    },
+    {
+      id: "c12_q39",
+      topic: "Number lines",
+      type: "mcq",
+      question: "Convert <strong>3/5</strong>, <strong>0.43</strong>, and <strong>67%</strong> to percentages. Which order correctly places them from smallest to largest?",
+      options: [
+        "3/5, 0.43, 67%",
+        "0.43, 3/5, 67%",
+        "67%, 3/5, 0.43",
+        "0.43, 67%, 3/5"
+      ],
+      answer: 1,
+      explanation: "First convert all to percentages: 3/5 = 60%, 0.43 = 43%, 67% = 67%. Ordering smallest to largest: 43% (0.43), then 60% (3/5), then 67%."
+    },
+    {
+      id: "c12_q40",
+      topic: "Expressing one quantity as a percentage of another",
+      type: "mcq",
+      question: "Express <strong>60 cm</strong> as a percentage of <strong>3 m</strong>.",
+      options: ["2%", "20%", "60%", "200%"],
+      answer: 1,
+      explanation: "First convert to the same units: 3 m = 300 cm. Then: (60 ÷ 300) × 100 = 0.2 × 100 = 20%. Always compare like with like!"
+    },
+    {
+      id: "c12_q41",
+      topic: "Finding a percentage of a quantity",
+      type: "mcq",
+      question: "Find <strong>27%</strong> of <strong>$1</strong>, giving your answer in <strong>cents</strong>.",
+      options: ["2.7 cents", "270 cents", "27 cents", "0.27 cents"],
+      answer: 2,
+      explanation: "$1 = 100 cents. 27% of 100 cents = 0.27 × 100 = 27 cents. Alternatively, 27% of $1 = $0.27 = 27 cents."
+    },
+    {
+      id: "c12_q42",
+      topic: "Percentage increase or decrease",
+      type: "mcq",
+      question: "A laptop costs €<strong>320</strong> plus <strong>10%</strong> goods tax. What is the <strong>size</strong> of the tax (not the total price)?",
+      options: ["€10", "€32", "€320", "€352"],
+      answer: 1,
+      explanation: "Size of tax = 10% of €320 = 0.10 × 320 = €32. The tax alone is €32 (the total price would be €352, but the question asks only for the tax)."
+    }
   ]
 };

@@ -1086,6 +1086,71 @@ const ch19 = {
       options: ["(5, −1)", "(−1, 5)", "(5, 1)", "(5, −5)"],
       answer: 0,
       explanation: "Step 1 — reflect in x-axis: (x,y)→(x,−y), so V(2,5)→V'(2,−5). Step 2 — translate 3 right, 4 up: (2+3, −5+4) = (5, −1). The final image is V''(5, −1)."
+    },
+    {
+      id: "c19_q46",
+      topic: "Translations",
+      type: "mcq",
+      question: "Shape A is translated <strong>3 right and 5 up</strong> to give shape B. What translation is needed to move shape B back to shape A?",
+      options: [
+        "3 right and 5 down",
+        "3 left and 5 down",
+        "5 left and 3 down",
+        "3 left and 5 up"
+      ],
+      answer: 1,
+      explanation: "To reverse a translation, you go the opposite direction by the same amount. The original translation was 3 right and 5 up, so the reverse translation is 3 left and 5 down. This moves B back exactly on top of A."
+    },
+    {
+      id: "c19_q47",
+      topic: "Translations",
+      type: "mcq",
+      question: "Shape A is translated <strong>4 right and 1 up</strong> to give shape B. Shape A is also translated <strong>2 right and 5 up</strong> to give shape C. What single translation moves shape B to shape C?",
+      options: [
+        "2 left and 4 up",
+        "6 right and 6 up",
+        "2 right and 4 up",
+        "6 left and 4 down"
+      ],
+      answer: 0,
+      explanation: "Think of A as the starting point. B is 4 right and 1 up from A. C is 2 right and 5 up from A. To go from B to C: x-change = 2 − 4 = −2 (left 2), y-change = 5 − 1 = +4 (up 4). So the translation from B to C is 2 left and 4 up."
+    },
+    {
+      id: "c19_q48",
+      topic: "Rotations",
+      type: "mcq",
+      question: "The hour hand of a clock is pointing at the <strong>12</strong>. The dial is rotated <strong>90° clockwise</strong>. Which number does the hour hand now point to?",
+      options: ["3", "6", "9", "1"],
+      answer: 0,
+      explanation: "Imagine the clock face. The 12 is at the top. A 90° clockwise turn moves the hand a quarter-turn to the right. After a quarter-turn clockwise from 12, the hand points to the 3."
+    },
+    {
+      id: "c19_q49",
+      topic: "Rotations",
+      type: "mcq",
+      question: "A shape is rotated <strong>90° anticlockwise</strong> about the origin, and then the result is rotated <strong>another 90° anticlockwise</strong> about the origin. What <strong>single rotation</strong> is equivalent to these two steps?",
+      options: [
+        "90° clockwise about the origin",
+        "180° about the origin",
+        "270° clockwise about the origin",
+        "360° about the origin"
+      ],
+      answer: 1,
+      explanation: "Each rotation is 90° anticlockwise. Two of them together give 90° + 90° = 180°. A 180° rotation about the origin is the same regardless of direction (clockwise or anticlockwise), so the single equivalent rotation is 180° about the origin."
+    },
+    {
+      id: "c19_q50",
+      topic: "Combinations of transformations",
+      type: "mcq",
+      question: "A shape undergoes a translation, a reflection, and a rotation (separately). Which property of the shape is <strong>changed</strong> by <strong>all three</strong> of these transformations?",
+      options: [
+        "The size of the shape",
+        "The angle measures",
+        "The position of the shape",
+        "The side lengths"
+      ],
+      answer: 2,
+      explanation: "Translations, reflections, and rotations are all isometries — they preserve size, side lengths, and angles. The one thing that always changes is the <strong>position</strong> of the shape, because it moves to a new location on the grid after each transformation."
     }
   ]
 };

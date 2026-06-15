@@ -411,6 +411,87 @@ const ch11 = {
       answer: "22",
       acceptableAnswers: ["22", "22 days"],
       explanation: "6 weeks = 6 × 7 = 42 days. Adding 2 days: 42 + 2 = 44 days total. Half of 44 = 44 ÷ 2 = <strong>22 days</strong>. This tests whether you can combine unit conversion with fraction thinking!"
+    },
+    {
+      id: "c11_q49",
+      topic: "Units of time",
+      type: "input",
+      question: "Write <strong>3 hours and 24 minutes</strong> in minutes only.",
+      answer: "204",
+      acceptableAnswers: ["204", "204 minutes", "204 mins"],
+      explanation: "3 hours = 3 × 60 = 180 minutes. Then add the extra 24 minutes: 180 + 24 = <strong>204 minutes</strong>."
+    },
+    {
+      id: "c11_q50",
+      topic: "Units of time",
+      type: "mcq",
+      question: "Write <strong>95 seconds</strong> in minutes and seconds.",
+      options: ["1 minute 25 seconds", "1 minute 35 seconds", "2 minutes 5 seconds", "1 minute 45 seconds"],
+      answer: 1,
+      explanation: "1 minute = 60 seconds. 95 − 60 = 35 seconds left over. So 95 seconds = <strong>1 minute 35 seconds</strong>."
+    },
+    {
+      id: "c11_q51",
+      topic: "Units of time",
+      type: "input",
+      question: "How many days are in <strong>144 hours</strong>?",
+      answer: "6",
+      acceptableAnswers: ["6", "6 days"],
+      explanation: "1 day = 24 hours. So 144 ÷ 24 = <strong>6 days</strong>."
+    },
+    {
+      id: "c11_q52",
+      topic: "Time calculations",
+      type: "mcq",
+      question: "Find the time that is <strong>2 hours 45 minutes before 6:30 pm</strong>.",
+      options: ["3:15 pm", "3:45 pm", "4:15 pm", "4:45 pm"],
+      answer: 1,
+      explanation: "Start at 6:30 pm. Subtract 2 hours: 6:30 pm − 2 h = 4:30 pm. Then subtract 45 minutes: 4:30 pm − 45 min = 4:30 − 30 min = 4:00 pm − 15 min = <strong>3:45 pm</strong>."
+    },
+    {
+      id: "c11_q53",
+      topic: "Time calculations",
+      type: "input",
+      question: "Shelley fell asleep at <strong>10:26 pm</strong> and woke up at <strong>6:05 am</strong> the next morning. How long did she sleep? Write your answer in hours and minutes (e.g. 7 hours 30 minutes).",
+      answer: "7 hours 39 minutes",
+      acceptableAnswers: ["7 hours 39 minutes", "7 hrs 39 min", "7h 39min", "7 hours and 39 minutes"],
+      explanation: "Count from 10:26 pm to midnight: from 10:26 pm to 11:00 pm = 34 minutes, then 11:00 pm to midnight = 1 hour. So 10:26 pm to midnight = 1 hour 34 minutes.<br>From midnight to 6:05 am = 6 hours 5 minutes.<br>Total = 1 h 34 min + 6 h 5 min = <strong>7 hours 39 minutes</strong>."
+    },
+    {
+      id: "c11_q54",
+      topic: "24-hour time",
+      type: "mcq",
+      question: "Which of the following is <strong>NOT a valid 24-hour time</strong>?",
+      options: ["08:45", "13:00", "08:62", "23:59"],
+      answer: 2,
+      explanation: "<strong>08:62</strong> is not valid because the minutes part can only go from 00 to 59 — there is no such thing as 62 minutes. All the others are valid: 08:45 is fine, 13:00 is 1 pm, and 23:59 is one minute before midnight."
+    },
+    {
+      id: "c11_q55",
+      topic: "Timetables",
+      type: "input",
+      question: "A bus timetable shows:<br><br><strong>Albury:</strong> arrives 11:10 am, departs 11:50 am<br><strong>Canberra:</strong> arrives 4:05 pm, departs 4:45 pm<br><br>How many minutes does the bus stop at <strong>Albury</strong>?",
+      answer: "40",
+      acceptableAnswers: ["40", "40 minutes", "40 mins"],
+      explanation: "The bus arrives at Albury at 11:10 am and departs at 11:50 am. 11:50 − 11:10 = <strong>40 minutes</strong>."
+    },
+    {
+      id: "c11_q56",
+      topic: "The calendar year",
+      type: "mcq",
+      question: "Noah is <strong>30 months</strong> old. Rosie is <strong>3 years</strong> old. Which child is older?",
+      options: ["Noah, because 30 is a bigger number than 3", "Rosie, because 3 years = 36 months which is more than 30 months", "They are the same age", "Noah, because months are smaller than years"],
+      answer: 1,
+      explanation: "To compare, convert to the same unit. 3 years = 3 × 12 = 36 months. Since 36 months > 30 months, <strong>Rosie is older</strong>. Always convert to the same unit before comparing!"
+    },
+    {
+      id: "c11_q57",
+      topic: "Time lines",
+      type: "input",
+      question: "A timeline shows that the Egyptian Hieroglyphics writing system first appeared in <strong>3000 BC</strong> and Japanese Script first appeared in <strong>500 AD</strong>. How many years are between these two events?",
+      answer: "3500",
+      acceptableAnswers: ["3500", "3500 years"],
+      explanation: "On a BC/AD timeline, to find the gap you add the two numbers together (because one is before year 0 and the other is after). 3000 + 500 = <strong>3500 years</strong>. Think of it like a number line: 3000 BC is 3000 steps to the left of year 0, and 500 AD is 500 steps to the right, so the total distance is 3000 + 500 = 3500 steps."
     }
   ]
 };

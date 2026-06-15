@@ -385,5 +385,186 @@ const ch07 = {
       acceptableAnswers: ["1.46", "£1.46", "1.46 pounds"],
       explanation: "Step 1 — add the three prices:<br>  6.49 + 8.75 + 3.30<br>Hundredths: 9 + 5 + 0 = 14, write 4 carry 1.<br>Tenths: 4 + 7 + 3 + 1 = 15, write 5 carry 1.<br>Ones: 6 + 8 + 3 + 1 = 18, write 8 carry 1.<br>Tens: 0 + 0 + 0 + 1 = 1.<br>Total spent = £18.54.<br><br>Step 2 — subtract from £20.00:<br>20.00 − 18.54 = 1.46.<br><br>Mia receives £1.46 change."
     },
+
+    // c7_q45 — Write decimal in words (Section A, Ex 7A Q2)
+    {
+      id: "c7_q45",
+      topic: "Decimal numbers",
+      type: "mcq",
+      question: "Which of the following correctly writes <strong>20.15</strong> in words?",
+      options: ["Twenty point one five", "Twenty point fifteen", "Two zero point one five", "Twenty-one point five"],
+      answer: 0,
+      explanation: "We read the whole number part first: 'twenty'. Then we say 'point' for the decimal point. Then we read each digit after the decimal point separately: '1' and '5'. So 20.15 is read as 'twenty point one five'. We never say 'fifteen' for the decimal digits — we read them one at a time."
+    },
+
+    // c7_q46 — Identify which two whole numbers a decimal lies between (Section A, Ex 7A Q3)
+    {
+      id: "c7_q46",
+      topic: "Decimal numbers",
+      type: "mcq",
+      question: "Between which two consecutive whole numbers does <strong>19.76</strong> lie?",
+      options: ["18 and 19", "19 and 20", "20 and 21", "17 and 20"],
+      answer: 1,
+      explanation: "The whole number part of 19.76 is 19, and the decimal part 0.76 is between 0 and 1. So 19.76 lies between 19 and 20. A quick check: 19 < 19.76 < 20. ✓"
+    },
+
+    // c7_q47 — State number of decimal places (Section A, Ex 7A Q4)
+    {
+      id: "c7_q47",
+      topic: "Decimal numbers",
+      type: "mcq",
+      question: "How many decimal places does the number <strong>57.813</strong> have?",
+      options: ["1", "2", "3", "5"],
+      answer: 2,
+      explanation: "The number of decimal places is the number of digits written after the decimal point. In 57.813, the digits after the decimal point are 8, 1, and 3 — that is 3 digits. So 57.813 has 3 decimal places."
+    },
+
+    // c7_q48 — Write decimal in expanded form (Section A, Ex 7A Q9)
+    {
+      id: "c7_q48",
+      topic: "Decimal numbers",
+      type: "mcq",
+      question: "Which of the following is the <strong>expanded form</strong> of <strong>3.072</strong>?",
+      options: [
+        "3 + 0/10 + 7/100 + 2/1000",
+        "3 + 7/10 + 2/100",
+        "3 + 7/100 + 2/1000",
+        "3 + 0/10 + 7/1000 + 2/100"
+      ],
+      answer: 2,
+      explanation: "In 3.072: the 3 is in the units place, 0 is in the tenths place (worth 0/10 = 0, so we skip it), 7 is in the hundredths place (7/100), and 2 is in the thousandths place (2/1000). The expanded form is 3 + 7/100 + 2/1000. We do not need to write the zero term."
+    },
+
+    // c7_q49 — Write expanded fraction form as decimal (Section A, Ex 7A Q10)
+    {
+      id: "c7_q49",
+      topic: "Decimal numbers",
+      type: "input",
+      question: "Write <strong>6 + 5/10 + 2/100</strong> as a decimal number.",
+      answer: "6.52",
+      acceptableAnswers: ["6.52"],
+      explanation: "Place each part in its column: 6 goes in the units column, 5/10 gives a 5 in the tenths column, and 2/100 gives a 2 in the hundredths column. So the decimal number is 6.52."
+    },
+
+    // c7_q50 — Write fraction with denominator 1000 as decimal (Section A, Ex 7A Q11/Q12)
+    {
+      id: "c7_q50",
+      topic: "Decimal numbers",
+      type: "input",
+      question: "Write <strong>307/1000</strong> as a decimal number.",
+      answer: "0.307",
+      acceptableAnswers: ["0.307"],
+      explanation: "A fraction with denominator 1000 always gives 3 decimal places. 307/1000 means 3 hundredths and 7 thousandths, but written out it is 0.307. Think of it as: _ . _ _ _ with 307 filling the three decimal places: 0.307."
+    },
+
+    // c7_q51 — Write decimal as fraction with denominator 100 (Section A, Ex 7A Q13)
+    {
+      id: "c7_q51",
+      topic: "Decimal numbers",
+      type: "mcq",
+      question: "Write <strong>0.45</strong> as a fraction with denominator <strong>100</strong>.",
+      options: ["4/100", "5/100", "45/100", "450/100"],
+      answer: 2,
+      explanation: "0.45 means 4 tenths and 5 hundredths. To write it as a fraction over 100: 0.45 = 45/100. You can verify: 45 ÷ 100 = 0.45. ✓"
+    },
+
+    // c7_q52 — Insert >, < or = between two decimals (Section C, Ex 7C Q3)
+    {
+      id: "c7_q52",
+      topic: "Ordering decimal numbers",
+      type: "mcq",
+      question: "Which symbol correctly completes the statement: <strong>0.81 __ 0.803</strong>?",
+      options: ["<", ">", "=", "Cannot be determined"],
+      answer: 1,
+      explanation: "Compare digit by digit from the left. Both numbers have 0 units. Tenths: 0.81 has 8 tenths and 0.803 also has 8 tenths — equal so far. Hundredths: 0.81 has 1 hundredth, but 0.803 has 0 hundredths. Since 1 > 0, we get 0.81 > 0.803."
+    },
+
+    // c7_q53 — Multiply by 10 specifically (Section H, Ex 7H Q1)
+    {
+      id: "c7_q53",
+      topic: "Multiplying by powers of 10",
+      type: "mcq",
+      question: "Calculate <strong>0.238 × 10</strong>.",
+      options: ["0.0238", "2.38", "23.8", "238"],
+      answer: 1,
+      explanation: "Multiplying by 10 moves the decimal point one place to the right. 0.238 × 10 = 2.38. The digits stay the same; only the decimal point shifts: 0.238 → 2.38."
+    },
+
+    // c7_q54 — Divide by 10 specifically (Section I, Ex 7I Q1)
+    {
+      id: "c7_q54",
+      topic: "Dividing by powers of 10",
+      type: "mcq",
+      question: "Calculate <strong>6.3 ÷ 10</strong>.",
+      options: ["63", "0.63", "0.063", "630"],
+      answer: 1,
+      explanation: "Dividing by 10 moves the decimal point one place to the left. 6.3 ÷ 10 = 0.63. The digits stay the same; the decimal point shifts left: 6.3 → 0.63."
+    },
+
+    // c7_q55 — Divide by 100 specifically (Section I, Ex 7I Q2)
+    {
+      id: "c7_q55",
+      topic: "Dividing by powers of 10",
+      type: "mcq",
+      question: "Calculate <strong>9.2 ÷ 100</strong>.",
+      options: ["920", "0.92", "0.092", "0.0092"],
+      answer: 2,
+      explanation: "Dividing by 100 moves the decimal point two places to the left. 9.2 ÷ 100 = 0.092. The decimal shifts: 9.2 → 0.92 → 0.092. We add a zero to fill the empty tenths place."
+    },
+
+    // c7_q56 — Find missing power of 10 (Section I, Ex 7I Q5 / Review 7B Q9)
+    {
+      id: "c7_q56",
+      topic: "Dividing by powers of 10",
+      type: "mcq",
+      question: "What number completes the statement: <strong>203 ÷ ___ = 2.03</strong>?",
+      options: ["10", "100", "1000", "10 000"],
+      answer: 1,
+      explanation: "We need to move the decimal point 2 places to the left to turn 203 into 2.03. Moving 2 places left means dividing by 100. Check: 203 ÷ 100 = 2.03. ✓"
+    },
+
+    // c7_q57 — Convert decimal > 1 to mixed number fraction (Section E, Ex 7E Q1)
+    {
+      id: "c7_q57",
+      topic: "Converting decimals to fractions",
+      type: "mcq",
+      question: "Convert <strong>4.3</strong> to a mixed number in its simplest form.",
+      options: ["43/10", "4 and 1/3", "4 and 3/10", "4 and 3/100"],
+      answer: 2,
+      explanation: "The whole number part is 4. The decimal part 0.3 = 3/10. So 4.3 = 4 and 3/10 (written as a mixed number). The fraction 3/10 is already in simplest form because 3 and 10 share no common factors other than 1."
+    },
+
+    // c7_q58 — Convert fraction to decimal by scaling denominator (Section F, Ex 7F Q3)
+    {
+      id: "c7_q58",
+      topic: "Converting fractions to decimals",
+      type: "mcq",
+      question: "Convert <strong>9/25</strong> to a decimal by finding an equivalent fraction with denominator 100.",
+      options: ["0.025", "0.36", "0.9", "0.45"],
+      answer: 1,
+      explanation: "Multiply numerator and denominator by 4 (since 25 × 4 = 100): 9/25 = (9 × 4)/(25 × 4) = 36/100 = 0.36."
+    },
+
+    // c7_q59 — Round to 3 decimal places (Section D, Ex 7D Q11)
+    {
+      id: "c7_q59",
+      topic: "Rounding decimal numbers",
+      type: "mcq",
+      question: "Round <strong>0.46172</strong> to <strong>3 decimal places</strong>.",
+      options: ["0.461", "0.462", "0.46", "0.4617"],
+      answer: 1,
+      explanation: "To round to 3 decimal places, look at the 4th decimal digit: it is 7. Since 7 ≥ 5, round up the 3rd decimal digit from 1 to 2. So 0.46172 ≈ 0.462."
+    },
+
+    // c7_q60 — Multiply decimal by two-digit whole number (Section J, Ex 7J Q5)
+    {
+      id: "c7_q60",
+      topic: "Multiplying decimals by a whole number",
+      type: "mcq",
+      question: "Calculate <strong>3.9 × 15</strong>.",
+      options: ["5.85", "58.5", "585", "5.085"],
+      answer: 1,
+      explanation: "Ignore the decimal and multiply: 39 × 15 = 585. (Check: 39 × 10 = 390, 39 × 5 = 195, total = 585.) The original number 3.9 has 1 decimal place, so place the decimal point 1 place from the right: 58.5. So 3.9 × 15 = 58.5."
+    }
   ]
 };

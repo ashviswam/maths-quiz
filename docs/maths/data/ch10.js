@@ -612,6 +612,60 @@ const ch10 = {
       answer: "96",
       acceptableAnswers: ["96", "96 cm²", "96cm²"],
       explanation: "Step 1: Area of full large rectangle = 12 × 9 = 108 cm²<br>Step 2: Area of removed corner piece = 4 × 3 = 12 cm²<br>Step 3: Remaining area = 108 − 12 = <strong>96 cm²</strong><br>The subtraction method works perfectly for shapes made by removing a piece!"
+    },
+    {
+      id: "c10_q41",
+      topic: "Area",
+      type: "mcq",
+      question: "Which unit would you use to measure the area of a <strong>sports stadium</strong>?",
+      options: ["mm²", "cm²", "m²", "km²"],
+      answer: 2,
+      explanation: "A sports stadium covers a large surface, typically a few thousand square metres. We use <strong>m²</strong> (square metres) for areas the size of a building, field, or stadium. mm² and cm² are too small; km² is used for very large areas like cities or countries."
+    },
+    {
+      id: "c10_q42",
+      topic: "The area of a rectangle",
+      type: "input",
+      question: "A rectangular field is <strong>13 km</strong> long and <strong>3 km</strong> wide. What is its area in km²?",
+      answer: "39",
+      acceptableAnswers: ["39", "39 km²", "39km²"],
+      explanation: "Area = length × width = 13 × 3 = <strong>39 km²</strong>. The formula works the same way whatever the unit — just make sure both measurements use the same unit."
+    },
+    {
+      id: "c10_q43",
+      topic: "The area of a rectangle",
+      type: "mcq",
+      question: "A postage stamp is <strong>3 cm</strong> long and <strong>2 cm</strong> wide. A sheet of paper is <strong>30 cm</strong> long and <strong>20 cm</strong> wide. How many stamps can fit on the sheet?",
+      options: ["50", "100", "150", "200"],
+      answer: 1,
+      explanation: "Step 1: Area of one stamp = 3 × 2 = 6 cm²<br>Step 2: Area of sheet = 30 × 20 = 600 cm²<br>Step 3: Number of stamps = 600 ÷ 6 = <strong>100</strong><br>Dividing the total area by one stamp's area tells you how many fit."
+    },
+    {
+      id: "c10_q44",
+      topic: "Capacity",
+      type: "mcq",
+      question: "Which unit would be <strong>most suitable</strong> for measuring the capacity of an <strong>Olympic swimming pool</strong>?",
+      options: ["mL", "L", "kL", "cm³"],
+      answer: 2,
+      explanation: "An Olympic swimming pool holds about 2,500,000 litres — a huge amount! We use <strong>kilolitres (kL)</strong> for very large volumes of liquid. 1 kL = 1,000 L, so the pool holds about 2,500 kL. mL and L would give very large awkward numbers; cm³ is a volume unit, not a capacity unit."
+    },
+    {
+      id: "c10_q45",
+      topic: "Capacity",
+      type: "input",
+      question: "A water tank holds <strong>12 400 L</strong> of water. How many <strong>kilolitres (kL)</strong> is this?<br>(1 kL = 1 000 L)",
+      answer: "12.4",
+      acceptableAnswers: ["12.4", "12.4 kL", "12.4kL"],
+      explanation: "To convert litres to kilolitres, divide by 1 000:<br>12 400 ÷ 1 000 = <strong>12.4 kL</strong>.<br>Think of it like converting metres to kilometres — you divide by 1 000 because there are 1 000 of the smaller unit in the larger one."
+    },
+    {
+      id: "c10_q46",
+      topic: "The area of a rectangle",
+      type: "mcq",
+      question: "A rectangular shower base is <strong>1.2 m</strong> long and <strong>90 cm</strong> wide. What is its area in square centimetres?<br><em>Hint: convert 1.2 m to cm first.</em>",
+      options: ["108 cm²", "1 080 cm²", "10 800 cm²", "108 000 cm²"],
+      answer: 2,
+      explanation: "Step 1: Convert 1.2 m to centimetres — 1.2 × 100 = <strong>120 cm</strong>.<br>Step 2: Area = 120 × 90 = <strong>10 800 cm²</strong>.<br>Always convert measurements to the same unit before multiplying — mixing metres and centimetres gives a wrong answer!"
     }
   ]
 };

@@ -569,5 +569,150 @@ const ch03 = {
       explanation: "Angles at a point (a full revolution) add up to 360°. Fourth angle = 360° − 85° − 110° − 72° = 360° − 267° = 93°."
     },
     // ─── CHALLENGING QUESTIONS ────────────────────────────────────────────────
+    // ─── AUDIT ADDITIONS (2026-06-15) ────────────────────────────────────────
+    {
+      id: "c3_q43",
+      topic: "Lines",
+      type: "mcq",
+      question: "In bracket notation, which of these correctly describes a <strong>line segment</strong> joining points P and Q (not extending beyond P or Q)?",
+      options: ["(PQ)", "[PQ]", "[PQ)", "(PQ]"],
+      answer: 1,
+      explanation: "The textbook uses square brackets for a line segment: [PQ] means the segment that starts at P and ends at Q. Round brackets (PQ) mean the full infinite line through P and Q. A square bracket on one side and a round bracket on the other — such as [PQ) — means a ray starting at P passing through Q and going on forever."
+    },
+    {
+      id: "c3_q44",
+      topic: "Angles",
+      type: "mcq",
+      question: "A clock hand turns through <strong>three-quarters</strong> of a full revolution. How many degrees has it turned?",
+      options: ["90°", "180°", "270°", "360°"],
+      answer: 2,
+      explanation: "One full revolution = 360°. Three-quarters of a turn = (3 ÷ 4) × 360° = 270°. A quarter turn is 90°, a half turn is 180°, and a three-quarter turn is 270°."
+    },
+    {
+      id: "c3_q45",
+      topic: "Calculating angles",
+      type: "input",
+      question: "Two angles fit exactly inside a right angle (a corner of 90°). One angle is <strong>34°</strong>. What is the other angle in degrees?",
+      answer: "56",
+      acceptableAnswers: ["56", "56°", "56 degrees"],
+      explanation: "Angles that together make up a right angle must add to 90°. So the unknown angle = 90° − 34° = 56°. Check: 34° + 56° = 90°."
+    },
+    {
+      id: "c3_q46",
+      topic: "Calculating angles",
+      type: "mcq",
+      question: "In the diagram, ray BM lies between rays BA and BC. The angle ABM = 65° and angle MBC = 50°. What is the size of angle ABC?",
+      options: ["15°", "115°", "105°", "65°"],
+      answer: 1,
+      explanation: "When a ray lies between two other rays, the total angle is found by adding the two smaller angles together. Angle ABC = 65° + 50° = 115°. Since 115° is between 90° and 180°, it is an obtuse angle."
+    },
+    {
+      id: "c3_q47",
+      topic: "Calculating angles",
+      type: "input",
+      question: "Ray BX lies inside angle ABC. The angle ABC = 82° and angle XBC = 38°. What is the size of angle ABX in degrees?",
+      answer: "44",
+      acceptableAnswers: ["44", "44°", "44 degrees"],
+      explanation: "When a ray divides an angle into two parts, the smaller part equals the whole minus the other part. Angle ABX = angle ABC − angle XBC = 82° − 38° = 44°."
+    },
+    {
+      id: "c3_q48",
+      topic: "Calculating angles",
+      type: "input",
+      question: "Two angles meet at a point. One angle is a reflex angle of <strong>215°</strong>. What is the size of the other angle in degrees?",
+      answer: "145",
+      acceptableAnswers: ["145", "145°", "145 degrees"],
+      explanation: "Angles at a point (a full revolution) add up to 360°. The other angle = 360° − 215° = 145°. Since 145° is between 90° and 180°, it is an obtuse angle."
+    },
+    {
+      id: "c3_q49",
+      topic: "Measuring angles",
+      type: "mcq",
+      question: "The protractor is placed with its centre on the vertex and the baseline along one ray. What is the size of the marked angle?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Protractor on an acute angle — find the angle size">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <path d="M 80,185 A 120,120 0 0,1 320,185 Z" fill="rgba(219,234,254,0.4)" stroke="none"/>
+  <path d="M 80,185 A 120,120 0 0,1 320,185" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="55" y1="185" x2="345" y2="185" stroke="#334155" stroke-width="1.8"/>
+  <line x1="320" y1="185" x2="308" y2="185" stroke="#334155" stroke-width="1.5"/>
+  <line x1="318" y1="164" x2="306" y2="166" stroke="#334155" stroke-width="1.2"/>
+  <line x1="313" y1="144" x2="302" y2="147" stroke="#334155" stroke-width="1.2"/>
+  <line x1="304" y1="125" x2="294" y2="131" stroke="#334155" stroke-width="1.5"/>
+  <line x1="292" y1="108" x2="283" y2="116" stroke="#334155" stroke-width="1.2"/>
+  <line x1="277" y1="93" x2="269" y2="102" stroke="#334155" stroke-width="1.2"/>
+  <line x1="260" y1="81" x2="254" y2="92" stroke="#334155" stroke-width="1.5"/>
+  <line x1="241" y1="72" x2="237" y2="84" stroke="#334155" stroke-width="1.2"/>
+  <line x1="221" y1="67" x2="219" y2="79" stroke="#334155" stroke-width="1.2"/>
+  <line x1="200" y1="65" x2="200" y2="77" stroke="#334155" stroke-width="1.5"/>
+  <line x1="179" y1="67" x2="181" y2="79" stroke="#334155" stroke-width="1.2"/>
+  <line x1="159" y1="72" x2="163" y2="84" stroke="#334155" stroke-width="1.2"/>
+  <line x1="140" y1="81" x2="146" y2="92" stroke="#334155" stroke-width="1.5"/>
+  <line x1="123" y1="93" x2="131" y2="102" stroke="#334155" stroke-width="1.2"/>
+  <line x1="108" y1="108" x2="117" y2="116" stroke="#334155" stroke-width="1.2"/>
+  <line x1="96" y1="125" x2="107" y2="131" stroke="#334155" stroke-width="1.5"/>
+  <line x1="87" y1="144" x2="99" y2="147" stroke="#334155" stroke-width="1.2"/>
+  <line x1="82" y1="164" x2="94" y2="167" stroke="#334155" stroke-width="1.2"/>
+  <line x1="80" y1="185" x2="92" y2="185" stroke="#334155" stroke-width="1.5"/>
+  <text x="336" y="189" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">0</text>
+  <text x="318" y="117" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">30</text>
+  <text x="268" y="67" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">60</text>
+  <text x="200" y="49" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">90</text>
+  <text x="132" y="67" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">120</text>
+  <text x="82" y="117" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">150</text>
+  <text x="64" y="189" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">180</text>
+  <circle cx="200" cy="185" r="3" fill="#334155"/>
+  <line x1="200" y1="185" x2="251" y2="46" stroke="#f43f5e" stroke-width="2.5"/>
+  <path d="M 230,185 A 30,30 0 0,0 210,157" fill="none" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="239" y="161" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700" fill="#f43f5e">?°</text>
+</svg>`,
+      options: ["60°", "70°", "80°", "110°"],
+      answer: 1,
+      explanation: "Count the tick marks from 0°: each tick represents 10°. The red ray lines up with the 7th tick from 0°, which is <strong>70°</strong>. The angle is acute (between 0° and 90°). A common mistake is to read 110° — that uses the wrong scale (reading from 180° instead of 0°)."
+    },
+    {
+      id: "c3_q50",
+      topic: "Measuring angles",
+      type: "mcq",
+      question: "The protractor is placed with its centre on the vertex and the baseline along one ray. What is the size of the marked angle?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Protractor on an obtuse angle — find the angle size">
+  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
+  <path d="M 80,185 A 120,120 0 0,1 320,185 Z" fill="rgba(219,234,254,0.4)" stroke="none"/>
+  <path d="M 80,185 A 120,120 0 0,1 320,185" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="55" y1="185" x2="345" y2="185" stroke="#334155" stroke-width="1.8"/>
+  <line x1="320" y1="185" x2="308" y2="185" stroke="#334155" stroke-width="1.5"/>
+  <line x1="318" y1="164" x2="306" y2="166" stroke="#334155" stroke-width="1.2"/>
+  <line x1="313" y1="144" x2="302" y2="147" stroke="#334155" stroke-width="1.2"/>
+  <line x1="304" y1="125" x2="294" y2="131" stroke="#334155" stroke-width="1.5"/>
+  <line x1="292" y1="108" x2="283" y2="116" stroke="#334155" stroke-width="1.2"/>
+  <line x1="277" y1="93" x2="269" y2="102" stroke="#334155" stroke-width="1.2"/>
+  <line x1="260" y1="81" x2="254" y2="92" stroke="#334155" stroke-width="1.5"/>
+  <line x1="241" y1="72" x2="237" y2="84" stroke="#334155" stroke-width="1.2"/>
+  <line x1="221" y1="67" x2="219" y2="79" stroke="#334155" stroke-width="1.2"/>
+  <line x1="200" y1="65" x2="200" y2="77" stroke="#334155" stroke-width="1.5"/>
+  <line x1="179" y1="67" x2="181" y2="79" stroke="#334155" stroke-width="1.2"/>
+  <line x1="159" y1="72" x2="163" y2="84" stroke="#334155" stroke-width="1.2"/>
+  <line x1="140" y1="81" x2="146" y2="92" stroke="#334155" stroke-width="1.5"/>
+  <line x1="123" y1="93" x2="131" y2="102" stroke="#334155" stroke-width="1.2"/>
+  <line x1="108" y1="108" x2="117" y2="116" stroke="#334155" stroke-width="1.2"/>
+  <line x1="96" y1="125" x2="107" y2="131" stroke="#334155" stroke-width="1.5"/>
+  <line x1="87" y1="144" x2="99" y2="147" stroke="#334155" stroke-width="1.2"/>
+  <line x1="82" y1="164" x2="94" y2="167" stroke="#334155" stroke-width="1.2"/>
+  <line x1="80" y1="185" x2="92" y2="185" stroke="#334155" stroke-width="1.5"/>
+  <text x="336" y="189" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">0</text>
+  <text x="318" y="117" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">30</text>
+  <text x="268" y="67" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">60</text>
+  <text x="200" y="49" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">90</text>
+  <text x="132" y="67" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">120</text>
+  <text x="82" y="117" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">150</text>
+  <text x="64" y="189" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="10" fill="#334155">180</text>
+  <circle cx="200" cy="185" r="3" fill="#334155"/>
+  <line x1="200" y1="185" x2="105" y2="72" stroke="#f43f5e" stroke-width="2.5"/>
+  <path d="M 230,185 A 30,30 0 0,0 181,162" fill="none" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="220" y="146" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="13" font-weight="700" fill="#f43f5e">?°</text>
+</svg>`,
+      options: ["50°", "120°", "130°", "140°"],
+      answer: 2,
+      explanation: "The red ray passes the 90° mark and continues to the 13th tick from 0°, which is <strong>130°</strong>. The angle is obtuse (between 90° and 180°). The answer 50° is the trap — 180° − 130° = 50° is what you get if you accidentally count from 180° instead of 0°."
+    }
   ]
 };

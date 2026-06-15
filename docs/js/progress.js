@@ -1,18 +1,21 @@
 /* ── Progress ─────────────────────────────────────────────────
    Persists quiz results in localStorage.
-   Key: "maths6_progress"
+   Key: driven by SUBJECT_CONFIG.progressKey (set by each subject page).
    Shape: { ch1: { questions: { c1_q1: { correct:bool, attempts:n } } } }
 ──────────────────────────────────────────────────────────────── */
 const Progress = (() => {
-  const KEY = 'maths6_progress';
+  function getKey() {
+    return (typeof SUBJECT_CONFIG !== 'undefined' && SUBJECT_CONFIG.progressKey)
+      ? SUBJECT_CONFIG.progressKey : 'maths6_progress';
+  }
 
   function load() {
-    try { return JSON.parse(localStorage.getItem(KEY)) || {}; }
+    try { return JSON.parse(localStorage.getItem(getKey())) || {}; }
     catch { return {}; }
   }
 
   function save(data) {
-    localStorage.setItem(KEY, JSON.stringify(data));
+    localStorage.setItem(getKey(), JSON.stringify(data));
   }
 
   function recordAnswer(chapterId, questionId, correct) {

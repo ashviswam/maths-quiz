@@ -507,5 +507,105 @@ const ch17 = {
       answer: 0,
       explanation: "Theoretical probability for each colour = 1/4 = 0.25. Calculate the absolute difference from 0.25 for each: Red: |0.38 − 0.25| = 0.13. Blue: |0.22 − 0.25| = 0.03. Green: |0.26 − 0.25| = 0.01. Yellow: |0.14 − 0.25| = 0.11. Red has the largest gap (0.13), so red is furthest from the theoretical probability. Great work computing all four differences!"
     },
+    {
+      id: "c17_q51",
+      topic: "Using numbers to describe probabilities",
+      type: "mcq",
+      question: "Match the probability value <strong>0.92</strong> to the best word or phrase.",
+      options: ["Impossible", "Unlikely", "50-50 chance", "Highly likely"],
+      answer: 3,
+      explanation: "0.92 is very close to 1 (certain). On the probability scale: 0 = impossible, 0.5 = 50-50 chance, 1 = certain. A value of 0.92 is very close to certain, so it is described as highly likely."
+    },
+    {
+      id: "c17_q52",
+      topic: "Using numbers to describe probabilities",
+      type: "mcq",
+      question: "Match the probability value <strong>0.14</strong> to the best word or phrase.",
+      options: ["Impossible", "Unlikely", "50-50 chance", "Highly likely"],
+      answer: 1,
+      explanation: "0.14 is close to 0 (impossible) but not equal to it. On the scale from 0 to 1, a value of 0.14 is much less than 0.5, meaning the event is not very likely to happen. The best description is unlikely."
+    },
+    {
+      id: "c17_q53",
+      topic: "Using numbers to describe probabilities",
+      type: "input",
+      question: "A spinner has 5 equal sections. The probability of each colour is shown: P(red) = 2/5, P(blue) = 2/5, P(green) = 1/5. What do all three probabilities add up to? Write your answer as a whole number.",
+      answer: "1",
+      acceptableAnswers: ["1"],
+      explanation: "The probabilities of all possible outcomes must always add up to 1. Check: 2/5 + 2/5 + 1/5 = 5/5 = 1. This is always true — if you list every possible outcome, the total probability is 1 (certain that one of them will happen)."
+    },
+    {
+      id: "c17_q54",
+      topic: "Calculating probabilities",
+      type: "mcq",
+      question: "A bag contains 3 red and 7 blue counters. One counter is chosen at random. What is the probability of <strong>not</strong> choosing red? (Hint: P(not red) = 1 − P(red))",
+      options: ["3/10", "7/10", "3/7", "1/10"],
+      answer: 1,
+      explanation: "P(red) = 3/10. The complementary probability is P(not red) = 1 − P(red) = 1 − 3/10 = 7/10. You can also count directly: 7 blue counters out of 10 total gives 7/10. Both methods give the same answer."
+    },
+    {
+      id: "c17_q55",
+      topic: "Calculating probabilities",
+      type: "mcq",
+      question: "A kitchen drawer contains 9 forks, 5 knives, and 6 spoons. Alexander selects an item at random. What is the probability of selecting a knife? Give your answer as a <strong>percentage</strong>.",
+      options: ["5%", "20%", "25%", "45%"],
+      answer: 2,
+      explanation: "Total items = 9 + 5 + 6 = 20. P(knife) = 5/20 = 1/4. To convert to a percentage: 1/4 × 100 = 25%. So there is a 25% chance of selecting a knife."
+    },
+    {
+      id: "c17_q56",
+      topic: "Calculating probabilities",
+      type: "mcq",
+      question: "Tickets numbered 1 to 20 are placed in a bag. One ticket is drawn at random. What is the probability of drawing a <strong>prime number</strong>?",
+      options: ["4/20", "7/20", "8/20", "9/20"],
+      answer: 2,
+      explanation: "The prime numbers from 1 to 20 are: 2, 3, 5, 7, 11, 13, 17, 19 — that is 8 prime numbers. (Remember: 1 is not prime.) P(prime) = 8/20 = 2/5."
+    },
+    {
+      id: "c17_q57",
+      topic: "Outcomes",
+      type: "mcq",
+      question: "A spinner has sections of <strong>different sizes</strong> — one large red section and one tiny blue section. Jack says the probability of red is 1/2 because there are 2 colours. Why is Jack wrong?",
+      options: [
+        "Jack is wrong because there must always be more than 2 outcomes",
+        "Jack is wrong because the sections are not equal in size, so the outcomes are not equally likely",
+        "Jack is wrong because you need to spin it at least 10 times first",
+        "Jack is correct — any spinner with 2 colours gives P(red) = 1/2"
+      ],
+      answer: 1,
+      explanation: "The formula P(event) = favourable ÷ total outcomes only works when all outcomes are equally likely. If the red section is much larger than the blue section, red is more likely to come up. Equal-sized sections are needed for equally likely outcomes."
+    },
+    {
+      id: "c17_q58",
+      topic: "Calculating probabilities",
+      type: "mcq",
+      question: "Petra has 5 petunias, 7 marigolds, and 8 roses in her garden. One plant was damaged by a possum. What is the probability that the damaged plant was a <strong>marigold or a rose</strong>?",
+      options: ["7/20", "8/20", "15/20", "13/20"],
+      answer: 2,
+      explanation: "Total plants = 5 + 7 + 8 = 20. P(marigold) = 7/20 and P(rose) = 8/20. These are separate outcomes so we add them: P(marigold or rose) = 7/20 + 8/20 = 15/20 = 3/4."
+    },
+    {
+      id: "c17_q59",
+      topic: "Calculating probabilities",
+      type: "mcq",
+      question: "All 26 letters of the alphabet are placed in a hat. One letter is drawn at random. What is the probability of drawing a <strong>vowel</strong> (A, E, I, O, U)?",
+      options: ["5/26", "5/21", "6/26", "21/26"],
+      answer: 0,
+      explanation: "There are 26 letters in the alphabet. The vowels are A, E, I, O, U — that is 5 vowels. P(vowel) = 5/26. (The remaining 21 are consonants.)"
+    },
+    {
+      id: "c17_q60",
+      topic: "Using numbers to describe probabilities",
+      type: "mcq",
+      question: "Simon has a probability of 0.64 of winning a darts game. His opponent Trent has a probability of 0.36 of winning. Who is more likely to win, and what do the two probabilities add up to?",
+      options: [
+        "Trent is more likely to win; they add up to 1",
+        "Simon is more likely to win; they add up to 1",
+        "Simon is more likely to win; they add up to 0.64",
+        "They are equally likely; they add up to 0.5"
+      ],
+      answer: 1,
+      explanation: "Simon has the higher probability (0.64 > 0.36), so Simon is more likely to win. The sum: 0.64 + 0.36 = 1.00. The probabilities of all possible outcomes (Simon wins or Trent wins) must always add up to 1."
+    }
   ]
 };

@@ -266,10 +266,10 @@ const ch08 = {
       id: "c8_q25",
       topic: "Units of mass",
       type: "input",
-      question: "A painkiller tablet contains <strong>500 mg</strong> of the active ingredient. How many grams is this?<br><br>1000 mg = 1 g. Write your answer in grams.",
-      answer: "0.5",
-      acceptableAnswers: ["0.5", "0.5 g", "0.50", "0.50 g", "1/2"],
-      explanation: "To convert milligrams to grams, divide by 1000. 500 ÷ 1000 = <strong>0.5 g</strong>. Moving to a larger unit means dividing — and 500 mg is half a gram."
+      question: "A bag of rice has a mass of <strong>2500 g</strong>. Write this mass in kilograms.<br><br>1000 g = 1 kg. Write your answer in kilograms.",
+      answer: "2.5",
+      acceptableAnswers: ["2.5", "2.5 kg", "2.50", "2.50 kg"],
+      explanation: "To convert grams to kilograms, divide by 1000. 2500 ÷ 1000 = <strong>2.5 kg</strong>. Moving to a larger unit always means dividing."
     },
 
     // Mass: tonnes
@@ -355,6 +355,92 @@ const ch08 = {
       answer: "1400000",
       acceptableAnswers: ["1400000", "1 400 000", "1,400,000", "1400000 g", "1,400,000 g"],
       explanation: "Step 1: tonnes → kg: 1.4 tonnes × 1000 = 1400 kg<br>Step 2: kg → g: 1400 × 1000 = <strong>1 400 000 g</strong> (one million four hundred thousand grams!)<br>It is usually better to express this as 1.4 tonnes or 1400 kg — this shows why we choose units that give manageable numbers."
+    },
+    {
+      id: "c8_q46",
+      topic: "Units",
+      type: "mcq",
+      question: "Match each description with the most suitable measurement.<br><br>Which option correctly pairs <em>\"The amount of juice in a bottle\"</em> with the right measurement?",
+      options: ["50 km/h", "350 mL", "7 hours", "55°C"],
+      answer: 1,
+      explanation: "Juice in a bottle is a <strong>capacity</strong>, measured in millilitres (mL) or litres (L). 350 mL is a typical bottle of juice. 50 km/h is a speed, 7 hours is a time, and 55°C is a temperature — none of these measure capacity."
+    },
+    {
+      id: "c8_q47",
+      topic: "Units",
+      type: "mcq",
+      question: "A bulldozer has a mass of about 18 000 kg. A student writes its mass as <strong>18 000 000 g</strong>. Why is using grams a poor choice of unit here?",
+      options: [
+        "Grams cannot be used for objects heavier than 1000 g",
+        "The number of grams is far too large to be practical — tonnes or kilograms give a much more manageable number",
+        "Grams are only used for liquids, not solid objects",
+        "18 000 000 g is not the correct conversion"
+      ],
+      answer: 1,
+      explanation: "18 000 kg = 18 000 000 g — that is eighteen million grams! The number is so large that it is hard to work with. We choose units that give <strong>sensible-sized numbers</strong>. For heavy objects like vehicles or machinery, tonnes or kilograms are far more practical. (18 000 kg = 18 t.)"
+    },
+    {
+      id: "c8_q48",
+      topic: "Mass",
+      type: "input",
+      question: "Convert <strong>7 g</strong> to milligrams.<br><br>1 g = 1000 mg. Write your answer in milligrams.",
+      answer: "7000",
+      acceptableAnswers: ["7000", "7000 mg", "7,000", "7,000 mg"],
+      explanation: "To convert grams to milligrams, multiply by 1000. 7 × 1000 = <strong>7000 mg</strong>. Moving from grams (larger unit) to milligrams (smaller unit) means multiplying."
+    },
+    {
+      id: "c8_q49",
+      topic: "Mass",
+      type: "input",
+      question: "Convert <strong>4150 kg</strong> to tonnes.<br><br>1 t = 1000 kg. Write your answer in tonnes.",
+      answer: "4.15",
+      acceptableAnswers: ["4.15", "4.15 t"],
+      explanation: "To convert kilograms to tonnes, divide by 1000. 4150 ÷ 1000 = <strong>4.15 t</strong>. Moving from kilograms (smaller unit) to tonnes (larger unit) means dividing."
+    },
+    {
+      id: "c8_q50",
+      topic: "Mass",
+      type: "input",
+      question: "Ervin bought a <strong>1.5 kg</strong> box of cereal and a <strong>700 g</strong> box of cereal. What is the <strong>total mass</strong> of the cereal in grams?",
+      answer: "2200",
+      acceptableAnswers: ["2200", "2200 g", "2,200", "2,200 g"],
+      explanation: "First convert 1.5 kg to grams: 1.5 × 1000 = 1500 g. Then add: 1500 + 700 = <strong>2200 g</strong>. Always convert all measurements to the same unit before adding."
+    },
+    {
+      id: "c8_q51",
+      topic: "Mass",
+      type: "input",
+      question: "A block of chocolate has a mass of <strong>120 g</strong>. A factory produces <strong>200</strong> such blocks. What is the total mass of the blocks in <strong>kilograms</strong>?<br><br>1 kg = 1000 g.",
+      answer: "24",
+      acceptableAnswers: ["24", "24 kg"],
+      explanation: "Step 1: Find total mass in grams: 120 × 200 = 24 000 g.<br>Step 2: Convert to kilograms: 24 000 ÷ 1000 = <strong>24 kg</strong>. Multiply first, then convert to the required unit."
+    },
+    {
+      id: "c8_q52",
+      topic: "Mass",
+      type: "input",
+      question: "350 sandbags are used to hold back floodwater. Each sandbag has a mass of <strong>20 kg</strong>. What is the total mass of all the sandbags in <strong>tonnes</strong>?<br><br>1 t = 1000 kg.",
+      answer: "7",
+      acceptableAnswers: ["7", "7 t", "7 tonnes"],
+      explanation: "Step 1: Find total mass in kilograms: 350 × 20 = 7000 kg.<br>Step 2: Convert to tonnes: 7000 ÷ 1000 = <strong>7 t</strong>. Multiply the number of bags by the mass per bag, then convert units."
+    },
+    {
+      id: "c8_q53",
+      topic: "Reading scales",
+      type: "mcq",
+      question: "A speedometer has markings at 0, 20, 40, 60, 80, 100, 120, 140, 160, 180 and 200 km/h. Between each 20 km/h marking there are <strong>4 equal spaces</strong> (with 3 small marks between them). The needle points to the <strong>third small mark</strong> past the 80 km/h marking. What speed is shown?",
+      options: ["83 km/h", "85 km/h", "90 km/h", "95 km/h"],
+      answer: 3,
+      explanation: "Each small division = 20 km/h ÷ 4 = 5 km/h. Three marks past 80 km/h = 80 + 3 × 5 = <strong>95 km/h</strong>. Reading a speedometer uses exactly the same method as reading any other scale: find the value of one small division, then count on from the nearest labelled mark."
+    },
+    {
+      id: "c8_q54",
+      topic: "Mass",
+      type: "input",
+      question: "A suitcase has a mass of <strong>21.2 kg</strong>. Write this mass in <strong>tonnes</strong>.<br><br>1 t = 1000 kg. Write your answer in tonnes.",
+      answer: "0.0212",
+      acceptableAnswers: ["0.0212", "0.0212 t"],
+      explanation: "To convert kilograms to tonnes, divide by 1000. 21.2 ÷ 1000 = <strong>0.0212 t</strong>. This shows why we do not usually express everyday luggage in tonnes — the number becomes very small and awkward."
     },
   ]
 };

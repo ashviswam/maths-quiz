@@ -1142,5 +1142,82 @@ const ch15 = {
       answer: 0,
       explanation: "The rectangle has corners at (2,1), (6,1) and (6,4). The fourth corner must be directly above (2,1) and to the left of (6,4), giving x = 2 and y = 4. So the fourth corner is (2, 4)."
     },
+    {
+      id: "c15_q41",
+      topic: "Coordinates",
+      type: "mcq",
+      question: "Which of the following points lies on the <strong>x-axis</strong>?",
+      options: ["(0, 3)", "(2, 5)", "(4, 0)", "(3, 3)"],
+      answer: 2,
+      explanation: "A point lies on the x-axis when its y-coordinate is 0. Only (4, 0) has y = 0, so it is the point on the x-axis. The point (0, 3) is on the y-axis, not the x-axis."
+    },
+    {
+      id: "c15_q42",
+      topic: "Coordinates",
+      type: "mcq",
+      question: "Which of the following points lies on the <strong>y-axis</strong>?",
+      options: ["(2, 0)", "(0, 6)", "(5, 5)", "(3, 0)"],
+      answer: 1,
+      explanation: "A point lies on the y-axis when its x-coordinate is 0. Only (0, 6) has x = 0, so it is the point on the y-axis. The points (2, 0) and (3, 0) are on the x-axis."
+    },
+    {
+      id: "c15_q43",
+      topic: "Coordinates",
+      type: "mcq",
+      question: "Are the points <strong>(1, 6)</strong> and <strong>(6, 1)</strong> the same point or different points?",
+      options: [
+        "They are the same point because they use the same two numbers",
+        "They are different points — the x-coordinate is always written first",
+        "They are the same point because both are in Quadrant 1",
+        "They are different points — one is in Quadrant 1 and the other is in Quadrant 2"
+      ],
+      answer: 1,
+      explanation: "Coordinates are an <em>ordered pair</em>: the x-coordinate always comes first. (1, 6) means 1 unit right and 6 units up; (6, 1) means 6 units right and 1 unit up. These are two completely different locations."
+    },
+    {
+      id: "c15_q44",
+      topic: "Positive and negative coordinates",
+      type: "mcq",
+      question: "The points P, Q, R and S have these coordinates: P(−3, 2), Q(1, −4), R(0, 3), S(−2, −2). Which point has an <strong>x-coordinate of −2</strong>?",
+      options: ["P", "Q", "R", "S"],
+      answer: 3,
+      explanation: "Look at the x-coordinate (the first number) of each point. P has x = −3, Q has x = 1, R has x = 0, and S has x = −2. So point S has an x-coordinate of −2."
+    },
+    {
+      id: "c15_q45",
+      topic: "Positive and negative coordinates",
+      type: "mcq",
+      question: "On a coordinate grid, point A is at <strong>(2, 5)</strong> and point B is at <strong>(2, 1)</strong>. How many grid units apart are A and B?",
+      options: ["1", "2", "4", "6"],
+      answer: 2,
+      explanation: "Both points have the same x-coordinate (x = 2), so they lie on a vertical line. The distance between them is the difference in their y-coordinates: 5 − 1 = 4 grid units."
+    },
+    {
+      id: "c15_q46",
+      topic: "Compass points",
+      type: "mcq",
+      question: "Point A is at <strong>(1, 3)</strong> and point C is at <strong>(1, −1)</strong> on a coordinate grid. In which direction must you travel to go from A to C? (North is up the page.)",
+      options: ["North", "South", "East", "West"],
+      answer: 1,
+      explanation: "Point C has the same x-coordinate as A (both at x = 1), so you move straight up or down. C has a smaller y-value (−1 < 3), which means C is below A. Moving downward on the page is travelling South."
+    },
+    {
+      id: "c15_q47",
+      topic: "Compass points",
+      type: "mcq",
+      question: "P is at <strong>(−3, 2)</strong> and Q is at <strong>(2, −4)</strong>. Which of the following points is <strong>south of P</strong>? (A point is due south if it has the same x-coordinate but a smaller y-coordinate.)",
+      options: ["(−3, 5)", "(−3, −1)", "(0, 2)", "(−3, 2)"],
+      answer: 1,
+      explanation: "A point is directly south of P(−3, 2) if it shares the same x-coordinate (−3) and has a smaller y-value. Only (−3, −1) has x = −3 and y = −1, which is less than 2. So (−3, −1) is south of P."
+    },
+    {
+      id: "c15_q48",
+      topic: "Compass points",
+      type: "input",
+      question: "A map uses the scale: 1 grid unit represents 1 km. Town A is at coordinates (2, 4) and Town B is at (2, −2). Both towns are joined by a straight road running north–south. How many kilometres long is the road? Write just the number.",
+      answer: "6",
+      acceptableAnswers: ["6", "6 km"],
+      explanation: "Both towns share the same x-coordinate (x = 2), so the road is vertical. The distance is the difference in y-coordinates: 4 − (−2) = 4 + 2 = 6 grid units. Since 1 grid unit = 1 km, the road is 6 km long."
+    }
   ]
 };

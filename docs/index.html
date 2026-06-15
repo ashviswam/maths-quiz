@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maths — Study Zone</title>
+  <title>Pragathy's Study Zone</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -15,170 +15,116 @@
   <!-- ── HEADER ─────────────────────────────────────────────── -->
   <header id="app-header">
     <div class="header-inner">
-      <button id="btn-back" class="btn-back hidden" onclick="App.goHome()">← Chapters</button>
-      <div class="logo">🧮 Maths</div>
-      <div id="header-right" class="header-right"></div>
+      <div class="logo">✏️ Study Zone</div>
     </div>
   </header>
 
-  <!-- ── HOME VIEW ──────────────────────────────────────────── -->
-  <main id="view-home" class="view">
+  <!-- ── SUBJECT SELECTOR ───────────────────────────────────── -->
+  <main class="view">
     <div class="home-floats" aria-hidden="true">
-      <span class="hf hf1">➕</span>
-      <span class="hf hf2">✖️</span>
-      <span class="hf hf3">π</span>
-      <span class="hf hf4">➗</span>
-      <span class="hf hf5">∑</span>
-      <span class="hf hf6">²</span>
-      <span class="hf hf7">%</span>
-      <span class="hf hf8">∞</span>
+      <span class="hf hf1">🔬</span>
+      <span class="hf hf2">📐</span>
+      <span class="hf hf3">🌍</span>
+      <span class="hf hf4">📚</span>
+      <span class="hf hf5">💻</span>
+      <span class="hf hf6">🧬</span>
+      <span class="hf hf7">🌟</span>
+      <span class="hf hf8">⚗️</span>
     </div>
+
     <div class="home-hero">
-      <h1 id="home-greeting">Welcome! 👋</h1>
-      <p class="home-subtitle">Pick a chapter to practise. Your progress is saved automatically.</p>
-      <div id="notes-cta" class="notes-cta hidden">
-        <button class="btn-notes-view" onclick="App.openNotes()">📋 View notes (<span id="notes-count">0</span>)</button>
-      </div>
-      <div id="overall-bar" class="overall-bar hidden">
-        <div class="overall-bar-track">
-          <div id="overall-bar-fill" class="overall-bar-fill"></div>
-        </div>
-        <span id="overall-bar-label"></span>
-      </div>
-    </div>
-    <div id="chapter-grid" class="chapter-grid"></div>
-  </main>
-
-  <!-- ── QUIZ VIEW ───────────────────────────────────────────── -->
-  <main id="view-quiz" class="view hidden">
-
-    <div class="quiz-top">
-      <div class="quiz-top-row">
-        <div id="quiz-title" class="quiz-title"></div>
-        <button id="btn-finish-quiz" class="btn-finish-early hidden" onclick="App.showResults()">Finish Quiz →</button>
-      </div>
-      <div class="quiz-meta">
-        <span id="quiz-counter" class="quiz-counter"></span>
-        <span id="quiz-score-live" class="quiz-score-live"></span>
-      </div>
-      <div class="quiz-prog-track">
-        <div id="quiz-prog-fill" class="quiz-prog-fill"></div>
-      </div>
+      <h1 id="home-greeting">Welcome back, Pragathy! 👋</h1>
+      <p class="home-subtitle">Pick a subject to start practising.</p>
     </div>
 
-    <div class="quiz-layout">
+    <div class="subject-grid">
 
-      <!-- ── Sidebar ─── -->
-      <aside id="quiz-sidebar" class="quiz-sidebar">
-        <div class="sidebar-hd">
-          <span class="sidebar-title">Questions</span>
-          <div class="sidebar-legend">
-            <span class="leg-item"><span class="ldot ldot-green"></span>Correct</span>
-            <span class="leg-item"><span class="ldot ldot-red"></span>Wrong</span>
-            <span class="leg-item"><span class="ldot ldot-grey"></span>Not tried</span>
-          </div>
+      <a href="dutch/" class="subject-card subject-card--soon">
+        <div class="subj-top">
+          <span class="subj-icon">🇳🇱</span>
+          <span class="subj-soon-badge">Coming soon</span>
         </div>
-        <div id="sidebar-list" class="sidebar-list"></div>
-      </aside>
+        <div class="subj-name">Dutch</div>
+        <div class="subj-desc">Language & Literacy</div>
+      </a>
 
-      <!-- ── Main content ─── -->
-      <div class="quiz-main">
-        <!-- Question card -->
-        <div id="question-card" class="card question-card">
-          <div class="q-topic-row">
-            <div id="q-topic" class="topic-badge"></div>
-            <div id="q-stretch-badge" class="stretch-badge hidden">⭐ Stretch</div>
-          </div>
-          <div id="q-diagram" class="q-diagram hidden"></div>
-          <div id="q-text" class="question-text"></div>
-
-          <!-- MCQ options -->
-          <div id="q-options" class="options-grid"></div>
-
-          <!-- Input answer -->
-          <div id="q-input" class="input-area hidden">
-            <input type="text" id="answer-input" placeholder="Type your answer here…" autocomplete="off" autocorrect="off">
-            <button id="btn-submit" class="btn-primary" onclick="App.submitInput()">Check →</button>
-          </div>
-
-          <!-- Parent note -->
-          <div id="q-note-bar" class="q-note-bar">
-            <button id="btn-note" class="btn-note" onclick="App.toggleNote()">📝 Leave a note</button>
-            <div id="note-panel" class="note-panel hidden">
-              <textarea id="note-text" class="note-textarea" placeholder="Your note about this question (only visible to you)…"></textarea>
-              <div class="note-actions">
-                <button class="btn-note-cancel" onclick="App.cancelNote()">Cancel</button>
-                <button class="btn-note-save" onclick="App.saveNote()">Save note</button>
-              </div>
-            </div>
-          </div>
+      <a href="english/" class="subject-card subject-card--soon">
+        <div class="subj-top">
+          <span class="subj-icon">📚</span>
+          <span class="subj-soon-badge">Coming soon</span>
         </div>
+        <div class="subj-name">English</div>
+        <div class="subj-desc">Language &amp; Literature</div>
+      </a>
 
-        <!-- Feedback card -->
-        <div id="feedback-card" class="card feedback-card hidden">
-          <div id="fb-icon" class="fb-icon"></div>
-          <div id="fb-heading" class="fb-heading"></div>
-          <div id="fb-explanation" class="fb-explanation"></div>
-          <button id="btn-next" class="btn-primary" onclick="App.nextQuestion()">Next Question →</button>
+      <a href="french/" class="subject-card subject-card--soon">
+        <div class="subj-top">
+          <span class="subj-icon">🇫🇷</span>
+          <span class="subj-soon-badge">Coming soon</span>
         </div>
-      </div>
+        <div class="subj-name">French</div>
+        <div class="subj-desc">Foreign Language</div>
+      </a>
+
+      <a href="humanities/" class="subject-card subject-card--soon">
+        <div class="subj-top">
+          <span class="subj-icon">🌍</span>
+          <span class="subj-soon-badge">Coming soon</span>
+        </div>
+        <div class="subj-name">Humanities</div>
+        <div class="subj-desc">History &amp; Geography</div>
+      </a>
+
+      <a href="ict/" class="subject-card subject-card--soon">
+        <div class="subj-top">
+          <span class="subj-icon">💻</span>
+          <span class="subj-soon-badge">Coming soon</span>
+        </div>
+        <div class="subj-name">ICT</div>
+        <div class="subj-desc">Digital Technology</div>
+      </a>
+
+      <a href="maths/" class="subject-card" style="--subj-color:#6366f1">
+        <div class="subj-top">
+          <span class="subj-icon">🧮</span>
+          <span class="subj-q-count" id="maths-count">19 chapters</span>
+        </div>
+        <div class="subj-name">Maths</div>
+        <div class="subj-desc">IB MYP Grade 6 · Haese</div>
+        <div class="subj-cta">Start practising →</div>
+      </a>
+
+      <a href="science/" class="subject-card" style="--subj-color:#22c55e">
+        <div class="subj-top">
+          <span class="subj-icon">🔬</span>
+          <span class="subj-q-count" id="science-count">5 topics</span>
+        </div>
+        <div class="subj-name">Science</div>
+        <div class="subj-desc">IB MYP Grade 6 · RISS</div>
+        <div class="subj-cta">Start practising →</div>
+      </a>
+
+      <a href="spanish/" class="subject-card subject-card--soon">
+        <div class="subj-top">
+          <span class="subj-icon">🇪🇸</span>
+          <span class="subj-soon-badge">Coming soon</span>
+        </div>
+        <div class="subj-name">Spanish</div>
+        <div class="subj-desc">Foreign Language</div>
+      </a>
 
     </div>
   </main>
-
-  <!-- ── RESULTS VIEW ────────────────────────────────────────── -->
-  <main id="view-results" class="view hidden">
-    <div class="results-wrap">
-      <div id="results-emoji" class="results-emoji"></div>
-      <h2 id="results-title" class="results-title"></h2>
-      <div id="results-score" class="results-score-block"></div>
-      <p id="results-msg" class="results-msg"></p>
-
-      <div id="results-breakdown" class="results-breakdown"></div>
-
-      <div class="results-actions">
-        <button id="btn-retry-wrong" class="btn-secondary hidden" onclick="App.retryWrong()">Retry Wrong Answers</button>
-        <button class="btn-primary" onclick="App.goHome()">Back to Chapters</button>
-      </div>
-    </div>
-  </main>
-
-  <!-- ── NOTES OVERLAY ────────────────────────────────────────── -->
-  <div id="notes-overlay" class="notes-overlay hidden">
-    <div class="notes-modal">
-      <div class="notes-header">
-        <span class="notes-title">📋 Your Notes</span>
-        <button class="notes-close" onclick="App.closeNotes()">✕ Close</button>
-      </div>
-      <div id="notes-list" class="notes-list"></div>
-    </div>
-  </div>
 
 </div><!-- /#app -->
 
-<!-- ── DATA FILES ──────────────────────────────────────────── -->
-<script src="js/data/ch01.js"></script>
-<script src="js/data/ch02.js"></script>
-<script src="js/data/ch03.js"></script>
-<script src="js/data/ch04.js"></script>
-<script src="js/data/ch05.js"></script>
-<script src="js/data/ch06.js"></script>
-<script src="js/data/ch07.js"></script>
-<script src="js/data/ch08.js"></script>
-<script src="js/data/ch09.js"></script>
-<script src="js/data/ch10.js"></script>
-<script src="js/data/ch11.js"></script>
-<script src="js/data/ch12.js"></script>
-<script src="js/data/ch13.js"></script>
-<script src="js/data/ch14.js"></script>
-<script src="js/data/ch15.js"></script>
-<script src="js/data/ch16.js"></script>
-<script src="js/data/ch17.js"></script>
-<script src="js/data/ch18.js"></script>
-<script src="js/data/ch19.js"></script>
-<script src="js/data/chapters.js"></script>
-<script src="js/progress.js"></script>
-<script src="js/app.js"></script>
+<script>
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? 'Good morning, Pragathy! ☀️'
+                 : hour < 17 ? 'Hey Pragathy! 👋'
+                 : 'Good evening, Pragathy! 🌙';
+  document.getElementById('home-greeting').textContent = greeting;
+</script>
 
 </body>
 </html>

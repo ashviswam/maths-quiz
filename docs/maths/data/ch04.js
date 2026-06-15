@@ -508,6 +508,132 @@ const ch04 = {
       options: ["0", "3", "6", "9"],
       answer: 1,
       explanation: "For divisibility by 9, the sum of ALL digits must be divisible by 9. The known digits sum to 4 + 7 + 8 + 2 = 21. Let the missing digit be d (used twice). Total sum = 21 + 2d. We need 21 + 2d to be divisible by 9. Test the options: d=0 → 21 (not divisible by 9). d=3 → 21 + 6 = 27 ✓ (27 ÷ 9 = 3). d=6 → 21 + 12 = 33 (no). d=9 → 21 + 18 = 39 (no). The missing digit is <strong>3</strong>. Excellent multi-step reasoning!"
+    },
+    {
+      id: "c4_q46",
+      topic: "Zero and one",
+      type: "mcq",
+      question: "What is the result of <strong>75 ÷ 0</strong>?",
+      options: ["0", "75", "1", "Undefined — you cannot divide by zero"],
+      answer: 3,
+      explanation: "Dividing by zero is undefined — it has no answer. You cannot split 75 into zero groups. This is different from 0 ÷ 75, which equals 0. Remember: any number divided by 0 is undefined, but 0 divided by any non-zero number equals 0."
+    },
+    {
+      id: "c4_q47",
+      topic: "Zero and one",
+      type: "input",
+      question: "What is the result of <strong>364 ÷ 1</strong>?",
+      answer: "364",
+      acceptableAnswers: ["364"],
+      explanation: "Dividing any number by 1 always gives the same number back. 364 ÷ 1 = 364. This is because 1 is the identity element for multiplication and division — it leaves the number unchanged. Just like 364 × 1 = 364."
+    },
+    {
+      id: "c4_q48",
+      topic: "Divisibility",
+      type: "mcq",
+      question: "Which of the following numbers is <strong>odd</strong>?",
+      options: ["48", "73", "102", "256"],
+      answer: 1,
+      explanation: "A number is odd if it is NOT divisible by 2 — odd numbers end in 1, 3, 5, 7, or 9. 73 ends in 3, so it is odd. The others all end in even digits (48 ends in 8, 102 ends in 2, 256 ends in 6), so they are all even."
+    },
+    {
+      id: "c4_q49",
+      topic: "Divisibility",
+      type: "mcq",
+      question: "The sum of two odd numbers is always:",
+      options: ["Odd", "Even", "Prime", "A multiple of 3"],
+      answer: 1,
+      explanation: "When you add two odd numbers, the result is always even. For example: 3 + 5 = 8, 7 + 9 = 16, 11 + 13 = 24. You can think of it this way: each odd number is one more than an even number, so the two extra 1s pair up to make another even number."
+    },
+    {
+      id: "c4_q50",
+      topic: "Factors",
+      type: "mcq",
+      question: "Is <strong>8</strong> a factor of <strong>56</strong>?",
+      options: ["Yes, because 56 ÷ 8 = 7 exactly", "No, because 56 is not in the 8 times table", "Yes, because 8 + 56 = 64", "No, because 8 is bigger than half of 56"],
+      answer: 0,
+      explanation: "A number is a factor if it divides exactly with no remainder. 56 ÷ 8 = 7 exactly (no remainder), so 8 IS a factor of 56. We can also write this as 8 × 7 = 56, confirming 8 and 7 are a factor pair of 56."
+    },
+    {
+      id: "c4_q51",
+      topic: "Factors",
+      type: "input",
+      question: "Complete this factor pair: 45 = 9 × ___. What is the missing number?",
+      answer: "5",
+      acceptableAnswers: ["5"],
+      explanation: "To find the missing factor, divide: 45 ÷ 9 = 5. So 45 = 9 × 5. You can check: 9 × 5 = 45 ✓. This means 9 and 5 are both factors of 45, and they form a factor pair."
+    },
+    {
+      id: "c4_q52",
+      topic: "Multiples",
+      type: "mcq",
+      question: "Which of the following lists shows the multiples of <strong>6</strong> that are between <strong>20 and 40</strong>?",
+      options: ["24, 30, 36", "20, 24, 30, 36, 40", "6, 12, 18, 24, 30, 36, 42", "24, 36"],
+      answer: 0,
+      explanation: "Multiples of 6 are: 6, 12, 18, 24, 30, 36, 42... The ones between 20 and 40 (not including 20 or 40) are 24, 30, and 36. Check: 6 × 4 = 24 ✓, 6 × 5 = 30 ✓, 6 × 6 = 36 ✓."
+    },
+    {
+      id: "c4_q53",
+      topic: "Multiples",
+      type: "mcq",
+      question: "Is <strong>63</strong> a multiple of <strong>7</strong>?",
+      options: ["Yes, because 63 ÷ 7 = 9 exactly", "No, because 63 is odd", "Yes, because 63 ends in 3", "No, because 7 does not divide 63 exactly"],
+      answer: 0,
+      explanation: "A number is a multiple of 7 if it appears in the 7 times table. 7 × 9 = 63, so 63 is the 9th multiple of 7. We can verify: 63 ÷ 7 = 9 exactly with no remainder, confirming 63 is a multiple of 7."
+    },
+    {
+      id: "c4_q54",
+      topic: "Square numbers",
+      type: "input",
+      question: "What is the <strong>12th square number</strong>? (The nth square number is n × n.)",
+      answer: "144",
+      acceptableAnswers: ["144"],
+      explanation: "The 12th square number is 12 × 12 = 144. You can work it out as (10 + 2) × 12 = 120 + 24 = 144. The sequence of square numbers is: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144."
+    },
+    {
+      id: "c4_q55",
+      topic: "Square numbers",
+      type: "input",
+      question: "What is the <strong>smallest square number that is greater than 200</strong>?",
+      answer: "225",
+      acceptableAnswers: ["225"],
+      explanation: "We need to find the first square number above 200. Check: 14² = 196 (too small), 15² = 15 × 15 = 225. Since 225 > 200 and 196 < 200, the smallest square number greater than 200 is 225."
+    },
+    {
+      id: "c4_q56",
+      topic: "Divisibility tests",
+      type: "mcq",
+      question: "Which of the following numbers is divisible by <strong>10</strong>?",
+      options: ["105", "1005", "3215", "4870"],
+      answer: 3,
+      explanation: "A number is divisible by 10 if its last digit is 0. Check each option: 105 ends in 5 (no), 1005 ends in 5 (no), 3215 ends in 5 (no), 4870 ends in 0 — yes! 4870 ÷ 10 = 487 exactly. The rule: a number is divisible by 10 if and only if its last digit is 0."
+    },
+    {
+      id: "c4_q57",
+      topic: "Prime and composite numbers",
+      type: "mcq",
+      question: "What are the <strong>prime factors</strong> of 30? (List only the prime numbers that divide 30 exactly.)",
+      options: ["1, 2, 3, 5", "2, 3, 5", "2, 5, 6", "3, 5, 10"],
+      answer: 1,
+      explanation: "The prime factors of 30 are the prime numbers that divide 30 exactly. 30 = 2 × 3 × 5. Check: 2 is prime ✓, 3 is prime ✓, 5 is prime ✓. Note that 1 is not a prime number, and 6 and 10 are not prime (they are composite). So the prime factors of 30 are 2, 3, and 5."
+    },
+    {
+      id: "c4_q58",
+      topic: "Prime and composite numbers",
+      type: "input",
+      question: "What is the sum of the <strong>first 5 prime numbers</strong>?",
+      answer: "28",
+      acceptableAnswers: ["28"],
+      explanation: "The first 5 prime numbers are 2, 3, 5, 7, and 11. Their sum is 2 + 3 + 5 + 7 + 11 = 28. Remember that 1 is NOT a prime number — primes must have exactly two factors (1 and themselves), but 1 only has one factor."
+    },
+    {
+      id: "c4_q59",
+      topic: "Cubic numbers",
+      type: "input",
+      question: "How many <strong>cubic numbers</strong> are there between 100 and 500? (Do not include 100 or 500 themselves.)",
+      answer: "3",
+      acceptableAnswers: ["3"],
+      explanation: "List the cubic numbers: 1³=1, 2³=8, 3³=27, 4³=64, 5³=125, 6³=216, 7³=343, 8³=512. The cubic numbers between 100 and 500 are 125, 216, and 343 — that is 3 cubic numbers. (512 is too large as it is greater than 500.)"
     }
   ]
 };

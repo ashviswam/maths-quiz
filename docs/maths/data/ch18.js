@@ -579,10 +579,10 @@ const ch18 = {
       topic: "Measuring the centre of a data set",
       difficulty: "challenging",
       type: "mcq",
-      question: "Six students' test scores are: 45, 52, 63, 63, 71, 86. A seventh student joins and the <strong>mean increases by 1</strong> to become 64. What did the seventh student score?",
+      question: "Six students' test scores are: 45, 52, 63, 63, 72, 83. A seventh student joins and the <strong>mean increases by 1</strong> to become 64. What did the seventh student score?",
       options: ["64", "68", "70", "74"],
       answer: 2,
-      explanation: "New mean = 64, with 7 students, so new total = 7 × 64 = 448. Old total of 6 students = 45 + 52 + 63 + 63 + 71 + 86 = 380. Old mean = 380 ÷ 6 ≈ 63.3 (note: the problem says the mean increases by 1 to 64). Seventh student's score = 448 − 380 = <strong>68</strong>. This is a great 'working backwards from the mean' problem — well done if you spotted that!"
+      explanation: "Old total = 45 + 52 + 63 + 63 + 72 + 83 = 378. Old mean = 378 ÷ 6 = 63. New mean = 64 (one more than 63). New total needed = 7 × 64 = 448. Seventh student's score = 448 − 378 = <strong>70</strong>. This is a great 'working backwards from the mean' problem — well done if you spotted that!"
     },
     {
       id: "c18_q47",
@@ -611,6 +611,69 @@ const ch18 = {
       options: ["40°", "100°", "144°", "160°"],
       answer: 2,
       explanation: "Sector angle = percentage ÷ 100 × 360°. Green sector = 40/100 × 360° = 0.4 × 360° = 144°. Always multiply the percentage as a decimal by 360 to convert to degrees."
+    },
+    {
+      id: "c18_q51",
+      topic: "Tally charts and frequency tables",
+      type: "mcq",
+      question: "A survey asked 40 students their favourite subject. The frequency table shows:<br><br><strong>Subject | Frequency</strong><br>Maths &nbsp;&nbsp;&nbsp;| 12<br>English &nbsp;| 8<br>Science &nbsp;| 14<br>Art &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 6<br><br>What <strong>percentage</strong> of students chose Maths?",
+      options: ["12%", "25%", "30%", "40%"],
+      answer: 2,
+      explanation: "Percentage = (frequency ÷ total) × 100 = (12 ÷ 40) × 100 = 0.3 × 100 = 30%. Divide the category frequency by the total, then multiply by 100 to convert to a percentage."
+    },
+    {
+      id: "c18_q52",
+      topic: "Dot plots",
+      type: "mcq",
+      question: "A dot plot shows the number of books students read last month:<br><strong>1:</strong> ●<br><strong>2:</strong> ● ● ●<br><strong>3:</strong> ● ●<br><strong>4:</strong> ● ●<br><strong>5:</strong> ● ●<br><br>What <strong>fraction</strong> of students read <strong>3 or more</strong> books? Write as a fraction in lowest terms.",
+      options: ["2/10", "3/5", "3/10", "1/2"],
+      answer: 1,
+      explanation: "Total students = 1 + 3 + 2 + 2 + 2 = 10. Students who read 3 or more = 2 + 2 + 2 = 6. Fraction = 6/10 = 3/5. Simplify by dividing both numerator and denominator by 2."
+    },
+    {
+      id: "c18_q53",
+      topic: "Numerical data",
+      type: "input",
+      question: "A dot plot shows the number of fillings children received at their last dental visit:<br><strong>0:</strong> ● ● ● ●<br><strong>1:</strong> ● ● ●<br><strong>2:</strong> ● ●<br><strong>3:</strong> ● ●<br><strong>4:</strong> ●<br><br>How many children received <strong>at least 2</strong> fillings? Write your answer as a number.",
+      answer: "5",
+      acceptableAnswers: ["5"],
+      explanation: "At least 2 fillings means 2, 3, or 4 fillings. Count the dots: 2 fillings = 2 dots, 3 fillings = 2 dots, 4 fillings = 1 dot. Total = 2 + 2 + 1 = 5 children."
+    },
+    {
+      id: "c18_q54",
+      topic: "Numerical data",
+      type: "mcq",
+      question: "A column graph shows the number of goals scored per match by a football team over several matches:<br><br>Goals | Frequency<br>0 &nbsp;&nbsp;&nbsp;&nbsp;| 2<br>1 &nbsp;&nbsp;&nbsp;&nbsp;| 4<br>2 &nbsp;&nbsp;&nbsp;&nbsp;| 7<br>3 &nbsp;&nbsp;&nbsp;&nbsp;| 5<br>4 &nbsp;&nbsp;&nbsp;&nbsp;| 2<br><br>The tallest bar is above the value 2. What is the <strong>mode</strong> of this data set?",
+      options: ["1", "2", "3", "7"],
+      answer: 1,
+      explanation: "The mode is the value that occurs most often — it has the tallest bar in the column graph. The bar above 2 goals has height 7, which is the tallest bar. So the mode is 2 goals. Note: the mode is the number of goals (2), not the frequency (7)."
+    },
+    {
+      id: "c18_q55",
+      topic: "Measuring the centre of a data set",
+      type: "input",
+      question: "A student recorded how long it took her to walk to school each day for 5 days (in minutes): 12.4, 11.8, 13.2, 12.6, 15.0. What is the <strong>mean</strong> walking time? Write your answer as a decimal number.",
+      answer: "13",
+      acceptableAnswers: ["13", "13.0"],
+      explanation: "Mean = sum ÷ count = (12.4 + 11.8 + 13.2 + 12.6 + 15.0) ÷ 5 = 65.0 ÷ 5 = 13.0 minutes. Add all the values carefully, then divide by how many there are."
+    },
+    {
+      id: "c18_q56",
+      topic: "Pie charts",
+      type: "mcq",
+      question: "A pie chart shows how students travel to school with these sectors:<br>Walk = 40%, Bus = 30%, Car = 20%, Cycle = 10%.<br><br>Which is the <strong>least common</strong> way students travel to school?",
+      options: ["Walk", "Bus", "Car", "Cycle"],
+      answer: 3,
+      explanation: "The least common category has the smallest percentage (smallest sector). Cycle = 10%, which is smaller than Car (20%), Bus (30%), and Walk (40%). So cycling is the least common way to travel."
+    },
+    {
+      id: "c18_q57",
+      topic: "Pictograms",
+      type: "mcq",
+      question: "A pictogram shows the number of houses sold each month. Key: <strong>1 house symbol = 10 houses</strong>.<br><br>April: ★★★★<br>May: ★★<br>June: ★★★<br>July: ★★★★★<br><br>Which month had the <strong>greatest</strong> number of houses sold?",
+      options: ["April", "May", "June", "July"],
+      answer: 3,
+      explanation: "Count the symbols in each row: April = 4, May = 2, June = 3, July = 5. July has the most symbols, so July had the greatest number of houses sold (5 × 10 = 50 houses)."
     }
   ]
 };

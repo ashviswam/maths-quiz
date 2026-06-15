@@ -52,10 +52,7 @@ const ch01 = {
   <text x="368" y="86" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="24" font-weight="700">…</text>
   <!-- Number display -->
   <text x="200" y="138" text-anchor="middle" fill="#1e293b" font-family="Nunito,Arial,sans-serif" font-size="14" font-weight="700">3, 7 4 8, 2 1 5</text>
-  <!-- Pointer arrow to highlighted 7 -->
-  <line x1="317" y1="107" x2="317" y2="150" stroke="#5b5ef4" stroke-width="1.5" stroke-dasharray="4,2"/>
-  <text x="317" y="165" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">7 is here</text>
-  <text x="317" y="180" text-anchor="middle" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="10">(hundred-thousands)</text>
+  <!-- Highlighted column (blue background) marks the digit to identify -->
 </svg>`,
       options: ["7,000", "700,000", "70,000", "7,000,000"],
       answer: 1,
@@ -599,6 +596,105 @@ const ch01 = {
       options: ["31,245", "29,541", "31,254", "25,431"],
       answer: 0,
       explanation: "We want the number closest to 30,000. Options above 30,000: the smallest above 30,000 using digits 1–5 once would start with 3, then the next digit as small as possible: 31,245 (distance from 30,000 = 1,245). Options below 30,000: the largest below 30,000 starts with 2, then 9... but we only have digits 1–5! So the largest number starting with 2 uses 2, 5, 4, 3, 1 = 25,431 (distance = 4,569). Comparing: 31,245 is only 1,245 away, while 29,541 is 459 away. Wait — can we make 29,541? Digits used: 2, 9, 5, 4, 1 — but we don't have a 9. So 29,541 is not possible. The closest we can get below 30,000 is 25,431 (4,569 away). The closest above is 31,245 (1,245 away). So <strong>31,245</strong> is closest to 30,000."
+    },
+
+    // ── AUDIT GAP-FILL QUESTIONS (c1_q45 – c1_q51) ───────────────────
+
+    // Gap 1: Write in numeral form from expanded form (Exercise 1A Q4)
+    {
+      id: "c1_q45",
+      topic: "Place value",
+      type: "input",
+      question: "Write <strong>50,000 + 200 + 40</strong> in numeral form. Write your answer as a number (no commas).",
+      answer: "50240",
+      acceptableAnswers: ["50240", "50,240"],
+      explanation: "Add each part carefully: 50,000 + 200 + 40 = 50,240. Notice there are no thousands, no hundreds of thousands, and no ones, so those places are filled with zeros: 5, 0, 2, 4, 0."
+    },
+
+    // Gap 2: Role of zero as a placeholder (Exercise 1A opening problem b / teaching text)
+    {
+      id: "c1_q46",
+      topic: "Place value",
+      type: "mcq",
+      question: "The number 40,308 contains two zeros. Why are these zeros important?",
+      options: [
+        "They show that the number is even.",
+        "They hold the ten-thousands and units places so other digits stay in the correct position.",
+        "They show that the thousands and tens places are empty and have no value.",
+        "They hold the thousands and tens places so other digits stay in the correct position."
+      ],
+      answer: 3,
+      explanation: "In 40,308: the zero in the thousands place holds that column so the 3 stays in the hundreds place, and the zero in the tens place holds that column so the 8 stays in the units place. Without these zeros the number would look like 438, which is completely different. Zero acts as a <em>placeholder</em> — it has no value itself but keeps all other digits in the right columns."
+    },
+
+    // Gap 3: Insert < or > to compare two numbers (Exercise 1B Q2)
+    {
+      id: "c1_q47",
+      topic: "Number lines",
+      type: "mcq",
+      question: "Which symbol correctly completes this statement? <br><strong>14 ___ 11</strong>",
+      options: ["< (less than)", "> (greater than)", "= (equal to)", "Cannot be determined"],
+      answer: 1,
+      explanation: "On a number line, numbers increase from left to right. 14 is to the right of 11, so 14 is greater than 11. We write 14 > 11. The symbol > points to the smaller number (like an open mouth eating the bigger number)."
+    },
+
+    // Gap 4: Order numbers in descending order (Exercise 1B Q4)
+    {
+      id: "c1_q48",
+      topic: "Number lines",
+      type: "mcq",
+      question: "Write the numbers <strong>24, 19, 32, 28, 21</strong> in <strong>descending order</strong> (largest to smallest).",
+      options: [
+        "19, 21, 24, 28, 32",
+        "32, 28, 24, 21, 19",
+        "32, 24, 28, 19, 21",
+        "28, 32, 24, 21, 19"
+      ],
+      answer: 1,
+      explanation: "Descending means decreasing — we go from largest to smallest. Place all five numbers on a number line in your mind: 19, 21, 24, 28, 32. Reading from right to left (largest first) gives: 32, 28, 24, 21, 19."
+    },
+
+    // Gap 5: Read/write numbers in the billions range (Exercise 1C Q4)
+    {
+      id: "c1_q49",
+      topic: "Big numbers",
+      type: "mcq",
+      question: "How do you write <strong>two billion, fifteen million</strong> in digits?",
+      options: [
+        "2,015,000,000",
+        "2,150,000,000",
+        "2,000,015,000",
+        "2,015,000"
+      ],
+      answer: 0,
+      explanation: "A billion is 1,000,000,000 (ten digits). Two billion = 2,000,000,000. Fifteen million = 15,000,000. Adding: 2,000,000,000 + 15,000,000 = 2,015,000,000. There are no thousands and no units, so those places are all zeros."
+    },
+
+    // Gap 6: Identify which multiple of 10 a number is nearer to / "midway" (Exercise 1D Q1)
+    {
+      id: "c1_q50",
+      topic: "Rounding numbers",
+      type: "mcq",
+      question: "Look at the number line: 450, <strong>457</strong>, 460.<br>Which multiple of 10 is 457 <strong>nearer to</strong>?",
+      options: [
+        "450, because 457 is below 460",
+        "460, because the units digit 7 is greater than 5",
+        "Neither — 457 is exactly midway between 450 and 460",
+        "450, because the units digit 7 rounds down"
+      ],
+      answer: 1,
+      explanation: "457 sits between the multiples of 10 at 450 and 460. The distance from 457 to 450 is 7, and the distance from 457 to 460 is 3. Since 3 &lt; 7, the number 457 is nearer to 460. This matches the rounding rule: when the units digit is 5, 6, 7, 8, or 9, we round up."
+    },
+
+    // Gap 7: Round a single number to multiple levels of accuracy (Exercise 1D Q11)
+    {
+      id: "c1_q51",
+      topic: "Rounding numbers",
+      type: "mcq",
+      question: "Round <strong>38,485</strong> to the nearest <strong>1,000</strong>.",
+      options: ["38,000", "39,000", "38,500", "40,000"],
+      answer: 0,
+      explanation: "To round to the nearest 1,000, look at the hundreds digit. In 38,485 the hundreds digit is 4. Since 4 &lt; 5, we round down: keep the thousands digit as 8 and replace the rest with zeros. 38,485 rounded to the nearest 1,000 is 38,000."
     }
   ]
 };

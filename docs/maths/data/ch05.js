@@ -433,8 +433,8 @@ const ch05 = {
       id: "c5_q20",
       topic: "Nets of solids",
       type: "mcq",
-      question: "Which solid would be formed by folding a net that has <strong>1 circle and 1 curved rectangle</strong> (a rectangle that wraps around)?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Net of a cylinder: one circle and one rectangle">
+      question: "Which solid would be formed by folding a net that has <strong>2 circles and 1 curved rectangle</strong> (a rectangle that wraps around)?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" aria-label="Net of a cylinder: two circles and one rectangle">
   <rect width="320" height="220" fill="#f8fafc" rx="8"/>
   <!-- Rectangle (curved side that wraps around) -->
   <rect x="50" y="80" width="160" height="80" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2" rx="3"/>
@@ -726,6 +726,188 @@ const ch05 = {
       options: ["Cylinder", "Cone", "Pyramid", "Sphere"],
       answer: 1,
       explanation: "The net of a <strong>cone</strong> is made of one circle (the flat base) and one sector — a fan or wedge shape that wraps around to form the curved surface. When the sector is rolled up and the circle is attached at the base, it forms a cone."
+    },
+
+    // ── GAP-FILL QUESTIONS ────────────────────────────────────────────────
+
+    // TRIANGLES: isosceles — classify by sides given measurements
+    {
+      id: "c5_q48",
+      topic: "Triangles",
+      type: "mcq",
+      question: "A triangle has sides of length <strong>5 cm, 5 cm, and 8 cm</strong>. What type of triangle is it <em>based on its sides</em>?",
+      options: ["Equilateral", "Scalene", "Isosceles", "Right-angled"],
+      answer: 2,
+      explanation: "An <strong>isosceles triangle</strong> has at least two sides of equal length. Here, two sides measure 5 cm and the third measures 8 cm — two sides are equal, so this is an isosceles triangle."
+    },
+
+    // TRIANGLES: angle sum = 180°
+    {
+      id: "c5_q49",
+      topic: "Triangles",
+      type: "input",
+      question: "Two angles of a triangle are 65° and 72°. What is the size of the third angle? Write your answer as a number (degrees).",
+      answer: "43",
+      acceptableAnswers: ["43", "43°"],
+      explanation: "The angles of any triangle always add up to <strong>180°</strong>. So the third angle = 180° − 65° − 72° = <strong>43°</strong>."
+    },
+
+    // CIRCLES: radius and diameter relationship
+    {
+      id: "c5_q50",
+      topic: "Circles",
+      type: "mcq",
+      question: "A circle has a <strong>diameter of 14 cm</strong>. What is its radius?",
+      options: ["28 cm", "7 cm", "14 cm", "3.5 cm"],
+      answer: 1,
+      explanation: "The <strong>diameter</strong> of a circle is twice the radius: diameter = 2 × radius. So radius = diameter ÷ 2 = 14 ÷ 2 = <strong>7 cm</strong>."
+    },
+
+    // CIRCLES: identify parts of a circle
+    {
+      id: "c5_q51",
+      topic: "Circles",
+      type: "mcq",
+      question: "The distance from the <strong>centre</strong> of a circle to any point on the circle is called the:",
+      options: ["Diameter", "Chord", "Arc", "Radius"],
+      answer: 3,
+      explanation: "The <strong>radius</strong> is the distance from the centre of a circle to any point on the circle. The diameter is a chord that passes through the centre and equals 2 × radius."
+    },
+
+    // QUADRILATERALS: angle sum = 360°
+    {
+      id: "c5_q52",
+      topic: "Quadrilaterals",
+      type: "input",
+      question: "Three angles of a quadrilateral are 85°, 110°, and 95°. What is the fourth angle? Write your answer as a number (degrees).",
+      answer: "70",
+      acceptableAnswers: ["70", "70°"],
+      explanation: "The angles of any quadrilateral add up to <strong>360°</strong>. So the fourth angle = 360° − 85° − 110° − 95° = <strong>70°</strong>."
+    },
+
+    // QUADRILATERALS: square is a special type of rhombus (true/false reasoning)
+    {
+      id: "c5_q53",
+      topic: "Quadrilaterals",
+      type: "mcq",
+      question: "True or false: <em>\"A square is a special type of rhombus.\"</em>",
+      options: [
+        "True — a square has all four sides equal, which is the definition of a rhombus",
+        "False — a square has right angles but a rhombus never does",
+        "False — a rhombus has more sides than a square",
+        "True — but only if the square has sides longer than 5 cm"
+      ],
+      answer: 0,
+      explanation: "This is <strong>true</strong>. A rhombus is any quadrilateral with all four sides equal. A square also has all four sides equal (and additionally has right angles). So a square is a special type of rhombus — one where all angles happen to be 90°."
+    },
+
+    // SOLIDS: classify by surface type (flat / curved / both)
+    {
+      id: "c5_q54",
+      topic: "Solids",
+      type: "mcq",
+      question: "Which solid has <strong>both flat and curved surfaces</strong>?",
+      options: ["Cube", "Square-based pyramid", "Cylinder", "Tetrahedron"],
+      answer: 2,
+      explanation: "A <strong>cylinder</strong> has two flat circular faces and one curved surface, so it has both flat and curved surfaces. A cube and a square-based pyramid (tetrahedron) have only flat surfaces. A sphere has only a curved surface."
+    },
+
+    // SOLIDS: identify cross-section of a prism
+    {
+      id: "c5_q55",
+      topic: "Solids",
+      type: "mcq",
+      question: "A prism is named after the shape of its <strong>cross-section</strong>. What is the cross-section of a <strong>triangular prism</strong>?",
+      options: ["Square", "Circle", "Triangle", "Pentagon"],
+      answer: 2,
+      explanation: "A <strong>triangular prism</strong> has a triangular cross-section — if you slice straight through it parallel to the ends, you always get a triangle. Prisms are named after this cross-section shape."
+    },
+
+    // POLYGONS: why a circle is not a polygon
+    {
+      id: "c5_q56",
+      topic: "Polygons",
+      type: "mcq",
+      question: "Why is a <strong>circle</strong> NOT a polygon?",
+      options: [
+        "Because it has no vertices",
+        "Because it has a curved side, not straight sides",
+        "Because it is too small",
+        "Because it has only one side"
+      ],
+      answer: 1,
+      explanation: "A <strong>polygon</strong> must have only straight line sides. A circle has a curved boundary, not straight sides, so it is <strong>not</strong> a polygon. A circle also has no vertices (corners)."
+    },
+
+    // SOLIDS: tetrahedron = triangular-based pyramid
+    {
+      id: "c5_q57",
+      topic: "Solids",
+      type: "mcq",
+      question: "A <strong>tetrahedron</strong> has four triangular faces and all edges are equal. What type of solid is it?",
+      options: [
+        "A triangular prism",
+        "A square-based pyramid",
+        "A triangular-based pyramid",
+        "A cylinder"
+      ],
+      answer: 2,
+      explanation: "A <strong>tetrahedron</strong> is a triangular-based pyramid — it has a triangular base and three triangular faces meeting at an apex. When all four faces are equilateral triangles of the same size, it is called a regular tetrahedron."
+    },
+    {
+      id: "c5_q58",
+      topic: "Nets of solids",
+      type: "mcq",
+      question: "This net is folded up to make a 3D solid. What solid does it form?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" aria-label="Net of six equal squares in a cross arrangement">
+  <rect width="400" height="200" fill="#f8fafc" rx="8"/>
+  <rect x="160" y="55" width="40" height="40" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2"/>
+  <rect x="120" y="95" width="40" height="40" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2"/>
+  <rect x="160" y="95" width="40" height="40" fill="rgba(91,94,244,0.22)" stroke="#5b5ef4" stroke-width="2"/>
+  <rect x="200" y="95" width="40" height="40" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2"/>
+  <rect x="240" y="95" width="40" height="40" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2"/>
+  <rect x="160" y="135" width="40" height="40" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2"/>
+  <text x="200" y="192" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="11" fill="#64748b">6 equal squares</text>
+</svg>`,
+      options: ["Cube", "Rectangular prism", "Triangular prism", "Square pyramid"],
+      answer: 0,
+      explanation: "This cross-shaped net has <strong>6 equal squares</strong>. When folded, the 4 squares in the row form four side faces, the top square becomes the top face, and the bottom square becomes the bottom face — forming a <strong>cube</strong>."
+    },
+    {
+      id: "c5_q59",
+      topic: "Nets of solids",
+      type: "mcq",
+      question: "This net is folded up to make a 3D solid. What solid does it form?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" aria-label="Net with three rectangles and two triangles — identify the solid">
+  <rect width="400" height="240" fill="#f8fafc" rx="8"/>
+  <rect x="125" y="90" width="50" height="65" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2"/>
+  <rect x="175" y="90" width="50" height="65" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2"/>
+  <rect x="225" y="90" width="50" height="65" fill="rgba(91,94,244,0.15)" stroke="#5b5ef4" stroke-width="2"/>
+  <polygon points="175,90 225,90 200,47" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="2"/>
+  <polygon points="175,155 225,155 200,198" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="2"/>
+  <text x="200" y="228" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="11" fill="#64748b">3 rectangles (blue) + 2 triangles (pink)</text>
+</svg>`,
+      options: ["Cylinder", "Triangular prism", "Rectangular prism", "Triangular pyramid"],
+      answer: 1,
+      explanation: "The net has <strong>2 triangles</strong> and <strong>3 rectangles</strong>. When folded, the two triangles become the triangular end faces and the three rectangles wrap around to form the three rectangular side faces — making a <strong>triangular prism</strong>."
+    },
+    {
+      id: "c5_q60",
+      topic: "Nets of solids",
+      type: "mcq",
+      question: "This net is folded up to make a 3D solid. What solid does it form?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" aria-label="Net with one square base and four triangles pointing outward — identify the solid">
+  <rect width="400" height="240" fill="#f8fafc" rx="8"/>
+  <rect x="170" y="90" width="60" height="60" fill="rgba(91,94,244,0.22)" stroke="#5b5ef4" stroke-width="2"/>
+  <polygon points="170,90 230,90 200,38" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="2"/>
+  <polygon points="230,90 230,150 283,120" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="2"/>
+  <polygon points="170,150 230,150 200,202" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="2"/>
+  <polygon points="170,90 170,150 117,120" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="2"/>
+  <text x="200" y="228" text-anchor="middle" font-family="Nunito,Arial,sans-serif" font-size="11" fill="#64748b">1 square (blue) + 4 triangles (pink)</text>
+</svg>`,
+      options: ["Cube", "Cone", "Triangular prism", "Square pyramid"],
+      answer: 3,
+      explanation: "The net has <strong>1 square</strong> in the centre and <strong>4 triangles</strong>, one on each side of the square. The square becomes the base, and the 4 triangles fold up to meet at a single point at the top — forming a <strong>square pyramid</strong>."
     }
   ]
 };

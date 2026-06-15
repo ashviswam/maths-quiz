@@ -762,39 +762,15 @@ const ch16 = {
       id: "c16_q16",
       topic: "Conversion graphs",
       type: "mcq",
-      question: "What is the key feature of <strong>all</strong> conversion graphs?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" aria-label="Conversion graph passing through the origin (0,0)">
-  <rect width="400" height="220" fill="#f8fafc" rx="8"/>
-  <!-- grid lines -->
-  <line x1="50" y1="20" x2="380" y2="20" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="50" y1="76" x2="380" y2="76" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="50" y1="130" x2="380" y2="130" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="50" y1="185" x2="380" y2="185" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- axes -->
-  <line x1="50" y1="20" x2="50" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="50" y1="185" x2="385" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <!-- straight line through origin -->
-  <line x1="50" y1="185" x2="380" y2="20" stroke="#5b5ef4" stroke-width="2.5"/>
-  <!-- highlight origin -->
-  <circle cx="50" cy="185" r="7" fill="none" stroke="#f43f5e" stroke-width="2.5"/>
-  <circle cx="50" cy="185" r="4" fill="#f43f5e"/>
-  <!-- annotation -->
-  <text x="65" y="178" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">Always passes</text>
-  <text x="65" y="192" fill="#f43f5e" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">through (0, 0)</text>
-  <!-- origin label -->
-  <text x="50" y="200" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">(0, 0)</text>
-  <!-- axis titles -->
-  <text x="215" y="215" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Unit A</text>
-  <text x="12" y="103" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11" transform="rotate(-90,12,103)">Unit B</text>
-</svg>`,
+      question: "A conversion graph converts <strong>km to miles</strong>. It is a straight line that passes through the point (0, 0). What does the point (0, 0) tell you?",
       options: [
-        "They always pass through the point (0, 0)",
-        "They are always curved",
-        "They always have a horizontal section",
-        "They only work for currency conversions"
+        "0 km = 0 miles",
+        "The graph only works for distances over 1 km",
+        "1 km = 1 mile",
+        "The graph starts halfway along the axis"
       ],
       answer: 0,
-      explanation: "Conversion graphs are always <strong>straight lines that pass through the origin (0, 0)</strong>. This is because zero of one unit always equals zero of the other unit."
+      explanation: "The point (0, 0) means that 0 km equals 0 miles — if you travel no distance in km, you travel no distance in miles. This is why proportional conversion graphs (like km↔miles or kg↔pounds) always start at the origin: zero of one unit equals zero of the other unit."
     },
     {
       id: "c16_q17",
@@ -1728,6 +1704,56 @@ const ch16 = {
       ],
       answer: 1,
       explanation: "Segment B is clearly the <strong>steepest</strong> section on the graph — it rises the most sharply, meaning the distance increases very quickly in a short time. On a distance-time graph, the <strong>steeper the line, the faster the speed</strong>. You do not need to calculate any numbers to compare steepness."
+    },
+    {
+      id: "c16_q36",
+      topic: "Travel graphs",
+      type: "mcq",
+      question: "A travel graph shows Peggy's morning walk. She walks at a steady pace and covers 1500 metres in 15 minutes.<br><br>Using the formula <strong>speed = distance ÷ time</strong>, what is Peggy's walking speed in metres per minute?",
+      options: ["80 m/min", "90 m/min", "100 m/min", "150 m/min"],
+      answer: 2,
+      explanation: "Speed = distance ÷ time = 1500 ÷ 15 = <strong>100 metres per minute</strong>. On a distance-time graph, you can calculate the speed of any straight-line section by reading the distance covered and the time taken for that section, then dividing."
+    },
+    {
+      id: "c16_q37",
+      topic: "Line graphs",
+      type: "mcq",
+      question: "A line graph shows the number of customers in a café. At 1 pm there were 20 customers, and at 3 pm there were 40 customers. The line between these points is straight.<br><br>Estimate how many customers were in the café at <strong>2 pm</strong>.",
+      options: ["20", "25", "30", "35"],
+      answer: 2,
+      explanation: "Because the line is straight between 1 pm and 3 pm, the number of customers increases steadily. The midpoint (2 pm) is halfway between 1 pm and 3 pm, so the customer count is halfway between 20 and 40: (20 + 40) ÷ 2 = <strong>30</strong>. This is called <em>reading between the points</em> or interpolating."
+    },
+    {
+      id: "c16_q38",
+      topic: "Travel graphs",
+      type: "input",
+      question: "A jogger's travel graph shows her leaving home at 7:00 am, running to a point 4 km away, then returning home by 7:50 am.<br><br>What is the <strong>total distance</strong> the jogger travelled during her run? Write your answer in km.",
+      answer: "8",
+      acceptableAnswers: ["8", "8 km", "8km"],
+      explanation: "The jogger runs <strong>4 km</strong> away from home, then runs <strong>4 km</strong> back. Total distance = 4 + 4 = <strong>8 km</strong>. Remember: distance is the total length of the path travelled, not just how far from home she ended up. The start and end points are the same (home), but she still covered 8 km."
+    },
+    {
+      id: "c16_q39",
+      topic: "Conversion graphs",
+      type: "mcq",
+      question: "A conversion graph shows the relationship between Fahrenheit (°F) and Celsius (°C). The graph is a straight line, but it does <strong>not</strong> pass through (0, 0) — it crosses the vertical axis at −18°C.<br><br>Which statement about this conversion graph is correct?",
+      options: [
+        "The graph must be wrong because all conversion graphs pass through (0, 0)",
+        "The graph is correct — conversion graphs do not always pass through (0, 0)",
+        "The graph shows that 0°F = 0°C",
+        "The graph cannot be used to convert temperatures"
+      ],
+      answer: 1,
+      explanation: "Conversion graphs are <strong>usually</strong> straight lines through the origin, but <strong>not always</strong>. The Fahrenheit–Celsius graph is a good example: 0°C = 32°F (not 0°F), so the line crosses the axes at different points. You can still read values from the graph exactly as normal — just trace from one axis to the line, then across to the other axis."
+    },
+    {
+      id: "c16_q40",
+      topic: "Line graphs",
+      type: "mcq",
+      question: "A line graph shows the amount of water used by a sprinkler system over time. The graph is a <strong>straight line</strong> passing through (0, 0). After 4 minutes the sprinkler has used 80 litres.<br><br>How many litres does the sprinkler use <strong>each minute</strong>?",
+      options: ["10 litres per minute", "20 litres per minute", "40 litres per minute", "80 litres per minute"],
+      answer: 1,
+      explanation: "The sprinkler uses 80 litres in 4 minutes. Rate = total amount ÷ time = 80 ÷ 4 = <strong>20 litres per minute</strong>. Because the line is straight, the rate is constant throughout. Reading the gradient (steepness) of a straight-line graph tells you the rate of change."
     }
   ]
 };

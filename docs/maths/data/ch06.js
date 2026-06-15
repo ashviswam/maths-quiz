@@ -470,6 +470,105 @@ const ch06 = {
       answer: "14",
       acceptableAnswers: ["14", "14 hectares"],
       explanation: "To find a fraction of a quantity, divide by the denominator then multiply by the numerator.<br>35 ÷ 5 = 7, then 7 × 2 = 14.<br>So 2/5 of 35 = 14 hectares."
+    },
+    {
+      id: "c6_q46",
+      topic: "Fractions",
+      type: "mcq",
+      question: "How do you write the fraction <strong>3/5</strong> in words?",
+      options: ["Three fives", "Three fifths", "Five thirds", "Three over five"],
+      answer: 1,
+      explanation: "The denominator tells us the name of each part. When the denominator is 5, each part is called a <em>fifth</em>. The numerator 3 tells us how many parts, so 3/5 is read as <strong>three fifths</strong>. (Other examples: 2/3 = two thirds, 3/4 = three quarters, 1/8 = one eighth.)"
+    },
+    {
+      id: "c6_q47",
+      topic: "Fractions as division",
+      type: "mcq",
+      question: "Write <strong>7 ÷ 9</strong> as a fraction.",
+      options: ["9/7", "7/9", "16/1", "63/1"],
+      answer: 1,
+      explanation: "A division can always be written as a fraction: the number being divided (7) becomes the numerator, and the number we divide by (9) becomes the denominator. So 7 ÷ 9 = 7/9."
+    },
+    {
+      id: "c6_q48",
+      topic: "Fractions as division",
+      type: "input",
+      question: "Write the fraction <strong>20/4</strong> as a division and work it out as a whole number. Write your answer as a whole number.",
+      answer: "5",
+      acceptableAnswers: ["5"],
+      explanation: "20/4 means 20 ÷ 4. Dividing: 20 ÷ 4 = 5. So the fraction 20/4 equals the whole number 5. This works whenever the numerator is exactly divisible by the denominator."
+    },
+    {
+      id: "c6_q49",
+      topic: "Proper and improper fractions",
+      type: "mcq",
+      question: "Which of these numbers is a <strong>mixed number</strong>?",
+      options: ["7/3", "3/7", "3 1/7", "7"],
+      answer: 2,
+      explanation: "A <strong>mixed number</strong> has a whole-number part AND a fraction part written together. 3 1/7 has the whole number 3 and the fraction 1/7, so it is a mixed number. 7/3 is an improper fraction (numerator > denominator), 3/7 is a proper fraction, and 7 on its own is just a whole number."
+    },
+    {
+      id: "c6_q50",
+      topic: "Fractions on a number line",
+      type: "mcq",
+      question: "A number line from 0 to 1 is divided into <strong>5 equal parts</strong>. A dot is placed at the <strong>3rd mark</strong> from 0. What fraction does the dot represent?",
+      options: ["3/1", "5/3", "3/5", "2/5"],
+      answer: 2,
+      explanation: "When the space from 0 to 1 is divided into 5 equal parts, each mark is 1/5 apart. The 1st mark is 1/5, the 2nd mark is 2/5, and the 3rd mark is 3/5. So the dot is at 3/5."
+    },
+    {
+      id: "c6_q51",
+      topic: "Equal fractions",
+      type: "mcq",
+      question: "Write <strong>2/3</strong> as an equivalent fraction with denominator 12.",
+      options: ["4/12", "6/12", "8/12", "3/12"],
+      answer: 2,
+      explanation: "To change the denominator from 3 to 12, multiply by 4 (since 3 × 4 = 12). You must also multiply the numerator by the same number: 2 × 4 = 8. So 2/3 = 8/12. You can check: 8 ÷ 12 = 2 ÷ 3."
+    },
+    {
+      id: "c6_q52",
+      topic: "Comparing fractions",
+      type: "mcq",
+      question: "Which symbol correctly compares <strong>5/9</strong> and <strong>7/9</strong>?",
+      options: ["5/9 &gt; 7/9", "5/9 = 7/9", "5/9 &lt; 7/9", "Cannot be compared"],
+      answer: 2,
+      explanation: "Both fractions have the <em>same denominator</em> (9), so we just compare the numerators. Since 5 &lt; 7, we have 5/9 &lt; 7/9. When denominators are the same, the fraction with the bigger numerator is bigger."
+    },
+    {
+      id: "c6_q53",
+      topic: "Adding and subtracting fractions",
+      type: "input",
+      question: "Find: <strong>3 + 2/9 + 4/9</strong>. Write your answer as a mixed number in the form <em>a b/c</em>.",
+      answer: "3 2/3",
+      acceptableAnswers: ["3 2/3", "3 6/9"],
+      explanation: "First add the fractions with the same denominator: 2/9 + 4/9 = 6/9. Now simplify 6/9: the HCF of 6 and 9 is 3, so 6/9 = 2/3. Then add the whole number: 3 + 2/3 = 3 2/3."
+    },
+    {
+      id: "c6_q54",
+      topic: "Adding and subtracting fractions",
+      type: "mcq",
+      question: "Find <strong>4 − 1 2/3</strong>.",
+      options: ["3 2/3", "2 2/3", "2 1/3", "3 1/3"],
+      answer: 2,
+      explanation: "Write 4 as an improper fraction with denominator 3: 4 = 12/3. Write 1 2/3 as an improper fraction: 1 × 3 + 2 = 5, so 1 2/3 = 5/3. Subtract: 12/3 − 5/3 = 7/3. Convert back: 7 ÷ 3 = 2 remainder 1, so 7/3 = 2 1/3."
+    },
+    {
+      id: "c6_q55",
+      topic: "Multiplying a fraction by a whole number",
+      type: "input",
+      question: "Calculate <strong>1/4 × 20</strong>. Write your answer as a whole number.",
+      answer: "5",
+      acceptableAnswers: ["5"],
+      explanation: "Multiply the numerator by the whole number and keep the denominator: 1/4 × 20 = (1 × 20)/4 = 20/4 = 5. The answer is a whole number because 20 is exactly divisible by 4."
+    },
+    {
+      id: "c6_q56",
+      topic: "A fraction of a quantity",
+      type: "mcq",
+      question: "What is <strong>1/5</strong> of 35?",
+      options: ["5", "7", "175", "30"],
+      answer: 1,
+      explanation: "To find a unit fraction (1/n) of a quantity, divide by the denominator. 35 ÷ 5 = 7. So 1/5 of 35 = 7. Because the numerator is 1, there is no need to multiply at the end."
     }
   ]
 };

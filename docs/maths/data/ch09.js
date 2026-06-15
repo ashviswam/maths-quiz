@@ -543,6 +543,94 @@ const ch09 = {
       answer: "6",
       acceptableAnswers: ["6", "6 cm"],
       explanation: "Add the five known sides: 14 + 6 + 4 + 8 + 10 = 42 cm. The total perimeter is 48 cm, so the missing side x = 48 − 42 = 6 cm. <br><br><strong>Shortcut for L-shapes:</strong> the horizontal step-in (x) equals the difference between the top and bottom sides: 14 − 8 = 6 cm. Both methods agree!"
+    },
+
+    // ── ADDITIONAL QUESTIONS (audit fill-in) ──────────────────────────────────
+
+    // Choose best unit for a real-world object
+    {
+      id: "c9_q47", topic: "Units of length", type: "mcq",
+      question: "Which unit of length is most suitable for measuring the length of a fly?",
+      options: ["kilometres (km)", "metres (m)", "centimetres (cm)", "millimetres (mm)"],
+      answer: 3,
+      explanation: "A fly is tiny — only about 7 mm long. Millimetres are the best unit for very small objects. Centimetres would also be possible but millimetres give a more precise, whole-number answer for something so small."
+    },
+
+    // Multi-step conversion: metres to millimetres
+    {
+      id: "c9_q48", topic: "Units of length", type: "input",
+      question: "Convert <strong>1.24 m</strong> to millimetres. Write your answer as a whole number.",
+      answer: "1240",
+      acceptableAnswers: ["1240", "1240 mm"],
+      explanation: "Step 1: Convert metres to centimetres: 1.24 × 100 = 124 cm.<br>Step 2: Convert centimetres to millimetres: 124 × 10 = 1240 mm.<br><br>Or in one step: multiply by 1000, so 1.24 × 1000 = 1240 mm."
+    },
+
+    // Add mixed units — convert to metres first (km + m)
+    {
+      id: "c9_q49", topic: "Operations with lengths", type: "mcq",
+      question: "By first writing each length in metres, find the sum of <strong>3 km</strong> and <strong>580 m</strong>.",
+      options: ["583 m", "3580 m", "358 m", "3058 m"],
+      answer: 1,
+      explanation: "Convert 3 km to metres: 3 × 1000 = 3000 m.<br>Add: 3000 + 580 = 3580 m.<br><br>Always convert to the same unit before adding!"
+    },
+
+    // Multiply a length — repeated word problem (bricks)
+    {
+      id: "c9_q50", topic: "Operations with lengths", type: "input",
+      question: "A house brick is <strong>23 cm</strong> long. Eight bricks are laid end to end. What is the total length in metres?",
+      answer: "1.84",
+      acceptableAnswers: ["1.84", "1.84 m"],
+      explanation: "Total length in cm = 8 × 23 = 184 cm.<br>Convert to metres: 184 ÷ 100 = 1.84 m."
+    },
+
+    // Divide total distance by unit length (number of jumps)
+    {
+      id: "c9_q51", topic: "Operations with lengths", type: "input",
+      question: "A rabbit travels <strong>30 cm</strong> with each jump. How many jumps does the rabbit need to travel <strong>15 m</strong>?",
+      answer: "50",
+      acceptableAnswers: ["50", "50 jumps"],
+      explanation: "Convert 15 m to centimetres: 15 × 100 = 1500 cm.<br>Number of jumps = total distance ÷ distance per jump = 1500 ÷ 30 = 50 jumps."
+    },
+
+    // Perimeter with mixed units — convert first, then add
+    {
+      id: "c9_q52", topic: "Perimeter", type: "mcq",
+      question: "A triangle has sides of <strong>15 mm</strong>, <strong>9 mm</strong>, and <strong>2 cm</strong>. What is its perimeter in millimetres?",
+      options: ["26 mm", "44 mm", "260 mm", "2.6 cm"],
+      answer: 1,
+      explanation: "First convert all sides to the same unit (mm).<br>2 cm = 20 mm.<br>Perimeter = 15 + 9 + 20 = 44 mm."
+    },
+
+    // Perimeter word problem with cost per metre
+    {
+      id: "c9_q53", topic: "Perimeter", type: "mcq",
+      question: "A rectangular tablecloth is <strong>3.2 m</strong> long and <strong>1.6 m</strong> wide. Lace trim costs <strong>$4 per metre</strong>. How much does it cost to put lace all the way around the tablecloth?",
+      options: ["$19.20", "$38.40", "$20.48", "$76.80"],
+      answer: 1,
+      explanation: "Step 1: Find the perimeter.<br>Perimeter = 2 × (3.2 + 1.6) = 2 × 4.8 = 9.6 m.<br><br>Step 2: Find the cost.<br>Cost = 9.6 × $4 = $38.40."
+    },
+
+    // Perimeter using tick-marks (equal sides on isosceles triangle)
+    {
+      id: "c9_q54", topic: "Perimeter", type: "mcq",
+      question: "The triangle below has two equal sides shown by tick marks. One of the equal sides is <strong>15 cm</strong> and the base is <strong>24 cm</strong>. What is the perimeter?",
+      options: ["39 cm", "54 cm", "63 cm", "30 cm"],
+      answer: 1,
+      explanation: "The tick marks mean the two slanted sides are equal in length — both are 15 cm.<br>Perimeter = 15 + 15 + 24 = 54 cm.<br><br>Tick marks are a shorthand way of showing equal sides without labelling every one."
+    },
+
+    // Find scale given actual and drawn lengths
+    {
+      id: "c9_q55", topic: "Scale diagrams", type: "mcq",
+      question: "A boat is <strong>30 m</strong> long. On its scale diagram it has a length of <strong>15 cm</strong>. Which of the following correctly states the scale of the diagram?",
+      options: [
+        "1 represents 2",
+        "1 represents 20",
+        "1 represents 200",
+        "1 represents 2000"
+      ],
+      answer: 2,
+      explanation: "Convert the actual length to centimetres: 30 m = 3000 cm.<br>Scale factor = actual length ÷ drawn length = 3000 ÷ 15 = 200.<br><br>So the scale is <strong>1 represents 200</strong>."
     }
   ]
 };
