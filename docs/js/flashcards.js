@@ -71,7 +71,7 @@ const Flashcards = (() => {
     ctrl.classList.remove('hidden');
 
     const card = deck[index];
-    document.getElementById('fc-front-text').textContent = card.fr;
+    document.getElementById('fc-front-text').textContent = card.fr ?? card.es ?? '';
     document.getElementById('fc-back-text').textContent  = card.en;
 
     const noteEl = document.getElementById('fc-back-note');
