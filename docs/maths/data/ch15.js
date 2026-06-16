@@ -1143,15 +1143,6 @@ const ch15 = {
       explanation: "The rectangle has corners at (2,1), (6,1) and (6,4). The fourth corner must be directly above (2,1) and to the left of (6,4), giving x = 2 and y = 4. So the fourth corner is (2, 4)."
     },
     {
-      id: "c15_q41",
-      topic: "Coordinates",
-      type: "mcq",
-      question: "Which of the following points lies on the <strong>x-axis</strong>?",
-      options: ["(0, 3)", "(2, 5)", "(4, 0)", "(3, 3)"],
-      answer: 2,
-      explanation: "A point lies on the x-axis when its y-coordinate is 0. Only (4, 0) has y = 0, so it is the point on the x-axis. The point (0, 3) is on the y-axis, not the x-axis."
-    },
-    {
       id: "c15_q42",
       topic: "Coordinates",
       type: "mcq",

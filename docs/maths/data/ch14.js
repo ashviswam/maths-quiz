@@ -533,42 +533,6 @@ const ch14 = {
       explanation: "From the 1st term to the 4th term, we multiply by the ratio 3 times. So: 2 × r³ = 54. Divide both sides by 2: r³ = 27. Since 3³ = 27, the common ratio r = 3.<br>Check: 2, 2×3=6, 6×3=18, 18×3=54 ✓. Well done — this is tricky thinking!"
     },
     {
-      id: "c14_q39",
-      topic: "Generating a sequence",
-      type: "input",
-      question: "A sequence <strong>starts at −18</strong> and increases by <strong>7</strong> each time.<br>What is the <strong>4th term</strong> of this sequence?",
-      answer: "3",
-      acceptableAnswers: ["3"],
-      explanation: "Starting at −18 and adding 7 each time: −18, −18+7=−11, −11+7=−4, −4+7=3. The 4th term is 3. Notice the sequence crosses zero from negative to positive!"
-    },
-    {
-      id: "c14_q40",
-      topic: "Generating a sequence",
-      type: "mcq",
-      question: "A sequence starts at <strong>5</strong> and increases by <strong>1/2</strong> each time.<br>What are the first four terms?",
-      options: ["5, 5.5, 6, 6.5", "5, 10, 15, 20", "5, 4.5, 4, 3.5", "5, 2.5, 1.25, 0.625"],
-      answer: 0,
-      explanation: "Adding 1/2 (= 0.5) each time: 5, 5+0.5=5.5, 5.5+0.5=6, 6+0.5=6.5. This is an arithmetic sequence with common difference 1/2."
-    },
-    {
-      id: "c14_q41",
-      topic: "Generating a sequence",
-      type: "mcq",
-      question: "A sequence starts at <strong>4</strong> and increases by <strong>0.6</strong> each time.<br>What is the <strong>5th term</strong>?",
-      options: ["6.0", "6.4", "7.0", "5.8"],
-      answer: 1,
-      explanation: "Adding 0.6 each time: 4, 4.6, 5.2, 5.8, 6.4. The 5th term is 6.4. Each step adds six tenths, so four steps add 4 × 0.6 = 2.4, and 4 + 2.4 = 6.4."
-    },
-    {
-      id: "c14_q42",
-      topic: "Generating a sequence",
-      type: "mcq",
-      question: "A sequence starts at <strong>1</strong> and each term is multiplied by <strong>−2</strong> to get the next term.<br>What are the first four terms?",
-      options: ["1, −2, −4, −8", "1, 2, 4, 8", "1, −2, 4, −8", "−1, 2, −4, 8"],
-      answer: 2,
-      explanation: "Multiplying by −2 each time changes the sign and doubles the value: 1, 1×(−2)=−2, (−2)×(−2)=4, 4×(−2)=−8. The terms alternate between positive and negative."
-    },
-    {
       id: "c14_q43",
       topic: "Generating a sequence",
       type: "mcq",

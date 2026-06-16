@@ -411,6 +411,47 @@ const ch02 = {
       question: "Explain why an astronaut weighs less on the Moon than on Earth, but their mass stays the same.",
       answer: "Mass is the amount of matter in the astronaut's body — this does not change. The Moon is smaller and less massive than Earth, so its gravitational field is weaker (about 1.6 N/kg compared to Earth's 10 N/kg). Since weight = mass × gravity, the weaker Moon gravity means less weight.",
       difficulty: "challenging"
+    },
+    {
+      id: "sc2_q39",
+      topic: "Mass vs Weight",
+      type: "short",
+      question: "Define mass and weight in your own words. How are they different? Give the unit for each.",
+      answer: "Mass is the amount of matter (substance) in an object. It is measured in kilograms (kg) or grams (g) and never changes, no matter where the object is in the universe. Weight is the gravitational force acting on an object's mass. It is measured in Newtons (N) and changes depending on the strength of gravity — for example, you weigh less on the Moon than on Earth, but your mass stays the same.",
+      explanation: "The key distinction is: mass = amount of matter (constant everywhere); weight = gravitational force (changes with gravity). Both the definition and units must be correct for full marks."
+    },
+    {
+      id: "sc2_q40",
+      topic: "Gravity on Planets",
+      type: "short",
+      question: "An object has a mass of 12 kg. Calculate its weight on Earth (g = 10 N/kg) and on Mars (g = 4 N/kg). Show your working for both.",
+      answer: "Weight on Earth: W = m × g = 12 kg × 10 N/kg = 120 N. Weight on Mars: W = m × g = 12 kg × 4 N/kg = 48 N. The object weighs 120 N on Earth but only 48 N on Mars because Mars has a weaker gravitational field.",
+      explanation: "Students must use W = m × g correctly for both planets. Check that they include units (N) in the answer and note that mass remains 12 kg on both planets — only weight changes."
+    },
+    {
+      id: "sc2_q41",
+      topic: "Newtons",
+      type: "short",
+      question: "Explain what the unit 'Newton' measures and why weight is measured in Newtons rather than kilograms.",
+      answer: "A Newton (N) is the unit for force. Weight is a force — it is the gravitational pull on an object's mass. Because weight is a force (not an amount of matter), it is measured in Newtons, not kilograms. Mass (amount of matter) is measured in kilograms. A common mistake is to say 'I weigh 50 kg' — scientifically, 50 kg is your mass; your weight would be 50 × 10 = 500 N on Earth.",
+      explanation: "This is a common misconception. Weight is a force → measured in Newtons. Mass is amount of matter → measured in kg. The formula W = m × g connects them."
+    },
+    {
+      id: "sc2_q42",
+      topic: "Free Fall",
+      type: "short",
+      question: "Galileo discovered that mass does not affect how fast an object falls. Explain why this seems surprising and what the scientific reason is.",
+      answer: "It seems surprising because heavier objects feel harder to lift, so you might expect gravity to pull them down faster. However, although a heavier object does experience a larger gravitational force, it also has more mass (more inertia), which requires more force to accelerate it. These two effects exactly cancel out, meaning all objects fall at the same rate in the absence of air resistance. This was confirmed when astronauts dropped a hammer and feather on the Moon — both hit the surface at the same time.",
+      explanation: "The key insight is that gravitational force and inertial mass increase together, so acceleration due to gravity is the same for all objects. The Moon experiment is a vivid real-world example.",
+      difficulty: "challenging"
+    },
+    {
+      id: "sc2_q43",
+      topic: "Gravity on Planets",
+      type: "short",
+      question: "Describe how the strength of gravity on a planet is related to the planet's mass. Give an example using Jupiter.",
+      answer: "The more massive a planet is, the stronger its gravitational field. A more massive planet pulls objects toward it with more force. For example, Jupiter is the largest planet in our Solar System and has a gravitational field strength of about 25 N/kg — much greater than Earth's 10 N/kg. This means that a person who weighs 600 N on Earth would weigh about 1500 N on Jupiter (mass × 25), making them feel much heavier.",
+      explanation: "Accept any answer that correctly states: more mass → stronger gravity. The Jupiter example shows application of W = m × g with g = 25 N/kg."
     }
   ]
 };

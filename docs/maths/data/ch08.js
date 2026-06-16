@@ -357,29 +357,6 @@ const ch08 = {
       explanation: "Step 1: tonnes → kg: 1.4 tonnes × 1000 = 1400 kg<br>Step 2: kg → g: 1400 × 1000 = <strong>1 400 000 g</strong> (one million four hundred thousand grams!)<br>It is usually better to express this as 1.4 tonnes or 1400 kg — this shows why we choose units that give manageable numbers."
     },
     {
-      id: "c8_q46",
-      topic: "Units",
-      type: "mcq",
-      question: "Match each description with the most suitable measurement.<br><br>Which option correctly pairs <em>\"The amount of juice in a bottle\"</em> with the right measurement?",
-      options: ["50 km/h", "350 mL", "7 hours", "55°C"],
-      answer: 1,
-      explanation: "Juice in a bottle is a <strong>capacity</strong>, measured in millilitres (mL) or litres (L). 350 mL is a typical bottle of juice. 50 km/h is a speed, 7 hours is a time, and 55°C is a temperature — none of these measure capacity."
-    },
-    {
-      id: "c8_q47",
-      topic: "Units",
-      type: "mcq",
-      question: "A bulldozer has a mass of about 18 000 kg. A student writes its mass as <strong>18 000 000 g</strong>. Why is using grams a poor choice of unit here?",
-      options: [
-        "Grams cannot be used for objects heavier than 1000 g",
-        "The number of grams is far too large to be practical — tonnes or kilograms give a much more manageable number",
-        "Grams are only used for liquids, not solid objects",
-        "18 000 000 g is not the correct conversion"
-      ],
-      answer: 1,
-      explanation: "18 000 kg = 18 000 000 g — that is eighteen million grams! The number is so large that it is hard to work with. We choose units that give <strong>sensible-sized numbers</strong>. For heavy objects like vehicles or machinery, tonnes or kilograms are far more practical. (18 000 kg = 18 t.)"
-    },
-    {
       id: "c8_q48",
       topic: "Mass",
       type: "input",

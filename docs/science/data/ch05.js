@@ -509,6 +509,55 @@ const ch05 = {
       question: "A student investigates how temperature affects the rate of diffusion of food colouring in water. Identify the independent variable, dependent variable, and one control variable.",
       answer: "Independent variable (IV): the temperature of the water. Dependent variable (DV): the rate of diffusion (e.g. how long it takes the colour to spread, or how far it spreads in a set time). Control variable (CV): any one of — volume of water, amount/type of food colouring, size/shape of container, starting position of the drop.",
       difficulty: "challenging"
+    },
+    {
+      id: "sc5_q41",
+      topic: "Particle Model",
+      type: "short",
+      question: "Using the particle model, explain why solids have a fixed shape but liquids take the shape of their container.",
+      answer: "In a solid, particles are held tightly in a regular, ordered arrangement by strong attractive forces. They can only vibrate in fixed positions and cannot move past each other — this is why a solid keeps its own shape. In a liquid, the particles are still close together but the forces holding them are weaker, so particles can slide and flow past each other. A liquid takes the shape of its container because its particles can rearrange themselves to fill the available space.",
+      explanation: "The key contrast is: solid particles are fixed in position (vibrate only) → fixed shape; liquid particles can move past each other → no fixed shape. Both have particles close together (similar densities)."
+    },
+    {
+      id: "sc5_q42",
+      topic: "Particle Model",
+      type: "short",
+      question: "Use the particle model to explain why gases can be compressed (squashed) but solids and liquids cannot.",
+      answer: "In a gas, particles are spread far apart with large gaps (empty space) between them. When a gas is compressed, the particles are pushed closer together into these gaps — so the gas can be squeezed into a smaller volume. In a solid or liquid, the particles are already packed closely together with almost no gaps between them. There is no room for the particles to move closer, so solids and liquids cannot be significantly compressed.",
+      explanation: "The key idea is the space between particles: gas = large gaps → can compress; solid/liquid = very little space → cannot compress. This is why gas in a syringe is easy to squash but water in a syringe is not."
+    },
+    {
+      id: "sc5_q43",
+      topic: "Brownian Motion",
+      type: "short",
+      question: "Describe the Brownian motion experiment using smoke particles. What do you observe and what does it tell us about the particle model?",
+      answer: "In the experiment, smoke particles are trapped in a glass cell and observed under a microscope in a beam of light. The smoke particles appear as bright specks that move in a random, erratic (zigzag) path — they never stop or travel in straight lines. This random movement is caused by invisible air molecules constantly colliding with the smoke particles from all sides. Since the hits are random and unequal, the smoke particles are pushed in unpredictable directions. This is evidence for the particle model — it shows that air is made of tiny, invisible, constantly moving molecules.",
+      explanation: "Key observations: bright specks moving randomly/erratically (zigzag). Key explanation: collisions with invisible air molecules. Key conclusion: supports the particle model (matter is made of tiny, moving particles)."
+    },
+    {
+      id: "sc5_q44",
+      topic: "Diffusion",
+      type: "short",
+      question: "Explain, using the particle model, why diffusion happens. Why do particles move from high concentration to low concentration?",
+      answer: "Diffusion occurs because particles are in constant, random motion — they move in all directions continuously. In an area of high concentration, there are many particles close together. Because they are moving randomly, more particles move away from the crowded area than move toward it. In the area of low concentration, there are fewer particles, so more arrive from the high-concentration area than leave. Overall, there is a net movement of particles from high to low concentration. This continues until the particles are evenly spread (equilibrium).",
+      explanation: "The explanation should reference: random particle motion → more particles moving away from high concentration → net movement toward low concentration → equilibrium. Emphasise that it is the randomness of motion that drives diffusion, not a deliberate 'force'.",
+      difficulty: "challenging"
+    },
+    {
+      id: "sc5_q45",
+      topic: "Air Pressure",
+      type: "short",
+      question: "A bicycle tyre is pumped up hard. Using the particle model, explain why the tyre feels hard and what would happen to pressure if the temperature increased on a hot day.",
+      answer: "The tyre feels hard because the many air particles inside it are constantly moving and colliding with the inner walls of the tyre. Each collision exerts a tiny force on the tyre wall; billions of collisions per second create a large overall pressure that pushes outward and makes the tyre rigid. On a hot day, the air particles inside the tyre gain more kinetic energy and move faster. They collide with the tyre walls more frequently and with greater force, increasing the pressure inside. This is why tyres can become over-inflated and even burst in very hot weather.",
+      explanation: "Key ideas: gas pressure = particle collisions with walls. Hot → faster particles → more frequent/forceful collisions → higher pressure. This is a real-world application of the particle model that connects to the earlier gas pressure MCQ."
+    },
+    {
+      id: "sc5_q46",
+      topic: "States of Matter",
+      type: "short",
+      question: "Explain what happens to water particles when water changes from a liquid to a gas (evaporates). Use the words 'energy', 'bonds', and 'escape' in your answer.",
+      answer: "When water is a liquid, its particles are close together and held by weak attractive forces (bonds). They are moving and sliding past each other, but most do not have enough energy to escape. As the water is heated, particles gain more energy and move faster. The fastest-moving particles at the surface eventually gain enough energy to break the bonds holding them in the liquid and escape into the air as individual gas particles. As more and more particles escape, the liquid evaporates. This is why evaporation happens faster at higher temperatures.",
+      explanation: "Key chain: heat → particles gain energy → fastest particles break bonds at the surface → escape as gas particles → evaporation. This connects particle model to changes of state."
     }
   ]
 };

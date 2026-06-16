@@ -386,17 +386,6 @@ const ch07 = {
       explanation: "Step 1 — add the three prices:<br>  6.49 + 8.75 + 3.30<br>Hundredths: 9 + 5 + 0 = 14, write 4 carry 1.<br>Tenths: 4 + 7 + 3 + 1 = 15, write 5 carry 1.<br>Ones: 6 + 8 + 3 + 1 = 18, write 8 carry 1.<br>Tens: 0 + 0 + 0 + 1 = 1.<br>Total spent = £18.54.<br><br>Step 2 — subtract from £20.00:<br>20.00 − 18.54 = 1.46.<br><br>Mia receives £1.46 change."
     },
 
-    // c7_q45 — Write decimal in words (Section A, Ex 7A Q2)
-    {
-      id: "c7_q45",
-      topic: "Decimal numbers",
-      type: "mcq",
-      question: "Which of the following correctly writes <strong>20.15</strong> in words?",
-      options: ["Twenty point one five", "Twenty point fifteen", "Two zero point one five", "Twenty-one point five"],
-      answer: 0,
-      explanation: "We read the whole number part first: 'twenty'. Then we say 'point' for the decimal point. Then we read each digit after the decimal point separately: '1' and '5'. So 20.15 is read as 'twenty point one five'. We never say 'fifteen' for the decimal digits — we read them one at a time."
-    },
-
     // c7_q46 — Identify which two whole numbers a decimal lies between (Section A, Ex 7A Q3)
     {
       id: "c7_q46",

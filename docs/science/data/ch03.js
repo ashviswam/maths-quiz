@@ -458,6 +458,47 @@ const ch03 = {
       type: "short",
       question: "Why does Earth have seasons? What is the key cause?",
       answer: "Earth has seasons because its axis is tilted at 23.5° relative to its orbit. As Earth travels around the Sun, different hemispheres receive more or less direct sunlight at different times of year. More direct sunlight = more energy per unit area = higher temperatures (summer). The distance from the Sun is NOT the main cause."
+    },
+    {
+      id: "sc3_q39",
+      topic: "Day and Night",
+      type: "short",
+      question: "Explain what causes day and night on Earth. Include the words 'rotation', 'axis', and 'Sun' in your answer.",
+      answer: "Day and night are caused by Earth's rotation on its axis. Earth spins once every 24 hours around an imaginary line (its axis) running from the North Pole to the South Pole. The half of Earth facing the Sun receives sunlight and experiences day; the half facing away from the Sun is in shadow and experiences night. As Earth rotates, different parts of the surface move into and out of the sunlight.",
+      explanation: "Key terms to check: rotation (spinning on its own axis), axis (imaginary line), and the idea that one side faces the Sun (day) while the other faces away (night)."
+    },
+    {
+      id: "sc3_q40",
+      topic: "Seasons",
+      type: "short",
+      question: "Explain why the Northern Hemisphere is warmer in summer than in winter. Include the idea of the angle of sunlight in your answer.",
+      answer: "In summer, the Northern Hemisphere is tilted toward the Sun, so sunlight hits the surface at a more direct (steeper) angle. This concentrates the same amount of solar energy into a smaller area, delivering more heat per square metre — making temperatures higher. In winter, the Northern Hemisphere is tilted away from the Sun, so sunlight hits at a low angle and is spread over a larger area, delivering less heat per square metre. Days are also shorter in winter, meaning less total sunlight per day.",
+      explanation: "Two factors contribute to summer warmth: (1) more direct angle of sunlight (greater energy per m²), and (2) longer days. Both are caused by the tilt. Students should understand that the angle of sunlight is key."
+    },
+    {
+      id: "sc3_q41",
+      topic: "Earth's Tilt",
+      type: "short",
+      question: "Earth's axis is tilted at 23.5°. Describe what this means and explain why this tilt is responsible for the seasons.",
+      answer: "Earth's axis is tilted at 23.5° relative to the plane of its orbit around the Sun. This means Earth does not sit 'upright' — it leans to one side. As Earth orbits the Sun throughout the year, the tilt means that first one hemisphere and then the other is pointed more toward the Sun. When a hemisphere is tilted toward the Sun, it receives more direct sunlight and longer days — causing summer. Six months later, the same hemisphere is tilted away, receiving less direct sunlight and shorter days — causing winter.",
+      explanation: "The tilt is constant throughout the year (the axis always points toward Polaris). What changes is which hemisphere is oriented toward the Sun as Earth orbits — this is what drives the seasons."
+    },
+    {
+      id: "sc3_q42",
+      topic: "Orbit",
+      type: "short",
+      question: "Describe Earth's orbit around the Sun. Include how long it takes, the shape, and what force keeps Earth in its orbit.",
+      answer: "Earth orbits the Sun in an elliptical (slightly oval) path, taking approximately 365.25 days (one year) to complete one orbit. The force that keeps Earth in its orbit is gravity — the Sun's massive gravitational pull continuously attracts Earth toward it. Earth's forward orbital speed prevents it from falling directly into the Sun, so it continues moving in an orbit. The extra 0.25 day each year is why we add a leap day (29 February) every four years.",
+      explanation: "Key facts: elliptical orbit, 365.25 days, gravity keeps it in orbit. Students often think the orbit is a perfect circle — it is actually slightly elliptical (though nearly circular). The leap year link is a nice application."
+    },
+    {
+      id: "sc3_q43",
+      topic: "Seasons",
+      type: "short",
+      question: "A student claims: 'It is summer in December in Australia because Earth is closer to the Sun in December.' Is the student correct? Explain your answer.",
+      answer: "The student is not correct. Seasons are caused by Earth's axial tilt, not its distance from the Sun. Australia is in the Southern Hemisphere, which is tilted toward the Sun in December — this is why it is summer there. In fact, Earth is slightly closer to the Sun in January (during the Northern Hemisphere's winter), which proves that distance is not the cause of seasons. The real reason is that the Southern Hemisphere receives more direct sunlight in December when it is tilted toward the Sun.",
+      explanation: "This is a classic misconception. Earth is actually nearest the Sun in early January (Southern summer/Northern winter). Seasons are caused by tilt → angle of sunlight and day length, not distance.",
+      difficulty: "challenging"
     }
   ]
 };

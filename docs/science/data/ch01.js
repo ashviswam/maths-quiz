@@ -462,6 +462,55 @@ const ch01 = {
       type: "short",
       question: "Describe the structure of a hydrogen atom.",
       answer: "A hydrogen atom has one proton in its nucleus and one electron orbiting around the nucleus. It has no neutrons. It is the simplest and most abundant element in the universe."
+    },
+    {
+      id: "sc1_q40",
+      topic: "The Big Bang",
+      type: "short",
+      question: "In your own words, explain what scientists mean when they say the universe began with the Big Bang. What existed before it?",
+      answer: "The Big Bang describes the origin of the entire universe — all space, time, matter, and energy — from an unimaginably hot, dense point approximately 13.8 billion years ago. It was not an explosion in existing space, but the rapid expansion of space itself. Scientists believe nothing (not even space or time) existed before the Big Bang.",
+      explanation: "Students often say the Big Bang was 'an explosion in space'. The key correction is that space itself came into existence — there was no 'before' or 'outside'. Accept any answer that captures the idea of all space/time/matter beginning at one moment."
+    },
+    {
+      id: "sc1_q41",
+      topic: "The Big Bang",
+      type: "short",
+      question: "Describe two pieces of evidence that support the Big Bang theory.",
+      answer: "1. The expanding universe: astronomers observe that galaxies are moving away from us in all directions — the further away a galaxy, the faster it is receding. This shows the universe is expanding, which is exactly what you would expect if it began from a single point. 2. Cosmic microwave background (CMB) radiation: faint radiation fills the universe in every direction — the leftover heat from the Big Bang, now cooled to a very low temperature.",
+      explanation: "Grade 6 level: at minimum, students should know about the expanding universe (Hubble's observation). CMB radiation is a stretch answer. Accept any two well-explained points."
+    },
+    {
+      id: "sc1_q42",
+      topic: "Gravity & Stars",
+      type: "short",
+      question: "Explain the role of gravity in the formation of stars. Use the words 'gas cloud', 'collapse', 'temperature', and 'nuclear fusion' in your answer.",
+      answer: "Stars form from large clouds of gas (mainly hydrogen) in space. Gravity pulls the gas cloud inward, causing it to collapse. As the cloud collapses, the particles are squeezed together and the temperature rises dramatically. When the core reaches millions of degrees, nuclear fusion ignites — hydrogen atoms fuse together to form helium, releasing enormous amounts of energy. This energy radiates outward as light and heat, and the star 'switches on'.",
+      explanation: "Check that the student uses all four key terms correctly. The key chain of events is: gas cloud → gravity causes collapse → temperature increases → nuclear fusion begins → star is born."
+    },
+    {
+      id: "sc1_q43",
+      topic: "Gravity & Stars",
+      type: "short",
+      question: "Explain how a supernova spreads elements through the universe and why this is important for life.",
+      answer: "During its lifetime, a massive star creates heavy elements (such as carbon, oxygen, iron, and gold) through nuclear fusion. When the star runs out of fuel, its core collapses and it explodes in a violent supernova. This explosion scatters all the elements the star has made across space. Over time, these elements mix with clouds of gas and dust that can collapse under gravity to form new stars and planets. All the heavy atoms in living things — including the carbon in our bodies — were made in stars and spread by supernovas.",
+      explanation: "The key ideas are: (1) stars make heavy elements by fusion, (2) supernova scatters them, (3) these elements become part of new planets and life. 'We are made of stardust' is a poetic summary of this process.",
+      difficulty: "challenging"
+    },
+    {
+      id: "sc1_q44",
+      topic: "Atoms & Elements",
+      type: "short",
+      question: "Using a simple model, describe the structure of a hydrogen atom. Include where each particle is found and its electric charge.",
+      answer: "A hydrogen atom has two types of particles: one proton and one electron. The proton is found in the nucleus at the centre of the atom and carries a positive (+) charge. The electron is much smaller and orbits the nucleus in a shell; it carries a negative (−) charge. A hydrogen atom has no neutrons. Overall the atom is neutral because the positive and negative charges cancel each other out.",
+      explanation: "Students should be able to draw or describe this as a central nucleus (proton) with one electron orbiting around it. Emphasise: proton = positive, in nucleus; electron = negative, orbiting outside."
+    },
+    {
+      id: "sc1_q45",
+      topic: "Solar System Formation",
+      type: "short",
+      question: "Describe how our Solar System formed from a cloud of gas and dust. Use the word 'gravity' in your answer.",
+      answer: "About 4.6 billion years ago, a large cloud of gas and dust (mainly hydrogen) in space began to collapse under gravity. As it collapsed, the material in the centre became denser and hotter until nuclear fusion started, forming the Sun. The remaining gas and dust formed a spinning disc around the young Sun. Gravity caused particles in this disc to clump together over millions of years, eventually forming the planets, moons, asteroids, and comets of our Solar System.",
+      explanation: "The essential steps are: cloud of gas/dust → gravity causes collapse → Sun forms at centre → remaining disc forms planets. Students should mention gravity as the driving force."
     }
   ]
 };

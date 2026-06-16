@@ -267,53 +267,6 @@ const ch02 = {
       answer: 1,
       explanation: "9<sup>2</sup> = 9 × 9 = <strong>81</strong>. 'Squared' means multiplied by itself once. Don't confuse with 9 × 2 = 18 — that's a common mistake!"
     },
-    {
-      id: "c2_q29",
-      topic: "Order of operations",
-      type: "mcq",
-      question: "Find the value of <strong>4<sup>2</sup> × (3 + 2) − 10</strong>.",
-      options: ["70", "60", "80", "75"],
-      answer: 0,
-      explanation: "BODMAS — Brackets first: 3+2=5. Then Orders (powers): 4<sup>2</sup>=16. Then multiplication: 16×5=80. Then subtraction: 80−10=<strong>70</strong>. Remember: powers are evaluated before multiplication."
-    },
-    {
-      id: "c2_q30",
-      topic: "Order of operations",
-      type: "mcq",
-      question: "Calculate <strong>(15 − 3<sup>2</sup>) × 4 ÷ 3</strong>.",
-      options: ["8", "6", "12", "4"],
-      answer: 0,
-      explanation: "BODMAS — Brackets (evaluate the inside): Orders first → 3<sup>2</sup>=9, then 15−9=6. So the brackets give 6. Then multiplication and division left to right: 6×4=24, then 24÷3=<strong>8</strong>."
-    },
-    {
-      id: "c2_q31",
-      topic: "Multiple operations",
-      type: "mcq",
-      question: "A school canteen sells sandwiches for $<strong>4</strong> each and juice for $<strong>2</strong> each. On Monday they sell <strong>35</strong> sandwiches and <strong>48</strong> juices. On Tuesday they sell <strong>27</strong> sandwiches and <strong>32</strong> juices. How much <em>more</em> did they earn on Monday than Tuesday?",
-      options: ["$64", "$54", "$74", "$44"],
-      answer: 0,
-      explanation: "Monday: 35×$4 + 48×$2 = $140 + $96 = $236. Tuesday: 27×$4 + 32×$2 = $108 + $64 = $172. Difference: $236 − $172 = <strong>$64</strong>. Break multi-step problems into one operation at a time."
-    },
-
-    // Exponent notation — writing repeated multiplication
-    {
-      id: "c2_q32",
-      topic: "Exponent notation",
-      type: "mcq",
-      question: "Write <strong>2 × 2 × 2 × 2 × 2</strong> using exponent notation.",
-      options: ["2<sup>4</sup>", "2<sup>5</sup>", "5<sup>2</sup>", "5<sup>3</sup>"],
-      answer: 1,
-      explanation: "Count how many times 2 is used as a factor: 2 × 2 × 2 × 2 × 2 — that's <strong>five</strong> twos. In exponent notation this is written <strong>2<sup>5</sup></strong> (base 2, exponent 5). Its value is 32."
-    },
-    {
-      id: "c2_q33",
-      topic: "Exponent notation",
-      type: "mcq",
-      question: "What is the value of <strong>3<sup>3</sup> + 4<sup>2</sup></strong>?",
-      options: ["43", "91", "37", "49"],
-      answer: 0,
-      explanation: "Evaluate each power separately first (Orders before Addition in BODMAS). 3<sup>3</sup> = 3×3×3 = 27. 4<sup>2</sup> = 4×4 = 16. Then add: 27 + 16 = <strong>43</strong>."
-    },
 
     // More order of operations
     {
@@ -386,16 +339,6 @@ const ch02 = {
       answer: "544",
       acceptableAnswers: ["544"],
       explanation: "Work <strong>backwards</strong> through the operations. The last step was '+8', so undo it: 144 − 8 = 136. The first step was '÷4', so undo it (multiply): 136 × 4 = <strong>544</strong>. Check: 544 ÷ 4 + 8 = 136 + 8 = 144 ✓. Always undo operations in reverse order!"
-    },
-    {
-      id: "c2_q41",
-      topic: "Exponent notation",
-      difficulty: "challenging",
-      type: "input",
-      question: "Calculate <strong>2<sup>5</sup> + 3<sup>3</sup> − 4<sup>2</sup></strong>.",
-      answer: "43",
-      acceptableAnswers: ["43"],
-      explanation: "Evaluate each power separately first (Orders before + and − in BODMAS). <strong>2<sup>5</sup></strong> = 2×2×2×2×2 = 32. <strong>3<sup>3</sup></strong> = 3×3×3 = 27. <strong>4<sup>2</sup></strong> = 4×4 = 16. Now combine left to right: 32 + 27 = 59, then 59 − 16 = <strong>43</strong>."
     },
     {
       id: "c2_q42",

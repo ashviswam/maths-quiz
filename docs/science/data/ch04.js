@@ -474,6 +474,55 @@ const ch04 = {
       type: "short",
       question: "Name three human body systems and give the main organ(s) of each.",
       answer: "Any three of the following are acceptable: Digestive system (stomach, intestines, liver); Circulatory system (heart, blood vessels); Respiratory/Breathing system (lungs, diaphragm); Urinary system (kidneys, bladder); Nervous system (brain, spinal cord, nerves); Locomotor/Musculoskeletal system (bones, muscles)."
+    },
+    {
+      id: "sc4_q41",
+      topic: "Life Processes",
+      type: "short",
+      question: "List all seven life processes (MRS NERG) and write one sentence describing each one.",
+      answer: "M — Movement: all living things can move, even if just part of their body (e.g. plants turning toward light). R — Respiration: releasing energy from food inside cells. S — Sensitivity: detecting and responding to changes in the environment. N — Nutrition: taking in food or making it (photosynthesis) for energy and growth. E — Excretion: removing waste products made by chemical reactions in the body. R — Reproduction: producing offspring to continue the species. G — Growth: increasing in size or complexity over time.",
+      explanation: "Students must recall all seven. Common errors: confusing respiration with breathing; confusing excretion with egestion (removal of undigested food). Award one mark per correctly described process."
+    },
+    {
+      id: "sc4_q42",
+      topic: "Photosynthesis",
+      type: "short",
+      question: "Write the word equation for photosynthesis and describe the role of chlorophyll.",
+      answer: "Word equation: carbon dioxide + water → glucose + oxygen. Chlorophyll is the green pigment found inside chloroplasts in plant cells. It absorbs light energy from the Sun, which powers the photosynthesis reaction. Without chlorophyll (and the light energy it captures), plants cannot produce glucose or release oxygen.",
+      explanation: "Students should produce the correct word equation (not a formula equation at this level). They should identify chlorophyll as a light-absorbing pigment found in chloroplasts, not just 'in the leaf'."
+    },
+    {
+      id: "sc4_q43",
+      topic: "Organs",
+      type: "short",
+      question: "Describe the function of the liver and explain why it is described as a 'multi-function' organ.",
+      answer: "The liver is described as multi-function because it carries out many different jobs: (1) it filters the blood and breaks down toxins such as alcohol and drugs; (2) it produces bile, which helps digest fats in the small intestine; (3) it stores glycogen (a form of glucose) as an energy reserve; (4) it regulates blood sugar levels; (5) it produces proteins needed by the body. It is one of the most versatile organs in the body.",
+      explanation: "At Grade 6 level, students should know at least three functions of the liver. The most commonly tested are: bile production (digestion), filtering toxins from blood, and storing glycogen.",
+      difficulty: "challenging"
+    },
+    {
+      id: "sc4_q44",
+      topic: "Body Systems",
+      type: "short",
+      question: "Describe what happens when you breathe in. Name the organs and muscles involved and explain the movement of air.",
+      answer: "When you breathe in (inhale): the diaphragm contracts and flattens; the intercostal muscles between the ribs contract, pulling the ribcage upward and outward. These movements increase the volume of the chest cavity, which lowers the air pressure inside the lungs. Air rushes in from outside through the nose/mouth, down the trachea, through the bronchi, into the bronchioles, and finally into the alveoli (tiny air sacs in the lungs) where gas exchange occurs.",
+      explanation: "Key organs: diaphragm, lungs, trachea, bronchi, bronchioles, alveoli. Key idea: volume increases → pressure decreases → air flows in. Students do not need to mention intercostal muscles, but it is a good stretch answer."
+    },
+    {
+      id: "sc4_q45",
+      topic: "Body Systems",
+      type: "short",
+      question: "Describe the path food takes through the digestive system from the mouth to the rectum. Name at least FOUR organs in the correct order.",
+      answer: "Food travels through the digestive system in this order: mouth (teeth chew food; saliva begins digestion) → oesophagus (muscular tube that pushes food to the stomach) → stomach (food is churned and mixed with acid and enzymes) → small intestine (digestion is completed; nutrients are absorbed into the bloodstream through villi) → large intestine (water is absorbed; undigested waste becomes faeces) → rectum (faeces are stored) → anus (faeces are expelled from the body).",
+      explanation: "Students should name at least four organs in the correct sequence. Common errors: placing the small intestine before the stomach, or forgetting the oesophagus. The liver and pancreas produce digestive substances but food does not pass through them."
+    },
+    {
+      id: "sc4_q46",
+      topic: "Organs",
+      type: "short",
+      question: "Explain the function of the kidneys and describe what urine is made of.",
+      answer: "The kidneys filter the blood, removing waste products and excess water. The main waste product removed is urea, which is produced in the liver when it breaks down excess amino acids. The kidneys produce urine, which is a liquid made of water, urea, and other dissolved salts that the body does not need. Urine passes from the kidneys through the ureters to the bladder, where it is stored until it is excreted through the urethra.",
+      explanation: "Key function: filtering blood to remove urea and excess water. Key path: kidneys → ureters → bladder → urethra. Students should know urea is a waste product of protein breakdown."
     }
   ]
 };

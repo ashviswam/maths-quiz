@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>French Flashcards — Study Zone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<script>
+const FLASHCARD_CONFIG = {
+  id: 'french',
+  progressKey: 'french6_flashcards'
+};
+</script>
+
+<div id="app">
+
+  <header id="app-header">
+    <div class="header-inner">
+      <a href="./" class="btn-back">← French</a>
+      <div class="logo">🃏 Flashcards</div>
+      <div class="header-right"></div>
+    </div>
+  </header>
+
+  <main class="view fc-page">
+
+    <!-- Progress -->
+    <div class="fc-progress-wrap">
+      <div class="fc-prog-track">
+        <div id="fc-prog-fill" class="fc-prog-fill"></div>
+      </div>
+      <span id="fc-prog-label" class="fc-prog-label">0 / 0 known</span>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="fc-toolbar">
+      <select id="fc-topic-filter" class="fc-select" onchange="Flashcards.filterByTopic(this.value)">
+        <option value="">All Topics</option>
+      </select>
+      <button id="btn-fc-unknown-only" class="btn-fc-tool" onclick="Flashcards.toggleUnknownOnly()">📚 Practice Only</button>
+      <button class="btn-fc-tool" onclick="Flashcards.shuffle()">🔀 Shuffle</button>
+    </div>
+
+    <!-- Counter + topic label -->
+    <div id="fc-counter" class="fc-counter">1 / 1</div>
+    <div id="fc-topic-label" class="fc-topic-label"></div>
+
+    <!-- Card -->
+    <div id="fc-card-wrap" class="fc-card-wrap" onclick="Flashcards.flip()">
+      <div id="fc-inner" class="fc-inner">
+        <div class="fc-face fc-front">
+          <div class="fc-lang-hint">🇫🇷 French</div>
+          <div id="fc-front-text" class="fc-main-text"></div>
+          <div class="fc-tap-hint">Tap to reveal →</div>
+        </div>
+        <div class="fc-face fc-back">
+          <div class="fc-lang-hint">🇬🇧 English</div>
+          <div id="fc-back-text" class="fc-main-text"></div>
+          <div id="fc-back-note" class="fc-back-note hidden"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty state -->
+    <div id="fc-empty" class="fc-empty hidden">
+      <div class="fc-empty-icon">🎉</div>
+      <div class="fc-empty-msg">All cards marked as known!</div>
+      <button class="btn-primary" onclick="Flashcards.toggleUnknownOnly()">Show all cards</button>
+    </div>
+
+    <!-- Navigation + known -->
+    <div id="fc-controls" class="fc-controls">
+      <button class="btn-fc-nav" onclick="Flashcards.prev()">← Prev</button>
+      <button id="btn-fc-known" class="btn-fc-known" onclick="Flashcards.toggleKnown()">Mark as Known ✓</button>
+      <button class="btn-fc-nav" onclick="Flashcards.next()">Next →</button>
+    </div>
+
+    <p class="fc-keyboard-hint">← → arrow keys · Space or Enter to flip · K to mark known</p>
+
+  </main>
+</div><!-- /#app -->
+
+<script src="data/topic01.js"></script>
+<script src="data/topic02.js"></script>
+<script src="data/topics.js"></script>
+<script src="../js/flashcards.js"></script>
+
+</body>
+</html>

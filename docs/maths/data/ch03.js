@@ -571,60 +571,6 @@ const ch03 = {
     // ─── CHALLENGING QUESTIONS ────────────────────────────────────────────────
     // ─── AUDIT ADDITIONS (2026-06-15) ────────────────────────────────────────
     {
-      id: "c3_q43",
-      topic: "Lines",
-      type: "mcq",
-      question: "In bracket notation, which of these correctly describes a <strong>line segment</strong> joining points P and Q (not extending beyond P or Q)?",
-      options: ["(PQ)", "[PQ]", "[PQ)", "(PQ]"],
-      answer: 1,
-      explanation: "The textbook uses square brackets for a line segment: [PQ] means the segment that starts at P and ends at Q. Round brackets (PQ) mean the full infinite line through P and Q. A square bracket on one side and a round bracket on the other — such as [PQ) — means a ray starting at P passing through Q and going on forever."
-    },
-    {
-      id: "c3_q44",
-      topic: "Angles",
-      type: "mcq",
-      question: "A clock hand turns through <strong>three-quarters</strong> of a full revolution. How many degrees has it turned?",
-      options: ["90°", "180°", "270°", "360°"],
-      answer: 2,
-      explanation: "One full revolution = 360°. Three-quarters of a turn = (3 ÷ 4) × 360° = 270°. A quarter turn is 90°, a half turn is 180°, and a three-quarter turn is 270°."
-    },
-    {
-      id: "c3_q45",
-      topic: "Calculating angles",
-      type: "input",
-      question: "Two angles fit exactly inside a right angle (a corner of 90°). One angle is <strong>34°</strong>. What is the other angle in degrees?",
-      answer: "56",
-      acceptableAnswers: ["56", "56°", "56 degrees"],
-      explanation: "Angles that together make up a right angle must add to 90°. So the unknown angle = 90° − 34° = 56°. Check: 34° + 56° = 90°."
-    },
-    {
-      id: "c3_q46",
-      topic: "Calculating angles",
-      type: "mcq",
-      question: "In the diagram, ray BM lies between rays BA and BC. The angle ABM = 65° and angle MBC = 50°. What is the size of angle ABC?",
-      options: ["15°", "115°", "105°", "65°"],
-      answer: 1,
-      explanation: "When a ray lies between two other rays, the total angle is found by adding the two smaller angles together. Angle ABC = 65° + 50° = 115°. Since 115° is between 90° and 180°, it is an obtuse angle."
-    },
-    {
-      id: "c3_q47",
-      topic: "Calculating angles",
-      type: "input",
-      question: "Ray BX lies inside angle ABC. The angle ABC = 82° and angle XBC = 38°. What is the size of angle ABX in degrees?",
-      answer: "44",
-      acceptableAnswers: ["44", "44°", "44 degrees"],
-      explanation: "When a ray divides an angle into two parts, the smaller part equals the whole minus the other part. Angle ABX = angle ABC − angle XBC = 82° − 38° = 44°."
-    },
-    {
-      id: "c3_q48",
-      topic: "Calculating angles",
-      type: "input",
-      question: "Two angles meet at a point. One angle is a reflex angle of <strong>215°</strong>. What is the size of the other angle in degrees?",
-      answer: "145",
-      acceptableAnswers: ["145", "145°", "145 degrees"],
-      explanation: "Angles at a point (a full revolution) add up to 360°. The other angle = 360° − 215° = 145°. Since 145° is between 90° and 180°, it is an obtuse angle."
-    },
-    {
       id: "c3_q49",
       topic: "Measuring angles",
       type: "mcq",

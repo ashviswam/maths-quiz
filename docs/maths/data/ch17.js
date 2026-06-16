@@ -508,15 +508,6 @@ const ch17 = {
       explanation: "Theoretical probability for each colour = 1/4 = 0.25. Calculate the absolute difference from 0.25 for each: Red: |0.38 − 0.25| = 0.13. Blue: |0.22 − 0.25| = 0.03. Green: |0.26 − 0.25| = 0.01. Yellow: |0.14 − 0.25| = 0.11. Red has the largest gap (0.13), so red is furthest from the theoretical probability. Great work computing all four differences!"
     },
     {
-      id: "c17_q51",
-      topic: "Using numbers to describe probabilities",
-      type: "mcq",
-      question: "Match the probability value <strong>0.92</strong> to the best word or phrase.",
-      options: ["Impossible", "Unlikely", "50-50 chance", "Highly likely"],
-      answer: 3,
-      explanation: "0.92 is very close to 1 (certain). On the probability scale: 0 = impossible, 0.5 = 50-50 chance, 1 = certain. A value of 0.92 is very close to certain, so it is described as highly likely."
-    },
-    {
       id: "c17_q52",
       topic: "Using numbers to describe probabilities",
       type: "mcq",

@@ -9,22 +9,62 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
 <div id="app">
+
   <header id="app-header">
     <div class="header-inner">
-      <a href="../" class="logo-link"><div class="logo">🇫🇷 French</div></a>
+      <a href="../" class="btn-back">← Subjects</a>
+      <div class="logo">🇫🇷 French</div>
+      <div class="header-right"></div>
     </div>
   </header>
+
   <main class="view">
-    <div class="coming-soon-wrap">
-      <div class="coming-soon-icon">🇫🇷</div>
-      <h1 class="coming-soon-title">French</h1>
-      <p class="coming-soon-sub">Foreign Language</p>
-      <div class="coming-soon-badge">Coming Soon</div>
-      <p class="coming-soon-msg">Quiz content for this subject is being prepared. Check back soon!</p>
-      <a href="../" class="btn-primary coming-soon-btn">← Back to Subjects</a>
+    <div class="home-floats" aria-hidden="true">
+      <span class="hf hf1">🇫🇷</span>
+      <span class="hf hf2">📖</span>
+      <span class="hf hf3">💬</span>
+      <span class="hf hf4">✏️</span>
+      <span class="hf hf5">🗣️</span>
+      <span class="hf hf6">🃏</span>
+      <span class="hf hf7">🌟</span>
+      <span class="hf hf8">🥐</span>
+    </div>
+
+    <div class="home-hero">
+      <h1 id="home-greeting">Bonjour, Pragathy! 👋</h1>
+      <p class="home-subtitle">Foreign Language · Grade 6 · Choose your mode:</p>
+    </div>
+
+    <div class="mode-grid">
+
+      <a href="flashcards.html" class="mode-card mode-card--flashcards">
+        <div class="mode-icon">🃏</div>
+        <div class="mode-name">Flashcards</div>
+        <div class="mode-desc">Practise vocabulary with flip cards. Go at your own pace, as many times as you like.</div>
+        <div class="mode-cta">Start practising →</div>
+      </a>
+
+      <a href="quiz.html" class="mode-card mode-card--quiz">
+        <div class="mode-icon">📝</div>
+        <div class="mode-name">Quiz</div>
+        <div class="mode-desc">Test your knowledge with multiple choice and typed answers. Progress is saved.</div>
+        <div class="mode-cta">Start quiz →</div>
+      </a>
+
     </div>
   </main>
-</div>
+
+</div><!-- /#app -->
+
+<script>
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? 'Bonjour, Pragathy! ☀️'
+                 : hour < 17 ? 'Salut, Pragathy! 👋'
+                 : 'Bonsoir, Pragathy! 🌙';
+  document.getElementById('home-greeting').textContent = greeting;
+</script>
+
 </body>
 </html>
