@@ -10,7 +10,7 @@ const ch19 = {
       topic: "Translations",
       type: "mcq",
       question: "Point A is at (2, 3). It is translated <strong>4 right and 2 up</strong>. What are the coordinates of the image A'?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" aria-label="Translation of point A(2,3) to A'(6,5)">
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" aria-label="Coordinate grid showing point A at (2, 3)">
   <rect width="340" height="340" fill="#f8fafc" rx="8"/>
   <!-- grid lines -->
   <line x1="20" y1="20" x2="320" y2="20" stroke="#e2e8f0" stroke-width="1"/>
@@ -42,17 +42,23 @@ const ch19 = {
   <!-- axes: origin at (170,170), 1 unit = 25px -->
   <line x1="20" y1="170" x2="320" y2="170" stroke="#64748b" stroke-width="1.5"/>
   <line x1="170" y1="20" x2="170" y2="320" stroke="#64748b" stroke-width="1.5"/>
-  <!-- axis labels -->
-  <text x="174" y="168" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="218" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
-  <text x="268" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
-  <text x="318" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">6</text>
-  <text x="122" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-2</text>
+  <!-- axis labels: x-axis positions = 170 + n*25; y-axis svgY = 170 - n*25 -->
+  <text x="174" y="183" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
+  <text x="120" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-2</text>
+  <text x="145" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-1</text>
+  <text x="195" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="220" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="245" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <text x="270" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <text x="295" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <text x="320" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">6</text>
+  <text x="157" y="220" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-2</text>
+  <text x="157" y="195" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-1</text>
+  <text x="157" y="145" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
   <text x="157" y="120" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
   <text x="157" y="95" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
   <text x="157" y="70" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
   <text x="157" y="45" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
-  <text x="157" y="220" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-2</text>
   <!-- Point A at (2,3): svgX=170+2*25=220, svgY=170-3*25=95 -->
   <circle cx="220" cy="95" r="5" fill="#5b5ef4"/>
   <text x="226" y="91" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">A(2,3)</text>
@@ -66,7 +72,7 @@ const ch19 = {
       topic: "Translations",
       type: "mcq",
       question: "A triangle has a vertex at (5, 4). After a translation, the image of this vertex is at (2, 7). Which vector describes this translation?",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" aria-label="Translation from (5,4) to (2,7)">
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" aria-label="Coordinate grid showing point at (5, 4)">
   <rect width="340" height="340" fill="#f8fafc" rx="8"/>
   <!-- grid -->
   <line x1="20" y1="20" x2="320" y2="20" stroke="#e2e8f0" stroke-width="1"/>
@@ -98,12 +104,19 @@ const ch19 = {
   <line x1="20" y1="170" x2="320" y2="170" stroke="#64748b" stroke-width="1.5"/>
   <line x1="170" y1="20" x2="170" y2="320" stroke="#64748b" stroke-width="1.5"/>
   <text x="174" y="183" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="243" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
-  <text x="268" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
-  <text x="293" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
-  <text x="157" y="75" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
-  <text x="157" y="50" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
-  <text x="157" y="100" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <text x="195" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="220" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="245" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <text x="270" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <text x="295" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <text x="157" y="220" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-2</text>
+  <text x="157" y="195" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-1</text>
+  <text x="157" y="145" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="157" y="120" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="157" y="95" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <text x="157" y="70" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <text x="157" y="45" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">5</text>
+  <text x="157" y="20" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">6</text>
   <!-- Point at (5,4): svgX=170+5*25=295, svgY=170-4*25=70 -->
   <circle cx="295" cy="70" r="5" fill="#5b5ef4"/>
   <text x="300" y="67" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">(5,4)</text>
@@ -117,9 +130,9 @@ const ch19 = {
       topic: "Translations",
       type: "input",
       question: "Point P is at (−3, 1). It is translated <strong>5 right and 4 down</strong>. Write the coordinates of image P' in the form (x, y).",
-      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" aria-label="Translation of P(-3,1) by 5 right and 4 down">
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" aria-label="Coordinate grid showing point P at (-3, 1)">
   <rect width="340" height="340" fill="#f8fafc" rx="8"/>
-  <!-- grid -->
+  <!-- grid: origin (170,170), 1 unit=25px; x from -6 to +6, y from -4 to +4 -->
   <line x1="20" y1="70" x2="320" y2="70" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="95" x2="320" y2="95" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="120" x2="320" y2="120" stroke="#e2e8f0" stroke-width="1"/>
@@ -129,27 +142,41 @@ const ch19 = {
   <line x1="20" y1="220" x2="320" y2="220" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="245" x2="320" y2="245" stroke="#e2e8f0" stroke-width="1"/>
   <line x1="20" y1="270" x2="320" y2="270" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="20" y1="70" x2="20" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="45" y1="70" x2="45" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="70" y1="70" x2="70" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="95" y1="70" x2="95" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="120" y1="70" x2="120" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="145" y1="70" x2="145" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="170" y1="70" x2="170" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="195" y1="70" x2="195" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="220" y1="70" x2="220" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="245" y1="70" x2="245" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="270" y1="70" x2="270" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="295" y1="70" x2="295" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <line x1="320" y1="70" x2="320" y2="320" stroke="#e2e8f0" stroke-width="1"/>
-  <!-- axes: origin (170,170) -->
+  <line x1="20" y1="70" x2="20" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="45" y1="70" x2="45" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="70" y1="70" x2="70" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="95" y1="70" x2="95" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="120" y1="70" x2="120" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="145" y1="70" x2="145" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="170" y1="70" x2="170" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="195" y1="70" x2="195" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="220" y1="70" x2="220" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="245" y1="70" x2="245" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="270" y1="70" x2="270" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="295" y1="70" x2="295" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="320" y1="70" x2="320" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- axes -->
   <line x1="20" y1="170" x2="320" y2="170" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="170" y1="70" x2="170" y2="300" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="170" y1="65" x2="170" y2="290" stroke="#64748b" stroke-width="1.5"/>
+  <!-- x-axis labels (y=183): every integer -4 to 4 -->
   <text x="174" y="183" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">0</text>
-  <text x="95" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-3</text>
+  <text x="70"  y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-4</text>
+  <text x="95"  y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-3</text>
+  <text x="120" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-2</text>
+  <text x="145" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-1</text>
+  <text x="195" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
   <text x="220" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
+  <text x="245" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <text x="270" y="183" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <!-- y-axis labels (x=157, text-anchor=end): every integer -4 to 4 excl. 0 -->
+  <text x="157" y="70"  text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">4</text>
+  <text x="157" y="95"  text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">3</text>
+  <text x="157" y="120" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">2</text>
   <text x="157" y="145" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">1</text>
+  <text x="157" y="195" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-1</text>
+  <text x="157" y="220" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-2</text>
   <text x="157" y="245" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-3</text>
+  <text x="157" y="270" text-anchor="end" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">-4</text>
   <!-- P at (-3,1): svgX=170+(-3)*25=95, svgY=170-1*25=145 -->
   <circle cx="95" cy="145" r="5" fill="#5b5ef4"/>
   <text x="100" y="141" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="12" font-weight="700">P(-3,1)</text>

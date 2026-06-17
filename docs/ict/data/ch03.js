@@ -28,7 +28,12 @@ const ch03 = {
       topic: "Fonts & Text Formatting",
       type: "mcq",
       question: "Which of the following is a <b>sans-serif</b> font?",
-      options: ["Times New Roman", "Georgia", "Calibri", "Courier New"],
+      options: [
+        "<span style=\"font-family:'Times New Roman',Times,serif;font-size:1.1em\">Times New Roman</span>",
+        "<span style=\"font-family:Georgia,serif;font-size:1.1em\">Georgia</span>",
+        "<span style=\"font-family:Calibri,Candara,Segoe UI,sans-serif;font-size:1.1em\">Calibri</span>",
+        "<span style=\"font-family:'Courier New',Courier,monospace;font-size:1.1em\">Courier New</span>"
+      ],
       answer: 2,
       explanation: "Calibri is a sans-serif font — it has clean letters with no decorative strokes at the ends. Times New Roman and Georgia are serif fonts. Calibri is the default body font in Microsoft Word."
     },
@@ -38,7 +43,12 @@ const ch03 = {
       topic: "Fonts & Text Formatting",
       type: "mcq",
       question: "Which of the following is a <b>serif</b> font?",
-      options: ["Calibri", "Verdana", "Arial", "Times New Roman"],
+      options: [
+        "<span style=\"font-family:Calibri,Candara,Segoe UI,sans-serif;font-size:1.1em\">Calibri</span>",
+        "<span style=\"font-family:Verdana,Geneva,sans-serif;font-size:1.1em\">Verdana</span>",
+        "<span style=\"font-family:Arial,Helvetica,sans-serif;font-size:1.1em\">Arial</span>",
+        "<span style=\"font-family:'Times New Roman',Times,serif;font-size:1.1em\">Times New Roman</span>"
+      ],
       answer: 3,
       explanation: "Times New Roman is a classic serif font — you can see the small horizontal strokes (serifs) at the ends of letters. Calibri, Verdana, and Arial are all sans-serif fonts."
     },

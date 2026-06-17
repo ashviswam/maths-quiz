@@ -317,11 +317,12 @@ const App = (() => {
   }
 
   function _refreshNoteBtn(qId) {
-    const btn = document.getElementById('btn-note');
-    if (!btn) return;
     const hasNote = !!Notes.get(qId);
-    btn.classList.toggle('has-note', hasNote);
-    btn.textContent = hasNote ? '📝 Edit note' : '📝 Leave a note';
+    const text = hasNote ? '📝 Edit note' : '📝 Leave a note';
+    const btn = document.getElementById('btn-note');
+    if (btn) { btn.classList.toggle('has-note', hasNote); btn.textContent = text; }
+    const btnFb = document.getElementById('btn-fb-note');
+    if (btnFb) { btnFb.classList.toggle('has-note', hasNote); btnFb.textContent = text; }
   }
 
   function renderOptions(q) {
@@ -413,6 +414,7 @@ const App = (() => {
     const fbReview = document.getElementById('fb-review');
     if (fbReview) fbReview.classList.add('hidden');
     document.getElementById('btn-next').classList.remove('hidden');
+    _refreshNoteBtn(q.id);
 
     document.getElementById('fb-icon').textContent = correct ? '🎉' : '💡';
     const heading = document.getElementById('fb-heading');
