@@ -9,7 +9,7 @@ Eight subjects are planned. Current status:
 | Subject    | Status       | Location          | Notes                          |
 |------------|--------------|-------------------|--------------------------------|
 | Dutch      | Coming soon  | docs/dutch/       | No content yet                 |
-| English    | Coming soon  | docs/english/     | No content yet                 |
+| English    | ✅ Live       | docs/english/     | 5 chapters, 84 questions (figurative language, poetry devices, exam poem 'I Don't Like Poetry', short story 'Eleven', mythology) |
 | French     | Coming soon  | docs/french/      | No content yet                 |
 | Humanities | Coming soon  | docs/humanities/  | No content yet                 |
 | ICT        | ✅ Live       | docs/ict/         | 5 units, ~90 questions (logic gates, algorithms, digital citizenship, doc production, Scratch) |
