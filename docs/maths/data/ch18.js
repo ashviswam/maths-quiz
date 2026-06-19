@@ -674,6 +674,146 @@ const ch18 = {
       options: ["April", "May", "June", "July"],
       answer: 3,
       explanation: "Count the symbols in each row: April = 4, May = 2, June = 3, July = 5. July has the most symbols, so July had the greatest number of houses sold (5 × 10 = 50 houses)."
+    },
+    {
+      id: "c18_q58",
+      topic: "Pie charts",
+      type: "mcq",
+      question: "A pie chart represents data from <strong>480 students</strong>. The 'Drama' sector has an angle of <strong>45°</strong>. How many students chose Drama?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" aria-label="Pie chart with a 45 degree Drama sector">
+  <rect width="260" height="220" fill="#f8fafc" rx="8"/>
+  <!-- Circle at (110,110) r=85. Drama = 45° CW from top -->
+  <!-- Start (top): (110,25). End (45° CW): (110+85*sin45, 110-85*cos45) = (170,50) -->
+  <path d="M110,110 L110,25 A85,85 0 0,1 170,50 Z" fill="#5b5ef4" opacity="0.85"/>
+  <!-- Remaining 315° arc back to top, large-arc=1 -->
+  <path d="M110,110 L170,50 A85,85 0 1,1 110,25 Z" fill="#e2e8f0" opacity="0.9"/>
+  <circle cx="110" cy="110" r="85" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Drama label: midpoint at 22.5° CW from top -->
+  <text x="130" y="62" text-anchor="middle" fill="white" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Drama</text>
+  <text x="130" y="74" text-anchor="middle" fill="white" font-family="Nunito,Arial,sans-serif" font-size="10">45°</text>
+  <text x="88" y="130" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Other</text>
+  <rect x="196" y="59" width="12" height="12" fill="#5b5ef4" rx="2"/>
+  <text x="214" y="70" text-anchor="start" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Drama</text>
+  <rect x="196" y="79" width="12" height="12" fill="#e2e8f0" stroke="#64748b" stroke-width="1" rx="2"/>
+  <text x="214" y="90" text-anchor="start" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Other</text>
+  <text x="130" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Total = 480 students</text>
+</svg>`,
+      options: ["45", "60", "80", "120"],
+      answer: 1,
+      explanation: "Frequency = (angle ÷ 360°) × total = (45 ÷ 360) × 480 = (1/8) × 480 = <strong>60 students</strong>. To go from angle to frequency: divide the sector angle by 360° to find the fraction, then multiply by the total."
+    },
+    {
+      id: "c18_q59",
+      topic: "Pie charts",
+      type: "mcq",
+      question: "A sector in a pie chart has an angle of <strong>108°</strong>. What <strong>percentage</strong> of the total data does this sector represent?",
+      options: ["18%", "27%", "30%", "36%"],
+      answer: 2,
+      explanation: "Percentage = (angle ÷ 360°) × 100 = (108 ÷ 360) × 100 = 0.3 × 100 = <strong>30%</strong>. Dividing by 360° gives the fraction of the full circle; multiplying by 100 converts that fraction to a percentage."
+    },
+    {
+      id: "c18_q60",
+      topic: "Pie charts",
+      type: "input",
+      question: "A pie chart shows results of a sports survey. The sector for '<strong>Hockey</strong>' has an angle of <strong>120°</strong> and represents <strong>40 students</strong>. How many students were surveyed in <strong>total</strong>? Write your answer as a number.",
+      answer: "120",
+      acceptableAnswers: ["120"],
+      explanation: "Use the formula: angle = (frequency ÷ total) × 360°. Rearranging gives: total = frequency × (360° ÷ angle) = 40 × (360 ÷ 120) = 40 × 3 = <strong>120 students</strong>. Check: (120 ÷ 360) × 120 = 40 ✓"
+    },
+    {
+      id: "c18_q61",
+      topic: "Pie charts",
+      type: "mcq",
+      question: "A sector of a pie chart represents <strong>3/8</strong> of the total data. What is the <strong>angle</strong> of this sector?",
+      options: ["108°", "120°", "135°", "150°"],
+      answer: 2,
+      explanation: "Sector angle = fraction × 360° = (3/8) × 360° = (3 × 360) ÷ 8 = 1080 ÷ 8 = <strong>135°</strong>. Multiply the fraction directly by 360° to find the sector angle."
+    },
+    {
+      id: "c18_q62",
+      topic: "Pie charts",
+      type: "mcq",
+      question: "A survey of <strong>72 students</strong> asked them to choose their favourite season. The results are:<br><br><strong>Season &nbsp;&nbsp;| Students</strong><br>Spring &nbsp;&nbsp;| 18<br>Summer &nbsp;| 24<br>Autumn &nbsp;| 12<br>Winter &nbsp;| 18<br><br>What is the <strong>sector angle</strong> for Summer in a pie chart?",
+      options: ["80°", "100°", "120°", "144°"],
+      answer: 2,
+      explanation: "Sector angle = (frequency ÷ total) × 360° = (24 ÷ 72) × 360° = (1/3) × 360° = <strong>120°</strong>. Notice that 24 is exactly one-third of 72 — simplify the fraction before multiplying to make the arithmetic easier."
+    },
+    {
+      id: "c18_q63",
+      topic: "Pie charts",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "In a pie chart, the sector for '<strong>Reading</strong>' represents <strong>30%</strong> of the students surveyed. If <strong>54 students</strong> chose Reading, how many students were surveyed in <strong>total</strong>?",
+      options: ["120", "150", "162", "180"],
+      answer: 3,
+      explanation: "30% of total = 54. Rearrange: total = 54 ÷ 0.30 = <strong>180 students</strong>. You can also think of it as: total = 54 × (100 ÷ 30) = 54 × 10/3 = 180. Check: 30% of 180 = 54 ✓"
+    },
+    {
+      id: "c18_q64",
+      topic: "Pie charts",
+      difficulty: "challenging",
+      type: "input",
+      question: "A survey of <strong>200 students</strong> asked which app they use most. Some results are shown:<br><br><strong>App &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Students</strong><br>YouTube &nbsp;&nbsp;| 80<br>TikTok &nbsp;&nbsp;&nbsp;| 50<br>Instagram | ?<br>Snapchat &nbsp;| 30<br><br>The sector for <strong>Instagram</strong> has an angle of <strong>72°</strong>. How many students chose Instagram? Write your answer as a number.",
+      answer: "40",
+      acceptableAnswers: ["40"],
+      explanation: "Frequency = (angle ÷ 360°) × total = (72 ÷ 360) × 200 = (1/5) × 200 = <strong>40 students</strong>. Check by adding all frequencies: 80 + 50 + 40 + 30 = 200 ✓ — all four groups must sum to the total."
+    },
+    {
+      id: "c18_q65",
+      topic: "Pie charts",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "Two sectors are from different pie charts:<br><br><strong>Sector A</strong> covers <strong>35%</strong> of its chart.<br><strong>Sector B</strong> has an angle of <strong>140°</strong>.<br><br>Which sector is <strong>larger</strong>?",
+      options: ["Sector A is larger", "Sector B is larger", "They are equal in size", "Cannot be determined from this information"],
+      answer: 1,
+      explanation: "Convert Sector A to degrees: 35% × 360° = (35 ÷ 100) × 360 = 126°. Compare: Sector A = 126°, Sector B = 140°. Since 140° > 126°, <strong>Sector B is larger</strong>. Always convert to the same unit before comparing sectors."
+    },
+    {
+      id: "c18_q66",
+      topic: "Pie charts",
+      type: "input",
+      question: "A pie chart shows how <strong>240 people</strong> spent their weekend. Three of the four sector angles are known:<br><br>Sports = 90°<br>Reading = 60°<br>Gaming = 45°<br>Socialising = ?°<br><br>What is the <strong>sector angle</strong> for Socialising? Write your answer in degrees (just the number).",
+      answer: "165",
+      acceptableAnswers: ["165", "165°"],
+      explanation: "All sector angles in a pie chart sum to 360°. Socialising = 360° − 90° − 60° − 45° = 360° − 195° = <strong>165°</strong>. Check: 90 + 60 + 45 + 165 = 360 ✓"
+    },
+    {
+      id: "c18_q67",
+      topic: "Pie charts",
+      difficulty: "challenging",
+      type: "mcq",
+      question: "A pie chart shows how <strong>180 students</strong> chose their favourite subject. The sector angles are: Art = <strong>60°</strong>, Science = <strong>100°</strong>, Other = <strong>200°</strong>.<br><br>How many <strong>more</strong> students chose Science than Art?",
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 220" aria-label="Pie chart showing Art, Science and Other sectors">
+  <rect width="280" height="220" fill="#f8fafc" rx="8"/>
+  <!-- Circle at (110,110) r=85 -->
+  <!-- Art: 60° CW from top. End=(110+85*sin60, 110-85*cos60)=(184,68) -->
+  <path d="M110,110 L110,25 A85,85 0 0,1 184,68 Z" fill="#5b5ef4" opacity="0.85"/>
+  <!-- Science: 100° from 60° to 160°. End=(110+85*sin160, 110-85*cos160)=(139,190) -->
+  <path d="M110,110 L184,68 A85,85 0 0,1 139,190 Z" fill="#22c55e" opacity="0.85"/>
+  <!-- Other: 200° from 160° to 360°, large-arc=1 -->
+  <path d="M110,110 L139,190 A85,85 0 1,1 110,25 Z" fill="#e2e8f0" opacity="0.9"/>
+  <circle cx="110" cy="110" r="85" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Art label: midpoint at 30° CW from top, r*0.65=55 -->
+  <text x="138" y="62" text-anchor="middle" fill="white" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Art</text>
+  <text x="138" y="74" text-anchor="middle" fill="white" font-family="Nunito,Arial,sans-serif" font-size="10">60°</text>
+  <!-- Science label: midpoint at 110° CW from top -->
+  <text x="162" y="129" text-anchor="middle" fill="white" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Science</text>
+  <text x="162" y="141" text-anchor="middle" fill="white" font-family="Nunito,Arial,sans-serif" font-size="10">100°</text>
+  <!-- Other label: midpoint at 260° CW from top -->
+  <text x="56" y="118" text-anchor="middle" fill="#475569" font-family="Nunito,Arial,sans-serif" font-size="11">Other</text>
+  <text x="56" y="130" text-anchor="middle" fill="#475569" font-family="Nunito,Arial,sans-serif" font-size="10">200°</text>
+  <!-- Legend -->
+  <rect x="210" y="50" width="12" height="12" fill="#5b5ef4" rx="2"/>
+  <text x="228" y="60" text-anchor="start" fill="#5b5ef4" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Art</text>
+  <rect x="210" y="70" width="12" height="12" fill="#22c55e" rx="2"/>
+  <text x="228" y="80" text-anchor="start" fill="#22c55e" font-family="Nunito,Arial,sans-serif" font-size="11" font-weight="700">Science</text>
+  <rect x="210" y="90" width="12" height="12" fill="#e2e8f0" stroke="#64748b" stroke-width="1" rx="2"/>
+  <text x="228" y="100" text-anchor="start" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Other</text>
+  <text x="130" y="210" text-anchor="middle" fill="#64748b" font-family="Nunito,Arial,sans-serif" font-size="11">Total = 180 students</text>
+</svg>`,
+      options: ["10", "20", "30", "50"],
+      answer: 1,
+      explanation: "Find each frequency: Art = (60 ÷ 360) × 180 = (1/6) × 180 = 30 students. Science = (100 ÷ 360) × 180 = (5/18) × 180 = 50 students. Difference = 50 − 30 = <strong>20 more students</strong> chose Science. Always convert the angle to a fraction of 360° first, then multiply by the total."
     }
   ]
 };
