@@ -3,133 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pragathy's Study Zone</title>
+  <title>Study Zone</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <div id="app">
 
-  <!-- ── HEADER ─────────────────────────────────────────────── -->
   <header id="app-header">
     <div class="header-inner">
-      <div class="logo">✏️ Study Zone</div>
+      <div class="logo" id="logo">✏️ Study Zone</div>
+      <div class="header-right"><span id="sync-slot"></span></div>
     </div>
   </header>
 
-  <!-- ── SUBJECT SELECTOR ───────────────────────────────────── -->
   <main class="view">
     <div class="home-floats" aria-hidden="true">
-      <span class="hf hf1">🔬</span>
-      <span class="hf hf2">📐</span>
-      <span class="hf hf3">🌍</span>
-      <span class="hf hf4">📚</span>
-      <span class="hf hf5">💻</span>
-      <span class="hf hf6">🧬</span>
-      <span class="hf hf7">🌟</span>
-      <span class="hf hf8">⚗️</span>
+      <span class="hf hf1">🔬</span><span class="hf hf2">📐</span><span class="hf hf3">🌍</span><span class="hf hf4">📚</span>
+      <span class="hf hf5">💻</span><span class="hf hf6">🧬</span><span class="hf hf7">🌟</span><span class="hf hf8">⚗️</span>
     </div>
 
     <div class="home-hero">
-      <h1 id="home-greeting">Welcome back, Pragathy! 👋</h1>
-      <p class="home-subtitle">Pick a subject to start practising.</p>
+      <h1 id="home-greeting">Welcome back! 👋</h1>
+      <p id="home-subtitle" class="home-subtitle"></p>
     </div>
 
-    <div class="subject-grid">
+    <div id="week-strip" class="week-strip"></div>
 
-      <a href="dutch/" class="subject-card subject-card--soon">
-        <div class="subj-top">
-          <span class="subj-icon">🇳🇱</span>
-          <span class="subj-soon-badge">Coming soon</span>
-        </div>
-        <div class="subj-name">Dutch</div>
-        <div class="subj-desc">Language & Literacy</div>
-      </a>
-
-      <a href="english/" class="subject-card" style="--subj-color:#be185d">
-        <div class="subj-top">
-          <span class="subj-icon">📚</span>
-          <span class="subj-q-count">5 chapters</span>
-        </div>
-        <div class="subj-name">English</div>
-        <div class="subj-desc">Language &amp; Literature · Grade 6</div>
-        <div class="subj-cta">Start practising →</div>
-      </a>
-
-      <a href="french/" class="subject-card" style="--subj-color:#a855f7">
-        <div class="subj-top">
-          <span class="subj-icon">🇫🇷</span>
-          <span class="subj-q-count">2 topics</span>
-        </div>
-        <div class="subj-name">French</div>
-        <div class="subj-desc">Foreign Language · Grade 6</div>
-        <div class="subj-cta">Start practising →</div>
-      </a>
-
-      <a href="humanities/" class="subject-card" style="--subj-color:#0ea5e9">
-        <div class="subj-top">
-          <span class="subj-icon">🌍</span>
-          <span class="subj-q-count">5 topics</span>
-        </div>
-        <div class="subj-name">Humanities</div>
-        <div class="subj-desc">History &amp; Geography · Grade 6</div>
-        <div class="subj-cta">Start practising →</div>
-      </a>
-
-      <a href="ict/" class="subject-card" style="--subj-color:#f59e0b">
-        <div class="subj-top">
-          <span class="subj-icon">💻</span>
-          <span class="subj-q-count">5 units</span>
-        </div>
-        <div class="subj-name">ICT</div>
-        <div class="subj-desc">IB MYP Grade 6 · RISS</div>
-        <div class="subj-cta">Start practising →</div>
-      </a>
-
-      <a href="maths/" class="subject-card" style="--subj-color:#6366f1">
-        <div class="subj-top">
-          <span class="subj-icon">🧮</span>
-          <span class="subj-q-count" id="maths-count">19 chapters</span>
-        </div>
-        <div class="subj-name">Maths</div>
-        <div class="subj-desc">IB MYP Grade 6 · Haese</div>
-        <div class="subj-cta">Start practising →</div>
-      </a>
-
-      <a href="science/" class="subject-card" style="--subj-color:#22c55e">
-        <div class="subj-top">
-          <span class="subj-icon">🔬</span>
-          <span class="subj-q-count" id="science-count">5 topics</span>
-        </div>
-        <div class="subj-name">Science</div>
-        <div class="subj-desc">IB MYP Grade 6 · RISS</div>
-        <div class="subj-cta">Start practising →</div>
-      </a>
-
-      <a href="spanish/" class="subject-card" style="--subj-color:#f59e0b">
-        <div class="subj-top">
-          <span class="subj-icon">🇪🇸</span>
-          <span class="subj-q-count">2 chapters</span>
-        </div>
-        <div class="subj-name">Spanish</div>
-        <div class="subj-desc">Foreign Language · Grade 6</div>
-        <div class="subj-cta">Start practising →</div>
-      </a>
-
-    </div>
+    <div id="subject-grid" class="subject-grid"></div>
   </main>
 
-</div><!-- /#app -->
+</div>
 
-<script>
-  const hour = new Date().getHours();
-  const greeting = hour < 12 ? 'Good morning, Pragathy! ☀️'
-                 : hour < 17 ? 'Hey Pragathy! 👋'
-                 : 'Good evening, Pragathy! 🌙';
-  document.getElementById('home-greeting').textContent = greeting;
-</script>
-
+<script src="data/manifest.js"></script>
+<script src="js/common.js"></script>
+<script src="js/store.js"></script>
+<script src="js/sync.js"></script>
+<script src="js/sync-ui.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>

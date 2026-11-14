@@ -1,1 +1,0 @@
-const CHAPTERS = [ch01, ch02, ch03, ch04, ch05];

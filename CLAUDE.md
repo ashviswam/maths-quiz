@@ -1,184 +1,86 @@
-# DevusExamPrep — Claude Context
+# DevusExamPrep (Study Zone): Claude context
 
 ## What this project is
-A static web quiz app for **Pragathy** (IB MYP Grade 6 student) deployed on GitHub Pages from the `docs/` folder. No build step — pure HTML/CSS/JS.
+A static web study app for **Pragathy** (IB MYP **Grade 7**, 2026–27), deployed on GitHub Pages from `docs/`. There's no build step: plain HTML/CSS/JS. Grade 6 content was deleted in Nov 2026 and is still in git history (before commit "Grade 7 rebuild").
 
-## Subjects
-Eight subjects are planned. Current status:
+**GitHub remote:** `https://github.com/ashviswam/maths-quiz.git`. This is a **public** repo, so never commit school-owned PDFs or curriculum text.
 
-| Subject    | Status       | Location          | Notes                          |
-|------------|--------------|-------------------|--------------------------------|
-| Dutch      | Coming soon  | docs/dutch/       | No content yet                 |
-| English    | ✅ Live       | docs/english/     | 5 chapters, 84 questions (figurative language, poetry devices, exam poem 'I Don't Like Poetry', short story 'Eleven', mythology) |
-| French     | Coming soon  | docs/french/      | No content yet                 |
-| Humanities | ✅ Live       | docs/humanities/  | 5 topics, 125 questions (Maps, Early Humans, Civilisations, World Religions, Biomes & Climates) |
-| ICT        | ✅ Live       | docs/ict/         | 5 units, ~90 questions (logic gates, algorithms, digital citizenship, doc production, Scratch) |
-| Maths      | ✅ Live       | docs/maths/       | 19 chapters, ~841 questions, Haese Grade 6 textbook |
-| Science    | ✅ Live       | docs/science/     | 5 topics, 195 questions (172 MCQ + 23 short), RISS Grade 6 |
-| Spanish    | Coming soon  | docs/spanish/     | No content yet                 |
-
-Source materials in `~/Downloads/pragathy/<subject>/` — PDFs of class slide decks and curriculum docs. These live **outside** the git repo and are never committed. `docs/curriculum*.md` and anything in `private/` are gitignored.
-
-**GitHub remote:** `https://github.com/ashviswam/maths-quiz.git` (public repo — do not commit school-owned PDFs or curriculum text).
+## How it's used
+- **Material in:** the parent drops class PDFs, slides and photos into `~/Documents/Pragathy/<subject>/`, optionally in chapter subfolders (`03-forces/`), or unsorted into `~/Documents/Pragathy/inbox/` (the skill sorts those by subject). Then they run **`/add-material`** (skill in `.claude/skills/add-material/`), which writes `docs/data/<subject>/chNN.js` and registers it.
+- **Practice:** chapter by chapter, with feedback after each question.
+- **Daily test:** started on demand, per subject, 15 questions (~50% newest chapter, ~30% due for review, rest older). Feedback after each question.
+- **Weekly test:** one per subject per ISO week (Mon–Sun), 30 questions across all chapters ("full portion"). Exam mode: timed (60s mcq / 90s input / 180s short), no feedback until submitted, short answers marked by a parent afterwards. Locks after it's taken. A parent can "allow a retake" from the subject page.
+- **Sync:** history syncs across devices through a secret GitHub Gist. The token is pasted per device and kept in localStorage only. The dialog also offers backup export/import.
 
 ## File structure
 ```
 docs/
-  index.html             ← Subject selector landing page
-  css/style.css          ← Shared styles (quiz + subject grid + coming-soon)
+  index.html            dashboard: streak, this week's weekly-test checklist, subject cards
+  subject.html          ?s=<id> — practice / daily / weekly / marking / results for any subject
+  flashcards.html       ?s=<id> — vocab flashcards (if chapters have `flashcards`)
+  css/style.css
+  data/
+    manifest.js         MANIFEST: student, grade, test sizes, time budget, subjects + chapter file lists
+    <subject>/chNN.js   addChapter({...}) — one file per chapter
   js/
-    app.js               ← Shared quiz engine (reads SUBJECT_CONFIG global)
-    progress.js          ← Shared progress store (reads SUBJECT_CONFIG.progressKey)
-  maths/
-    index.html           ← Maths quiz page (sets SUBJECT_CONFIG, loads data/)
-    data/
-      ch01.js–ch19.js    ← Chapter question data
-      chapters.js        ← CHAPTERS array (registry)
-  science/
-    index.html           ← Science quiz page
-    data/
-      ch01.js–ch05.js    ← Topic question data
-      chapters.js        ← CHAPTERS array
-  dutch|english|french|humanities|ict|spanish/
-    index.html           ← "Coming soon" placeholder
+    common.js           Util: escaping, shuffle, answer checking, subject loader
+    store.js            Store: answer log, tests, notes, flashcard flags (one localStorage doc, mergeable)
+    sync.js / sync-ui.js  Gist sync + settings/backup modal
+    picker.js           daily/weekly question selection (pure functions)
+    quiz.js             subject page controller
+    dashboard.js        index page
+    flashcards.js
+tools/check.js          validator: run `node tools/check.js` before every commit
+.claude/skills/add-material/SKILL.md   material → chapter workflow + question-writing rules
 ```
 
-## Adding a new subject
-1. Create `docs/<subject>/index.html` — copy from `docs/science/index.html`, update `SUBJECT_CONFIG` (id, name, icon, progressKey, notesKey).
-2. Create `docs/<subject>/data/chapters.js` and `docs/<subject>/data/ch01.js` etc. following the maths or science data format.
-3. Add a subject card in `docs/index.html` — change `subject-card--soon` to `subject-card`, set `--subj-color`, add href.
-4. Copy source PDFs from `Downloads/pragathy/<subject>/` for reference.
+## Adding content
+Use `/add-material`. By hand: create `docs/data/<subject>/chNN.js`, add the file name to the subject's `chapters` in `docs/data/manifest.js`, then run `node tools/check.js`. The checker fails if a file exists but isn't listed, or the reverse. That catches the "forgot the script tag" crash class we hit in Grade 6.
 
 ## Question data format
-
-Three question types are supported:
-
 ```js
-const ch01 = {
-  id: 1,
-  title: "Chapter Title",
-  icon: "🔢",
-  color: "#6366f1",          // accent colour for the card
-  topics: ["Topic A", "Topic B"],
+addChapter({
+  id: 3, title: "Forces", icon: "🧲", color: "#0ea5e9",
+  added: "2026-11-14",          // daily tests weight the newest chapter by this
+  topics: ["Friction", "Balanced forces"],
   questions: [
-    // ── MCQ (auto-graded) ──────────────────────────────────────
-    {
-      id: "c1_q1",           // unique — prefix by subject (sc1_q1 for science, c1_q1 for maths)
-      topic: "Topic A",
-      type: "mcq",
-      question: "Question text (HTML allowed)",
-      options: ["A", "B", "C", "D"],
-      answer: 0,             // 0-based index
-      explanation: "Why the answer is correct.",
-      difficulty: "challenging",  // optional — adds ⭐ Stretch badge
-      diagram: `<svg>...</svg>`   // optional SVG diagram
-    },
-    // ── Free-text input (auto-graded by exact/numeric match) ───
-    {
-      id: "c1_q2",
-      topic: "Topic A",
-      type: "input",
-      question: "What is 3 + 4?",
-      answer: "7",
-      acceptableAnswers: ["seven"],  // optional extra accepted strings
-      explanation: "3 + 4 = 7."
-    },
-    // ── Short answer (parent-reviewed) ────────────────────────
-    {
-      id: "sc1_q35",
-      topic: "Topic B",
-      type: "short",
-      question: "Explain in your own words why…",
-      answer: "Model answer shown to parent/student after submission.",
-      explanation: "Optional extra explanation shown after grading."
-      // No options field. explanation is optional for short type.
-    }
-  ]
-};
+    { id: "sc3_q1", topic: "Friction", type: "mcq", question: "…", options: ["…","…","…","…"], answer: 2,
+      explanation: "…", difficulty: "challenging" /* optional */, diagram: `<svg…>` /* optional */,
+      fixedOrder: true /* optional, only if options must not be shuffled */ },
+    { id: "sc3_q2", topic: "…", type: "input", question: "…", answer: "12", acceptableAnswers: ["12 N"], explanation: "…" },
+    { id: "sc3_q3", topic: "…", type: "short", question: "Explain…", answer: "Model answer for the parent", explanation: "…" }
+  ],
+  flashcards: [ { id: "fr3_f1", front: "la grenouille", back: "the frog", note: "optional" } ]   // language subjects
+});
 ```
-`chapters.js` is always: `const CHAPTERS = [ch01, ch02, ...];`
+- Id prefixes: dutch `nl`, english `en`, french `fr`, humanities `hum`, ict `ict`, maths `c`, science `sc`, spanish `sp`. Ids must be unique within a subject and **never reused or renumbered**, because history is keyed by id.
+- **MCQ options are shuffled at display time.** Grade 6 data had a heavy answer-position bias (e.g. every Humanities answer was A). Never write "Both A and B" / "All of the above". The checker flags these.
+- Input answers: `answer` always counts, and `acceptableAnswers` are extras. Matching ignores case, spacing, thousands separators and trailing units on a single number. Commas inside coordinates and lists are kept.
+- Every question needs an `explanation` (optional for `short`).
 
-### Short answer flow
-1. Student types in a textarea and clicks "Submit Answer →"
-2. Feedback card opens showing **their answer** and the **model answer** (green box)
-3. Parent clicks **"✓ Got it!"** or **"✗ Need more practice"** — result recorded to progress
-4. `explanation` (if present) shows after grading
+## Storage model (store.js)
+One localStorage doc, `studyzone_g7`: `ev` is an append-only answer log `[id, time, subject, qid, correct, mode]`. `tests` holds daily/weekly records (last-write-wins; a finished test beats an unfinished one). `notes` and `fc` are last-write-wins maps. Merging is conflict-free, so sync and import never lose data. Mastery means "the last attempt was correct". Sync config lives in `studyzone_g7_sync` (device-only).
 
-Short answer HTML (`#q-short`, `#fb-review`) is only in `docs/science/index.html` currently. Copy from there when adding it to other subjects.
+## Testing
+- `node tools/check.js`: data and manifest validation plus a picker smoke test.
+- To test the UI with sample data, copy `docs/` to the scratchpad, add chapter files there, and serve with `python3 -m http.server`. Playwright is installed globally (`$(npm root -g)/playwright`).
 
-## SUBJECT_CONFIG (set in each subject's index.html, before loading app.js)
-```js
-const SUBJECT_CONFIG = {
-  id: 'science',
-  name: 'Science',
-  icon: '🔬',
-  progressKey: 'science6_progress',  // localStorage key for progress
-  notesKey: 'science6_notes'         // localStorage key for parent notes
-};
-```
+## Privacy: what NOT to commit
+- Source material stays in `~/Documents/Pragathy/` (outside the repo).
+- `private/` (incl. `private/processed.json`, the /add-material log) and `docs/curriculum*.md` are gitignored.
+- Question files are our own work and fine to commit. Don't paste long verbatim passages from school material.
 
-## Science curriculum (RISS Grade 6, 2025–2026)
-5 topics mapped to chapters:
-- Ch 1: Space & The Solar System (Big Bang, atoms, gravity, star formation)
-- Ch 2: Mass, Weight & Gravity (mass vs weight, W=mg, Galileo, Newtons)
-- Ch 3: Earth in Space (day/night, seasons, Earth's 23.5° tilt, rotation vs revolution)
-- Ch 4: Living Things (life processes, organs, body systems, cells, photosynthesis)
-- Ch 5: Matter & Particles (states of matter, particle model, diffusion, Brownian motion)
+## Content accuracy checks (apply when writing questions)
+1. **Arithmetic:** for mean/median/mode, sum the data yourself. Never trust the numbers by eye.
+2. **No duplicate scenarios:** grep the subject's chapters for the same context/numbers first.
+3. **Conversion graphs:** only proportional graphs pass through (0, 0). °C↔°F does not.
+4. **Cylinder net:** 2 circles + 1 rectangle.
+5. **SVG arcs:** y points down, so `sweep-flag=0` draws counter-clockwise on screen.
 
-Future topics to add: Reproduction, Elements & Compounds, Investigation Skills.
+## SVG diagram rules
+- Never include text or labels that reveal the answer (asked-about column labelled, tick value equal to the answer, solid's name on its net).
+- Protractor questions: semicircle, ticks every 10°, labels at 0/30/…/180, a `?°` label. The student measures with a real protractor on screen.
+- Nets: squares/rectangles blue-tinted, triangles pink-tinted, unlabelled.
 
-## Maths curriculum (Haese Grade 6, IB MYP)
-19 chapters covering: Whole Numbers, Fractions, Decimals, Algebra, Geometry, Statistics, Probability, and more. See `docs/maths/data/chapters.js` for full list.
-
-## Quiz engine behaviour
-- Progress is stored per-subject in localStorage using the subject's `progressKey`.
-- Resuming: starts from the first unanswered question automatically.
-- Retry mode: shows only previously wrong questions.
-- Parent notes: stored under `notesKey`; visible in notes overlay on the home screen.
-- Stretch questions: marked `difficulty: "challenging"` show a ⭐ badge.
-- MCQ (4 options, auto-graded), free-text input (auto-graded), and short answer (parent-reviewed) types are supported.
-
-## GitHub Pages
-Deployed from `docs/` on the `main` branch. The root URL serves `docs/index.html` (subject selector). Each subject is at `/<subject>/`.
-
-## Privacy — what NOT to commit
-This is a **public** repo. School-owned content must stay out:
-- PDFs and slide decks → keep in `~/Downloads/pragathy/` (outside repo) or in `private/` (gitignored)
-- Curriculum documents → `docs/curriculum*.md` is gitignored
-- Generated quiz JS files (ch01.js etc.) are fine — they are our own work
-
-## Source PDFs
-- Maths textbook: `~/Downloads/Math6-3rdEd.pdf` (Haese Mathematics 6, 3rd edition, ~400 pages). Use this for auditing question coverage by chapter.
-- Science and other subjects: `~/Downloads/pragathy/<subject>/` — slide deck PDFs.
-
-## Pitfall: generating quiz content with background agents
-When spawning a background agent to write quiz data files, explicitly tell it the target path (`docs/<subject>/data/`) and variable naming convention (`const ch01`, not `const sc01`). In practice agents have written to the wrong directory; plan to move/rename files after the agent completes if needed.
-
-## SVG diagram patterns
-
-### Physical-interaction diagrams
-Some diagram types require the student to interact physically with the screen — these are fine to implement as SVGs:
-- **Protractor questions**: Draw a protractor SVG (semicircle, tick marks every 10°, labels at 0/30/60/90/120/150/180, centre dot). Show the angle ray and a `?°` label. The student places a real protractor on the laptop screen to verify. Never annotate the tick that matches the answer.
-- **Net identification**: Draw the unfolded net with filled squares/rectangles (blue tint) and triangles (pink tint) in the correct arrangement. The student looks at the net and predicts the 3D solid. Options name the solid; the diagram must not label faces with the solid's name.
-
-### SVG answer-safety rule
-Never include any text, label, or annotation in an SVG that identifies the correct answer. This includes:
-- Labelling a specific column/row with the place value being asked about
-- Annotating a tick mark with its degree value when that value is the answer
-- Writing the name of a shape on its net
-- Any comment-style text visible in the rendered output
-
-## Content accuracy checks
-Run these mentally before finalising any question:
-
-1. **Arithmetic consistency** — For mean/median/mode questions, verify the dataset's actual statistics match what the question claims. E.g. if the question says "the mean is 63", sum the values and divide — don't trust the numbers by eye.
-2. **No duplicate scenarios** — Grep the chapter file for keywords from a new question before adding it; duplicates (same context, same numbers) have appeared within the same chapter.
-3. **Conversion graph scope** — Not all conversion graphs pass through (0, 0). Proportional graphs (km↔miles, currency) do; non-proportional graphs (°C↔°F) do not. Questions asserting a universal rule about conversion graphs are factually wrong — scope any claim to the specific graph shown.
-4. **Cylinder net** — A cylinder net has **2** circles (top + bottom) and 1 curved rectangle. "1 circle" is a common mistake.
-5. **SVG arc direction** — In SVG (y-axis points down), `sweep-flag=0` draws counter-clockwise on screen (right → up → left). Use `A rx,ry 0 0,0 x,y` for arcs that sweep upward from the baseline.
-
-## Key rules when editing quiz data
-- Never put the answer text in the question or option labels in a way that reveals it visually in SVG diagrams.
-- Keep questions in-syllabus (matched to the curriculum objectives above).
-- Maintain unique `id` values across all questions in a subject.
-- All questions must have an `explanation` field.
+## Pitfall: background agents writing quiz data
+Tell them the exact path (`docs/data/<subject>/chNN.js`), the `addChapter({...})` wrapper, the id prefix, and to run `node tools/check.js`.

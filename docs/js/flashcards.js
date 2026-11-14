@@ -1,5 +1,8 @@
 /* ── Flashcard Engine ──────────────────────────────────────────
-   Depends on: TOPICS array, FLASHCARD_CONFIG (set in page)
+   flashcards.html?s=<subject>. Cards come from each chapter's
+   `flashcards: [{id, front, back, note?}]` (legacy fr/es/en accepted).
+   "Known" flags live in Store so they sync across devices.
+   Depends on: MANIFEST, Util, Store.
 ──────────────────────────────────────────────────────────────── */
 const Flashcards = (() => {
   let allCards = [];
@@ -9,18 +12,10 @@ const Flashcards = (() => {
   let knownSet = new Set();
   let unknownOnly = false;
   let activeTopicId = '';
-
-  function storageKey() {
-    return (typeof FLASHCARD_CONFIG !== 'undefined' ? FLASHCARD_CONFIG.progressKey : 'flashcards') + '_known';
-  }
+  let TOPICS = [];
 
   function loadKnown() {
-    try { return new Set(JSON.parse(localStorage.getItem(storageKey())) || []); }
-    catch { return new Set(); }
-  }
-
-  function saveKnown() {
-    localStorage.setItem(storageKey(), JSON.stringify([...knownSet]));
+    return new Set(TOPICS.flatMap(t => (t.flashcards || []).map(f => f.id)).filter(Store.isKnown));
   }
 
   function collectCards(topicId) {
@@ -28,7 +23,15 @@ const Flashcards = (() => {
     return source.flatMap(t => (t.flashcards || []).map(f => ({ ...f, topicTitle: t.title, topicColor: t.color })));
   }
 
-  function init() {
+  async function init() {
+    const subj = Util.subject(Util.param('s'));
+    if (!subj) { location.href = './'; return; }
+    document.title = `${subj.name} flashcards — Study Zone`;
+    const back = document.getElementById('fc-back-link');
+    back.href = `subject.html?s=${subj.id}`;
+    back.textContent = `← ${subj.name}`;
+    document.getElementById('fc-front-hint').textContent = `${subj.icon} ${subj.name}`;
+    TOPICS    = (await Util.loadSubject(subj)).filter(t => (t.flashcards || []).length);
     knownSet  = loadKnown();
     allCards  = collectCards('');
     buildDeck();
@@ -71,8 +74,8 @@ const Flashcards = (() => {
     ctrl.classList.remove('hidden');
 
     const card = deck[index];
-    document.getElementById('fc-front-text').textContent = card.fr ?? card.es ?? '';
-    document.getElementById('fc-back-text').textContent  = card.en;
+    document.getElementById('fc-front-text').textContent = card.front ?? card.fr ?? card.es ?? card.nl ?? '';
+    document.getElementById('fc-back-text').textContent  = card.back ?? card.en ?? '';
 
     const noteEl = document.getElementById('fc-back-note');
     if (card.note) { noteEl.textContent = card.note; noteEl.classList.remove('hidden'); }
@@ -115,7 +118,7 @@ const Flashcards = (() => {
     const card = deck[index];
     if (knownSet.has(card.id)) knownSet.delete(card.id);
     else knownSet.add(card.id);
-    saveKnown();
+    Store.setKnown(card.id, knownSet.has(card.id));
     renderCard();
     updateProgress();
   }

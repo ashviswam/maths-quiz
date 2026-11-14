@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Zone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+
+  <header id="app-header">
+    <div class="header-inner">
+      <a href="./" class="btn-back" id="link-home">← Subjects</a>
+      <button id="btn-back" class="btn-back hidden" onclick="App.goHome()"></button>
+      <div class="logo" id="logo">Study Zone</div>
+      <div class="header-right">
+        <span id="timer" class="timer hidden"></span>
+        <span id="sync-slot"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── HOME ─────────────────────────────────────────────────── -->
+  <main id="view-home" class="view">
+    <div class="home-hero">
+      <h1 id="home-greeting">Welcome! 👋</h1>
+      <p id="home-subtitle" class="home-subtitle"></p>
+      <div id="notes-cta" class="notes-cta hidden">
+        <button class="btn-notes-view" onclick="App.openNotes()">📋 Parent notes (<span id="notes-count">0</span>)</button>
+      </div>
+    </div>
+
+    <div id="home-empty" class="empty-state hidden"></div>
+
+    <div id="home-content" class="hidden">
+      <div id="mode-row" class="mode-row"></div>
+
+      <div class="home-panels">
+        <section id="history" class="panel hidden">
+          <h3 class="panel-title">Recent tests</h3>
+          <div id="history-list"></div>
+        </section>
+        <section id="weak" class="panel hidden">
+          <h3 class="panel-title">Needs more practice <span class="panel-sub">last 30 days</span></h3>
+          <div id="weak-list"></div>
+        </section>
+      </div>
+
+      <h3 class="section-title">Practise by chapter</h3>
+      <div id="chapter-grid" class="chapter-grid"></div>
+    </div>
+  </main>
+
+  <!-- ── QUIZ ─────────────────────────────────────────────────── -->
+  <main id="view-quiz" class="view hidden">
+    <div class="quiz-top">
+      <div class="quiz-top-row">
+        <div id="quiz-title" class="quiz-title"></div>
+        <button id="btn-finish-quiz" class="btn-finish-early hidden" onclick="App.finish()">Finish →</button>
+      </div>
+      <div class="quiz-meta">
+        <span id="quiz-counter" class="quiz-counter"></span>
+        <span id="quiz-score-live" class="quiz-score-live"></span>
+      </div>
+      <div class="quiz-prog-track"><div id="quiz-prog-fill" class="quiz-prog-fill"></div></div>
+    </div>
+
+    <div class="quiz-layout">
+      <aside class="quiz-sidebar">
+        <div class="sidebar-hd">
+          <span class="sidebar-title">Questions</span>
+          <div id="quiz-sidebar-legend" class="sidebar-legend"></div>
+        </div>
+        <div id="sidebar-list" class="sidebar-list"></div>
+      </aside>
+
+      <div class="quiz-main">
+        <div class="card question-card">
+          <div class="q-topic-row">
+            <div id="q-topic" class="topic-badge"></div>
+            <div id="q-stretch-badge" class="stretch-badge hidden">⭐ Stretch</div>
+          </div>
+          <div id="q-diagram" class="q-diagram hidden"></div>
+          <div id="q-text" class="question-text"></div>
+
+          <div id="q-options" class="options-grid hidden"></div>
+
+          <div id="q-input" class="input-area hidden">
+            <input type="text" id="answer-input" placeholder="Type your answer here…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <button id="btn-submit" class="btn-primary" onclick="App.submitInput()">Check →</button>
+          </div>
+
+          <div id="q-short" class="short-area hidden">
+            <textarea id="short-answer" class="short-textarea" rows="4" placeholder="Write your answer in your own words…"></textarea>
+            <button id="btn-submit-short" class="btn-primary" onclick="App.submitShort()">Submit answer →</button>
+          </div>
+
+          <div id="exam-nav" class="exam-nav hidden">
+            <button id="btn-exam-prev" class="btn-secondary" onclick="App.examPrev()">← Previous</button>
+            <button id="btn-exam-next" class="btn-primary" onclick="App.examNext()">Next →</button>
+          </div>
+
+          <div class="q-note-bar">
+            <button id="btn-note" class="btn-note" onclick="App.toggleNote()">📝 Leave a note</button>
+            <div id="note-panel" class="note-panel hidden">
+              <textarea id="note-text" class="note-textarea" placeholder="Note about this question (e.g. a mistake in it, or something to revisit)…"></textarea>
+              <div class="note-actions">
+                <button class="btn-note-cancel" onclick="App.cancelNote()">Cancel</button>
+                <button class="btn-note-save" onclick="App.saveNote()">Save note</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="feedback-card" class="card feedback-card hidden">
+          <div id="fb-icon" class="fb-icon"></div>
+          <div id="fb-heading" class="fb-heading"></div>
+          <div id="fb-review" class="fb-review hidden">
+            <div class="fb-review-student">
+              <div class="fb-review-label">Your answer</div>
+              <div id="fb-review-text" class="fb-review-text"></div>
+            </div>
+            <div class="fb-review-model">
+              <div class="fb-review-label">Model answer</div>
+              <div id="fb-model-text" class="fb-model-text"></div>
+            </div>
+            <div class="fb-mark-actions">
+              <button class="btn-mark-correct" onclick="App.markShort(true)">✓ Got it!</button>
+              <button class="btn-mark-wrong" onclick="App.markShort(false)">✗ Need more practice</button>
+            </div>
+          </div>
+          <div id="fb-explanation" class="fb-explanation"></div>
+          <button id="btn-next" class="btn-primary" onclick="App.nextQuestion()">Next question →</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── PARENT MARKING (weekly short answers) ────────────────── -->
+  <main id="view-mark" class="view hidden">
+    <div class="results-wrap">
+      <div class="results-emoji">🧐</div>
+      <h2 class="results-title">Parent marking</h2>
+      <p class="results-msg">Compare each written answer with the model answer. The score appears once everything is marked.</p>
+      <div id="mark-list" class="mark-list"></div>
+    </div>
+  </main>
+
+  <!-- ── RESULTS ──────────────────────────────────────────────── -->
+  <main id="view-results" class="view hidden">
+    <div class="results-wrap">
+      <div id="results-emoji" class="results-emoji"></div>
+      <h2 id="results-title" class="results-title"></h2>
+      <div id="results-score" class="results-score-block"></div>
+      <p id="results-msg" class="results-msg"></p>
+      <p class="results-hint">Tap a question to see the answer and explanation.</p>
+      <div id="results-breakdown" class="results-breakdown"></div>
+      <div class="results-actions">
+        <button id="btn-retry-wrong" class="btn-secondary hidden" onclick="App.retryWrong()">Retry wrong answers</button>
+        <button class="btn-primary" onclick="App.goHome()">Done</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="notes-overlay" class="notes-overlay hidden" onclick="if(event.target===this)App.closeNotes()">
+    <div class="notes-modal">
+      <div class="notes-header">
+        <span class="notes-title">📋 Parent notes</span>
+        <button class="notes-close" onclick="App.closeNotes()">✕ Close</button>
+      </div>
+      <div id="notes-list" class="notes-list"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="data/manifest.js"></script>
+<script src="js/common.js"></script>
+<script src="js/store.js"></script>
+<script src="js/sync.js"></script>
+<script src="js/sync-ui.js"></script>
+<script src="js/picker.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>
