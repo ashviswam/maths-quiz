@@ -1519,3 +1519,4 @@ details.breakdown-item summary::-webkit-details-marker { display: none; }
 .lv-easy:hover   { border-color: var(--success); color: var(--success-dk); }
 .lv-medium:hover { border-color: var(--warning); color: #92400e; }
 .lv-hard:hover   { border-color: var(--error); color: var(--error-dk); }
+.q-passage { background: var(--bg); border-left: 4px solid var(--border); border-radius: 8px; padding: 10px 14px; margin: 0 0 12px; font-size: .92rem; line-height: 1.55; font-weight: 400; }
