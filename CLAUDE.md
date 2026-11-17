@@ -18,6 +18,7 @@ docs/
   index.html            dashboard: streak, this week's weekly-test checklist, subject cards
   subject.html          ?s=<id> — practice / daily / weekly / marking / results for any subject
   flashcards.html       ?s=<id> — vocab flashcards (if chapters have `flashcards`)
+  articles.html         ?s=<id> — quick-fire "el/la/los/las?" drill (if chapters have `articles`)
   css/style.css
   data/
     manifest.js         MANIFEST: student, grade, test sizes, time budget, subjects + chapter file lists
@@ -30,6 +31,7 @@ docs/
     quiz.js             subject page controller
     dashboard.js        index page
     flashcards.js
+    articles.js         article drill; missed words kept per device in localStorage
 tools/check.js          validator: run `node tools/check.js` before every commit
 .claude/skills/add-material/SKILL.md   material → chapter workflow + question-writing rules
 ```
@@ -50,7 +52,8 @@ addChapter({
     { id: "sc3_q2", topic: "…", type: "input", question: "…", answer: "12", acceptableAnswers: ["12 N"], explanation: "…" },
     { id: "sc3_q3", topic: "…", type: "short", question: "Explain…", answer: "Model answer for the parent", explanation: "…" }
   ],
-  flashcards: [ { id: "fr3_f1", front: "la grenouille", back: "the frog", note: "optional" } ]   // language subjects
+  flashcards: [ { id: "fr3_f1", front: "la grenouille", back: "the frog", note: "optional" } ],  // language subjects
+  articles: [ ["grenouille", "la", "frog", "optional note, e.g. why it's a trap"] ]          // optional: article drill words
 });
 ```
 - Id prefixes: dutch `nl`, english `en`, french `fr`, humanities `hum`, ict `ict`, maths `c`, science `sc`, spanish `sp`. Ids must be unique within a subject and **never reused or renumbered**, because history is keyed by id.

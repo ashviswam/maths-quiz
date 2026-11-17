@@ -119,6 +119,7 @@ const App = (() => {
     }
 
     const hasCards = chapters.some(ch => (ch.flashcards || []).length);
+    const arts = [...new Set(chapters.flatMap(ch => (ch.articles || []).map(a => a[1])))];
     $('mode-row').innerHTML = `
       <div class="mode-tile" onclick="App.startDaily()">
         <div class="mode-tile-icon">📅</div>
@@ -137,7 +138,12 @@ const App = (() => {
         <div class="mode-tile-icon">🃏</div>
         <div class="mode-tile-name">Flashcards</div>
         <div class="mode-tile-status">Vocabulary practice</div>
-        <div class="mode-tile-cta">Open →</div></a>` : ''}`;
+        <div class="mode-tile-cta">Open →</div></a>` : ''}
+      ${arts.length ? `<a class="mode-tile" href="articles.html?s=${subj.id}">
+        <div class="mode-tile-icon">⚡</div>
+        <div class="mode-tile-name">${Util.esc(arts.join(', '))}?</div>
+        <div class="mode-tile-status">Quick-fire masculine / feminine drill</div>
+        <div class="mode-tile-cta">Play →</div></a>` : ''}`;
   }
 
   function renderHistory() {

@@ -70,6 +70,18 @@ for (const s of M.subjects) {
       if (q.difficulty && !['easy', 'medium', 'hard', 'challenging'].includes(q.difficulty)) err(`${at}: difficulty must be easy, medium or hard`);
       if (!q.difficulty) warn(`${at}: no difficulty (easy/medium/hard)`);
     }
+    // Optional "which article?" drill words: [word, article, english?, note?]
+    if (ch.articles !== undefined) {
+      if (!Array.isArray(ch.articles)) err(`${where}: articles must be an array`);
+      else {
+        const seen = new Set();
+        ch.articles.forEach((a, i) => {
+          if (!Array.isArray(a) || !a[0] || !a[1]) err(`${where}: articles[${i}] must be [word, article, english?, note?]`);
+          else if (seen.has(a[0])) err(`${where}: articles has "${a[0]}" twice`);
+          else seen.add(a[0]);
+        });
+      }
+    }
   }
   grand += n;
 

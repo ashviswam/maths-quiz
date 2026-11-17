@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles drill — Study Zone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <header id="app-header">
+    <div class="header-inner">
+      <a href="./" class="btn-back" id="ar-back">← Back</a>
+      <div class="logo" id="ar-logo">⚡ Articles</div>
+      <div class="header-right"></div>
+    </div>
+  </header>
+
+  <main class="view ar-page">
+    <!-- Start -->
+    <section id="ar-start" class="card ar-card">
+      <h2 class="ar-title" id="ar-heading">Which article?</h2>
+      <p class="ar-sub">A word appears and you tap its article. Words you miss come back at the end of the round.</p>
+      <div class="ar-choice" id="ar-modes"></div>
+      <button class="btn-primary ar-go" onclick="Articles.start()">Start ⚡</button>
+      <p class="ar-hint" id="ar-missed-hint"></p>
+    </section>
+
+    <!-- Play -->
+    <section id="ar-play" class="card ar-card hidden">
+      <div class="ar-top"><span id="ar-count"></span><span id="ar-score"></span></div>
+      <div class="ar-track"><div id="ar-fill" class="ar-fill"></div></div>
+      <div class="ar-word-wrap">
+        <div id="ar-blank" class="ar-blank">___</div>
+        <div id="ar-word" class="ar-word"></div>
+        <div id="ar-en" class="ar-en"></div>
+      </div>
+      <div id="ar-buttons" class="ar-buttons"></div>
+      <div id="ar-feedback" class="ar-feedback hidden"></div>
+      <button id="ar-next" class="btn-primary ar-go hidden" onclick="Articles.next()">Next →</button>
+      <p class="ar-keys" id="ar-keys"></p>
+    </section>
+
+    <!-- Results -->
+    <section id="ar-end" class="card ar-card hidden">
+      <div class="ar-big" id="ar-final"></div>
+      <p class="ar-sub" id="ar-final-msg"></p>
+      <div id="ar-missed-list"></div>
+      <button class="btn-primary ar-go" onclick="Articles.start()">Play again ⚡</button>
+    </section>
+  </main>
+</div>
+
+<script src="data/manifest.js"></script>
+<script src="js/common.js"></script>
+<script src="js/articles.js"></script>
+</body>
+</html>
