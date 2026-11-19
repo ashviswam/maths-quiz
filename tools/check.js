@@ -70,6 +70,14 @@ for (const s of M.subjects) {
       if (q.difficulty && !['easy', 'medium', 'hard', 'challenging'].includes(q.difficulty)) err(`${at}: difficulty must be easy, medium or hard`);
       if (!q.difficulty) warn(`${at}: no difficulty (easy/medium/hard)`);
     }
+    // Optional weekly-test topic weights must name real topics.
+    if (ch.weeklyWeights) {
+      const used = new Set(ch.questions.map(q => q.topic));
+      for (const [t, w] of Object.entries(ch.weeklyWeights)) {
+        if (!used.has(t)) err(`${where}: weeklyWeights names "${t}", which no question uses`);
+        if (typeof w !== 'number' || w < 0) err(`${where}: weeklyWeights["${t}"] must be a number ≥ 0`);
+      }
+    }
     // Optional "which article?" drill words: [word, article, english?, note?]
     if (ch.articles !== undefined) {
       if (!Array.isArray(ch.articles)) err(`${where}: articles must be an array`);

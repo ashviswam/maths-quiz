@@ -77,6 +77,19 @@ const Picker = (() => {
     return Util.shuffle(result, rng).map(it => it.q);
   }
 
+  /* Split `quota` between a chapter's topics: equal shares, or weighted by
+     ch.weeklyWeights ({ topic: weight }, default 1). Largest remainder, so
+     the shares add up to exactly `quota`. */
+  function topicQuotas(ch, quota) {
+    const topics = [...new Set(ch.questions.map(q => q.topic))];
+    const w = t => (ch.weeklyWeights && ch.weeklyWeights[t] != null ? ch.weeklyWeights[t] : 1);
+    const sum = topics.reduce((s, t) => s + w(t), 0) || 1;
+    const shares = topics.map(t => { const x = quota * w(t) / sum; return { topic: t, n: Math.floor(x), r: x % 1 }; });
+    let left = quota - shares.reduce((s, x) => s + x.n, 0);
+    [...shares].sort((a, b) => b.r - a.r).forEach(x => { if (left > 0) { x.n++; left--; } });
+    return shares;
+  }
+
   /* Weekly: the full portion. Every chapter is represented in proportion
      to its size (min 2), preferring questions not used in earlier weekly
      tests, then weak ones. */
@@ -94,10 +107,17 @@ const Picker = (() => {
     const result = [];
     chapters.forEach((ch, i) => {
       const quota = Math.max(2, Math.round(size * ch.questions.length / total));
-      // Balance difficulty within each chapter, then top up from whatever is left.
+      // Share the chapter's quota between its topics, so small topics aren't
+      // crowded out, then balance difficulty within each topic. Top up from
+      // whatever is left.
       const got = [];
-      for (const [lv, share] of Object.entries(MIX))
-        got.push(...take(pools[i].filter(it => level(it.q) === lv), Math.round(quota * share), picked, limits));
+      for (const { topic, n } of topicQuotas(ch, quota)) {
+        const pool = pools[i].filter(it => it.q.topic === topic), mine = [];
+        for (const [lv, share] of Object.entries(MIX))
+          mine.push(...take(pool.filter(it => level(it.q) === lv), Math.round(n * share), picked, limits));
+        mine.push(...take(pool, n - mine.length, picked, limits));
+        got.push(...mine);
+      }
       got.push(...take(pools[i], quota - got.length, picked, limits));
       result.push(...got);
     });

@@ -61,7 +61,7 @@
                           ['0111', '0001'], ['1010', '0111'], ['00101100', '00010111'], ['01001111', '00110001']]) {
       const x = parseInt(a, 2), y = parseInt(b, 2), s = x + y, w = a.length;
       const raw = s.toString(2), ans = raw.padStart(w, '0'), carries = (x & y) !== 0;
-      out.push({ id: `ict1_add_${a}_${b}`, topic: 'Binary addition & ASCII', type: 'input',
+      out.push({ id: `ict1_add_${a}_${b}`, topic: 'Binary addition', type: 'input',
         difficulty: w === 8 ? 'hard' : carries ? 'medium' : 'easy',
         question: `Add these binary numbers: <code>${a}</code> + <code>${b}</code>. Give your answer in binary.`,
         answer: ans, acceptableAnswers: [raw, raw.padStart(8, '0')],
@@ -72,7 +72,7 @@
     // Odd or even
     for (const b of ['1101', '10010', '11111110', '10000001']) {
       const odd = b.endsWith('1');
-      out.push({ id: `ict1_oe_${b}`, topic: 'Binary addition & ASCII', type: 'mcq', difficulty: 'easy',
+      out.push({ id: `ict1_oe_${b}`, topic: 'Binary addition', type: 'mcq', difficulty: 'easy',
         question: `Is the binary number <code>${b}</code> odd or even?`,
         options: ['Odd', 'Even', "Neither: binary numbers aren't odd or even", 'You must convert it to decimal to tell'], answer: odd ? 0 : 1,
         explanation: `It ends in <strong>${b.slice(-1)}</strong>, so it is <strong>${odd ? 'odd' : 'even'}</strong> (it's ${parseInt(b, 2)} in decimal). Only the 1s column is odd.` });
@@ -82,7 +82,7 @@
     for (const [word, ...wrong] of [['FACE', 'face', 'FADE', 'CAFE'], ['bead', 'BEAD', 'dead', 'bade'],
                                     ['DIG', 'dig', 'DOG', 'BIG'], ['jog', 'JOG', 'job', 'log']]) {
       const opts = [word, ...wrong];
-      out.push({ id: `ict1_asc_${word}`, topic: 'Binary addition & ASCII', type: 'mcq',
+      out.push({ id: `ict1_asc_${word}`, topic: 'ASCII', type: 'mcq',
         difficulty: word === word.toUpperCase() ? 'medium' : 'hard',
         question: `Use the ASCII table to decode: <code>${[...word].map(code).join(' ')}</code>` + tableFor(opts.join('')),
         options: opts, answer: 0,
@@ -92,7 +92,7 @@
     // ASCII encode
     for (const [anchor, target, lv] of [['A', 'C', 'medium'], ['a', 'e', 'medium'], ['A', 'Z', 'hard']]) {
       const a = anchor.charCodeAt(0), t = target.charCodeAt(0);
-      out.push({ id: `ict1_enc_${target}`, topic: 'Binary addition & ASCII', type: 'input', difficulty: lv,
+      out.push({ id: `ict1_enc_${target}`, topic: 'ASCII', type: 'input', difficulty: lv,
         question: `'${anchor}' has the ASCII code <code>${code(anchor)}</code> (${a} in decimal). What is the 8-bit ASCII code for <strong>'${target}'</strong>?`,
         answer: code(target), acceptableAnswers: [t.toString(2)],
         explanation: `Letters are numbered in alphabetical order: '${target}' is ${t - a} after '${anchor}', so ${a} + ${t - a} = ${t} = <strong>${code(target)}</strong>.` });
@@ -125,9 +125,123 @@
       ['250 MB', 'kilobytes (kB)', '250000', '1 MB = 1 000 kB, so 250 × 1 000 = 250 000 kB.', 'medium'],
       ['1.5 GB', 'megabytes (MB)', '1500', '1 GB = 1 000 MB, so 1.5 × 1 000 = 1 500 MB.', 'medium'],
       ['3 kB', 'bits', '24000', '3 kB = 3 000 bytes, and each byte is 8 bits: 3 000 × 8 = 24 000 bits.', 'hard']]) {
-      out.push({ id: `ict1_unit_${from.replace(/\W/g, '')}_${to.split(' ')[0]}`, topic: 'Binary numbers', type: 'input', difficulty: lv,
+      out.push({ id: `ict1_unit_${from.replace(/\W/g, '')}_${to.split(' ')[0]}`, topic: 'Data units', type: 'input', difficulty: lv,
         question: `Convert <strong>${from}</strong> into <strong>${to}</strong>. Type the number.`,
         answer: ans, explanation: how });
+    }
+
+    // More unit conversions. Answers and working are computed from the unit table.
+    // Class convention: 1 byte = 8 bits, and each step from kB up is × 1 000.
+    const UNITS = ['bits', 'bytes', 'kB', 'MB', 'GB', 'TB'];
+    const LONG = { bits: 'bits', bytes: 'bytes', kB: 'kilobytes (kB)', MB: 'megabytes (MB)', GB: 'gigabytes (GB)', TB: 'terabytes (TB)' };
+    const STEP = i => (i === 0 ? 8 : 1000);          // size of UNITS[i+1] in UNITS[i]
+    const exact = x => Number(x.toPrecision(12));
+    const fmt = n => { const [i, d] = String(n).split('.'); return i.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + (d ? '.' + d : ''); };
+    const parseSize = s => { const p = s.split(' '); return [Number(p.slice(0, -1).join('')), p[p.length - 1]]; };
+    function convert(v, from, to) {
+      let i = UNITS.indexOf(from), x = v; const j = UNITS.indexOf(to), chain = [`${fmt(v)} ${from}`];
+      while (i !== j) {
+        const f = i < j ? STEP(i) : STEP(i - 1);
+        x = exact(i < j ? x / f : x * f);
+        i += i < j ? 1 : -1;
+        chain.push(`${i > UNITS.indexOf(from) ? '÷' : '×'} ${fmt(f)} = ${fmt(x)} ${UNITS[i]}`);
+      }
+      return { x, chain };
+    }
+    for (const [from, to, lv] of [
+      ['7 kB', 'bytes', 'easy'], ['9 GB', 'MB', 'easy'], ['2 TB', 'GB', 'easy'], ['40 bits', 'bytes', 'easy'],
+      ['6 bytes', 'bits', 'easy'], ['6 000 MB', 'GB', 'medium'], ['8 000 GB', 'TB', 'medium'],
+      ['45 000 bytes', 'kB', 'medium'], ['2.5 TB', 'GB', 'medium'], ['0.5 GB', 'MB', 'medium'],
+      ['2 MB', 'bytes', 'medium'], ['1 TB', 'MB', 'medium'], ['3 500 kB', 'MB', 'medium'],
+      ['750 MB', 'GB', 'hard'], ['3 GB', 'kB', 'hard'], ['5 MB', 'bits', 'hard'], ['64 000 bits', 'kB', 'hard'],
+      ['20 kB', 'bits', 'hard'], ['1 GB', 'bytes', 'hard'], ['4 000 000 kB', 'GB', 'hard']]) {
+      const [v, u] = parseSize(from), { x, chain } = convert(v, u, to);
+      const up = UNITS.indexOf(to) > UNITS.indexOf(u), ans = String(x);
+      out.push({ id: `ict1_unit_${from.replace(/\W/g, '')}_${LONG[to].split(' ')[0]}`, topic: 'Data units', type: 'input', difficulty: lv,
+        question: `Convert <strong>${from}</strong> into <strong>${LONG[to]}</strong>. Type the number.`,
+        answer: ans, ...(ans.startsWith('0.') ? { acceptableAnswers: [ans.slice(1), ans.replace('.', ',')] } : {}),
+        explanation: `${up ? 'Going to a <strong>bigger</strong> unit, so divide' : 'Going to a <strong>smaller</strong> unit, so multiply'} ` +
+          `(${u === 'bits' || to === 'bits' ? '8 between bits and bytes, 1 000 for every other step' : '1 000 for each step'}): ${chain.join(' ')}. Answer: <strong>${fmt(x)} ${to}</strong>.` });
+    }
+
+    // How many files fit? Both sizes are converted to the same unit first.
+    for (const [item, what, space, lv] of [['5 MB', 'photos', '2 GB', 'medium'], ['4 MB', 'songs', '12 GB', 'medium'],
+                                           ['2 GB', 'films', '1 TB', 'medium'], ['500 kB', 'documents', '1 GB', 'hard']]) {
+      const [iv, iu] = parseSize(item), [sv, su] = parseSize(space), inItem = convert(sv, su, iu).x, n = exact(inItem / iv);
+      out.push({ id: `ict1_fit_${what}`, topic: 'Data units', type: 'input', difficulty: lv,
+        question: `Each of your ${what} is <strong>${item}</strong>. How many ${what} fit in <strong>${space}</strong> of free space?`,
+        answer: String(n),
+        explanation: `Use the same unit for both: ${space} = ${fmt(inItem)} ${iu}. Then ${fmt(inItem)} ÷ ${iv} = <strong>${fmt(n)} ${what}</strong>.` });
+    }
+
+    // More ASCII. The 32 column is the only difference between upper and lower case.
+    const swap = c => (c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase());
+    const shift = (c, d) => String.fromCharCode(c.charCodeAt(0) + d);
+    for (const [word, ...wrong] of [['BAG', 'bag', 'BIG', 'BEG'], ['milk', 'MILK', 'mild', 'silk'],
+                                    ['Code', 'CODE', 'code', 'Cone'], ['Hide', 'HIDE', 'hide', 'Hike']]) {
+      const opts = [word, ...wrong];
+      out.push({ id: `ict1_asc_${word}`, topic: 'ASCII', type: 'mcq',
+        difficulty: word === word.toUpperCase() ? 'medium' : 'hard',
+        question: `Use the ASCII table to decode: <code>${[...word].map(code).join(' ')}</code>` + tableFor(opts.join('')),
+        options: opts, answer: 0,
+        explanation: [...word].map(c => `${code(c)} = ${c}`).join(', ') + ` → <strong>${word}</strong>. Uppercase codes start 010, lowercase start 011.` });
+    }
+    for (const [anchor, target, lv] of [['A', 'G', 'medium'], ['a', 'm', 'hard'], ['A', 'P', 'hard']]) {
+      const a = anchor.charCodeAt(0), t = target.charCodeAt(0);
+      out.push({ id: `ict1_enc_${target}`, topic: 'ASCII', type: 'input', difficulty: lv,
+        question: `'${anchor}' has the ASCII code <code>${code(anchor)}</code> (${a} in decimal). What is the 8-bit ASCII code for <strong>'${target}'</strong>?`,
+        answer: code(target), acceptableAnswers: [t.toString(2)],
+        explanation: `Letters are numbered in alphabetical order: '${target}' is ${t - a} after '${anchor}', so ${a} + ${t - a} = ${t} = <strong>${code(target)}</strong>.` });
+    }
+    // Decimal code of a letter
+    for (const [anchor, target, lv] of [['A', 'E', 'easy'], ['A', 'M', 'medium'], ['a', 'd', 'easy'], ['a', 'z', 'hard']]) {
+      const a = anchor.charCodeAt(0), t = target.charCodeAt(0);
+      out.push({ id: `ict1_dec_${target}`, topic: 'ASCII', type: 'input', difficulty: lv,
+        question: `'${anchor}' has the ASCII decimal code <strong>${a}</strong>. What is the decimal code for <strong>'${target}'</strong>?`,
+        answer: String(t),
+        explanation: `'${target}' is ${t - a} letters after '${anchor}', so ${a} + ${t - a} = <strong>${t}</strong>.` });
+    }
+    // Which letter has this decimal code? (case matters, so multiple choice)
+    for (const [anchor, n, lv] of [['A', 70, 'medium'], ['a', 104, 'medium'], ['A', 84, 'hard']]) {
+      const a = anchor.charCodeAt(0), t = String.fromCharCode(n);
+      out.push({ id: `ict1_chr_${n}`, topic: 'ASCII', type: 'mcq', difficulty: lv,
+        question: `'${anchor}' is ${a} in ASCII. Which character has the decimal code <strong>${n}</strong>?`,
+        options: [t, swap(t), shift(t, 1), shift(t, -1)], answer: 0,
+        explanation: `${n} − ${a} = ${n - a}, so it is ${n - a} letters after '${anchor}': <strong>'${t}'</strong>. It's ${anchor === 'A' ? 'uppercase' : 'lowercase'} because '${anchor}' is.` });
+    }
+    // Which binary code is this letter?
+    for (const [anchor, target, lv] of [['A', 'D', 'medium'], ['a', 'g', 'hard']]) {
+      const opts = [target, swap(target), shift(target, 1), shift(target, -1)].map(code);
+      out.push({ id: `ict1_whc_${target}`, topic: 'ASCII', type: 'mcq', difficulty: lv,
+        question: `'${anchor}' is <code>${code(anchor)}</code>. Which is the ASCII code for <strong>'${target}'</strong>?`,
+        options: opts, answer: 0,
+        explanation: `'${target}' is ${target.charCodeAt(0) - anchor.charCodeAt(0)} after '${anchor}': ${anchor.charCodeAt(0)} + ${target.charCodeAt(0) - anchor.charCodeAt(0)} = ${target.charCodeAt(0)} = <strong>${code(target)}</strong>. Check the start too: ${target === target.toUpperCase() ? '010 means uppercase' : '011 means lowercase'}.` });
+    }
+    // Switching case: flip the 32 column
+    for (const [from, lv] of [['H', 'hard'], ['q', 'hard'], ['B', 'medium']]) {
+      const to = swap(from);
+      out.push({ id: `ict1_case_${from}`, topic: 'ASCII', type: 'input', difficulty: lv,
+        question: `'${from}' has the ASCII code <code>${code(from)}</code>. What is the 8-bit code for <strong>'${to}'</strong>?`,
+        answer: code(to), acceptableAnswers: [to.charCodeAt(0).toString(2)],
+        explanation: `Upper and lower case differ by 32, which is the third bit from the left. ` +
+          `${from === from.toUpperCase() ? 'Lowercase is 32 more: change 010 to 011' : 'Uppercase is 32 less: change 011 to 010'} → <strong>${code(to)}</strong> (${from.charCodeAt(0)} ${from === from.toUpperCase() ? '+' : '−'} 32 = ${to.charCodeAt(0)}).` });
+    }
+    // Upper or lower case, from the first three bits
+    for (const c of ['s', 'M', 'w']) {
+      const lower = c !== c.toUpperCase();
+      out.push({ id: `ict1_ul_${code(c)}`, topic: 'ASCII', type: 'mcq', difficulty: 'easy',
+        question: `Without a table: is <code>${code(c)}</code> the ASCII code of an uppercase or a lowercase letter?`,
+        options: ['Lowercase', 'Uppercase', "You can't tell without the full table"], answer: lower ? 0 : 1,
+        explanation: `It starts <strong>${code(c).slice(0, 3)}</strong>. Uppercase letters start 010 and lowercase start 011, so it's ${lower ? 'lowercase' : 'uppercase'} (it's '${c}').` });
+    }
+    // Storing text: one byte per character, and spaces count
+    for (const [text, unit, lv] of [['SCHOOL', 'bytes', 'easy'], ['Hi there', 'bits', 'medium'], ['I love ICT', 'bytes', 'medium'], ['Cat', 'bits', 'easy']]) {
+      const n = text.length, spaces = n - text.replace(/ /g, '').length, ans = unit === 'bits' ? n * 8 : n;
+      out.push({ id: `ict1_txt_${text.replace(/\W/g, '')}`, topic: 'ASCII', type: 'input', difficulty: lv,
+        question: `How many <strong>${unit}</strong> are needed to store <code>${text}</code> in ASCII?`,
+        answer: String(ans),
+        explanation: `Each character is 1 byte (8 bits). '${text}' has ${n} characters${spaces ? `, including ${spaces} space${spaces > 1 ? 's' : ''} (a space is a character too)` : ''}` +
+          (unit === 'bits' ? `, so ${n} × 8 = <strong>${ans} bits</strong>.` : `, so <strong>${ans} bytes</strong>.`) });
     }
     return out;
   }
@@ -138,7 +252,9 @@
     icon: "🖥️",
     color: "#f59e0b",
     added: "2026-11-14",
-    topics: ["Computer systems", "The CPU", "Binary numbers", "Binary addition & ASCII", "Storage devices", "New technologies"],
+    topics: ["Computer systems", "The CPU", "Binary numbers", "Data units", "Binary addition", "ASCII", "Storage devices", "New technologies"],
+    // Weekly test: every topic gets a share; unit conversions and ASCII get a double share.
+    weeklyWeights: { "Data units": 2, "ASCII": 2 },
     questions: [
       // ── L1 Computer systems ─────────────────────────────────
       { id: "ict1_q1", topic: "Computer systems", type: "mcq", difficulty: "easy",
@@ -277,70 +393,70 @@
         question: "Moving one column to the <strong>left</strong> in a binary number, each column is worth…",
         options: ["ten times as much", "twice as much", "one more", "half as much"], answer: 1,
         explanation: "Binary columns go 1, 2, 4, 8, 16… so each is double the one on its right. (In decimal each column is ten times bigger.)" },
-      { id: "ict1_q34", topic: "Binary numbers", type: "mcq", difficulty: "easy",
+      { id: "ict1_q34", topic: "Data units", type: "mcq", difficulty: "easy",
         question: "Using the units you learned in class, how many bytes are in <strong>1 kilobyte (kB)</strong>?",
         options: ["10", "100", "1 000", "1 000 000"], answer: 2,
         explanation: "Kilo means thousand: 1 kB = 1 000 bytes. Then 1 MB = 1 000 000 bytes and 1 GB = 1 000 000 000 bytes." },
-      { id: "ict1_q35", topic: "Binary numbers", type: "input", difficulty: "medium",
+      { id: "ict1_q35", topic: "Data units", type: "input", difficulty: "medium",
         question: "How many <strong>megabytes</strong> are in <strong>500 gigabytes</strong>? Type the number.",
         answer: "500000", acceptableAnswers: ["500 thousand"],
         explanation: "1 GB = 1 000 MB, so 500 GB = 500 × 1 000 = <strong>500 000 MB</strong>." },
-      { id: "ict1_q36", topic: "Binary numbers", type: "mcq", difficulty: "hard",
+      { id: "ict1_q36", topic: "Data units", type: "mcq", difficulty: "hard",
         question: "How many <strong>bits</strong> are in 1 terabyte (TB)?",
         options: ["1 000 000 000 000", "8 000 000 000", "8 000 000 000 000", "1 000 000 000"], answer: 2,
         explanation: "1 TB = 1 000 000 000 000 bytes (a trillion). Each byte is 8 bits, so × 8 = <strong>8 000 000 000 000 bits</strong>." },
-      { id: "ict1_q37", topic: "Binary numbers", type: "mcq", difficulty: "easy",
+      { id: "ict1_q37", topic: "Data units", type: "mcq", difficulty: "easy",
         question: "Put these in order from <strong>smallest to largest</strong>.",
         options: ["bit, byte, kilobyte, megabyte, gigabyte, terabyte", "byte, bit, kilobyte, gigabyte, megabyte, terabyte", "bit, kilobyte, byte, megabyte, terabyte, gigabyte", "byte, bit, megabyte, kilobyte, gigabyte, terabyte"], answer: 0,
         explanation: "bit → byte (8 bits) → kilo (thousand) → mega (million) → giga (billion) → tera (trillion)." },
 
       // ── L4 Binary addition & ASCII ──────────────────────────
-      { id: "ict1_q38", topic: "Binary addition & ASCII", type: "mcq", difficulty: "easy",
+      { id: "ict1_q38", topic: "Binary addition", type: "mcq", difficulty: "easy",
         question: "Is the binary number <code>10110111</code> odd or even?",
         options: ["Even, because it has more 1s than 0s", "Odd, because it ends in 1", "Even, because it starts with 1", "You have to convert it to decimal to know"], answer: 1,
         explanation: "Only the right-hand column (worth 1) is odd; every other column is even. So a binary number is <strong>odd if it ends in 1</strong> and even if it ends in 0." },
-      { id: "ict1_q39", topic: "Binary addition & ASCII", type: "mcq", difficulty: "easy",
+      { id: "ict1_q39", topic: "Binary addition", type: "mcq", difficulty: "easy",
         question: "What happens to a binary number when you add a <strong>0</strong> to its right-hand end?",
         options: ["It doubles", "It halves", "It goes up by 1", "It stays the same"], answer: 0,
         explanation: "Every digit moves one column to the left, and each column is worth twice as much. Example: 111 = 7 and 1110 = 14." },
-      { id: "ict1_q40", topic: "Binary addition & ASCII", type: "input", difficulty: "hard",
+      { id: "ict1_q40", topic: "Binary addition", type: "input", difficulty: "hard",
         question: "<code>1011</code> is 11 in decimal. Without converting from scratch, what is <code>10110</code> in decimal?",
         answer: "22",
         explanation: "Adding a 0 on the right doubles the number: 11 × 2 = <strong>22</strong>. Check: 16 + 4 + 2 = 22." },
-      { id: "ict1_q41", topic: "Binary addition & ASCII", type: "input", difficulty: "medium",
+      { id: "ict1_q41", topic: "Binary addition", type: "input", difficulty: "medium",
         question: "Add these binary numbers: <code>0101</code> + <code>0011</code>. Give your answer in binary.",
         answer: "1000", acceptableAnswers: ["01000", "00001000"],
         explanation: "Right to left: 1+1 = 0 carry 1; 0+1+1 = 0 carry 1; 1+0+1 = 0 carry 1; 0+0+1 = 1 → <strong>1000</strong>. Check: 5 + 3 = 8." },
-      { id: "ict1_q42", topic: "Binary addition & ASCII", type: "input", difficulty: "medium",
+      { id: "ict1_q42", topic: "Binary addition", type: "input", difficulty: "medium",
         question: "Add these binary numbers: <code>0110</code> + <code>0111</code>. Give your answer in binary.",
         answer: "1101", acceptableAnswers: ["01101", "00001101"],
         explanation: "Right to left: 0+1 = 1; 1+1 = 0 carry 1; 1+1+1 = 1 carry 1; 0+0+1 = 1 → <strong>1101</strong>. Check: 6 + 7 = 13." },
-      { id: "ict1_q43", topic: "Binary addition & ASCII", type: "mcq", difficulty: "hard",
+      { id: "ict1_q43", topic: "Binary addition", type: "mcq", difficulty: "hard",
         question: "Calculate <code>00110101</code> + <code>00011110</code>.",
         options: ["01010011", "00101011", "01001011", "01110011"], answer: 0,
         explanation: "Work right to left using the carry rules, or check in decimal: 53 + 30 = 83 = 64 + 16 + 2 + 1 = <strong>01010011</strong>." },
-      { id: "ict1_q44", topic: "Binary addition & ASCII", type: "mcq", difficulty: "medium",
+      { id: "ict1_q44", topic: "Binary addition", type: "mcq", difficulty: "medium",
         question: "In binary addition, what is <strong>1 + 1 + 1</strong> (two 1s plus a carried 1)?",
         options: ["0, carry 1", "1, carry 1", "3", "1, no carry"], answer: 1,
         explanation: "1 + 1 + 1 = 3, and 3 in binary is 11: write <strong>1</strong> and <strong>carry 1</strong>. (1 + 1 on its own is 0 carry 1.)" },
-      { id: "ict1_q45", topic: "Binary addition & ASCII", type: "mcq", difficulty: "easy",
+      { id: "ict1_q45", topic: "ASCII", type: "mcq", difficulty: "easy",
         question: "What does <strong>ASCII</strong> do?",
         options: ["Compresses files so they take less space", "Checks the spelling of documents", "Gives every character a unique binary code", "Speeds up the processor"], answer: 2,
         explanation: "ASCII (American Standard Code for Information Interchange) gives each letter, digit and symbol its own 8-bit binary number, so text can be stored as 0s and 1s." },
-      { id: "ict1_q46", topic: "Binary addition & ASCII", type: "mcq", difficulty: "medium",
+      { id: "ict1_q46", topic: "ASCII", type: "mcq", difficulty: "medium",
         question: "Use the ASCII table to decode: <code>01000011 01000001 01010100</code>" +
           asciiTable([["01000001", "A"], ["01000010", "B"], ["01000011", "C"], ["01010010", "R"], ["01010100", "T"], ["01100001", "a"], ["01100011", "c"], ["01110100", "t"]]),
         options: ["cat", "CAT", "CAR", "BAT"], answer: 1,
         explanation: "01000011 = C, 01000001 = A, 01010100 = T → <strong>CAT</strong>. These are uppercase codes; lowercase letters start with 011 instead of 010." },
-      { id: "ict1_q47", topic: "Binary addition & ASCII", type: "mcq", difficulty: "easy",
+      { id: "ict1_q47", topic: "ASCII", type: "mcq", difficulty: "easy",
         question: "Why do 'A' and 'a' have <strong>different</strong> ASCII codes?",
         options: ["Uppercase and lowercase are different characters, so each needs its own code", "Lowercase letters use fewer bits", "Uppercase letters are stored in RAM and lowercase in storage", "ASCII can only store uppercase letters"], answer: 0,
         explanation: "The computer must know exactly which character to show. 'A' is 01000001 (65) and 'a' is 01100001 (97)." },
-      { id: "ict1_q48", topic: "Binary addition & ASCII", type: "input", difficulty: "medium",
+      { id: "ict1_q48", topic: "ASCII", type: "input", difficulty: "medium",
         question: "Uppercase 'J' has the ASCII decimal code 74. What is the decimal code for uppercase <strong>'K'</strong>?",
         answer: "75",
         explanation: "Letters are numbered in alphabetical order, so the next letter has the next code: 74 + 1 = <strong>75</strong>." },
-      { id: "ict1_q49", topic: "Binary addition & ASCII", type: "mcq", difficulty: "hard",
+      { id: "ict1_q49", topic: "ASCII", type: "mcq", difficulty: "hard",
         question: "'A' is <code>01000001</code> and 'a' is <code>01100001</code>. What is the difference between their codes in <strong>decimal</strong>?",
         options: ["1", "26", "64", "32"], answer: 3,
         explanation: "01000001 = 65 and 01100001 = 97. 97 − 65 = <strong>32</strong>. The only difference is the bit in the 32 column." },
@@ -376,11 +492,11 @@
         question: "How is the data track laid out on a CD, DVD or Blu-ray?",
         options: ["One long spiral starting at the centre and working outwards", "Separate circles from the outside in", "Straight lines from the centre to the edge", "Random spots all over the disc"], answer: 0,
         explanation: "Each optical disc has a single, tightly wound spiral track that begins near the centre." },
-      { id: "ict1_q57", topic: "Storage devices", type: "mcq", difficulty: "medium",
+      { id: "ict1_q57", topic: "Data units", type: "mcq", difficulty: "medium",
         question: "Roughly how much storage does <strong>1 minute of MP3 audio</strong> need?",
         options: ["About 1 byte", "About 1 kilobyte", "About 1 megabyte", "About 1 terabyte"], answer: 2,
         explanation: "As a rough guide: a byte ≈ one letter, a kilobyte ≈ a short email, a megabyte ≈ 1 minute of MP3, a gigabyte ≈ 15 albums." },
-      { id: "ict1_q58", topic: "Storage devices", type: "mcq", difficulty: "easy",
+      { id: "ict1_q58", topic: "Data units", type: "mcq", difficulty: "easy",
         question: "How much storage does a single letter such as 'A' need?",
         options: ["1 bit", "1 byte", "1 kilobyte", "1 megabyte"], answer: 1,
         explanation: "Each ASCII character is an 8-bit code, which is exactly 1 byte." },
@@ -552,7 +668,7 @@
         question: "What is the name for a group of <strong>8 bits</strong>?",
         answer: "byte", acceptableAnswers: ["a byte", "bytes", "1 byte"],
         explanation: "8 bits = 1 byte. One byte can store one character." },
-      { id: "ict1_q99", topic: "Binary numbers", type: "mcq", difficulty: "medium",
+      { id: "ict1_q99", topic: "Data units", type: "mcq", difficulty: "medium",
         question: "Using the units from class, how many bytes are in <strong>1 megabyte (MB)</strong>?",
         options: ["1 000", "1 000 000", "1 000 000 000", "8 000"], answer: 1,
         explanation: "Mega = million: 1 MB = 1 000 000 bytes." },
@@ -586,11 +702,11 @@
         question: "A laser reads a disc and detects: <em>no change, no change, change</em>. Which bits are these?",
         options: ["110", "001", "111", "000"], answer: 1,
         explanation: "No change = 0, change = 1. So: 0, 0, 1 → <strong>001</strong>." },
-      { id: "ict1_q107", topic: "Storage devices", type: "mcq", difficulty: "medium",
+      { id: "ict1_q107", topic: "Data units", type: "mcq", difficulty: "medium",
         question: "A 15-line text email is roughly what size?",
         options: ["1 byte", "1 kilobyte", "1 gigabyte", "1 terabyte"], answer: 1,
         explanation: "Plain text is small: about a kilobyte for a short email. A byte is just one letter." },
-      { id: "ict1_q108", topic: "Storage devices", type: "mcq", difficulty: "medium",
+      { id: "ict1_q108", topic: "Data units", type: "mcq", difficulty: "medium",
         question: "About <strong>200 DVD films</strong> would fill roughly…",
         options: ["1 megabyte", "1 gigabyte", "1 terabyte", "1 kilobyte"], answer: 2,
         explanation: "A terabyte is 1 000 gigabytes, enough for about 200 DVD films or 15 000 MP3 albums." },
@@ -655,7 +771,57 @@
       { id: "ict1_q123", topic: "New technologies", type: "short", difficulty: "hard",
         question: "Explain how <strong>motion capture</strong> has changed films or computer games.",
         answer: "Sensors/markers record exactly how a real actor moves; the computer uses this data to animate a digital character. This makes characters' movement much more <strong>realistic</strong> and is faster than animating every movement by hand.",
-        explanation: "Say what motion capture records, how the data is used, and what difference it makes." }
+        explanation: "Say what motion capture records, how the data is used, and what difference it makes." },
+
+      // ── More: Data units ───────────────────────────────────
+      { id: "ict1_q124", topic: "Data units", type: "mcq", difficulty: "easy",
+        question: "What does the prefix <strong>giga</strong> (as in gigabyte) mean?",
+        options: ["Billion (1 000 000 000)", "Million (1 000 000)", "Thousand (1 000)", "Trillion (1 000 000 000 000)"], answer: 0,
+        explanation: "kilo = thousand, mega = million, <strong>giga = billion</strong>, tera = trillion." },
+      { id: "ict1_q125", topic: "Data units", type: "mcq", difficulty: "easy",
+        question: "What does the prefix <strong>tera</strong> (as in terabyte) mean?",
+        options: ["Trillion (1 000 000 000 000)", "Billion (1 000 000 000)", "Million (1 000 000)", "Ten thousand (10 000)"], answer: 0,
+        explanation: "tera = trillion, so 1 TB = 1 000 GB = 1 000 000 000 000 bytes." },
+      { id: "ict1_q126", topic: "Data units", type: "mcq", difficulty: "easy",
+        question: "To convert <strong>gigabytes into megabytes</strong>, you…",
+        options: ["multiply by 1 000", "divide by 1 000", "multiply by 8", "divide by 8"], answer: 0,
+        explanation: "MB is the smaller unit, so you need more of them: 1 GB = 1 000 MB. Smaller unit → multiply." },
+      { id: "ict1_q127", topic: "Data units", type: "mcq", difficulty: "easy",
+        question: "To convert <strong>bytes into bits</strong>, you…",
+        options: ["multiply by 8", "divide by 8", "multiply by 1 000", "divide by 1 000"], answer: 0,
+        explanation: "Every byte is 8 bits, and bits are the smaller unit, so multiply by 8." },
+      { id: "ict1_q128", topic: "Data units", type: "mcq", difficulty: "easy",
+        question: "Which is the same as <strong>4 GB</strong>?",
+        options: ["4 000 MB", "400 MB", "40 000 MB", "4 000 000 MB"], answer: 0,
+        explanation: "1 GB = 1 000 MB, so 4 × 1 000 = <strong>4 000 MB</strong>." },
+      { id: "ict1_q129", topic: "Data units", type: "mcq", difficulty: "medium",
+        question: "<strong>2 500 kB</strong> is the same as…",
+        options: ["2.5 MB", "25 MB", "0.25 MB", "250 MB"], answer: 0,
+        explanation: "kB → MB is a bigger unit, so divide by 1 000: 2 500 ÷ 1 000 = <strong>2.5 MB</strong>." },
+      { id: "ict1_q130", topic: "Data units", type: "mcq", difficulty: "easy",
+        question: "Which unit is best for describing the size of <strong>one phone photo</strong>?",
+        options: ["Megabytes (MB)", "Bits", "Terabytes (TB)", "Bytes"], answer: 0,
+        explanation: "A typical photo is a few MB. Bits and bytes are far too small to be useful here, and a terabyte would hold hundreds of thousands of photos." },
+      { id: "ict1_q131", topic: "Data units", type: "mcq", difficulty: "hard",
+        question: "Which of these is the <strong>largest</strong> amount of storage?",
+        options: ["0.004 TB", "3 000 MB", "2 GB", "3 500 000 kB"], answer: 0,
+        explanation: "Put everything in GB: 0.004 TB = <strong>4 GB</strong>, 3 000 MB = 3 GB, 2 GB, 3 500 000 kB = 3.5 GB. The biggest number isn't always the biggest size!" },
+      { id: "ict1_q132", topic: "Data units", type: "mcq", difficulty: "hard",
+        question: "Put these in order from <strong>largest to smallest</strong>: 900 GB, 2 TB, 3 000 000 kB, 1 500 000 MB.",
+        options: ["2 TB, 1 500 000 MB, 900 GB, 3 000 000 kB", "3 000 000 kB, 1 500 000 MB, 900 GB, 2 TB", "1 500 000 MB, 3 000 000 kB, 2 TB, 900 GB", "2 TB, 900 GB, 1 500 000 MB, 3 000 000 kB"], answer: 0,
+        explanation: "In GB: 2 TB = 2 000 GB, 1 500 000 MB = 1 500 GB, 900 GB, 3 000 000 kB = 3 GB." },
+      { id: "ict1_q133", topic: "Data units", type: "input", difficulty: "medium",
+        question: "A <strong>16 GB</strong> USB stick holds three files: 3.5 GB, 6 GB and 2.5 GB. How many <strong>GB</strong> of space are left?",
+        answer: "4",
+        explanation: "Used: 3.5 + 6 + 2.5 = 12 GB. Free: 16 − 12 = <strong>4 GB</strong>." },
+      { id: "ict1_q134", topic: "Data units", type: "input", difficulty: "hard",
+        question: "A <strong>32 GB</strong> phone has <strong>18 500 MB</strong> of apps and photos on it. How many <strong>GB</strong> are free?",
+        answer: "13.5", acceptableAnswers: ["13,5"],
+        explanation: "Same unit first: 18 500 MB = 18.5 GB. Then 32 − 18.5 = <strong>13.5 GB</strong>." },
+      { id: "ict1_q135", topic: "Data units", type: "mcq", difficulty: "medium",
+        question: "Which is <strong>bigger</strong>: 1 byte or 7 bits?",
+        options: ["1 byte, because it is 8 bits", "7 bits, because 7 is more than 1", "They are the same size", "You can't compare bits and bytes"], answer: 0,
+        explanation: "1 byte = 8 bits, which is one more than 7 bits. Always compare in the same unit." }
     ].concat(drills())
 
   });
