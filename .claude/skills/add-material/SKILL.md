@@ -63,7 +63,7 @@ When **extending** an existing chapter, append questions with new ids. Never ren
 - **Size:** 25–45 questions per chapter, so the weekly test (30 questions across all chapters) and daily tests (15) have room to vary. Roughly 70% mcq, 15% input, 15% short. Maths should lean more on `input`.
 - **Stay in scope:** only what the material teaches. Grade 7 / IB MYP Year 2 level. Mark about 15% harder questions with `difficulty: "challenging"`.
 - **MCQ:** exactly 4 plausible options, with distractors drawn from real misconceptions. Options are **shuffled at display time**, so never write "Both A and B", "All of the above" or "option C". If order truly matters, set `fixedOrder: true`. Spread `answer` indices anyway.
-- **Input:** short exact answers (a number, a word). Put every reasonable variant in `acceptableAnswers` (units, spelling, "1/2" vs "0.5" if both are acceptable). The checker ignores case, spaces and thousands separators, and accepts trailing units on a single number.
+- **Input:** short exact answers (a number, a word). Put every reasonable variant in `acceptableAnswers` (units, spelling, "1/2" vs "0.5" if both are acceptable). The checker ignores case, spaces and thousands separators, and accepts trailing units on a single number. For algebraic answers ("5p", "2x+3") set `exact: true`, or "5" would be accepted for "5p", and list the other term orders in `acceptableAnswers`.
 - **Short:** open "explain/describe/compare" questions. `answer` is a model answer a parent can mark against in 10 seconds: 2–4 key points.
 - **Explanation required** on every question. It must teach *why*, not restate the answer.
 - **No duplicates:** grep the subject's existing chapters for the same scenario/numbers before adding.

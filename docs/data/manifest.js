@@ -19,7 +19,7 @@ const MANIFEST = {
     { id: 'french',     name: 'French',     icon: '🇫🇷', color: '#a855f7', desc: 'Language Acquisition', chapters: [] },
     { id: 'humanities', name: 'Humanities', icon: '🌍',  color: '#0ea5e9', desc: 'Individuals & Societies', chapters: [] },
     { id: 'ict',        name: 'ICT',        icon: '💻',  color: '#f59e0b', desc: 'Design & Technology', chapters: ['ch01.js'] },
-    { id: 'maths',      name: 'Maths',      icon: '🧮',  color: '#6366f1', desc: 'Mathematics', chapters: [] },
+    { id: 'maths',      name: 'Maths',      icon: '🧮',  color: '#6366f1', desc: 'Mathematics', chapters: ['ch08.js'] },
     { id: 'science',    name: 'Science',    icon: '🔬',  color: '#22c55e', desc: 'Sciences', chapters: [] },
     { id: 'spanish',    name: 'Spanish',    icon: '🇪🇸', color: '#eab308', desc: 'Language Acquisition', chapters: ['ch02.js'] }
   ]

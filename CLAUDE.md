@@ -58,7 +58,7 @@ addChapter({
 ```
 - Id prefixes: dutch `nl`, english `en`, french `fr`, humanities `hum`, ict `ict`, maths `c`, science `sc`, spanish `sp`. Ids must be unique within a subject and **never reused or renumbered**, because history is keyed by id.
 - **MCQ options are shuffled at display time.** Grade 6 data had a heavy answer-position bias (e.g. every Humanities answer was A). Never write "Both A and B" / "All of the above". The checker flags these.
-- Input answers: `answer` always counts, and `acceptableAnswers` are extras. Matching ignores case, spacing, thousands separators and trailing units on a single number. Commas inside coordinates and lists are kept.
+- Input answers: `answer` always counts, and `acceptableAnswers` are extras. Set `exact: true` for algebra answers (e.g. "5p") so the number-with-units rule doesn't accept a bare "5". Matching ignores case, spacing, thousands separators and trailing units on a single number. Commas inside coordinates and lists are kept.
 - Every question needs an `explanation` (optional for `short`).
 
 ## Storage model (store.js)

@@ -39,6 +39,8 @@ const Util = (() => {
     // acceptableAnswers are *extra* accepted strings — the main answer always counts.
     const accepted = [q.answer, ...(q.acceptableAnswers || [])].map(normalize);
     if (accepted.includes(user)) return true;
+    // exact: algebra answers like "5p" must not accept a bare "5".
+    if (q.exact) return false;
     // Numeric match tolerating units/currency ("12", "12 cm", "$12"), only when
     // both sides are a single number — so "34" never matches "3:4" or "(3, 4)".
     const asNumber = s => {
