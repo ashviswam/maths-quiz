@@ -10,7 +10,7 @@ const MANIFEST = {
   materialDir: '~/Documents/Pragathy',
 
   dailySize: 15,                                // questions per daily test
-  weeklySize: 40,                               // questions per weekly timed test (30% easy / 40% medium / 30% hard)
+  weeklySize: 40,                               // questions per weekly timed test (10% easy / 50% medium / 40% hard, ≤40% multiple choice)
   secondsPer: { mcq: 60, input: 90, short: 180 }, // weekly test time budget per question
 
   subjects: [

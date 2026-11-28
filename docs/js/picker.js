@@ -9,7 +9,8 @@ const Picker = (() => {
 
   // Difficulty: 'easy' | 'medium' | 'hard' ('challenging' is the old name for hard).
   function level(q) { return q.difficulty === 'challenging' ? 'hard' : (q.difficulty || 'medium'); }
-  const MIX = { easy: 0.3, medium: 0.4, hard: 0.3 };   // weekly test difficulty spread
+  const MIX = { easy: 0.1, medium: 0.5, hard: 0.4 };   // weekly test difficulty spread
+  const MCQ_MAX = 0.4;                                  // weekly test: at most 40% multiple choice
 
   function flatten(chapters) {
     return chapters.flatMap(ch => ch.questions.map(q => ({ q, ch })));
@@ -132,9 +133,51 @@ const Picker = (() => {
       const rest = pools.flat().map(it => ({ it, k: rank(it) })).sort((a, b) => a.k - b.k).map(x => x.it);
       out.push(...take(rest, size - out.length, picked, limits));
     }
+    rebalance(out, pools, size);
     // Keep chapter order, easy → hard within a chapter, so the paper reads like an exam.
     const rankLv = { easy: 0, medium: 1, hard: 2 };
     return out.sort((a, b) => a.ch.id - b.ch.id || rankLv[level(a.q)] - rankLv[level(b.q)]).map(it => it.q);
+  }
+
+  /* Hit the whole-test difficulty mix and the multiple-choice cap by swapping
+     questions for unused ones from the same topic (else the same chapter), so
+     topic and chapter coverage stay as picked. Best effort: a subject without
+     enough hard or typed questions keeps what it has. */
+  function rebalance(out, pools, size) {
+    const LV = ['easy', 'medium', 'hard'];
+    const ranked = pools.flat();                                  // each chapter's pool is in need order
+    const inOut = new Set(out.map(it => it.q.id));
+    const count = f => out.filter(f).length;
+    const shortMax = Math.max(1, Math.round(size * 0.15));
+    const allowed = (c, leaving) => !inOut.has(c.q.id)
+      && (c.q.type !== 'short' || leaving.q.type === 'short' || count(it => it.q.type === 'short') < shortMax);
+    const find = (leaving, test) =>
+      ranked.find(c => c.ch === leaving.ch && c.q.topic === leaving.q.topic && test(c) && allowed(c, leaving))
+      || ranked.find(c => c.ch === leaving.ch && test(c) && allowed(c, leaving));
+    const swap = (i, c) => { inOut.delete(out[i].q.id); inOut.add(c.q.id); out[i] = c; };
+
+    // 1. Difficulty: move questions from over-full levels to under-full ones, preferring typed answers.
+    const want = lv => Math.round(size * MIX[lv]);
+    const n = lv => count(it => level(it.q) === lv);
+    for (let guard = 0; guard < size * 3; guard++) {
+      const over = LV.filter(lv => n(lv) > want(lv)), under = LV.filter(lv => n(lv) < want(lv));
+      if (!over.length || !under.length) break;
+      let moved = false;
+      for (let i = 0; i < out.length && !moved; i++) {
+        if (!over.includes(level(out[i].q))) continue;
+        const toUnder = c => under.includes(level(c.q));
+        const c = find(out[i], c => toUnder(c) && c.q.type !== 'mcq') || find(out[i], toUnder);
+        if (c) { swap(i, c); moved = true; }
+      }
+      if (!moved) break;
+    }
+    // 2. Fewer multiple choice: swap MCQs for typed questions of the same level.
+    const mcqMax = Math.round(size * MCQ_MAX);
+    for (let i = 0; i < out.length && count(it => it.q.type === 'mcq') > mcqMax; i++) {
+      if (out[i].q.type !== 'mcq') continue;
+      const lv = level(out[i].q), c = find(out[i], c => c.q.type !== 'mcq' && level(c.q) === lv);
+      if (c) swap(i, c);
+    }
   }
 
   function timeLimitSec(questions) {

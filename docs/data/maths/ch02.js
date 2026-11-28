@@ -237,16 +237,48 @@
         explanation: `${a}° + ${b}° = ${s}°. ${s === 90 ? 'They add to 90°, so they are complementary.' : s === 180 ? 'They add to 180°, so they are supplementary.' : 'That is neither 90° nor 180°, so they are neither.'}` });
     });
 
-    // Classify an angle by size.
+    // Angle types: reason about the size first, then name it (replaces plain "what type is 180°?").
     const kinds = ['Acute', 'Right angle', 'Obtuse', 'Straight angle', 'Reflex', 'Revolution'];
     const kindOf = a => a < 90 ? 0 : a === 90 ? 1 : a < 180 ? 2 : a === 180 ? 3 : a < 360 ? 4 : 5;
-    [[47, 'easy'], [90, 'easy'], [135, 'easy'], [180, null], [210, null], [89, null], [91, null], [359, 'challenging'], [360, null]].forEach(([a, d]) => {
-      const k = kindOf(a);
-      const opts = [k, ...[0, 1, 2, 3, 4, 5].filter(x => x !== k).sort((x, y) => Math.abs(x - k) - Math.abs(y - k)).slice(0, 3)];
-      add({ id: `c2_kind_${a}`, topic: 'Angles', type: 'mcq', ...(d ? { difficulty: d } : {}), ref: 'Textbook 3B Q3 (p.49)',
-        question: `What type of angle measures ${a}°?`, options: opts.map(i => kinds[i]), answer: 0,
-        explanation: 'Acute: less than 90°. Right: exactly 90°. Obtuse: between 90° and 180°. Straight: exactly 180°. Reflex: between 180° and 360°. Revolution: a full turn, 360°.' });
+    const kindOpts = k => [k, ...[0, 1, 2, 3, 4, 5].filter(x => x !== k).sort((x, y) => Math.abs(x - k) - Math.abs(y - k)).slice(0, 3)].map(i => kinds[i]);
+    const KEY = 'Acute &lt; 90° · right = 90° · obtuse 90°–180° · straight = 180° · reflex 180°–360° · revolution = 360°.';
+    // Fractions of a turn.
+    [[3, 4], [2, 3], [5, 8], [1, 3], [3, 8]].forEach(([n, dn]) => {
+      const a = 360 * n / dn, k = kindOf(a);
+      add({ id: `c2_turn_${n}_${dn}`, topic: 'Angles', type: 'mcq', difficulty: dn === 8 ? 'challenging' : 'medium', ref: 'Textbook 3B (p.47)',
+        question: `An angle is ${n}/${dn} of a full turn. What type of angle is it?`, options: kindOpts(k), answer: 0,
+        explanation: `A full turn is 360°, so ${n}/${dn} of a turn is 360 ÷ ${dn} × ${n} = ${a}°. ${KEY}` });
     });
+    // Clock hands (the smaller angle unless asked for the reflex one).
+    [[4, false], [5, false], [10, false], [2, true]].forEach(([h, reflex]) => {
+      const small = Math.min(30 * h, 360 - 30 * h), a = reflex ? 360 - small : small;
+      add({ id: `c2_clock_${h}${reflex ? 'r' : ''}`, topic: 'Angles', type: 'input', difficulty: reflex ? 'challenging' : 'medium', ref: 'Textbook 3B Q9 (p.50)',
+        question: reflex ? `At exactly ${h} o'clock, what is the <b>reflex</b> angle between the clock hands?` : `At exactly ${h} o'clock, what is the smaller angle between the clock hands? Is it acute, obtuse or reflex?`,
+        answer: String(a), acceptableAnswers: [a + '°', ...(reflex ? [] : [`${a} ${kinds[kindOf(a)].toLowerCase()}`, `${a}° ${kinds[kindOf(a)].toLowerCase()}`])],
+        explanation: `Each hour mark is 360 ÷ 12 = 30°. ${h} o'clock: the hands are ${Math.min(h, 12 - h)} hour marks apart, so ${small}°${reflex ? `, and the reflex angle is the long way round: 360 − ${small} = ${a}°` : ` (${kinds[kindOf(a)].toLowerCase()})`}.` });
+    });
+    // Reflex ↔ ordinary angle.
+    [[290, 'ord'], [205, 'ord'], [95, 'ref']].forEach(([v, k]) => {
+      const a = 360 - v;
+      add({ id: `c2_refl_${v}`, topic: 'Angles', type: 'mcq', difficulty: 'challenging', ref: 'Textbook 3B (p.48)',
+        question: k === 'ord' ? `Reflex ∠PQR measures ${v}°. What type of angle is the ordinary (non-reflex) ∠PQR?` : `∠PQR measures ${v}°. How big is reflex ∠PQR, and what type is it?`,
+        options: k === 'ord' ? kindOpts(kindOf(a)) : [`${a}°, reflex`, `${180 - v}°, acute`, `${a}°, obtuse`, `${v + 180}°, reflex`], answer: 0,
+        explanation: `An angle and its reflex angle go all the way round, so they add to 360°: 360 − ${v} = ${a}°. ${k === 'ord' ? KEY : ''}` });
+    });
+    // Reasoning about types.
+    [
+      ['Two acute angles are added together. Which type can the answer <b>never</b> be?', ['Reflex', 'Acute', 'Right angle', 'Obtuse'],
+       'Each acute angle is under 90°, so two of them add to less than 180°. The answer could be acute (30 + 40), right (45 + 45) or obtuse (60 + 70), but never reflex.'],
+      ['An obtuse angle is bisected (cut exactly in half). What type is each half?', ['Acute', 'Obtuse', 'Right angle', 'It depends on the angle'],
+       'Obtuse is between 90° and 180°, so half of it is between 45° and 90°: always acute.'],
+      ['A reflex angle is bisected. What type is each half?', ['Obtuse', 'Acute', 'Reflex', 'Right angle'],
+       'Reflex is between 180° and 360°, so half of it is between 90° and 180°: obtuse.'],
+      ['The supplement of an acute angle is always …', ['obtuse', 'acute', 'reflex', 'a right angle'],
+       'Supplement = 180° − the angle. Take away less than 90° from 180° and you get more than 90° (but under 180°): obtuse.'],
+      ['You face North and turn clockwise to face South-East. What type of angle have you turned through?', ['Obtuse', 'Acute', 'Reflex', 'Right angle'],
+       'North → East is 90°, and East → South-East is another 45°: 135° in total, which is obtuse.'],
+    ].forEach(([q, opts, why], i) => add({ id: `c2_why_${i + 1}`, topic: 'Angles', type: 'mcq', difficulty: i === 0 || i === 4 ? 'medium' : 'challenging', ref: 'Textbook 3B (p.47)',
+      question: q, options: opts, answer: 0, explanation: why }));
 
     // Read a protractor (two scales: start from the 0 on the arm you measure from).
     [40, 70, 110, 160, 125].forEach(a => add({ id: `c2_prot_${a}`, topic: 'Angles', type: 'input', difficulty: a === 125 ? 'challenging' : 'medium', ref: 'Textbook 3B Q5 (p.49)',
