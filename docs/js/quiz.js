@@ -82,6 +82,7 @@ const App = (() => {
       return;
     }
     renderModes();
+    renderPaper();
     renderHistory();
     renderWeak();
     renderChapters();
@@ -144,6 +145,32 @@ const App = (() => {
         <div class="mode-tile-name">${Util.esc(arts.join(', '))}?</div>
         <div class="mode-tile-status">Quick-fire masculine / feminine drill</div>
         <div class="mode-tile-cta">Play →</div></a>` : ''}`;
+  }
+
+  // Paper tasks the student has done, waiting for a parent to look at the drawing.
+  function renderPaper() {
+    const list = Store.paperWaiting(subj.id).map(p => ({ ...p, hit: byId.get(p.qid) })).filter(p => p.hit);
+    $('paper-check').classList.toggle('hidden', !list.length);
+    $('paper-list').innerHTML = list.map(({ qid, t, hit: { q, ch } }) => `
+      <details class="paper-item">
+        <summary><span class="paper-when">${Util.fmtDate(t)}</span> ${Util.esc(Util.stripTags(q.question, 90))}</summary>
+        <div class="paper-detail">
+          <div class="notes-entry-meta">Ch. ${ch.id}: ${Util.esc(ch.title)} · ${Util.esc(q.topic)}${q.ref ? ` · 📖 ${Util.esc(q.ref)}` : ''}</div>
+          <div class="question-text">${q.question}</div>
+          ${q.diagram ? `<div class="q-diagram">${q.diagram}</div>` : ''}
+          <div class="fb-review-model"><div class="fb-review-label">What to check</div>
+            <div class="fb-model-text">${q.answer}</div></div>
+          <div class="fb-mark-actions">
+            <button class="btn-mark-correct" onclick="App.markPaper('${qid}',1)">✓ Got it</button>
+            <button class="btn-mark-wrong" onclick="App.markPaper('${qid}',0)">✗ Not yet</button>
+          </div>
+        </div>
+      </details>`).join('');
+  }
+
+  function markPaper(qid, ok) {
+    Store.recordAnswer(subj.id, qid, !!ok, 'p');
+    Store.setPaper(subj.id, qid, 0);     // re-renders home via onChange
   }
 
   function renderHistory() {
@@ -339,7 +366,9 @@ const App = (() => {
       return;
     }
     const r = S.results[q.id];
+    if (r && r.paper) { btn.classList.add('si-answered'); return; }
     if (r) { btn.classList.add(r.correct ? 'si-correct' : 'si-wrong'); return; }
+    if (q.type === 'paper' && Store.isPaperWaiting(subj.id, q.id)) { btn.classList.add('si-answered'); return; }
     if (S.mode === 'practice' || S.mode === 'retry') {
       const st = S.stats && S.stats.get(q.id);
       if (st) btn.classList.add(st.lastC ? 'si-correct' : 'si-wrong');
@@ -388,13 +417,13 @@ const App = (() => {
       if (st) badge = st.lastC ? ' <span class="hist-badge hist-ok">Got it before ✓</span>'
                                : ' <span class="hist-badge hist-bad">Missed before</span>';
     }
-    $('q-text').innerHTML = q.question + badge;
+    $('q-text').innerHTML = q.question + badge + (q.ref && q.type !== 'paper' ? `<div class="q-ref">📖 Like ${Util.esc(q.ref)}</div>` : '');
     $('q-diagram').innerHTML = q.diagram || '';
     $('q-diagram').classList.toggle('hidden', !q.diagram);
 
     $('feedback-card').classList.add('hidden');
     $('fb-review').classList.add('hidden');
-    ['q-options', 'q-input', 'q-short'].forEach(id => $(id).classList.add('hidden'));
+    ['q-options', 'q-input', 'q-short', 'q-paper'].forEach(id => $(id).classList.add('hidden'));
     $('exam-nav').classList.toggle('hidden', !exam);
 
     const prior = exam ? S.test.ans[q.id] : undefined;
@@ -404,6 +433,12 @@ const App = (() => {
       $('q-options').classList.remove('hidden');
       renderOptions(q, exam ? prior : undefined);
       if (done) lockOptions(q, done.value);
+    } else if (q.type === 'paper') {
+      $('q-paper').classList.remove('hidden');
+      $('paper-ref').innerHTML = (q.ref ? `📖 ${Util.esc(q.ref)} · ` : '') + 'Draw this in your exercise book, then tap the button. A parent will check it later.';
+      const waiting = Store.isPaperWaiting(subj.id, q.id);
+      $('btn-paper-done').classList.toggle('hidden', !!done || waiting);
+      if (waiting && !done) $('paper-ref').innerHTML += ' <strong>Already done — waiting for a parent to check.</strong>';
     } else if (q.type === 'short') {
       $('q-short').classList.remove('hidden');
       const ta = $('short-answer');
@@ -420,7 +455,8 @@ const App = (() => {
       $('btn-submit').classList.toggle('hidden', exam || !!done);
       if (!done) inp.focus();
     }
-    if (done) { S.answered = true; showFeedback(done.correct, q, false); }
+    if (done && done.paper) { S.answered = true; showPaperSaved(q, false); }
+    else if (done) { S.answered = true; showFeedback(done.correct, q, false); }
 
     if (exam) {
       $('btn-exam-prev').disabled = S.index === 0;
@@ -434,7 +470,7 @@ const App = (() => {
 
   function updateScoreLive() {
     if (S.mode === 'weekly') { $('quiz-score-live').textContent = ''; return; }
-    const r = Object.values(S.results), ok = r.filter(x => x.correct).length;
+    const r = Object.values(S.results).filter(x => !x.paper), ok = r.filter(x => x.correct).length;
     $('quiz-score-live').textContent = `✓ ${ok}  ✗ ${r.length - ok}`;
   }
 
@@ -508,6 +544,30 @@ const App = (() => {
     $('fb-review-text').textContent = text;
     $('fb-model-text').innerHTML = q.answer;
     $('fb-review').classList.remove('hidden');
+  }
+
+  function submitPaper() {
+    if (S.answered) return;
+    const q = S.questions[S.index];
+    S.answered = true;
+    Store.setPaper(subj.id, q.id, 1);
+    S.results[q.id] = { value: '(on paper)', paper: true };
+    $('btn-paper-done').classList.add('hidden');
+    paintSidebar(S.index);
+    updateFinishBtn();
+    showPaperSaved(q, true);
+  }
+
+  function showPaperSaved(q, animate) {
+    const fb = $('feedback-card');
+    fb.classList.remove('hidden');
+    $('btn-next').classList.remove('hidden');
+    $('fb-icon').textContent = '✏️';
+    $('fb-heading').textContent = 'Saved — a parent will check your drawing';
+    $('fb-heading').className = 'fb-heading';
+    $('fb-explanation').innerHTML = q.explanation ? `<p><strong>Check yourself first:</strong></p>${q.explanation}` : '';
+    $('btn-next').textContent = S.index >= S.questions.length - 1 ? 'Finish →' : 'Next question →';
+    if (animate) { fb.classList.add('pop'); setTimeout(() => fb.classList.remove('pop'), 300); }
   }
 
   function markShort(correct) {
@@ -680,7 +740,7 @@ const App = (() => {
       Sync.syncNow();
       return showTestResults(t);
     }
-    const items = S.questions.filter(q => S.results[q.id]).map(q => ({ q, value: S.results[q.id].value, correct: S.results[q.id].correct }));
+    const items = S.questions.filter(q => S.results[q.id] && !S.results[q.id].paper).map(q => ({ q, value: S.results[q.id].value, correct: S.results[q.id].correct }));
     if (!items.length) return goHome();
     showResults(items, { retry: S.mode === 'practice' });
   }
@@ -789,6 +849,7 @@ const App = (() => {
   document.addEventListener('DOMContentLoaded', init);
 
   return { goHome, startDaily, startWeekly, openWeekly, allowRetake, reviewTest, submitInput, submitShort, markShort,
+           submitPaper, markPaper,
            nextQuestion, finish, retryWrong, examPrev, examNext, confirmSubmit, markPending,
            toggleNote, cancelNote, saveNote, openNotes, closeNotes };
 })();

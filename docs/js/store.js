@@ -10,6 +10,7 @@
      tests: { id: TestRecord }      last-write-wins by `u`, finished beats unfinished
      notes: { 'subject/qid': [text, time] }   last-write-wins; '' = deleted
      fc:    { cardId: [known 0|1, time] }     flashcard "known" flags, last-write-wins
+     pp:    { 'subject/qid': [waiting 0|1, time] }  paper (drawing) tasks waiting for a parent check
    }
 
    TestRecord: { id, s, kind:'daily'|'weekly', day, week, start, deadline?, end?,
@@ -22,7 +23,7 @@ const Store = (() => {
   let data = load();
 
   function rid() { return Math.random().toString(36).slice(2, 10); }
-  function blank() { return { v: 1, dev: rid(), ev: [], tests: {}, notes: {}, fc: {} }; }
+  function blank() { return { v: 1, dev: rid(), ev: [], tests: {}, notes: {}, fc: {}, pp: {} }; }
 
   function load() {
     try {
@@ -101,6 +102,17 @@ const Store = (() => {
   function isKnown(id) { const f = data.fc[id]; return !!(f && f[0]); }
   function setKnown(id, known) { data.fc[id] = [known ? 1 : 0, Date.now()]; save(); }
 
+  // ── Paper tasks ────────────────────────────────────────────
+  // Drawn on paper, so a parent marks them later from the subject page.
+  function setPaper(s, qid, waiting) { data.pp[`${s}/${qid}`] = [waiting ? 1 : 0, Date.now()]; save(); }
+  function isPaperWaiting(s, qid) { const p = data.pp[`${s}/${qid}`]; return !!(p && p[0]); }
+  function paperWaiting(s) {
+    return Object.entries(data.pp)
+      .filter(([k, v]) => v[0] && k.startsWith(s + '/'))
+      .map(([k, v]) => ({ qid: k.slice(s.length + 1), t: v[1] }))
+      .sort((a, b) => a.t - b.t);
+  }
+
   // ── Merge (used by sync and import) ────────────────────────
   // Mutates `a` with anything newer in `b`. Returns true if `a` changed.
   function mergeInto(a, b) {
@@ -118,7 +130,7 @@ const Store = (() => {
         || (!!t.end === !!mine.end && (t.u || 0) > (mine.u || 0));
       if (better) { a.tests[id] = t; changed = true; }
     }
-    for (const k of ['notes', 'fc']) {
+    for (const k of ['notes', 'fc', 'pp']) {
       a[k] = a[k] || {};
       for (const [id, v] of Object.entries(b[k] || {})) {
         const mine = a[k][id];
@@ -147,6 +159,7 @@ const Store = (() => {
     putTest, getTest, newTestId, tests,
     getNote, setNote, notes,
     isKnown, setKnown,
+    setPaper, isPaperWaiting, paperWaiting,
     mergeInto, mergeFrom, snapshot
   };
 })();

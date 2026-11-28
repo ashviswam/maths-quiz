@@ -50,7 +50,9 @@ addChapter({
       explanation: "…", difficulty: "challenging" /* optional */, diagram: `<svg…>` /* optional */,
       fixedOrder: true /* optional, only if options must not be shuffled */ },
     { id: "sc3_q2", topic: "…", type: "input", question: "…", answer: "12", acceptableAnswers: ["12 N"], explanation: "…" },
-    { id: "sc3_q3", topic: "…", type: "short", question: "Explain…", answer: "Model answer for the parent", explanation: "…" }
+    { id: "sc3_q3", topic: "…", type: "short", question: "Explain…", answer: "Model answer for the parent", explanation: "…" },
+    { id: "c2_pp1", topic: "…", type: "paper", question: "Draw / construct / copy…", answer: "What the parent checks",
+      ref: "Textbook 3I Q1 (p.64)" /* optional on any question: shown as 'Like …' */ }
   ],
   flashcards: [ { id: "fr3_f1", front: "la grenouille", back: "the frog", note: "optional" } ],  // language subjects
   articles: [ ["grenouille", "la", "frog", "optional note, e.g. why it's a trap"] ]          // optional: article drill words
@@ -59,7 +61,8 @@ addChapter({
 - Id prefixes: dutch `nl`, english `en`, french `fr`, humanities `hum`, ict `ict`, maths `c`, science `sc`, spanish `sp`. Ids must be unique within a subject and **never reused or renumbered**, because history is keyed by id.
 - **MCQ options are shuffled at display time.** Grade 6 data had a heavy answer-position bias (e.g. every Humanities answer was A). Never write "Both A and B" / "All of the above". The checker flags these.
 - Input answers: `answer` always counts, and `acceptableAnswers` are extras. Set `exact: true` for algebra answers (e.g. "5p") so the number-with-units rule doesn't accept a bare "5". Matching ignores case, spacing, thousands separators and trailing units on a single number. Commas inside coordinates and lists are kept.
-- Every question needs an `explanation` (optional for `short`).
+- Every question needs an `explanation` (optional for `short` and `paper`).
+- `paper` = drawn in an exercise book (constructions, nets, projections). Practice only, never in daily/weekly tests. She taps "done on paper"; the task waits in "Drawings to check" on the subject page until a parent marks it (stored in `pp`, synced).
 
 ## Storage model (store.js)
 One localStorage doc, `studyzone_g7`: `ev` is an append-only answer log `[id, time, subject, qid, correct, mode]`. `tests` holds daily/weekly records (last-write-wins; a finished test beats an unfinished one). `notes` and `fc` are last-write-wins maps. Merging is conflict-free, so sync and import never lose data. Mastery means "the last attempt was correct". Sync config lives in `studyzone_g7_sync` (device-only).

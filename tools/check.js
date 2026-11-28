@@ -53,7 +53,7 @@ for (const s of M.subjects) {
       qIds.add(q.id);
       if (!q.topic) err(`${at}: missing topic`);
       if (!q.question) err(`${at}: missing question`);
-      if (!q.explanation && q.type !== 'short') err(`${at}: missing explanation`);
+      if (!q.explanation && q.type !== 'short' && q.type !== 'paper') err(`${at}: missing explanation`);
       if (q.type === 'mcq') {
         if (!Array.isArray(q.options) || q.options.length < 2) err(`${at}: mcq needs options`);
         else {
@@ -63,7 +63,7 @@ for (const s of M.subjects) {
           if (!q.fixedOrder && q.options.some(o => /\b(both|all|none) of (the )?(above|these)\b|\b[A-D] and [A-D]\b|\boption [A-D]\b/i.test(o)))
             err(`${at}: an option refers to other options by position — options are shuffled; reword it or set fixedOrder: true`);
         }
-      } else if (q.type === 'input' || q.type === 'short') {
+      } else if (q.type === 'input' || q.type === 'short' || q.type === 'paper') {
         if (q.answer === undefined || q.answer === '') err(`${at}: missing answer`);
       } else err(`${at}: unknown type "${q.type}"`);
       if (q.diagram && /<script/i.test(q.diagram)) err(`${at}: diagram contains <script>`);

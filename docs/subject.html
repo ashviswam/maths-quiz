@@ -38,6 +38,11 @@
     <div id="home-content" class="hidden">
       <div id="mode-row" class="mode-row"></div>
 
+      <section id="paper-check" class="panel paper-panel hidden">
+        <h3 class="panel-title">✏️ Drawings to check <span class="panel-sub">parent: look at the paper, then mark</span></h3>
+        <div id="paper-list"></div>
+      </section>
+
       <div class="home-panels">
         <section id="history" class="panel hidden">
           <h3 class="panel-title">Recent tests</h3>
@@ -91,6 +96,11 @@
           <div id="q-input" class="input-area hidden">
             <input type="text" id="answer-input" placeholder="Type your answer here…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
             <button id="btn-submit" class="btn-primary" onclick="App.submitInput()">Check →</button>
+          </div>
+
+          <div id="q-paper" class="paper-area hidden">
+            <div id="paper-ref" class="paper-ref"></div>
+            <button id="btn-paper-done" class="btn-primary" onclick="App.submitPaper()">✏️ I've done it on paper</button>
           </div>
 
           <div id="q-short" class="short-area hidden">

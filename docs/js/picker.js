@@ -53,9 +53,13 @@ const Picker = (() => {
     return out;
   }
 
+  // Paper (drawing) tasks take too long for a test: they are practice-only.
+  const noPaper = chs => chs.map(ch => ({ ...ch, questions: ch.questions.filter(q => q.type !== 'paper') }));
+
   /* Daily: ~50% newest chapter, ~30% due for review (wrong / not seen
      for a while) from anywhere, rest from older chapters — unseen first. */
   function daily(chapters, stats, { size = 15, now = Date.now(), rng = Math.random } = {}) {
+    chapters = noPaper(chapters);
     const all = flatten(chapters);
     if (!all.length) return [];
     const newest = newestChapter(chapters);
@@ -94,6 +98,7 @@ const Picker = (() => {
      to its size (min 2), preferring questions not used in earlier weekly
      tests, then weak ones. */
   function weekly(chapters, stats, usedBefore, { size = 30, now = Date.now(), rng = Math.random } = {}) {
+    chapters = noPaper(chapters);
     const total = chapters.reduce((n, ch) => n + ch.questions.length, 0);
     if (!total) return [];
     size = Math.min(size, total);
